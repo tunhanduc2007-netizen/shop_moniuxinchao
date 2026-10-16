@@ -6,7 +6,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "58102720478",
     "name": "LA POMME Bodysuit cho bé trai/gái từ 3-12m",
     "brand": "LA POMME",
-    "category": "Bodysuit",
+    "category": "Bodysuit & Đồ liền",
     "variants": [
       "3-6M",
       "6-9M",
@@ -24,7 +24,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "57954579433",
     "name": "NOUS Bộ bodysuit cài lệch dài tay màu trơn phối quần size newborn sơ sinh",
     "brand": "NOUS",
-    "category": "Bodysuit",
+    "category": "Bodysuit & Đồ liền",
     "variants": [
       "Newborn (3-5.5kg)",
       "0-3M",
@@ -42,7 +42,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "57951077715",
     "name": "[MỞ BÁN 10.11] NOUS BST NOEL 2025 Bộ áo quần dài hoạ tiết Giáng Sinh cho bé trai/ bé gái có size từ 6M",
     "brand": "NOUS",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "6-9M",
       "9-12M",
@@ -61,7 +61,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "57654579156",
     "name": "NOUS Khẩu trang cho bé mẫu mới 2026",
     "brand": "NOUS",
-    "category": "Phụ kiện",
+    "category": "Phụ kiện & Khác",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -80,7 +80,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "57265616334",
     "name": "[QUÀ TẶNG] Sticker Nous chủ đề trung thu dành cho đơn từ 309K",
     "brand": "NOUS",
-    "category": "Quà tặng",
+    "category": "Quà tặng kèm",
     "variants": [
       "Quà tặng kèm"
     ],
@@ -96,7 +96,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "57256963138",
     "name": "NOUS BST MỚI PETIT A PETIT Bộ liền cộc/Bộ cộc cho bé trai/bé gái có size từ 0m đến 12m",
     "brand": "NOUS",
-    "category": "Bodysuit",
+    "category": "Bodysuit & Đồ liền",
     "variants": [
       "12M"
     ],
@@ -112,7 +112,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "57157476441",
     "name": "NOUS PREMIUM MỚI Bộc cộc/ba lỗ Pickle ball bé trai/bé gái từ 6m đến 2-3y",
     "brand": "NOUS",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "6-9M",
       "9-12M",
@@ -131,7 +131,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "57013739193",
     "name": "CLEARANCE SALE NOUS Áo khoác lông hồng cài thẳng thêu hình cô bé quàng khăn đỏ cho bé gái",
     "brand": "NOUS",
-    "category": "Áo khoác",
+    "category": "Áo & Áo khoác",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -150,7 +150,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "57002689160",
     "name": "MONONA CHĂN LÔNG TUYẾT 4 MÀU TRƠN CÓ HÌNH THÊU Ở GÓC",
     "brand": "MONONA",
-    "category": "Chăn gối",
+    "category": "Chăn gối & Đệm ngủ",
     "variants": [
       "Kem thêu oliu",
       "Nâu thêu gấu",
@@ -169,7 +169,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "56501031816",
     "name": "[MỞ BÁN 10/11] NOUS BST NOEL GIÁNG SINH CHO BÉ TỪ 6M - 2Y",
     "brand": "NOUS",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "6-9M",
       "9-12M",
@@ -188,7 +188,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "56215635214",
     "name": "NOUS MỚI Bộ dài tay dáng xoè caro nâu phối quần be cho bé gái size từ 0m đến 9-12m",
     "brand": "NOUS",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "9-12M"
     ],
@@ -204,7 +204,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "56200348158",
     "name": "MONONA Thảm điều hòa chống thấm cao cấp thêu hình Gấu/Thỏ/Rắn",
     "brand": "MONONA",
-    "category": "Đồ sơ sinh",
+    "category": "Chăn gối & Đệm ngủ",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -223,7 +223,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "56063734448",
     "name": "CLEARANCE SALE NOUS Bộ dài tay cài lệch thêu trang trí cho bé trai gái",
     "brand": "NOUS",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -242,7 +242,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "55813739374",
     "name": "CLEARANCE SALE NOUS Quần yếm chấm bi xanh kèm áo tay dài trắng cho bé trai gái",
     "brand": "NOUS",
-    "category": "Phụ kiện",
+    "category": "Quần yếm & Set yếm",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -261,7 +261,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "55802653397",
     "name": "MONONA Lót đầu sợi tre viền sò hoạ tiết cổ tích dành cho bé từ sơ sinh",
     "brand": "MONONA",
-    "category": "Chăn gối",
+    "category": "Chăn gối & Đệm ngủ",
     "variants": [
       "Newborn (3-5.5kg)",
       "0-3M",
@@ -279,7 +279,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "55763734328",
     "name": "CLEARANCE SALE NOUS Áo khoác lông có cổ màu trắng hoạ tiết cherry cho bé gái",
     "brand": "NOUS",
-    "category": "Áo khoác",
+    "category": "Áo & Áo khoác",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -298,7 +298,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "55703006821",
     "name": "LA POMME 2026 Bộ cộc/dài tay phối quần/váy cho bé trai/gái",
     "brand": "LA POMME",
-    "category": "Váy đầm",
+    "category": "Váy đầm bé gái",
     "variants": [
       "6M"
     ],
@@ -314,7 +314,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "55500537797",
     "name": "MONONA Yếm muslin cổ tích siêu thấm hút cho bé",
     "brand": "MONONA",
-    "category": "Phụ kiện",
+    "category": "Yếm cho bé",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -333,7 +333,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "55157727259",
     "name": "NOUS PREMIUM Bodysuit cộc tay dành cho bé trai/bé gái từ 0m đến 9-12m",
     "brand": "NOUS",
-    "category": "Bodysuit",
+    "category": "Bodysuit & Đồ liền",
     "variants": [
       "9-12M"
     ],
@@ -349,7 +349,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "55054564061",
     "name": "NOUS MỚI Thú nhồi bông cho bé",
     "brand": "NOUS",
-    "category": "Đồ sơ sinh",
+    "category": "Phụ kiện & Khác",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -368,7 +368,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "54550768949",
     "name": "NOUS Balo ông già Noel màu trắng phối đỏ",
     "brand": "NOUS",
-    "category": "Đồ sơ sinh",
+    "category": "Bộ quần áo bé",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -387,7 +387,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "54465833053",
     "name": "NOUS Túi ngủ kẻ caro cho bé trai gái hỗ trợ giữ ấm vùng ngực cho bé size M/XL",
     "brand": "NOUS",
-    "category": "Đồ sơ sinh",
+    "category": "Bộ quần áo bé",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -406,7 +406,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "54413739459",
     "name": "CLEARANCE SALE NOUS Bộ liền dài tất cài lệch kẻ cam phối trắng cho bé trai gái",
     "brand": "NOUS",
-    "category": "Bodysuit",
+    "category": "Bodysuit & Đồ liền",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -425,7 +425,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "54403015737",
     "name": "LA POMME BST TẾT 2026 Bộ cộc/dày tay áo trắng hoạ tiết phối quần kẻ be",
     "brand": "LA POMME",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "6M"
     ],
@@ -441,7 +441,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "54119180492",
     "name": "NOUS Bộ dài tay màu be phối xanh dương thêu hoạ tiết dành cho bé từ 0m đến 9-12m",
     "brand": "NOUS",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "9-12M"
     ],
@@ -457,7 +457,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "54108743546",
     "name": "NOUS Mũ bơi rộng vành màu hồng/xanh cho bé size M/L",
     "brand": "NOUS",
-    "category": "Phụ kiện",
+    "category": "Nón & Mũ bé",
     "variants": [
       "12M"
     ],
@@ -473,7 +473,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "53903292594",
     "name": "[NOUS PARTY] Set Bộ liền cộc/bộ liền dài cho bé trai/gái size từ 0m đến 9-12m",
     "brand": "NOUS",
-    "category": "Bodysuit",
+    "category": "Bodysuit & Đồ liền",
     "variants": [
       "9-12M"
     ],
@@ -489,7 +489,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "53808325101",
     "name": "NOUS PREMIUM Bộ ba lỗ/Váy dành cho bé trai/bé gái từ 6m đến 2-3y",
     "brand": "NOUS",
-    "category": "Váy đầm",
+    "category": "Váy đầm bé gái",
     "variants": [
       "6-9M",
       "9-12M",
@@ -508,7 +508,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "53808309955",
     "name": "NOUS PREMIUM T4 Bộ liền cộc hoạ tiết cho bé trai/bé gái size từ 0m đến 9-12m",
     "brand": "NOUS",
-    "category": "Bodysuit",
+    "category": "Bodysuit & Đồ liền",
     "variants": [
       "9-12M"
     ],
@@ -524,7 +524,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "53501128143",
     "name": "NOUS T11 BỘ DÀI TAY SIZE NEWBORN SƠ SINH HOẠ TIẾT NOEL",
     "brand": "NOUS",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "Newborn (3-5.5kg)",
       "0-3M",
@@ -542,7 +542,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "53453292682",
     "name": "[NOUS PARTY] Phụ kiện công chúa/hoàng tử cho các bé yêu",
     "brand": "NOUS",
-    "category": "Đồ sơ sinh",
+    "category": "Bộ quần áo bé",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -561,7 +561,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "52651042138",
     "name": "[MỞ BÁN 10/11] NOUS BST NOEL GIÁNG SINH BODYSUIT/ BỘ QUẦN YẾM CHO BÉ TỪ 0m - 12m",
     "brand": "NOUS",
-    "category": "Bodysuit",
+    "category": "Quần yếm & Set yếm",
     "variants": [
       "12M",
       "6-9M"
@@ -578,7 +578,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "52563339676",
     "name": "LA POMME MỚI Bộ cộc tay nhiều màu sắc bé trai gái size từ 6m đến 5y",
     "brand": "LA POMME",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "6M"
     ],
@@ -594,7 +594,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "52506447092",
     "name": "LA POMME Body cộc tay petit hoạ tiết đáng yêu cho bé từ 3 -9 tháng",
     "brand": "LA POMME",
-    "category": "Bodysuit",
+    "category": "Bodysuit & Đồ liền",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -613,7 +613,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "52313734330",
     "name": "CLEARANCE SALE NOUS Bộ liền dài kẻ hồng cam yếm trắng thêu cho bé gái",
     "brand": "NOUS",
-    "category": "Bodysuit",
+    "category": "Yếm cho bé",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -632,7 +632,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "52103942946",
     "name": "MONONA KHĂN TẮM XÔ XÙ 6 lớp HOẠ TIẾT CỔ TÍCH 100x110cm",
     "brand": "MONONA",
-    "category": "Phụ kiện",
+    "category": "Phụ kiện & Khác",
     "variants": [
       "Newborn (3-5.5kg)",
       "0-3M",
@@ -650,7 +650,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "51909273260",
     "name": "[QUÀ TẶNG LA POMME] Phao bơi cho bé nhiều màu sắc, tặng ngẫu nhiên cho hoá đơn từ 399K",
     "brand": "LA POMME",
-    "category": "Quà tặng",
+    "category": "Quà tặng kèm",
     "variants": [
       "Quà tặng kèm"
     ],
@@ -666,7 +666,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "51907181839",
     "name": "NOUS ECOM Bodysuit cộc tay cài thẳng caro ghi/ hồng in hoạ tiết có size từ 0m đến 9-12m",
     "brand": "NOUS",
-    "category": "Bodysuit",
+    "category": "Bodysuit & Đồ liền",
     "variants": [
       "9-12M"
     ],
@@ -682,7 +682,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "51809262915",
     "name": "LA POMME Mũ bơi mùa hè dành cho bé trai/ bé gái từ 6 tháng đến 5 tuổi",
     "brand": "LA POMME",
-    "category": "Phụ kiện",
+    "category": "Nón & Mũ bé",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -701,7 +701,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "51615370018",
     "name": "NOUS Bộ dài kèm mũ bé trai gái từ 9m đến 2y",
     "brand": "NOUS",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "9M",
       "2Y"
@@ -718,7 +718,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "51556914431",
     "name": "NOUS MỚI Bộ cộc tay/ ba lỗ mùa hè cho bé trai size từ 6m đến 2-3y",
     "brand": "NOUS",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "6-9M",
       "9-12M",
@@ -737,7 +737,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "51556447663",
     "name": "LA POMME Phụ kiện mũ/yếm/băng đô cho bé gái freesize từ 0-6m",
     "brand": "LA POMME",
-    "category": "Phụ kiện",
+    "category": "Yếm cho bé",
     "variants": [
       "6M"
     ],
@@ -753,7 +753,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "51307185611",
     "name": "NOUS ECOM Bộ cộc áo cài lệch màu xanh in hình gấu có size từ 0m đến 9-12m",
     "brand": "NOUS",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "9-12M"
     ],
@@ -769,7 +769,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "51204564722",
     "name": "NOUS Khăn choàng cho bé tuti",
     "brand": "NOUS",
-    "category": "Phụ kiện",
+    "category": "Phụ kiện & Khác",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -788,7 +788,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "51152698427",
     "name": "MONONA x JOONEE CHĂN HẠT ĐẬU SỢI TRA HOẠ TIẾT",
     "brand": "MONONA",
-    "category": "Chăn gối",
+    "category": "Chăn gối & Đệm ngủ",
     "variants": [
       "Kem thêu oliu",
       "Nâu thêu gấu",
@@ -807,7 +807,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "51113742293",
     "name": "CLEARANCE SALE NOUS Áo Khoác/ Áo gile Nu mini dành cho bé trai gái",
     "brand": "NOUS",
-    "category": "Áo khoác",
+    "category": "Áo & Áo khoác",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -826,7 +826,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "50952921042",
     "name": "MONONA CHĂN TRẦN BÔNG ĐIỀU HOÀ HOẠ TIẾT CỔ TÍCH",
     "brand": "MONONA",
-    "category": "Chăn gối",
+    "category": "Chăn gối & Đệm ngủ",
     "variants": [
       "Kem thêu oliu",
       "Nâu thêu gấu",
@@ -845,7 +845,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "50765842721",
     "name": "NOUS Gối ôm hình cho bé trai gái cực đáng yêu",
     "brand": "NOUS",
-    "category": "Chăn gối",
+    "category": "Chăn gối & Đệm ngủ",
     "variants": [
       "Kem thêu oliu",
       "Nâu thêu gấu",
@@ -864,7 +864,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "50463739371",
     "name": "CLEARANCE NOUS Áo khoác dài tay màu nâu có mũ thêu chữ Nous cho bé trai gái",
     "brand": "NOUS",
-    "category": "Áo khoác",
+    "category": "Áo & Áo khoác",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -883,7 +883,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "50368984373",
     "name": "NOUS T10 Bodysuit dài tay/giả váy/liền dài cho bé trai gái từ 0m đến 9-12m",
     "brand": "NOUS",
-    "category": "Bodysuit",
+    "category": "Váy đầm bé gái",
     "variants": [
       "9-12M"
     ],
@@ -899,7 +899,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "50018865431",
     "name": "[QUÀ TẶNG] LY UỐNG NƯỚC KÈM ỐNG HÚT DÀNH CHO HOÁ ĐƠN TỪ 899K",
     "brand": "Moniu",
-    "category": "Quà tặng",
+    "category": "Quà tặng kèm",
     "variants": [
       "Quà tặng kèm"
     ],
@@ -915,7 +915,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "49951079528",
     "name": "NOUS MỚI Bodysuit cổ tròn xanh lá/hồng siêu iu dành cho các bé từ 0m đến 9m",
     "brand": "NOUS",
-    "category": "Bodysuit",
+    "category": "Bodysuit & Đồ liền",
     "variants": [
       "9M"
     ],
@@ -931,7 +931,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "49655055297",
     "name": "[NOUS PARTY] BỘ YẾM CỘC/BỘ VEST DÀNH CHO BÉ TRAI TỪ 9M ĐẾN 2-3Tuổi",
     "brand": "NOUS",
-    "category": "Bộ quần áo",
+    "category": "Yếm cho bé",
     "variants": [
       "9M"
     ],
@@ -947,7 +947,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "49607226502",
     "name": "NOUS ECOM Bộ liền cộc dành cho bé trai/bé gái có size từ 0m đến 9-12m",
     "brand": "NOUS",
-    "category": "Bodysuit",
+    "category": "Bodysuit & Đồ liền",
     "variants": [
       "9-12M"
     ],
@@ -963,7 +963,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "49552714120",
     "name": "MONONA CHĂN 2 MẶT COTTON LỤA HẠT ĐẬU",
     "brand": "MONONA",
-    "category": "Chăn gối",
+    "category": "Chăn gối & Đệm ngủ",
     "variants": [
       "Kem thêu oliu",
       "Nâu thêu gấu",
@@ -982,7 +982,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "49316947639",
     "name": "LA POMME Bodysuit dài tay cho bé trai gái từ sơ sinh NB đến 3m",
     "brand": "LA POMME",
-    "category": "Bodysuit",
+    "category": "Bodysuit & Đồ liền",
     "variants": [
       "Newborn (3-5.5kg)",
       "0-3M",
@@ -1000,7 +1000,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "49150725913",
     "name": "LA POMME BST Váy/ Yếm/ Bộ dài tay Giáng sinh Noel cho các bé từ 9 tháng đến 5 tuổi",
     "brand": "LA POMME",
-    "category": "Váy đầm",
+    "category": "Yếm cho bé",
     "variants": [
       "9M",
       "4-5Y"
@@ -1017,7 +1017,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "48852673903",
     "name": "NOUS MỚI Phụ kiện Túi đeo chéo/Khăn lụa hoạ tiết cho bé",
     "brand": "NOUS",
-    "category": "Phụ kiện",
+    "category": "Phụ kiện & Khác",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -1036,7 +1036,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "48852588661",
     "name": "[TẶNG TÚI NOUS HOÁ ĐƠN TỪ 549K][QUÀ TẶNG] TÚI GIẤY CHỦ ĐỀ GIÁNG SINH NOUS KÈM THIỆP",
     "brand": "NOUS",
-    "category": "Quà tặng",
+    "category": "Quà tặng kèm",
     "variants": [
       "Quà tặng kèm"
     ],
@@ -1052,7 +1052,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "48418597119",
     "name": "LA POMME Body chip dài tay kèm quần dành cho bé trai gái từ NB- 0M- 3M",
     "brand": "LA POMME",
-    "category": "Bodysuit",
+    "category": "Bodysuit & Đồ liền",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -1071,7 +1071,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "47858329998",
     "name": "NOUS PREMIUM T4 Bộ pyjama cộc tay màu be hoạ tiết con ngựa cho bé từ 6m đến 2-3y",
     "brand": "NOUS",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "6-9M",
       "9-12M",
@@ -1090,7 +1090,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "47351067207",
     "name": "[MỞ BÁN 10/11] NOUS SET 2 TẤT NOEL GIÁNG SINH CHO BÉ SIZE S/M/L",
     "brand": "NOUS",
-    "category": "Bộ quần áo",
+    "category": "Bao tay & Bao chân",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -1109,7 +1109,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "47269210728",
     "name": "NOUS Bộ bodysuit dài tay màu trắng quần xanh phối yếm thêu hoạ tiết dành cho bé trai từ 3m đến 9-12m",
     "brand": "NOUS",
-    "category": "Bodysuit",
+    "category": "Bodysuit & Đồ liền",
     "variants": [
       "9-12M"
     ],
@@ -1125,7 +1125,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "47062484318",
     "name": "LA POMME Body dài tay chất liệu petit cho bé trai gái từ NB đến 3m",
     "brand": "LA POMME",
-    "category": "Bodysuit",
+    "category": "Bodysuit & Đồ liền",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -1144,7 +1144,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "47001127511",
     "name": "BST NOEL 2025 Mũ chùm tai/ Băng đô chủ đề Giáng Sinh cho bé size S/M/L/XL",
     "brand": "Moniu",
-    "category": "Phụ kiện",
+    "category": "Nón & Mũ bé",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -1163,7 +1163,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "46913762368",
     "name": "CLEARANCE SALE NOUS Áo Khoác/ Măng tô/Cardigan cho bé trai gái",
     "brand": "NOUS",
-    "category": "Áo khoác",
+    "category": "Áo & Áo khoác",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -1182,7 +1182,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "46667808879",
     "name": "NOUS Newborn Premium Bộ dài tay cho bé sơ sinh trai gái từ 2,7kg đến dưới 5kg",
     "brand": "NOUS",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "Newborn (3-5.5kg)",
       "0-3M",
@@ -1200,7 +1200,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "46568607063",
     "name": "La Pomme Bộ dài tay cúc lệch Petit soyeu dành cho bé trai gái từ NB-OM-3M",
     "brand": "LA POMME",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -1219,7 +1219,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "46506458947",
     "name": "LA POMME Bộ cộc hoa nhí kem hồng cotton cho bé gái từ 3m đến 18m",
     "brand": "LA POMME",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "18M"
     ],
@@ -1235,7 +1235,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "46452750235",
     "name": "[MỞ BÁN 11/12] NOUS TẾT Áo dài cho bé trai/gái từ 6m đến 2-3y",
     "brand": "NOUS",
-    "category": "Đồ sơ sinh",
+    "category": "Bộ quần áo bé",
     "variants": [
       "6-9M",
       "9-12M",
@@ -1254,7 +1254,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "46303089469",
     "name": "[QUÀ TẶNG] TÚI SHOPPING BAG HOÁ ĐƠN TỪ 499K",
     "brand": "Moniu",
-    "category": "Quà tặng",
+    "category": "Quà tặng kèm",
     "variants": [
       "Quà tặng kèm"
     ],
@@ -1270,7 +1270,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "46265872893",
     "name": "NOUS MỚI Áo giữ nhiệt cổ 3 phân cho bé trai gái size từ 6m đến 2-3y",
     "brand": "NOUS",
-    "category": "Đồ sơ sinh",
+    "category": "Bộ quần áo bé",
     "variants": [
       "6-9M",
       "9-12M",
@@ -1289,7 +1289,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "46256937985",
     "name": "[MỞ BÁN 9/3] NOUS MỚI Bộ cộc tay mùa hè dành cho bé gái từ 6m đến 2-3y",
     "brand": "NOUS",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "6-9M",
       "9-12M",
@@ -1308,7 +1308,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "46000711143",
     "name": "LA POMME BST NOEL Bodysuit/Bộ quần áo dài tay cho bé từ 3m đến 18m",
     "brand": "LA POMME",
-    "category": "Bodysuit",
+    "category": "Bodysuit & Đồ liền",
     "variants": [
       "18M"
     ],
@@ -1324,7 +1324,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "45957496559",
     "name": "NOUS PREMIUM MỚI Bộ cộc/Váy chủ đề Pickle Ball bé trai/bé gái có size từ 6m đến 4-5y",
     "brand": "NOUS",
-    "category": "Váy đầm",
+    "category": "Váy đầm bé gái",
     "variants": [
       "6M",
       "4-5Y"
@@ -1341,7 +1341,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "45852941062",
     "name": "MONONA LÓT CHỐNG THẤM CỔ TÍCH CHO BÉ 50x70cm",
     "brand": "MONONA",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -1360,7 +1360,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "45751061946",
     "name": "[MỞ BÁN 10/11] NOUS GỐI BÔNG NOEL 2025",
     "brand": "NOUS",
-    "category": "Chăn gối",
+    "category": "Chăn gối & Đệm ngủ",
     "variants": [
       "Kem thêu oliu",
       "Nâu thêu gấu",
@@ -1379,7 +1379,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "45558759119",
     "name": "[TĂNG SIZE] LA POMME Bộ đồ bơi liền/2 mảnh dành cho bé trai/bé gái có size từ 6m đến 5y",
     "brand": "LA POMME",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "6M"
     ],
@@ -1395,7 +1395,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "45513759330",
     "name": "CLEARANCE SALE NOUS Quần yếm chấm bi cam hồng kèm áo tay dài trắng cho bé gái",
     "brand": "NOUS",
-    "category": "Phụ kiện",
+    "category": "Quần yếm & Set yếm",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -1414,7 +1414,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "45457570178",
     "name": "LA POMME MỚI BST XUÂN HÈ Bộ cộc/Ba lỗ cho bé từ  6m đến 5-6y",
     "brand": "LA POMME",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "6M"
     ],
@@ -1430,7 +1430,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "45403035802",
     "name": "LA POMME BST TẾT 2026 Áo dài xanh/hồng cho bé trai/gái",
     "brand": "LA POMME",
-    "category": "Đồ sơ sinh",
+    "category": "Bộ quần áo bé",
     "variants": [
       "6M"
     ],
@@ -1446,7 +1446,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "45307205384",
     "name": "NOUS Bộ cộc/Ba lỗ dành cho bé trai/bé gái có size từ 6m đến 2-3 tuổi",
     "brand": "NOUS",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "6M"
     ],
@@ -1462,7 +1462,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "45307201862",
     "name": "NOUS Bodysuit cộc tay cài thẳng màu hồng in hoạ tiết bé gái size từ 0m đến 9-12m",
     "brand": "NOUS",
-    "category": "Bodysuit",
+    "category": "Bodysuit & Đồ liền",
     "variants": [
       "9-12M"
     ],
@@ -1478,7 +1478,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "45250711314",
     "name": "LA POMME BST NOEL Bodysuit cho các bé nhỏ từ 0-3m",
     "brand": "LA POMME",
-    "category": "Bodysuit",
+    "category": "Bodysuit & Đồ liền",
     "variants": [
       "0-3M"
     ],
@@ -1494,7 +1494,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "45157205766",
     "name": "NOUS Bộ liền dài hoạ tiết bé trai gái size newborn sơ sinh",
     "brand": "NOUS",
-    "category": "Bodysuit",
+    "category": "Bodysuit & Đồ liền",
     "variants": [
       "Newborn (3-5.5kg)",
       "0-3M",
@@ -1512,7 +1512,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "45003022028",
     "name": "LA POMME BST TẾT Body chip kèm quần + mũ màu đỏ/hồng",
     "brand": "LA POMME",
-    "category": "Bodysuit",
+    "category": "Nón & Mũ bé",
     "variants": [
       "6-9M"
     ],
@@ -1528,7 +1528,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "44950852732",
     "name": "[QUÀ TẶNG] YẾM NOUS MÀU NGẪU NHIÊN",
     "brand": "NOUS",
-    "category": "Quà tặng",
+    "category": "Quà tặng kèm",
     "variants": [
       "Quà tặng kèm"
     ],
@@ -1544,7 +1544,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "44758329837",
     "name": "[CÓ HỘP] Set quà NOUS 5 món bé trai/bé gái từ 0-3m mới 2026",
     "brand": "NOUS",
-    "category": "Bộ quần áo",
+    "category": "Quà tặng kèm",
     "variants": [
       "Newborn (3-5.5kg)",
       "0-3M",
@@ -1562,7 +1562,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "44552683512",
     "name": "[QUÀ TẶNG] NOUS TÚI TOTE CHỦ ĐỀ GIÁNG SINH 2025",
     "brand": "NOUS",
-    "category": "Quà tặng",
+    "category": "Quà tặng kèm",
     "variants": [
       "Quà tặng kèm"
     ],
@@ -1578,7 +1578,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "44430326574",
     "name": "[TĂNG SIZE] LA POMME Body chip cộc tay chất liệu petit thoáng mát cho bé size từ 0-9m",
     "brand": "LA POMME",
-    "category": "Bodysuit",
+    "category": "Bodysuit & Đồ liền",
     "variants": [
       "9M",
       "9-12M"
@@ -1595,7 +1595,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "44407267484",
     "name": "Body chip ngắn/dài, bộ quần áo dài La Pomme hồng soyeu",
     "brand": "LA POMME",
-    "category": "Bodysuit",
+    "category": "Bodysuit & Đồ liền",
     "variants": [
       "Newborn (3-5.5kg)",
       "0-3M",
@@ -1613,7 +1613,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "44406915225",
     "name": "Bộ cộc tay Nous dành cho bé từ 6m",
     "brand": "NOUS",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "6M"
     ],
@@ -1629,7 +1629,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "44307911444",
     "name": "NOUS MỚI Bodysuit cộc sát nách dành cho bé trai/ bé gái",
     "brand": "NOUS",
-    "category": "Bodysuit",
+    "category": "Bodysuit & Đồ liền",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -1648,7 +1648,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "44206912852",
     "name": "Set yếm áo trắng dài tay kèm mũ Nous cho bé từ 9m",
     "brand": "NOUS",
-    "category": "Bộ quần áo",
+    "category": "Yếm cho bé",
     "variants": [
       "9M",
       "12M"
@@ -1665,7 +1665,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "43972819734",
     "name": "MONONA GỐI CHẶN CHỐNG GIẬT MÌNH, HỖ TRỢ BÉ NGỦ NGON HƠN VẢI COTTON WAFFLE",
     "brand": "MONONA",
-    "category": "Chăn gối",
+    "category": "Chăn gối & Đệm ngủ",
     "variants": [
       "Newborn (3-5.5kg)",
       "0-3M",
@@ -1683,7 +1683,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "43957270204",
     "name": "Tổng hợp phụ kiện Nón, Mũ La Pomme cho bé từ sơ sinh",
     "brand": "LA POMME",
-    "category": "Phụ kiện",
+    "category": "Nón & Mũ bé",
     "variants": [
       "Newborn (3-5.5kg)",
       "0-3M",
@@ -1701,7 +1701,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "43862744791",
     "name": "NOUS Bộ áo tay dài in hoạ tiết cho bé trai gái từ 6m đến 2 tuổi",
     "brand": "NOUS",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "6M"
     ],
@@ -1717,7 +1717,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "43856907563",
     "name": "Váy dài Nous dành cho bé gái từ 6m đến 2 tuổi màu trắng/be/xanh",
     "brand": "NOUS",
-    "category": "Váy đầm",
+    "category": "Váy đầm bé gái",
     "variants": [
       "6M"
     ],
@@ -1733,7 +1733,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "43772731681",
     "name": "MONONA Lót đầu sơ sinh trần bông in hoạ tiết cho bé",
     "brand": "MONONA",
-    "category": "Chăn gối",
+    "category": "Chăn gối & Đệm ngủ",
     "variants": [
       "Newborn (3-5.5kg)",
       "0-3M",
@@ -1751,7 +1751,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "43771734273",
     "name": "[HÀNG LẺ SIZE] NOUS Bộ áo quần cộc đủ size cho bé trai/gái từ bé đến lớn",
     "brand": "NOUS",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -1770,7 +1770,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "43757997702",
     "name": "NOUS MỚI T7 Băng đô nơ cho bé gái từ 0m đến 2 tuổi size S/M/L/XL",
     "brand": "NOUS",
-    "category": "Đồ sơ sinh",
+    "category": "Nón & Mũ bé",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -1789,7 +1789,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "43755851500",
     "name": "NOUS Bộ liền cộc màu nâu nhạt cho bé size từ 6m đến 2-3y",
     "brand": "NOUS",
-    "category": "Bodysuit",
+    "category": "Bodysuit & Đồ liền",
     "variants": [
       "6-9M",
       "9-12M",
@@ -1808,7 +1808,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "43670018207",
     "name": "NOUS MINI Bộ dài tay nhiều màu cho bé trai/gái có size từ 9m",
     "brand": "NOUS",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "9M"
     ],
@@ -1824,7 +1824,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "43658243246",
     "name": "NOUS MỚI Set quà tặng 5 món trắng phối kẻ caro hồng xinh xắn cho bé gái từ 0-3m",
     "brand": "NOUS",
-    "category": "Quà tặng",
+    "category": "Quà tặng kèm",
     "variants": [
       "Quà tặng kèm"
     ],
@@ -1840,7 +1840,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "43625793160",
     "name": "Khăn sữa sợi tre Monona x Joonee có hoạ tiết",
     "brand": "MONONA",
-    "category": "Phụ kiện",
+    "category": "Phụ kiện & Khác",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -1859,7 +1859,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "43622788959",
     "name": "MONONA Chăn muslin hạt đậu in hoạ tiết cổ tích siêu HOT siêu cưng cho bé",
     "brand": "MONONA",
-    "category": "Chăn gối",
+    "category": "Chăn gối & Đệm ngủ",
     "variants": [
       "Kem thêu oliu",
       "Nâu thêu gấu",
@@ -1878,7 +1878,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "43622673503",
     "name": "MONONA KHĂN TẮM 6 LỚP HỌA TIẾT XỊN XÒ CHO BÉ",
     "brand": "MONONA",
-    "category": "Phụ kiện",
+    "category": "Phụ kiện & Khác",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -1897,7 +1897,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "43575798201",
     "name": "KHĂN TẮM SỢI TRE MONONA x Joonee 2 LỚP",
     "brand": "MONONA",
-    "category": "Phụ kiện",
+    "category": "Chăn gối & Đệm ngủ",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -1916,7 +1916,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "43522675733",
     "name": "MONONA GỐI CAO SU NON TAI GẤU MUSLIN hoạ tiết mới",
     "brand": "MONONA",
-    "category": "Chăn gối",
+    "category": "Chăn gối & Đệm ngủ",
     "variants": [
       "Newborn (3-5.5kg)",
       "0-3M",
@@ -1934,7 +1934,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "43506918237",
     "name": "Tổng hợp Bộ quần áo dài tay Nous Premium cho bé trai, bé gái size sơ sinh",
     "brand": "NOUS",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "Newborn (3-5.5kg)",
       "0-3M",
@@ -1952,7 +1952,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "43362521643",
     "name": "NOUS T8 Bodysuit dài tay kèm yếm, mũ caro xanh 3m/6m/9m",
     "brand": "NOUS",
-    "category": "Bodysuit",
+    "category": "Yếm cho bé",
     "variants": [
       "6M",
       "9M"
@@ -1969,7 +1969,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "43314372254",
     "name": "NOUS NOEL Phụ kiện Mũ/băng đô giáng sinh cho bé có size S/M/L/XL",
     "brand": "NOUS",
-    "category": "Phụ kiện",
+    "category": "Nón & Mũ bé",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -1988,7 +1988,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "43312517146",
     "name": "NOUS T8 Bộ dài tay áo cài lệch phối quần hồng/xanh cho bé trai/gái",
     "brand": "NOUS",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "6M",
       "9M"
@@ -2005,7 +2005,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "43308251064",
     "name": "NOUS MỚI Bộ liền dài không tất hồng/be có size cho bé từ sơ sinh",
     "brand": "NOUS",
-    "category": "Bodysuit",
+    "category": "Bodysuit & Đồ liền",
     "variants": [
       "Newborn (3-5.5kg)",
       "0-3M",
@@ -2023,7 +2023,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "43255572688",
     "name": "NOUS Gối định hình đầu cho bé từ SƠ SINH Newborn nhiều hình dáng",
     "brand": "NOUS",
-    "category": "Chăn gối",
+    "category": "Chăn gối & Đệm ngủ",
     "variants": [
       "Newborn (3-5.5kg)",
       "0-3M",
@@ -2041,7 +2041,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "43075546536",
     "name": "MONONA CHĂN LÔNG TUYẾT THÊU VIỀN SÒ PHONG CÁCH HÀN QUỐC",
     "brand": "MONONA",
-    "category": "Chăn gối",
+    "category": "Chăn gối & Đệm ngủ",
     "variants": [
       "Kem thêu oliu",
       "Nâu thêu gấu",
@@ -2060,7 +2060,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "43064103801",
     "name": "LA POMME Khăn sữa/Khăn đa năng sợi tre lụa màu trắng/hồng/xanh",
     "brand": "LA POMME",
-    "category": "Phụ kiện",
+    "category": "Phụ kiện & Khác",
     "variants": [
       "Newborn (3-5.5kg)",
       "0-3M",
@@ -2078,7 +2078,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "42956917593",
     "name": "Set Nous dài tay xanh lá kèm mũ rộng vành",
     "brand": "NOUS",
-    "category": "Bộ quần áo",
+    "category": "Nón & Mũ bé",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -2097,7 +2097,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "42922954088",
     "name": "MONONA Combo phòng ngủ cho bé từ sơ sinh chất liệu vải cotton waffle màu xanh/hồng/kem",
     "brand": "MONONA",
-    "category": "Chăn gối",
+    "category": "Chăn gối & Đệm ngủ",
     "variants": [
       "Newborn (3-5.5kg)",
       "0-3M",
@@ -2115,7 +2115,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "42859572467",
     "name": "Nous Mini Bộ Ba lỗ hồng in hình gấu dành cho bé gái từ 6 tháng đến 2-3 tuổi",
     "brand": "NOUS",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -2134,7 +2134,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "42823119520",
     "name": "NOUS T10 THU ĐÔNG_Bộ liền dài/Bodysuit yếm, giả váy cho bé trai/gái từ 0m",
     "brand": "NOUS",
-    "category": "Bodysuit",
+    "category": "Yếm cho bé",
     "variants": [
       "9-12M"
     ],
@@ -2150,7 +2150,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "42751161730",
     "name": "NOUS Nhộng chũn hỗ trợ bé tự ngủ, ngon giấc, đỡ giật mình 0-9m",
     "brand": "NOUS",
-    "category": "Đồ sơ sinh",
+    "category": "Bộ quần áo bé",
     "variants": [
       "9M"
     ],
@@ -2166,7 +2166,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "42712484566",
     "name": "NOUS T8 Áo dài tay cao cổ thêu hình gấu màu be/hồng nhạt/hồng đậm",
     "brand": "NOUS",
-    "category": "Đồ sơ sinh",
+    "category": "Bộ quần áo bé",
     "variants": [
       "6-9M",
       "9-12M",
@@ -2185,7 +2185,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "42675551368",
     "name": "MONONA CHĂN WAFFLE THÊU MIX HẠT BÔNG",
     "brand": "MONONA",
-    "category": "Chăn gối",
+    "category": "Chăn gối & Đệm ngủ",
     "variants": [
       "Kem thêu oliu",
       "Nâu thêu gấu",
@@ -2204,7 +2204,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "42662484704",
     "name": "NOUS T8 Áo giữ nhiệt cổ 3 phân cho bé trai/gái nhiều màu size từ 6m",
     "brand": "NOUS",
-    "category": "Đồ sơ sinh",
+    "category": "Bộ quần áo bé",
     "variants": [
       "6-9M",
       "9-12M",
@@ -2223,7 +2223,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "42612560231",
     "name": "NOUS T8 Bộ liền dài kem phối nâu/hồng dành cho bé trai/gái từ 0m",
     "brand": "NOUS",
-    "category": "Bodysuit",
+    "category": "Bodysuit & Đồ liền",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -2242,7 +2242,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "42612544948",
     "name": "NOUS T8 Bộ bodysuit cài lệch phối thêm quần cho bé từ 0m",
     "brand": "NOUS",
-    "category": "Bodysuit",
+    "category": "Bodysuit & Đồ liền",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -2261,7 +2261,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "42612539472",
     "name": "NOUS T8 Bộ quần áo dài kẻ caro hồng thêu hình gấu nhiều size cho bé gái từ 9m",
     "brand": "NOUS",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "9M"
     ],
@@ -2277,7 +2277,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "42608239845",
     "name": "NOUS MỚI Bộ cộc liền dành cho bé trai gái từ 0m đến 9-12m",
     "brand": "NOUS",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "Newborn (3-5.5kg)",
       "0-3M",
@@ -2295,7 +2295,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "42469713071",
     "name": "NOUS T9 Bộ dài cài thẳng màu be hoạ tiết Tinker bell cho bé gái có size từ 0m",
     "brand": "NOUS",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "6M",
       "9M"
@@ -2312,7 +2312,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "42462746001",
     "name": "NOUS T8 Bộ áo dài cài lệch màu be hình gấu phối yếm nâu có size từ 0m/3m/6m/9m",
     "brand": "NOUS",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "6M",
       "9M"
@@ -2329,7 +2329,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "42458811879",
     "name": "NOUS Mini Bodysuit dài tay hoạ tiết đáng yêu dành cho bé từ 0m",
     "brand": "NOUS",
-    "category": "Bodysuit",
+    "category": "Bodysuit & Đồ liền",
     "variants": [
       "9-12M"
     ],
@@ -2345,7 +2345,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "42407908458",
     "name": "NOUS MỚI Bộ cộc mix phụ kiện áo trắng phối quần xanh rêu kèm mũ dành cho bé trai size từ 6m đến 2-3y",
     "brand": "NOUS",
-    "category": "Bộ quần áo",
+    "category": "Nón & Mũ bé",
     "variants": [
       "6-9M",
       "9-12M",
@@ -2364,7 +2364,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "42401166729",
     "name": "NOUS Bộ đồ bơi cộc tay dành cho bé gái từ 9 tháng đến 2-3 tuổi",
     "brand": "NOUS",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -2383,7 +2383,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "42362743260",
     "name": "NOUS T8 BST Mẫu bodysuit dài màu pastel cho bé gái/trai size sơ sinh",
     "brand": "NOUS",
-    "category": "Bodysuit",
+    "category": "Bodysuit & Đồ liền",
     "variants": [
       "Newborn (3-5.5kg)",
       "0-3M",
@@ -2401,7 +2401,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "42362643010",
     "name": "NOUS T8 Bộ pyjama dài kẻ caro be",
     "brand": "NOUS",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "6-9M",
       "9-12M",
@@ -2420,7 +2420,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "42358351784",
     "name": "NOUS MỚI BST mũ tròn dành cho bé yêu từ sơ sinh",
     "brand": "NOUS",
-    "category": "Phụ kiện",
+    "category": "Nón & Mũ bé",
     "variants": [
       "Newborn (3-5.5kg)",
       "0-3M",
@@ -2438,7 +2438,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "42320089228",
     "name": "NOUS T9 Bộ dài tay cài lệch cho bé trai/gái nhiều màu chỉ có size Newborn sơ sinh",
     "brand": "NOUS",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "Newborn (3-5.5kg)",
       "0-3M",
@@ -2456,7 +2456,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "42319989987",
     "name": "NOUS MINI Áo khoác gi lê vạt bầu nhiều màu xinh yêu cho bé từ 3m/6m/9m/12m/18m/2y",
     "brand": "NOUS",
-    "category": "Áo khoác",
+    "category": "Áo & Áo khoác",
     "variants": [
       "6-9M",
       "9-12M",
@@ -2475,7 +2475,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "42272673328",
     "name": "MONONA Chăn Muslin hạt đậu viền sò siêu yêu cho bé",
     "brand": "MONONA",
-    "category": "Chăn gối",
+    "category": "Chăn gối & Đệm ngủ",
     "variants": [
       "Kem thêu oliu",
       "Nâu thêu gấu",
@@ -2494,7 +2494,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "42259453687",
     "name": "LA POMME MỚI Body chip/Bộ dài tay màu xanh/vàng Bé yêu bồng bềnh cho bé từ 0m",
     "brand": "LA POMME",
-    "category": "Bodysuit",
+    "category": "Bodysuit & Đồ liền",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -2513,7 +2513,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "42258815435",
     "name": "NOUS MINI Bodysuit cộc tay có size từ 0m",
     "brand": "NOUS",
-    "category": "Bodysuit",
+    "category": "Bodysuit & Đồ liền",
     "variants": [
       "Newborn (3-5.5kg)",
       "0-3M",
@@ -2531,7 +2531,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "42255840571",
     "name": "NOUS Bộ liền cộc tay bodysuit dành cho bé gái/trai",
     "brand": "NOUS",
-    "category": "Bodysuit",
+    "category": "Bodysuit & Đồ liền",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -2550,7 +2550,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "42223128796",
     "name": "NOUS T10 Áo khoác lông có cổ dài tay kẻ nâu thêu trang trí",
     "brand": "NOUS",
-    "category": "Áo khoác",
+    "category": "Áo & Áo khoác",
     "variants": [
       "2Y",
       "4-5Y"
@@ -2567,7 +2567,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "42155304065",
     "name": "LA POMME Nhộng chũn hỗ trợ giấc ngủ dành cho bé từ sơ sinh bé trai/bé gái size S/M/L",
     "brand": "LA POMME",
-    "category": "Đồ sơ sinh",
+    "category": "Bộ quần áo bé",
     "variants": [
       "Newborn (3-5.5kg)",
       "0-3M",
@@ -2585,7 +2585,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "42072824105",
     "name": "MONONA Gối ôm cotton waffle hoạ tiết siêu yêu cho bé dài 60cm",
     "brand": "MONONA",
-    "category": "Chăn gối",
+    "category": "Chăn gối & Đệm ngủ",
     "variants": [
       "Kem thêu oliu",
       "Nâu thêu gấu",
@@ -2604,7 +2604,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "41959575800",
     "name": "Nous Mini Bộ cộc tay cài thẳng nhiều màu cho bé",
     "brand": "NOUS",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "0-3M",
       "3-6M",
@@ -2623,7 +2623,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "41922886547",
     "name": "[QUÀ TẶNG 10.10] Túi Tote Nous có thể dùng làm túi bỉm sữa cho mẹ",
     "brand": "NOUS",
-    "category": "Quà tặng",
+    "category": "Quà tặng kèm",
     "variants": [
       "Quà tặng kèm"
     ],
@@ -2639,7 +2639,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "41908492918",
     "name": "NOUS Bộ áo quần dài chui đầu dành cho bé trai, bé gái gừ 9m đến 2-3y",
     "brand": "NOUS",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "9M",
       "2-3Y"
@@ -2656,7 +2656,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "41834847341",
     "name": "La Pomme Body dài tay liền tất dành cho bé trai gái Petit Soyeu NB 0M 3M",
     "brand": "LA POMME",
-    "category": "Bodysuit",
+    "category": "Bodysuit & Đồ liền",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -2675,7 +2675,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "28738229212",
     "name": "Set quần yếm/bộ liền thân cộc màu xanh/xám cho bé trai từ 0m Nous",
     "brand": "NOUS",
-    "category": "Bodysuit",
+    "category": "Quần yếm & Set yếm",
     "variants": [
       "Newborn (3-5.5kg)",
       "0-3M",
@@ -2693,7 +2693,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "28703350093",
     "name": "NOUS baby Mũ chùm tai/ Mũ tròn dành cho bé sơ sinh nhiều hoạ tiết đáng yêu",
     "brand": "NOUS",
-    "category": "Phụ kiện",
+    "category": "Nón & Mũ bé",
     "variants": [
       "Newborn (3-5.5kg)",
       "0-3M",
@@ -2711,7 +2711,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "28688232190",
     "name": "Bộ cộc tay Nous cho bé gái từ 0m màu hồng/vàng/cam",
     "brand": "NOUS",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -2730,7 +2730,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "28638530475",
     "name": "NOUS MỚI Tổng hợp mũ/nón cho bé trai/bé gái có 3 size S/M/L",
     "brand": "NOUS",
-    "category": "Phụ kiện",
+    "category": "Nón & Mũ bé",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -2749,7 +2749,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "28605559561",
     "name": "NOUS BST THÁNG 7 Bộ cộc tay áo trắng phối quần xanh nhạt",
     "brand": "NOUS",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -2768,7 +2768,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "28555561980",
     "name": "NOUS Bộ dài tay áo trắng phối quần nâu/hồng dành cho bé từ 9m đến 2 tuổi",
     "brand": "NOUS",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "9M"
     ],
@@ -2784,7 +2784,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "28538494696",
     "name": "NOUS MỚI Bộ cộc kẻ caro dành cho bé trai/bé gái từ 0m",
     "brand": "NOUS",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "9-12M"
     ],
@@ -2800,7 +2800,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "28492554847",
     "name": "MONONA GỐI TAI GẤU VẢI WAFFLE sợi tre MONONA cho bé từ sơ sinh",
     "brand": "MONONA",
-    "category": "Chăn gối",
+    "category": "Chăn gối & Đệm ngủ",
     "variants": [
       "Newborn (3-5.5kg)",
       "0-3M",
@@ -2818,7 +2818,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "28453349244",
     "name": "NOUS Set BTBC nhiều màu cho bé trai/ bé gái sơ sinh",
     "brand": "NOUS",
-    "category": "Bộ quần áo",
+    "category": "Bao tay & Bao chân",
     "variants": [
       "Newborn (3-5.5kg)",
       "0-3M",
@@ -2836,7 +2836,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "28350876188",
     "name": "Nous Mới Bộ cộc tay trắng phối nâu cho bé từ 6 tháng đến 2 tuổi",
     "brand": "NOUS",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -2855,7 +2855,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "28314079096",
     "name": "[CÓ HỘP] NOUS Set quà tặng 4 món cho bé từ 1-2 tuổi",
     "brand": "NOUS",
-    "category": "Quà tặng",
+    "category": "Quà tặng kèm",
     "variants": [
       "Quà tặng kèm"
     ],
@@ -2871,7 +2871,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "28304607590",
     "name": "Nous Bộ cài Thẳng/lệch màu trơn cho newborn sơ sinh 3-5kg",
     "brand": "NOUS",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "Newborn (3-5.5kg)",
       "0-3M",
@@ -2889,7 +2889,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "28201760290",
     "name": "NOUS KID mới Bộ cộc tay màu vàng nhạt in mặt gấu",
     "brand": "NOUS",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -2908,7 +2908,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "28158979022",
     "name": "SET Quà tặng Nous bé trai bé gái từ 0-3m [BST tháng 8]",
     "brand": "NOUS",
-    "category": "Quà tặng",
+    "category": "Quà tặng kèm",
     "variants": [
       "Quà tặng kèm"
     ],
@@ -2924,7 +2924,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "28142655711",
     "name": "NOUS T10 Áo Gile/Áo khoác dài tay lông thêu trang trí màu nâu/navy cho bé trai/bé gái",
     "brand": "NOUS",
-    "category": "Áo khoác",
+    "category": "Áo & Áo khoác",
     "variants": [
       "18M"
     ],
@@ -2940,7 +2940,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "28064074011",
     "name": "NOUS MỚI Bộ pyjama tay dài phối quần caro",
     "brand": "NOUS",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -2959,7 +2959,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "27964214480",
     "name": "NOUS Áo khoác lông cao cấp cho bé màu nâu/be có size từ 6m đến 5-6y",
     "brand": "NOUS",
-    "category": "Áo khoác",
+    "category": "Áo & Áo khoác",
     "variants": [
       "6M"
     ],
@@ -2975,7 +2975,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "27917639373",
     "name": "[TĂNG SIZE] NOUS  Set 2 bodysuit dành cho bé trai gái từ 0m đến 9-12m",
     "brand": "NOUS",
-    "category": "Bodysuit",
+    "category": "Bodysuit & Đồ liền",
     "variants": [
       "9-12M"
     ],
@@ -2991,7 +2991,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "27804606788",
     "name": "NOUS Bộ cài thẳng dài màu hồng/ trắng/ xanh/be cho bé từ 0-12m",
     "brand": "NOUS",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "0-3M",
       "3-6M",
@@ -3010,7 +3010,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "27788228643",
     "name": "Bộ cộc Nous ba lỗ dành cho bé gái từ 0m",
     "brand": "NOUS",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -3029,7 +3029,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "27742579157",
     "name": "MONONA Chăn cotton waffle thêu hình Thỏ/Gấu mới về hàng dành cho bé từ sơ sinh",
     "brand": "MONONA",
-    "category": "Chăn gối",
+    "category": "Chăn gối & Đệm ngủ",
     "variants": [
       "Newborn (3-5.5kg)",
       "0-3M",
@@ -3047,7 +3047,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "27664214150",
     "name": "[6.6_TẶNG SHOPPING BAG HĐ TỪ 499K] NOUS MỚI Set bodysuit dài tay hồng/xanh",
     "brand": "NOUS",
-    "category": "Bodysuit",
+    "category": "Bodysuit & Đồ liền",
     "variants": [
       "Newborn (3-5.5kg)",
       "0-3M",
@@ -3065,7 +3065,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "27353809727",
     "name": "NOUS KIDS Bộ cộc tay in hình áo trắng phối quần hồng cho bé từ 2 đến 6 tuổi",
     "brand": "NOUS",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -3084,7 +3084,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "27345546730",
     "name": "NOUS MỚI 2026 Áo khoác gile màu nâu/kem thêu dành cho bé trai gái từ 6m đến 2-3y",
     "brand": "NOUS",
-    "category": "Áo khoác",
+    "category": "Áo & Áo khoác",
     "variants": [
       "6-9M",
       "9-12M",
@@ -3103,7 +3103,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "27259035416",
     "name": "[6.6_TẶNG SHOPPING BAG HĐ TỪ 499K] NOUS Bộ cộc tay màu nâu/xanh cho bé từ 0m đến 9-12m",
     "brand": "NOUS",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "9-12M",
       "12M"
@@ -3120,7 +3120,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "27250240975",
     "name": "NOUS mới cao cấp Bộ cộc tay xanh da trời/xanh lá phối quần kẻ cho bé từ 2 đến 6 tuổi",
     "brand": "NOUS",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -3139,7 +3139,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "27088237485",
     "name": "Bộ liền dài tất kèm mũ cho bé trai Nous",
     "brand": "NOUS",
-    "category": "Bodysuit",
+    "category": "Nón & Mũ bé",
     "variants": [
       "Newborn (3-5.5kg)",
       "0-3M",
@@ -3157,7 +3157,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "26903349238",
     "name": "Nous baby Bộ liền dài tất màu trắng/ hồng/ xanh cho bé sơ sinh",
     "brand": "NOUS",
-    "category": "Bodysuit",
+    "category": "Bodysuit & Đồ liền",
     "variants": [
       "Newborn (3-5.5kg)",
       "0-3M",
@@ -3175,7 +3175,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "26867634349",
     "name": "NOUS NOEL Bộ dài tay áo kem phối quần xanh/đỏ dành cho bé trai/bé gái",
     "brand": "NOUS",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -3194,7 +3194,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "26712644212",
     "name": "NOUS MỚI Bộ liền dài size newborn cao cấp cho bé trai/ gái",
     "brand": "NOUS",
-    "category": "Bodysuit",
+    "category": "Bodysuit & Đồ liền",
     "variants": [
       "Newborn (3-5.5kg)",
       "0-3M",
@@ -3212,7 +3212,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "26689797704",
     "name": "NOUS T8 Bộ cộc/ba lỗ/hai dây chất vải mềm mát dành cho bé từ 6m đến 2-3y",
     "brand": "NOUS",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "6-9M",
       "9-12M",
@@ -3231,7 +3231,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "26667641837",
     "name": "NOUS NOEL Váy / Yếm dài tay cho bé gái từ 1-5 tuổi",
     "brand": "NOUS",
-    "category": "Váy đầm",
+    "category": "Yếm cho bé",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -3250,7 +3250,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "26564218370",
     "name": "NOUS Áo khoác cho bé trai gái từ 6m đến 2-3y mẫu MỚI",
     "brand": "NOUS",
-    "category": "Áo khoác",
+    "category": "Áo & Áo khoác",
     "variants": [
       "6-9M",
       "9-12M",
@@ -3269,7 +3269,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "26514209036",
     "name": "NOUS MỚI Váy dài tay cho bé gái size từ 6m đế 2-3y",
     "brand": "NOUS",
-    "category": "Váy đầm",
+    "category": "Váy đầm bé gái",
     "variants": [
       "6-9M",
       "9-12M",
@@ -3288,7 +3288,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "26441601899",
     "name": "NOUS T9 Bộ liền dài không tất hoạ tiết cho bé trai/bé gái có size NB",
     "brand": "NOUS",
-    "category": "Bodysuit",
+    "category": "Bodysuit & Đồ liền",
     "variants": [
       "6M"
     ],
@@ -3304,7 +3304,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "26289174119",
     "name": "NOUS PREMIUM Bộ cộc ba lỗ kẻ caro be/hồng dành cho bé gái",
     "brand": "NOUS",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -3323,7 +3323,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "26137881899",
     "name": "Gối chữ nhật Nous dành cho bé trai/bé gái nhiều màu và hoạ tiết cực xinh",
     "brand": "NOUS",
-    "category": "Chăn gối",
+    "category": "Chăn gối & Đệm ngủ",
     "variants": [
       "Kem thêu oliu",
       "Nâu thêu gấu",
@@ -3342,7 +3342,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "25972405689",
     "name": "N03042 Set quà tặng 5 món màu trắng phối xanh cho bé",
     "brand": "Moniu",
-    "category": "Quà tặng",
+    "category": "Quà tặng kèm",
     "variants": [
       "Quà tặng kèm"
     ],
@@ -3358,7 +3358,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "25972405238",
     "name": "N03027 Set phụ kiện 4 món màu trắng  mũ + giày",
     "brand": "Moniu",
-    "category": "Bộ quần áo",
+    "category": "Nón & Mũ bé",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -3377,7 +3377,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "25972403244",
     "name": "Bộ cộc tay La Pomme người bạn Gấu quần + áo cho bé",
     "brand": "LA POMME",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -3396,7 +3396,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "25972399866",
     "name": "N03016 Bộ cộc tay yukata màu trắng phối xanh 6-2Y",
     "brand": "Moniu",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "2Y"
     ],
@@ -3412,7 +3412,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "25922406201",
     "name": "[BST MỚI NOUS] Set 2 body suit phối xanh trắng",
     "brand": "NOUS",
-    "category": "Bodysuit",
+    "category": "Bodysuit & Đồ liền",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -3431,7 +3431,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "25922402983",
     "name": "[ BST MỚI T8 LAPOM] Bộ thu đông cho bé màu trắng mix đỏ cho bé quần + áo",
     "brand": "LA POMME",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -3450,7 +3450,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "25922402597",
     "name": "N03048 Bộ cộc tay màu be phối cổ trắng cho bé",
     "brand": "Moniu",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -3469,7 +3469,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "25872405562",
     "name": "DEAL 15.3 Combo 3 khăn tắm sợi tre bamboo màu ngẫu nhiên cho bé",
     "brand": "Moniu",
-    "category": "Phụ kiện",
+    "category": "Phụ kiện & Khác",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -3488,7 +3488,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "25872404953",
     "name": "[BST MỚI LAPOM] Bộ sơ sinh màu cam cho bé chủ đề vườn cổ tích quần + áo",
     "brand": "LA POMME",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "Newborn (3-5.5kg)",
       "0-3M",
@@ -3506,7 +3506,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "25772407363",
     "name": "[BST MỚI LA POMME] Combo 5 bộ sơ sinh màu Ghi cho bé chủ đề vườn cổ tích quần + áo",
     "brand": "LA POMME",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "Newborn (3-5.5kg)",
       "0-3M",
@@ -3524,7 +3524,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "25722405159",
     "name": "[DEAL TẾT] Body dài mix mũ tai thỏ màu be in họa tiết quần liền áo",
     "brand": "Moniu",
-    "category": "Bodysuit",
+    "category": "Nón & Mũ bé",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -3543,7 +3543,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "25722404538",
     "name": "NOUS Bộ cộc tay cài thẳng/ tròng đầu cho bé trai, bé gái",
     "brand": "NOUS",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "Newborn (3-5.5kg)",
       "0-3M",
@@ -3561,7 +3561,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "25722401885",
     "name": "L03002 Bộ yếm body cộc tay La Pomme thuỷ thủ chất liệu bamboo thoáng mát cho bé quần + áo",
     "brand": "LA POMME",
-    "category": "Bodysuit",
+    "category": "Yếm cho bé",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -3580,7 +3580,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "25678402497",
     "name": "Bộ cộc tay Nous gấu nhỏ màu nâu/xanh cho bé",
     "brand": "NOUS",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "9M"
     ],
@@ -3596,7 +3596,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "25672403873",
     "name": "B02008 Bộ dài tay cài giữa Bambus Iconic 1 quần + áo-BBB102NS",
     "brand": "Moniu",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -3615,7 +3615,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "25622407537",
     "name": "N04019 Bộ cộc tay áo màu trắng phối quần hồng mềm mát cho bé gái mùa hè áo + quần",
     "brand": "Moniu",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -3634,7 +3634,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "25622407334",
     "name": "NOUS Bộ cộc tay trắng phối xanh in hình con cua cho bé quần + áo",
     "brand": "NOUS",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -3653,7 +3653,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "25622402708",
     "name": "[NOUS BST T1] Bộ liền dài tất màu cam phối trắng NB",
     "brand": "NOUS",
-    "category": "Bodysuit",
+    "category": "Bodysuit & Đồ liền",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -3672,7 +3672,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "25622402546",
     "name": "[LAPOM BST T1] Bộ La Pomme Bonjour màu tím",
     "brand": "LA POMME",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -3691,7 +3691,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "25622399694",
     "name": "N03019 Bộ liền cộc trắng in họa tiết phối màu tím 0-9M áo liên quần",
     "brand": "Moniu",
-    "category": "Bodysuit",
+    "category": "Bodysuit & Đồ liền",
     "variants": [
       "9M"
     ],
@@ -3707,7 +3707,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "25572405439",
     "name": "N03014 Bộ dài tay màu trắng phối tím NB quần + áo",
     "brand": "Moniu",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -3726,7 +3726,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "25572404544",
     "name": "DỤNG CỤ HÂM NƯỚC PHA SỮA CẦM TAY – MINI SMART 2 – FB3625VA FATZBABY",
     "brand": "Moniu",
-    "category": "Bộ quần áo",
+    "category": "Phụ kiện & Khác",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -3745,7 +3745,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "25572402635",
     "name": "B03012 Bộ ngắn tay cổ tròn bé gái họa tiết cánh tiên chất bamboo cho mùa hè -BBC130403",
     "brand": "Moniu",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -3764,7 +3764,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "25572401854",
     "name": "N03060 Bộ liền cộc màu trắng họa tiết quả lê cho bé áo liền quần",
     "brand": "Moniu",
-    "category": "Bodysuit",
+    "category": "Bodysuit & Đồ liền",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -3783,7 +3783,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "25528799296",
     "name": "[BST MỚI] Váy dài NOUS màu be hoa nhí/kẻ cho bé gái từ 2 tuổi",
     "brand": "NOUS",
-    "category": "Váy đầm",
+    "category": "Váy đầm bé gái",
     "variants": [
       "2-3Y",
       "3-4Y",
@@ -3801,7 +3801,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "25522404481",
     "name": "[ BST MỚI T8 LAPOM] Bộ thu đông cho bé màu trắng mix xanh cho bé quần + áo",
     "brand": "LA POMME",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -3820,7 +3820,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "25522402766",
     "name": "Bộ sát nách cổ tròn Bambus Signature",
     "brand": "Moniu",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "Newborn (3-5.5kg)",
       "0-3M",
@@ -3838,7 +3838,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "25522402131",
     "name": "N03040 Mũ rộng vành kẻ xanh tai gấu mũ cho bé",
     "brand": "Moniu",
-    "category": "Phụ kiện",
+    "category": "Nón & Mũ bé",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -3857,7 +3857,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "25480517732",
     "name": "Bộ quần cộc tay be phối quần tai gấu xanh lá/xanh dương/nâu nhạt đính dâu hồng",
     "brand": "Moniu",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -3876,7 +3876,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "25472403646",
     "name": "[ BST SƠ SINH LAPOM] Bộ sơ sinh màu Nâu La Pomme baby kisses quần + áo",
     "brand": "LA POMME",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "Newborn (3-5.5kg)",
       "0-3M",
@@ -3894,7 +3894,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "25472402455",
     "name": "C03002 Bộ dài tay cúc giữa Pool cho bé dưới 6 tháng quần + áo",
     "brand": "Moniu",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -3913,7 +3913,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "25422407384",
     "name": "N04011 Bộ cộc tay trắng họa tiết gấu phối quần kẻ xanh áo + quần",
     "brand": "Moniu",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -3932,7 +3932,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "25422406060",
     "name": "Combo 4 bộ  Pomme sweetie màu cam quần + áo",
     "brand": "Moniu",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -3951,7 +3951,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "25422405188",
     "name": "B02006 Bộ ngắn tay cài giữa Bambus Iconic 1 quần + áo BBB1302NS",
     "brand": "Moniu",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -3970,7 +3970,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "25422404847",
     "name": "NOUS Set phụ kiện 4 món Yếm, BTBC, Mũ dành cho bé từ sơ sinh đến dưới 6m",
     "brand": "NOUS",
-    "category": "Bộ quần áo",
+    "category": "Bao tay & Bao chân",
     "variants": [
       "Newborn (3-5.5kg)",
       "0-3M",
@@ -3988,7 +3988,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "25422403656",
     "name": "[NOUS BST T1] Bộ cài lệch trắng phối hồng in họa tiết NB",
     "brand": "NOUS",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -4007,7 +4007,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "25422403224",
     "name": "N03028 Set quà tặng 5 món màu trắng bé trai NB quần + áo",
     "brand": "Moniu",
-    "category": "Quà tặng",
+    "category": "Quà tặng kèm",
     "variants": [
       "Quà tặng kèm"
     ],
@@ -4023,7 +4023,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "25422399753",
     "name": "[NOUS BST T10] Bộ bodysuit cộc tay màu xanh, vàng, màu trắng in họa tiết cho bé",
     "brand": "NOUS",
-    "category": "Bodysuit",
+    "category": "Bodysuit & Đồ liền",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -4042,7 +4042,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "25378799425",
     "name": "[NOUS PARTY] Bộ cộc tay/Váy dài dành cho bé gái từ 9m đến 2-3y",
     "brand": "NOUS",
-    "category": "Váy đầm",
+    "category": "Váy đầm bé gái",
     "variants": [
       "9M",
       "2-3Y"
@@ -4059,7 +4059,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "25373532519",
     "name": "[BST THÁNG 3] Bộ cộc tay áo trắng phối quần tím 9m, 12m",
     "brand": "Moniu",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "9M",
       "12M",
@@ -4078,7 +4078,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "25372407271",
     "name": "[Your Wishes] Áo len dài tay cổ tròn cho bé trai và bé gái",
     "brand": "Moniu",
-    "category": "Đồ sơ sinh",
+    "category": "Áo & Áo khoác",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -4097,7 +4097,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "25372404315",
     "name": "[BST T10 LAPOM] Set sơ sinh Lapom phối màu cam cho bé quần + áo",
     "brand": "LA POMME",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "Newborn (3-5.5kg)",
       "0-3M",
@@ -4115,7 +4115,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "25372402075",
     "name": "PC03002 Bộ cộc tay cổ tròn raglan Bakery cotton mềm mại cho bé quần + áo",
     "brand": "Moniu",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -4134,7 +4134,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "25322402903",
     "name": "[NOUS] Gối chặn chống giật mình cho bé họa tiết đáng yêu",
     "brand": "NOUS",
-    "category": "Chăn gối",
+    "category": "Chăn gối & Đệm ngủ",
     "variants": [
       "Kem thêu oliu",
       "Nâu thêu gấu",
@@ -4153,7 +4153,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "25322401743",
     "name": "N03030 Set yếm và áo màu trắng quần kẻ xanh lá 6M cho bé áo + quần",
     "brand": "Moniu",
-    "category": "Bộ quần áo",
+    "category": "Yếm cho bé",
     "variants": [
       "6M"
     ],
@@ -4169,7 +4169,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "25322399881",
     "name": "N03046 Bộ cộc tay áo trắng phối quần navy cho bé quần + áo",
     "brand": "Moniu",
-    "category": "Bộ quần áo",
+    "category": "Yếm cho bé",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -4188,7 +4188,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "25272405814",
     "name": "[HOT NOUS BST T10] Bộ bodysuit cộc tay màu trắng in họa tiết, màu vàng, xanh phối quần dài",
     "brand": "NOUS",
-    "category": "Bodysuit",
+    "category": "Bodysuit & Đồ liền",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -4207,7 +4207,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "25272402810",
     "name": "LITTLE LOVE Bộ cộc tay cho bé quần + áo",
     "brand": "Moniu",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -4226,7 +4226,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "25272402448",
     "name": "[LAPOM BST T12] Gối đầu La Pomme bồng bềnh",
     "brand": "LA POMME",
-    "category": "Chăn gối",
+    "category": "Chăn gối & Đệm ngủ",
     "variants": [
       "Kem thêu oliu",
       "Nâu thêu gấu",
@@ -4245,7 +4245,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "25272399965",
     "name": "L02002  Bộ sơ sinh La Pomme hoạ tiết Pettit Soyeu - Trắng Be",
     "brand": "LA POMME",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "Newborn (3-5.5kg)",
       "0-3M",
@@ -4263,7 +4263,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "25222407742",
     "name": "anous Bộ cộc tay màu be phối cam mềm mát mùa hè cho bé quần + áo",
     "brand": "NOUS",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -4282,7 +4282,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "25222405687",
     "name": "[ BST SƠ SINH LAPOM] Bộ sơ sinh màu Tím Baby Kisses quần + áo",
     "brand": "LA POMME",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "Newborn (3-5.5kg)",
       "0-3M",
@@ -4300,7 +4300,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "25222404871",
     "name": "Nous Bộ cộc tay áo trắng in trang trí phối quần xanh mềm mát cho bé áo + quần",
     "brand": "NOUS",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -4319,7 +4319,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "25222404670",
     "name": "Nous Bộ ba lỗ nâu phối be đính cà rốt mềm mát mặc hè cho bé áo + quần",
     "brand": "NOUS",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -4338,7 +4338,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "25222401632",
     "name": "N03018 Bộ liền cộc kẻ xanh phối trắng 0-9M",
     "brand": "Moniu",
-    "category": "Bodysuit",
+    "category": "Bodysuit & Đồ liền",
     "variants": [
       "9M"
     ],
@@ -4354,7 +4354,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "25222399076",
     "name": "B03007 Bộ quần áo ngắn tay cài giữa chất liệu siro mềm mại cho bé áo+ quần BSR130202",
     "brand": "Moniu",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -4373,7 +4373,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "25172406673",
     "name": "[MIO x THẾ GIỚI MBS]  Bộ dài tay Mio họa tiết thỏ cho bé quần + áo",
     "brand": "Moniu",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -4392,7 +4392,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "25172405166",
     "name": "B03011 Bộ ngắn tay cổ trụ Kyomi quần áo mùa hè cho bé trai và gái BBC130301",
     "brand": "Moniu",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -4411,7 +4411,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "25172402445",
     "name": "N03001 Gối định hình cho bé từ sơ sinh",
     "brand": "Moniu",
-    "category": "Chăn gối",
+    "category": "Chăn gối & Đệm ngủ",
     "variants": [
       "Newborn (3-5.5kg)",
       "0-3M",
@@ -4429,7 +4429,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "25172402201",
     "name": "[LAPOM BST T11] Set sơ sinh La Pomme Gấu tai rời màu nâu",
     "brand": "LA POMME",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "Newborn (3-5.5kg)",
       "0-3M",
@@ -4447,7 +4447,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "25172399353",
     "name": "[HÀNG LẺ SIZE]NOUS KID Bộ cộc tay áo trắng phối quần navy, màu be phối cổ trắng cho bé trai bé gái",
     "brand": "NOUS",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "3-4Y"
     ],
@@ -4463,7 +4463,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "25128401531",
     "name": "Bộ quần áo Nous ba lỗ xanh/nâu cho bé trai từ 6m/9m/12m/18m/2y",
     "brand": "NOUS",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "6-9M",
       "9-12M",
@@ -4482,7 +4482,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "25122404607",
     "name": "N04006 Bộ liền dài  sơ sinh màu trắng phối xanh in hình cá voi cho bé áo liền quần",
     "brand": "Moniu",
-    "category": "Bodysuit",
+    "category": "Bodysuit & Đồ liền",
     "variants": [
       "Newborn (3-5.5kg)",
       "0-3M",
@@ -4500,7 +4500,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "25122399138",
     "name": "N03032 Bộ bodysuit cộc tay màu trắng phối quần vàng quần + áo",
     "brand": "Moniu",
-    "category": "Bodysuit",
+    "category": "Bodysuit & Đồ liền",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -4519,7 +4519,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "25072407627",
     "name": "[BST MỚI LA POMME] Bộ sơ sinh màu Hồng cho bé chủ đề vườn cổ tích quần + áo",
     "brand": "LA POMME",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "Newborn (3-5.5kg)",
       "0-3M",
@@ -4537,7 +4537,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "25072406880",
     "name": "[NOUS] BCCV trắng in máy bay Nous phối quần xanh, quần hồng áo + quần",
     "brand": "NOUS",
-    "category": "Đồ sơ sinh",
+    "category": "Bộ quần áo bé",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -4556,7 +4556,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "25072406257",
     "name": "[BST T10 LAPOM] Set sơ sinh Lapom phối màu xanh cho bé quần + áo",
     "brand": "LA POMME",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "Newborn (3-5.5kg)",
       "0-3M",
@@ -4574,7 +4574,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "25072402980",
     "name": "N03044 Set quà tặng 5 món màu trắng cho bé",
     "brand": "Moniu",
-    "category": "Quà tặng",
+    "category": "Quà tặng kèm",
     "variants": [
       "Quà tặng kèm"
     ],
@@ -4590,7 +4590,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "25023533143",
     "name": "[BST THÁNG 4] Bộ cộc tay nâu nhạt hình gấu 9m, 12m",
     "brand": "Moniu",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "9M",
       "12M"
@@ -4607,7 +4607,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "25022407127",
     "name": "[LAPOM BST MỚI T9] Bộ sơ sinh màu Nâu La Pomme Caro Bear quần + áo",
     "brand": "LA POMME",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "Newborn (3-5.5kg)",
       "0-3M",
@@ -4625,7 +4625,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "25022406611",
     "name": "[X'MAS NOUS] túi tote Nous họa tiết Noel",
     "brand": "NOUS",
-    "category": "Bộ quần áo",
+    "category": "Yếm cho bé",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -4644,7 +4644,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "25022405923",
     "name": "Combo 3 Bánh gạo hữu cơ vị táo/ cà rốt, khoai lang/bí ngô, bánh gạo lứt Pororo cho bé",
     "brand": "Moniu",
-    "category": "Đồ sơ sinh",
+    "category": "Bộ quần áo bé",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -4663,7 +4663,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "25022404723",
     "name": "N04028  Bộ cộc tay áo trắng hình in trang trí phối quần kẻ hồng cho bé gái quần + áo",
     "brand": "Moniu",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -4682,7 +4682,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "25022402225",
     "name": "KN04 Bộ Quần Áo Ngắn Tay KINNI quần + áo",
     "brand": "Moniu",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -4701,7 +4701,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "25022401622",
     "name": "NOUS Bộ liền dài sơ sinh mix yếm in họa tiết cho bé áo liền quần",
     "brand": "NOUS",
-    "category": "Bodysuit",
+    "category": "Bodysuit & Đồ liền",
     "variants": [
       "Newborn (3-5.5kg)",
       "0-3M",
@@ -4719,7 +4719,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "25022399102",
     "name": "[BST THÁNG 3] Set 2 body suit trắng phối tím bé gái 6m,9m",
     "brand": "Moniu",
-    "category": "Bodysuit",
+    "category": "Bodysuit & Đồ liền",
     "variants": [
       "6M",
       "9M"
@@ -4736,7 +4736,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "24973545419",
     "name": "[BST THÁNG 4] Bộ hai dây / ba lỗ cho bé từ 2 tuổi",
     "brand": "Moniu",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "12M"
     ],
@@ -4752,7 +4752,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "24972406464",
     "name": "B03001 áo choàng tắm cho bé từ 1 tuổi dành cho mùa hè mềm thấm hút tốt ATR614301",
     "brand": "Moniu",
-    "category": "Đồ sơ sinh",
+    "category": "Áo & Áo khoác",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -4771,7 +4771,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "24972406108",
     "name": "[NOUS] Áo giữ nhiệt cổ 3cm/5cm chất Nu Peptit mềm mịn cho bé trai, bé gái",
     "brand": "NOUS",
-    "category": "Đồ sơ sinh",
+    "category": "Bộ quần áo bé",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -4790,7 +4790,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "24972404693",
     "name": "[BST MỚI NOUS] Set 2 mũ nồi chấm bi hồng và caro xám",
     "brand": "NOUS",
-    "category": "Bộ quần áo",
+    "category": "Nón & Mũ bé",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -4809,7 +4809,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "24972402098",
     "name": "N03061 Bộ cộc tay áo trắng phối quần hồng thêu ngôi sao cho bé quần + áo",
     "brand": "Moniu",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -4828,7 +4828,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "24922404985",
     "name": "Nous Bộ cộc ba lỗ áo trắng in họa tiết xanh phối quần navy quần + áo",
     "brand": "NOUS",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -4847,7 +4847,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "24922404547",
     "name": "B04001 Bộ ngắn tay cổ tròn Siro cho bé mùa hè BSR130400 quần + áo",
     "brand": "Moniu",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -4866,7 +4866,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "24922399645",
     "name": "Set 5 Khăn sữa sợi tre lụa (30x30) La Pomme",
     "brand": "LA POMME",
-    "category": "Bộ quần áo",
+    "category": "Phụ kiện & Khác",
     "variants": [
       "Newborn (3-5.5kg)",
       "0-3M",
@@ -4884,7 +4884,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "24878805071",
     "name": "[BST MỚI] Bộ ba lỗ NOUS tai gấu phối quần kẻ bé trai/ bé gái",
     "brand": "NOUS",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -4903,7 +4903,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "24872406889",
     "name": "[12.12_NOUS TẶNG TÚI TOTE CHO ĐƠN TỪ 699K] [X'MAS NOUS] Phụ kiện mũ giáng sinh cho bé",
     "brand": "NOUS",
-    "category": "Phụ kiện",
+    "category": "Quà tặng kèm",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -4922,7 +4922,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "24872405141",
     "name": "[NOUS BST T11] BDKT màu kẻ caro vàng/ xám ốp túi ngực",
     "brand": "NOUS",
-    "category": "Đồ sơ sinh",
+    "category": "Bộ quần áo bé",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -4941,7 +4941,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "24872403031",
     "name": "[MIO x THẾ GIỚI MBS]  Bộ ngắn tay họa tiết thỏ xanh, hồng cho bé quần + áo",
     "brand": "Moniu",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -4960,7 +4960,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "24872402003",
     "name": "B02009 Bộ ngắn tay cài chéo Bambus Iconic 1 quần + áo-BBB1308NS",
     "brand": "Moniu",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -4979,7 +4979,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "24833124147",
     "name": "NOUS Khăn đa năng chất liệu muslin/bamboo chống ngạt cho bé",
     "brand": "NOUS",
-    "category": "Phụ kiện",
+    "category": "Chăn gối & Đệm ngủ",
     "variants": [
       "Newborn (3-5.5kg)",
       "0-3M",
@@ -4997,7 +4997,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "24822404898",
     "name": "Nous Bộ cộc ba lỗ áo màu be phối quần màu cam mềm mát cho bé mặc hè quần + áo",
     "brand": "NOUS",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -5016,7 +5016,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "24822404222",
     "name": "SET QUÀ TẶNG 3 MÓN CHO BÉ",
     "brand": "Moniu",
-    "category": "Quà tặng",
+    "category": "Quà tặng kèm",
     "variants": [
       "Quà tặng kèm"
     ],
@@ -5032,7 +5032,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "24822402397",
     "name": "KN05 Bộ Quần Áo Ngắn Tay KINNI Chất Liệu Cotton Organic Thoáng Mát",
     "brand": "Moniu",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -5051,7 +5051,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "24772407426",
     "name": "[BST MỚI NOUS] Bộ áo ba lỗ áo + quần bé trai bé gái từ 0-1 tuổi",
     "brand": "NOUS",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -5070,7 +5070,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "24772405643",
     "name": "[NOUS] Bộ dài cài lệch màu nâu, màu xanh, ghi phối be mix phụ kiện mũ quần + áo",
     "brand": "NOUS",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -5089,7 +5089,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "24746490292",
     "name": "La Pomme Set 2 bodysuit cộc tay chất liệu petit size 0m/3m/6m/9m",
     "brand": "LA POMME",
-    "category": "Bodysuit",
+    "category": "Bodysuit & Đồ liền",
     "variants": [
       "Newborn (3-5.5kg)",
       "0-3M",
@@ -5107,7 +5107,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "24722407714",
     "name": "Bộ ba lỗ trắng phối quần caro xanh mềm mịn mát mặc hè cho bé áo + quần",
     "brand": "Moniu",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -5126,7 +5126,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "24722407485",
     "name": "Nous Bộ cộc tay màu be phối quần nâu mềm mát mùa hè cho bé áo+ quần",
     "brand": "NOUS",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -5145,7 +5145,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "24722402663",
     "name": "[LAPOM BST T1] Bộ La Pomme Bonjour màu xanh",
     "brand": "LA POMME",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -5164,7 +5164,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "24722402199",
     "name": "Bộ dài tay mix mũ màu trắng phồi quần hồng, màu trắng in hình vịt vàng cho bé quần + áo + mũN04001",
     "brand": "Moniu",
-    "category": "Bộ quần áo",
+    "category": "Nón & Mũ bé",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -5183,7 +5183,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "24722399963",
     "name": "B02015 Bộ ngắn tay cài giữa siro cho bé mùa hè quần + áo BSR130801",
     "brand": "Moniu",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -5202,7 +5202,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "24672409986",
     "name": "[LAPOM BST MỚI T9] Bộ sơ sinh LaPomme Meowy Cat - Màu hồng quần + áo",
     "brand": "LA POMME",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "Newborn (3-5.5kg)",
       "0-3M",
@@ -5220,7 +5220,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "24672408964",
     "name": "Khăn đa năng NOUS Muslin cho bé",
     "brand": "NOUS",
-    "category": "Phụ kiện",
+    "category": "Phụ kiện & Khác",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -5239,7 +5239,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "24672408676",
     "name": "[NOUS HÀNG MỚI VỀ] Áo gile cho bé trai bé gái mẫu mới 2023",
     "brand": "NOUS",
-    "category": "Đồ sơ sinh",
+    "category": "Áo & Áo khoác",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -5258,7 +5258,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "24622407724",
     "name": "Yếm tam giác muslin trắng in họa tiết",
     "brand": "Moniu",
-    "category": "Phụ kiện",
+    "category": "Yếm cho bé",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -5277,7 +5277,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "24622407490",
     "name": "Nous Bộ ba lỗ màu be in hình quả lê mềm mát cho bé mặc hè cho bé áo+ quần",
     "brand": "NOUS",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -5296,7 +5296,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "24622401578",
     "name": "Bộ liền dài sơ sinh màu trắng in họa tiết táo đỏ, màu xanh chấm bi in họa tiết vịt cho bé áo liền quần N04003",
     "brand": "Moniu",
-    "category": "Bodysuit",
+    "category": "Bodysuit & Đồ liền",
     "variants": [
       "Newborn (3-5.5kg)",
       "0-3M",
@@ -5314,7 +5314,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "24572410166",
     "name": "L03001 Bộ cộc tay La Pomme giả váy thủy thủ rayon cotton mềm mịn quần +áo",
     "brand": "LA POMME",
-    "category": "Váy đầm",
+    "category": "Váy đầm bé gái",
     "variants": [
       "Newborn (3-5.5kg)",
       "0-3M",
@@ -5332,7 +5332,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "24532484921",
     "name": "Nous baby Bộ dài cài thẳng/ cài lệch nhiều màu cho bé sơ sinh từ 3-5kg",
     "brand": "NOUS",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "Newborn (3-5.5kg)",
       "0-3M",
@@ -5350,7 +5350,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "24522407513",
     "name": "N04012  Bộ cộc tay be phối nâu đính thỏ mềm mát mặc hè cho bé áo + quần",
     "brand": "Moniu",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -5369,7 +5369,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "24522407250",
     "name": "Bộ ba lỗ hồng trắng họa tiết vịt mềm mát mặc hè cho bé áo + quần",
     "brand": "Moniu",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -5388,7 +5388,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "24522404571",
     "name": "NOUS PETIT A PETIT Bộ liền cộc trắng phối màu cho bé trai/gái size từ 0m",
     "brand": "NOUS",
-    "category": "Bodysuit",
+    "category": "Bodysuit & Đồ liền",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -5407,7 +5407,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "24522399339",
     "name": "DN03008 Body cộc trắng phối vàng thêu trang trí cho bé từ 0M quần liền áo",
     "brand": "Moniu",
-    "category": "Bodysuit",
+    "category": "Bodysuit & Đồ liền",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -5426,7 +5426,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "24472412153",
     "name": "[DUY NHẤT 30/8] Set quà tặng sơ sinh cao cấp Best for baby từ LA POMME",
     "brand": "LA POMME",
-    "category": "Quà tặng",
+    "category": "Quà tặng kèm",
     "variants": [
       "Quà tặng kèm"
     ],
@@ -5442,7 +5442,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "24422407397",
     "name": "N04008 Bộ ba lỗ xanh trắng họa tiết gấu mềm mát cho bé  áo + quần",
     "brand": "Moniu",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -5461,7 +5461,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "24422406444",
     "name": "NOUS Set 5 Khăn Sữa Bamboo/ Muslin Mềm Mại Không Bám Bụi Vải Mẫu Mới",
     "brand": "NOUS",
-    "category": "Bộ quần áo",
+    "category": "Phụ kiện & Khác",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -5480,7 +5480,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "24422404557",
     "name": "Bộ liền cộc màu trắng phối xanh lá, phối hồng, phối vàng",
     "brand": "Moniu",
-    "category": "Bodysuit",
+    "category": "Bodysuit & Đồ liền",
     "variants": [
       "Newborn (3-5.5kg)",
       "0-3M",
@@ -5498,7 +5498,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "24422401661",
     "name": "Bộ liền dài sơ sinh màu trắng in hình thỏ, trắng phối xanh in hình cá voi mới nhất 2024 cho bé áo liền quần N04004",
     "brand": "Moniu",
-    "category": "Bodysuit",
+    "category": "Bodysuit & Đồ liền",
     "variants": [
       "Newborn (3-5.5kg)",
       "0-3M",
@@ -5516,7 +5516,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "24395232320",
     "name": "NOUS Bộ đồ bơi cộc tay dành cho bé trai từ 9 tháng đến 2-3 tuổi",
     "brand": "NOUS",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -5535,7 +5535,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "24372409990",
     "name": "[LAPOM BST MỚI T9] Bộ sơ sinh LaPomme Meowy Cat - Màu nâu quần + áo",
     "brand": "LA POMME",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "Newborn (3-5.5kg)",
       "0-3M",
@@ -5553,7 +5553,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "24322405900",
     "name": "[NOUS BST T10] Body dài yếm kẻ xanh, hồng, vàng cho bé 0m,3m,6m,9m áo liền quần",
     "brand": "NOUS",
-    "category": "Bodysuit",
+    "category": "Yếm cho bé",
     "variants": [
       "6M",
       "9M"
@@ -5570,7 +5570,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "24322402283",
     "name": "NOUS Yếm cho bé trai, bé gái từ sơ sinh",
     "brand": "NOUS",
-    "category": "Phụ kiện",
+    "category": "Yếm cho bé",
     "variants": [
       "Newborn (3-5.5kg)",
       "0-3M",
@@ -5588,7 +5588,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "24322399755",
     "name": "C03005 Bộ cộc cổ tròn Fairy hồng mềm mại thấm hút mồ hôi cho bé gái áo + quần",
     "brand": "Moniu",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -5607,7 +5607,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "24272408295",
     "name": "[CÓ HỘP] NOUS Set quà tặng đầy tháng cho bé trai gái size newborn",
     "brand": "NOUS",
-    "category": "Quà tặng",
+    "category": "Quà tặng kèm",
     "variants": [
       "Quà tặng kèm"
     ],
@@ -5623,7 +5623,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "24272407596",
     "name": "Nous Bộ liền cộc màu trắng phối kẻ xanh thêu con voi",
     "brand": "NOUS",
-    "category": "Bodysuit",
+    "category": "Bodysuit & Đồ liền",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -5642,7 +5642,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "24272404386",
     "name": "NOUS Set 2 bodysuit tay dài cho bé trai, bé gái",
     "brand": "NOUS",
-    "category": "Bodysuit",
+    "category": "Bodysuit & Đồ liền",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -5661,7 +5661,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "24222405777",
     "name": "[X'MAS NOUS] Set quần yếm màu xanh, đỏ kèm áo và mũ bonnet quần+áo",
     "brand": "NOUS",
-    "category": "Bộ quần áo",
+    "category": "Quần yếm & Set yếm",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -5680,7 +5680,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "24172412254",
     "name": "[BST MỚI NOUS] Set body suit dài trắng phối hồng nhạt quần + áo",
     "brand": "NOUS",
-    "category": "Bodysuit",
+    "category": "Bodysuit & Đồ liền",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -5699,7 +5699,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "24172410058",
     "name": "[BST THÁNG3] Bộ ba lỗ cho bé trai bé gái NOUS",
     "brand": "NOUS",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -5718,7 +5718,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "24128406306",
     "name": "Váy Nous vàng phối cổ trắng cho bé gái 2 tuổi",
     "brand": "NOUS",
-    "category": "Váy đầm",
+    "category": "Váy đầm bé gái",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -5737,7 +5737,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "24127334786",
     "name": "Váy Nous dài kẻ xanh thêu trang trí ở cổ cho bé gái từ 2 tuổi",
     "brand": "NOUS",
-    "category": "Váy đầm",
+    "category": "Váy đầm bé gái",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -5756,7 +5756,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "24127331883",
     "name": "Bộ quần áo Nous dài tay chui đầu mặc ngủ cho bé",
     "brand": "NOUS",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "12-18M",
       "18-24M"
@@ -5773,7 +5773,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "24072410443",
     "name": "NOUS Khăn choàng ủ đa năng cho bé từ sơ sinh",
     "brand": "NOUS",
-    "category": "Phụ kiện",
+    "category": "Phụ kiện & Khác",
     "variants": [
       "Newborn (3-5.5kg)",
       "0-3M",
@@ -5791,7 +5791,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "24072408614",
     "name": "[LAPOM BST MỚI T9] Bộ sơ sinh màu Ghi La Pomme Hươu nhỏ quần + áo",
     "brand": "LA POMME",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "Newborn (3-5.5kg)",
       "0-3M",
@@ -5809,7 +5809,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "24072407066",
     "name": "Bộ sơ sinh dài tay phối quần xanh in hình con vịt cho bé áo + quần N04002",
     "brand": "Moniu",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "Newborn (3-5.5kg)",
       "0-3M",
@@ -5827,7 +5827,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "24022406223",
     "name": "[ BST MỚI T8 LAPOM] Bộ thu đông cho bé màu trắng mix cam cho bé quần + áo",
     "brand": "LA POMME",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -5846,7 +5846,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "24022404466",
     "name": "[HOT NOUS BST T10] Áo khoác cardigan kẻ tím, xanh hình thêu trang trí",
     "brand": "NOUS",
-    "category": "Áo khoác",
+    "category": "Áo & Áo khoác",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -5865,7 +5865,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "24022403061",
     "name": "Nous Set 2 bodysuit mix màu xanh trắng",
     "brand": "NOUS",
-    "category": "Bodysuit",
+    "category": "Bodysuit & Đồ liền",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -5884,7 +5884,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "23889759455",
     "name": "NOUS Bộ liền dài có tất màu trắng, xanh, cam in họa tiết NB",
     "brand": "NOUS",
-    "category": "Bodysuit",
+    "category": "Bodysuit & Đồ liền",
     "variants": [
       "Newborn (3-5.5kg)",
       "0-3M",
@@ -5902,7 +5902,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "22889766183",
     "name": "B02002 Bộ ngắn tay cài chéo Bambus quần + áo Sợi tre mát BBB130802",
     "brand": "Moniu",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -5921,7 +5921,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "22664263408",
     "name": "B02010 Bộ dài tay cài chéo Bambus Iconic 1 quần + áo-BBB1108NS",
     "brand": "Moniu",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -5940,7 +5940,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "22364258848",
     "name": "N03049 Bộ hai dây màu hồng in họa tiết cho bé gái",
     "brand": "Moniu",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "Hồng pastel",
       "Xanh mint",
@@ -5959,7 +5959,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "tiktokId": "19687495622",
     "name": "L02001 Bộ sơ sinh La Pomme hoạ tiết Pettit Soyeu - Trắng xanh",
     "brand": "LA POMME",
-    "category": "Bộ quần áo",
+    "category": "Bộ quần áo bé",
     "variants": [
       "Newborn (3-5.5kg)",
       "0-3M",

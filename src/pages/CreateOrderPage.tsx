@@ -879,28 +879,32 @@ export const CreateOrderPage: React.FC = () => {
 
               {/* Category Filters */}
               <div className="flex items-center gap-1.5 overflow-x-auto pb-1 scrollbar-none">
-                <span className="text-[11px] font-bold text-[#8C7065] mr-1">Danh mục:</span>
+                <span className="text-[11px] font-bold text-[#8C7065] mr-1 shrink-0">Phân loại:</span>
                 {[
-                  'all',
-                  'Bodysuit',
-                  'Bộ quần áo',
-                  'Chăn gối',
-                  'Áo khoác',
-                  'Váy đầm',
-                  'Phụ kiện',
-                  'Quà tặng',
+                  { id: 'all', label: 'Tất cả loại' },
+                  { id: 'Bộ quần áo bé', label: 'Bộ quần áo' },
+                  { id: 'Bodysuit & Đồ liền', label: 'Bodysuit' },
+                  { id: 'Áo & Áo khoác', label: 'Áo khoác' },
+                  { id: 'Nón & Mũ bé', label: 'Nón / Mũ' },
+                  { id: 'Yếm cho bé', label: 'Yếm' },
+                  { id: 'Bao tay & Bao chân', label: 'Bao tay/chân' },
+                  { id: 'Chăn gối & Đệm ngủ', label: 'Chăn gối' },
+                  { id: 'Váy đầm bé gái', label: 'Váy đầm' },
+                  { id: 'Quần yếm & Set yếm', label: 'Quần yếm' },
+                  { id: 'Phụ kiện & Khác', label: 'Phụ kiện' },
+                  { id: 'Quà tặng kèm', label: 'Quà tặng' },
                 ].map((cat) => (
                   <button
-                    key={cat}
+                    key={cat.id}
                     type="button"
-                    onClick={() => setPickerCategory(cat)}
-                    className={`px-2.5 py-0.5 rounded-lg text-[11px] font-semibold transition-all cursor-pointer ${
-                      pickerCategory === cat
-                        ? 'bg-[#3D271D] text-white font-bold'
+                    onClick={() => setPickerCategory(cat.id)}
+                    className={`px-2.5 py-0.5 rounded-lg text-[11px] font-semibold whitespace-nowrap transition-all cursor-pointer ${
+                      pickerCategory === cat.id
+                        ? 'bg-[#3D271D] text-white font-bold shadow-xs'
                         : 'bg-white text-[#8C7065] hover:bg-[#FFF9F6] border border-[#FDE2E4]'
                     }`}
                   >
-                    {cat === 'all' ? 'Tất cả loại' : cat}
+                    {cat.label}
                   </button>
                 ))}
               </div>

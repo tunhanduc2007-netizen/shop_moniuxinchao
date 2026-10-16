@@ -51,6 +51,16 @@ export const ProductsPage: React.FC = () => {
     return { nous, lapomme, monona, total: products.length };
   }, [products]);
 
+  // Category counts
+  const categoryStats = useMemo(() => {
+    const counts: Record<string, number> = {};
+    products.forEach((p) => {
+      const c = p.category || 'Khác';
+      counts[c] = (counts[c] || 0) + 1;
+    });
+    return counts;
+  }, [products]);
+
   // Filtering & Sorting
   const filteredProducts = useMemo(() => {
     let result = products.filter((p) => {
@@ -301,9 +311,8 @@ export const ProductsPage: React.FC = () => {
           </div>
         </div>
 
-        {/* Brand & Category Filter Buttons */}
+        {/* Brand Filter Buttons */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-3 border-t border-[#FFF0F1]">
-          {/* Brand Pills */}
           <div className="flex items-center gap-1.5 overflow-x-auto pb-1 sm:pb-0 scrollbar-none">
             <span className="text-[11px] font-bold text-[#8C7065] mr-1 shrink-0">Hãng:</span>
             {[
@@ -331,7 +340,7 @@ export const ProductsPage: React.FC = () => {
 
           {/* Category Dropdown */}
           <div className="flex items-center gap-2 self-start sm:self-auto">
-            <span className="text-[11px] font-bold text-[#8C7065] shrink-0">Danh mục:</span>
+            <span className="text-[11px] font-bold text-[#8C7065] shrink-0">Lọc danh mục:</span>
             <select
               value={categoryFilter}
               onChange={(e) => {
@@ -340,16 +349,54 @@ export const ProductsPage: React.FC = () => {
               }}
               className="bg-[#FFF9F6] text-xs font-bold text-[#3D271D] px-3 py-1.5 rounded-xl border border-[#FDE2E4] focus:outline-hidden focus:border-[#FF5B65]"
             >
-              <option value="all">Tất cả danh mục đồ bé</option>
-              <option value="Bodysuit">Bodysuit / Đồ liền</option>
-              <option value="Bộ quần áo">Bộ quần áo sơ sinh</option>
-              <option value="Chăn gối">Chăn gối / Phụ kiện ngủ</option>
-              <option value="Áo khoác">Áo khoác lông / giữ ấm</option>
-              <option value="Váy đầm">Váy đầm bé gái</option>
-              <option value="Phụ kiện">Khẩu trang, nón, tất, yếm</option>
-              <option value="Quà tặng">Quà tặng kèm livestream</option>
+              <option value="all">Tất cả phân loại ({products.length} SP)</option>
+              <option value="Bộ quần áo bé">Bộ quần áo bé ({categoryStats['Bộ quần áo bé'] || 0})</option>
+              <option value="Bodysuit & Đồ liền">Bodysuit & Đồ liền ({categoryStats['Bodysuit & Đồ liền'] || 0})</option>
+              <option value="Áo & Áo khoác">Áo & Áo khoác ({categoryStats['Áo & Áo khoác'] || 0})</option>
+              <option value="Nón & Mũ bé">Nón & Mũ bé ({categoryStats['Nón & Mũ bé'] || 0})</option>
+              <option value="Yếm cho bé">Yếm cho bé ({categoryStats['Yếm cho bé'] || 0})</option>
+              <option value="Bao tay & Bao chân">Bao tay & Bao chân ({categoryStats['Bao tay & Bao chân'] || 0})</option>
+              <option value="Chăn gối & Đệm ngủ">Chăn gối & Đệm ngủ ({categoryStats['Chăn gối & Đệm ngủ'] || 0})</option>
+              <option value="Váy đầm bé gái">Váy đầm bé gái ({categoryStats['Váy đầm bé gái'] || 0})</option>
+              <option value="Quần yếm & Set yếm">Quần yếm & Set yếm ({categoryStats['Quần yếm & Set yếm'] || 0})</option>
+              <option value="Phụ kiện & Khác">Phụ kiện & Khác ({categoryStats['Phụ kiện & Khác'] || 0})</option>
+              <option value="Quà tặng kèm">Quà tặng kèm ({categoryStats['Quà tặng kèm'] || 0})</option>
             </select>
           </div>
+        </div>
+
+        {/* Quick Category Filter Pills */}
+        <div className="pt-2 border-t border-[#FFF0F1] flex items-center gap-1.5 overflow-x-auto pb-1 scrollbar-none">
+          <span className="text-[11px] font-bold text-[#8C7065] mr-1 shrink-0">Phân loại:</span>
+          {[
+            { id: 'all', label: 'Tất cả' },
+            { id: 'Bộ quần áo bé', label: `Bộ quần áo (${categoryStats['Bộ quần áo bé'] || 0})` },
+            { id: 'Bodysuit & Đồ liền', label: `Bodysuit (${categoryStats['Bodysuit & Đồ liền'] || 0})` },
+            { id: 'Áo & Áo khoác', label: `Áo khoác (${categoryStats['Áo & Áo khoác'] || 0})` },
+            { id: 'Nón & Mũ bé', label: `Nón / Mũ (${categoryStats['Nón & Mũ bé'] || 0})` },
+            { id: 'Yếm cho bé', label: `Yếm (${categoryStats['Yếm cho bé'] || 0})` },
+            { id: 'Bao tay & Bao chân', label: `Bao tay/chân (${categoryStats['Bao tay & Bao chân'] || 0})` },
+            { id: 'Chăn gối & Đệm ngủ', label: `Chăn gối (${categoryStats['Chăn gối & Đệm ngủ'] || 0})` },
+            { id: 'Váy đầm bé gái', label: `Váy đầm (${categoryStats['Váy đầm bé gái'] || 0})` },
+            { id: 'Quần yếm & Set yếm', label: `Quần yếm (${categoryStats['Quần yếm & Set yếm'] || 0})` },
+            { id: 'Phụ kiện & Khác', label: `Phụ kiện (${categoryStats['Phụ kiện & Khác'] || 0})` },
+            { id: 'Quà tặng kèm', label: `Quà tặng (${categoryStats['Quà tặng kèm'] || 0})` },
+          ].map((cat) => (
+            <button
+              key={cat.id}
+              onClick={() => {
+                setCategoryFilter(cat.id);
+                setCurrentPage(1);
+              }}
+              className={`px-2.5 py-1 rounded-xl text-[11px] font-bold whitespace-nowrap transition-all cursor-pointer ${
+                categoryFilter === cat.id
+                  ? 'bg-[#3D271D] text-white shadow-xs'
+                  : 'bg-[#FFF9F6] text-[#8C7065] hover:bg-[#FFF0F1] hover:text-[#3D271D] border border-[#FDE2E4]'
+              }`}
+            >
+              {cat.label}
+            </button>
+          ))}
         </div>
       </div>
 

@@ -405,14 +405,18 @@ export const ReportsPage: React.FC = () => {
               }}
               className="text-xs font-bold bg-[#FFF9F6] border border-[#FDE2E4] text-[#3D271D] rounded-xl px-3 py-1.5 focus:outline-hidden focus:border-[#FF5B65]"
             >
-              <option value="all">Tất cả danh mục</option>
-              <option value="Bodysuit">Bodysuit</option>
-              <option value="Bộ quần áo">Bộ quần áo</option>
-              <option value="Chăn gối">Chăn gối</option>
-              <option value="Áo khoác">Áo khoác</option>
-              <option value="Váy đầm">Váy đầm</option>
-              <option value="Phụ kiện">Phụ kiện</option>
-              <option value="Quà tặng">Quà tặng</option>
+              <option value="all">Tất cả danh mục ({products.length} SP)</option>
+              <option value="Bộ quần áo bé">Bộ quần áo bé</option>
+              <option value="Bodysuit & Đồ liền">Bodysuit & Đồ liền</option>
+              <option value="Áo & Áo khoác">Áo & Áo khoác</option>
+              <option value="Nón & Mũ bé">Nón & Mũ bé</option>
+              <option value="Yếm cho bé">Yếm cho bé</option>
+              <option value="Bao tay & Bao chân">Bao tay & Bao chân</option>
+              <option value="Chăn gối & Đệm ngủ">Chăn gối & Đệm ngủ</option>
+              <option value="Váy đầm bé gái">Váy đầm bé gái</option>
+              <option value="Quần yếm & Set yếm">Quần yếm & Set yếm</option>
+              <option value="Phụ kiện & Khác">Phụ kiện & Khác</option>
+              <option value="Quà tặng kèm">Quà tặng kèm</option>
             </select>
           </div>
         </div>
