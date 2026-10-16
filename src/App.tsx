@@ -10,6 +10,7 @@ import { OrderHistoryPage } from './pages/OrderHistoryPage';
 import { ShippingPage } from './pages/ShippingPage';
 import { ReportsPage } from './pages/ReportsPage';
 import { SettingsPage } from './pages/SettingsPage';
+import { ProductsPage } from './pages/ProductsPage';
 
 const AppContent: React.FC = () => {
   const { activeTab, selectedOrderForModal, setSelectedOrderForModal } = useShop();
@@ -33,6 +34,7 @@ const AppContent: React.FC = () => {
           {activeTab === 'overview' && <OverviewPage />}
           {activeTab === 'create-order' && <CreateOrderPage />}
           {activeTab === 'orders' && <OrderHistoryPage />}
+          {activeTab === 'products' && <ProductsPage />}
           {activeTab === 'shipping' && <ShippingPage />}
           {activeTab === 'reports' && <ReportsPage />}
           {activeTab === 'settings' && <SettingsPage />}

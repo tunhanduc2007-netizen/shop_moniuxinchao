@@ -5,6 +5,7 @@ import {
   FileText,
   Truck,
   TrendingUp,
+  Boxes,
   Settings,
   X,
   Sparkles,
@@ -24,6 +25,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     { id: 'overview', label: 'Tổng quan', icon: LayoutDashboard },
     { id: 'create-order', label: 'Tạo đơn hàng', icon: PlusSquare },
     { id: 'orders', label: 'Lịch sử đơn hàng', icon: FileText },
+    { id: 'products', label: 'Kho sản phẩm', icon: Boxes },
     { id: 'shipping', label: 'Vận chuyển', icon: Truck },
     { id: 'reports', label: 'Báo cáo', icon: TrendingUp },
     { id: 'settings', label: 'Cài đặt', icon: Settings },
@@ -113,6 +115,17 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                     >
                       <Sparkles className="w-2.5 h-2.5" />
                       Live
+                    </span>
+                  )}
+                  {item.id === 'products' && (
+                    <span
+                      className={`ml-auto text-[10px] font-extrabold px-2 py-0.5 rounded-full transition-colors ${
+                        isActive
+                          ? 'bg-[#FF5B65] text-white shadow-xs'
+                          : 'bg-white/20 text-white border border-white/25 shadow-xs'
+                      }`}
+                    >
+                      330 SP
                     </span>
                   )}
                 </button>

@@ -86,4 +86,4 @@ export interface StoreSettings {
   bankBranch: string;
 }
 
-export type ActiveTab = 'overview' | 'create-order' | 'orders' | 'shipping' | 'reports' | 'settings';
+export type ActiveTab = 'overview' | 'create-order' | 'orders' | 'products' | 'shipping' | 'reports' | 'settings';
