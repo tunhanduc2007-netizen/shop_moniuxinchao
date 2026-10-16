@@ -20,8 +20,9 @@ import {
   Sparkles,
 } from 'lucide-react';
 import { useShop } from '../context/ShopContext';
-import type { OrderItem, PaymentMethod, ShippingCarrier } from '../types';
+import type { OrderItem, PaymentMethod, ShippingCarrier, ProductCatalogItem } from '../types';
 import { formatCurrency } from '../utils/formatters';
+import { SizeSelectionModal } from '../components/SizeSelectionModal';
 
 export const CreateOrderPage: React.FC = () => {
   const {
@@ -30,6 +31,9 @@ export const CreateOrderPage: React.FC = () => {
     generateUniqueCode,
     addOrder,
     setActiveTab,
+    pendingOrderItem,
+    setPendingOrderItem,
+    showToast,
   } = useShop();
 
   // Form states
@@ -61,6 +65,22 @@ export const CreateOrderPage: React.FC = () => {
   const [pickerBrand, setPickerBrand] = useState('all');
   const [pickerCategory, setPickerCategory] = useState('all');
   const [activeRowForPicker, setActiveRowForPicker] = useState<number | null>(null);
+  const [pickerProductForSize, setPickerProductForSize] = useState<ProductCatalogItem | null>(null);
+
+  // Tự động nhận sản phẩm đã chọn size khi chốt đơn từ Kho 330 SP
+  useEffect(() => {
+    if (pendingOrderItem) {
+      setOrderItems((prev) => {
+        const isEmptySingleRow =
+          prev.length === 1 && !prev[0].productCode && !prev[0].productName;
+        if (isEmptySingleRow) {
+          return [pendingOrderItem];
+        }
+        return [...prev, pendingOrderItem];
+      });
+      setPendingOrderItem(null);
+    }
+  }, [pendingOrderItem, setPendingOrderItem]);
 
   useEffect(() => {
     setOrderCode(generateUniqueCode());
@@ -125,14 +145,20 @@ export const CreateOrderPage: React.FC = () => {
     });
   };
 
-  const handleSelectFromPicker = (prod: (typeof products)[0]) => {
+  // Mở bước chọn size khi chọn sản phẩm từ kho
+  const handleStartSizeSelectionForPicker = (prod: ProductCatalogItem) => {
+    setPickerProductForSize(prod);
+  };
+
+  const handleConfirmPickerSize = (prod: ProductCatalogItem, selectedSize: string, qty: number) => {
     const newItem: OrderItem = {
       id: Math.random().toString(),
       productCode: prod.code,
       productName: prod.name,
-      variant: prod.variants[0] || 'Chuẩn',
+      variant: selectedSize,
       unitPrice: prod.price,
-      quantity: 1,
+      quantity: qty,
+      image: prod.image,
     };
 
     if (activeRowForPicker !== null && orderItems[activeRowForPicker]) {
@@ -158,12 +184,20 @@ export const CreateOrderPage: React.FC = () => {
 
     setIsProductPickerOpen(false);
     setActiveRowForPicker(null);
+    setPickerProductForSize(null);
+
+    showToast({
+      type: 'success',
+      title: 'Đã thêm vào đơn hàng!',
+      message: `${prod.name} (Size: ${selectedSize}, SL: ${qty})`,
+      code: prod.code,
+    });
   };
 
   const handleQuickSelectCatalogProduct = (prodCode: string) => {
     const prod = products.find((p) => p.code === prodCode);
     if (!prod) return;
-    handleSelectFromPicker(prod);
+    setPickerProductForSize(prod);
   };
 
   const filteredPickerProducts = React.useMemo(() => {
@@ -530,9 +564,24 @@ export const CreateOrderPage: React.FC = () => {
 
                       {/* Phân loại / Biến thể (Màu & Size tháng/tuổi) */}
                       <div className="col-span-6 sm:col-span-3">
-                        <label className="block text-[10px] font-bold text-[#8C7065] mb-1">
-                          Màu sắc & Size (0-3M, 1-2Y,...)
-                        </label>
+                        <div className="flex items-center justify-between mb-1">
+                          <label className="block text-[10px] font-bold text-[#8C7065]">
+                            Màu sắc & Size (0-3M, 1-2Y,...)
+                          </label>
+                          {matched && (
+                            <button
+                              type="button"
+                              onClick={() => {
+                                setActiveRowForPicker(index);
+                                handleStartSizeSelectionForPicker(matched);
+                              }}
+                              className="text-[10px] font-bold text-[#FF5B65] hover:underline cursor-pointer"
+                              title="Mở bảng chọn size & cân nặng chuẩn của Moniu"
+                            >
+                              Chọn size chuẩn
+                            </button>
+                          )}
+                        </div>
                         <input
                           type="text"
                           placeholder="Size tháng / màu"
@@ -879,7 +928,7 @@ export const CreateOrderPage: React.FC = () => {
                   {filteredPickerProducts.slice(0, 60).map((prod) => (
                     <div
                       key={prod.code}
-                      onClick={() => handleSelectFromPicker(prod)}
+                      onClick={() => handleStartSizeSelectionForPicker(prod)}
                       className="p-3 bg-white hover:bg-[#FFF9F6] border border-[#FDE2E4] hover:border-[#FF5B65] rounded-2xl transition-all cursor-pointer flex gap-3 group relative shadow-2xs hover:shadow-md"
                     >
                       <img
@@ -915,7 +964,7 @@ export const CreateOrderPage: React.FC = () => {
                           </span>
 
                           <span className="text-[10px] font-bold px-2 py-0.5 bg-[#FFF0F1] text-[#FF5B65] rounded-lg group-hover:bg-[#FF5B65] group-hover:text-white transition-colors">
-                            + Thêm
+                            + Chọn size
                           </span>
                         </div>
                       </div>
@@ -942,6 +991,15 @@ export const CreateOrderPage: React.FC = () => {
           </div>
         </div>
       )}
+
+      {/* Modal Chọn Size khi chọn sản phẩm trong Tạo đơn */}
+      <SizeSelectionModal
+        isOpen={!!pickerProductForSize}
+        onClose={() => setPickerProductForSize(null)}
+        product={pickerProductForSize}
+        onConfirm={handleConfirmPickerSize}
+        confirmText="Xác nhận & Thêm vào đơn"
+      />
     </div>
   );
 };

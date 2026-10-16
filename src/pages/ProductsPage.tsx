@@ -22,9 +22,10 @@ import {
 import { useShop } from '../context/ShopContext';
 import type { ProductCatalogItem } from '../types';
 import { formatCurrency } from '../utils/formatters';
+import { SizeSelectionModal } from '../components/SizeSelectionModal';
 
 export const ProductsPage: React.FC = () => {
-  const { products, setActiveTab } = useShop();
+  const { products, setActiveTab, setPendingOrderItem, showToast } = useShop();
 
   // Search, Filter & Sort states
   const [searchTerm, setSearchTerm] = useState('');
@@ -39,6 +40,7 @@ export const ProductsPage: React.FC = () => {
 
   // Selected product for detail modal
   const [selectedProduct, setSelectedProduct] = useState<ProductCatalogItem | null>(null);
+  const [productForSizeModal, setProductForSizeModal] = useState<ProductCatalogItem | null>(null);
   const [copiedId, setCopiedId] = useState<string | null>(null);
 
   // Brand counts
@@ -113,7 +115,33 @@ export const ProductsPage: React.FC = () => {
     document.body.removeChild(link);
   };
 
+  // Bước chọn size khi bấm Chốt đơn
   const handleCreateOrderWithProduct = (prod: ProductCatalogItem) => {
+    setProductForSizeModal(prod);
+  };
+
+  const handleConfirmSizeSelection = (
+    prod: ProductCatalogItem,
+    selectedSize: string,
+    quantity: number
+  ) => {
+    setPendingOrderItem({
+      id: Math.random().toString(),
+      productCode: prod.code,
+      productName: prod.name,
+      variant: selectedSize,
+      unitPrice: prod.price,
+      quantity: quantity,
+      image: prod.image,
+    });
+
+    showToast({
+      type: 'success',
+      title: 'Đã chọn size cho sản phẩm!',
+      message: `${prod.name} (Size: ${selectedSize}, SL: ${quantity})`,
+      code: prod.code,
+    });
+
     setActiveTab('create-order');
   };
 
@@ -674,6 +702,15 @@ export const ProductsPage: React.FC = () => {
           </div>
         </div>
       )}
+
+      {/* Modal Chọn Size khi bấm Chốt đơn */}
+      <SizeSelectionModal
+        isOpen={!!productForSizeModal}
+        onClose={() => setProductForSizeModal(null)}
+        product={productForSizeModal}
+        onConfirm={handleConfirmSizeSelection}
+        confirmText="Xác nhận Chốt Size & Chuyển Đến Tạo Đơn"
+      />
     </div>
   );
 };

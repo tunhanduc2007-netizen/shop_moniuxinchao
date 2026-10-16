@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
-import { Order, OrderStatus, ShippingStatus, StoreSettings, ProductCatalogItem, ActiveTab } from '../types';
+import { Order, OrderItem, OrderStatus, ShippingStatus, StoreSettings, ProductCatalogItem, ActiveTab } from '../types';
 import { INITIAL_ORDERS, INITIAL_PRODUCTS, INITIAL_SETTINGS } from '../data/initialData';
 import { generateOrderCode } from '../utils/formatters';
 
@@ -21,6 +21,8 @@ interface ShopContextType {
   setSearchQuery: (query: string) => void;
   selectedOrderForModal: Order | null;
   setSelectedOrderForModal: (order: Order | null) => void;
+  pendingOrderItem: OrderItem | null;
+  setPendingOrderItem: (item: OrderItem | null) => void;
   toasts: ToastMessage[];
   showToast: (toast: Omit<ToastMessage, 'id'>) => void;
   removeToast: (id: string) => void;
@@ -63,6 +65,7 @@ export const ShopProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const [activeTab, setActiveTab] = useState<ActiveTab>('overview');
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedOrderForModal, setSelectedOrderForModal] = useState<Order | null>(null);
+  const [pendingOrderItem, setPendingOrderItem] = useState<OrderItem | null>(null);
   const [toasts, setToasts] = useState<ToastMessage[]>([]);
 
   // 100% Dynamic products catalog stats derived from actual orders
@@ -267,6 +270,8 @@ export const ShopProvider: React.FC<{ children: React.ReactNode }> = ({ children
         setSearchQuery,
         selectedOrderForModal,
         setSelectedOrderForModal,
+        pendingOrderItem,
+        setPendingOrderItem,
         toasts,
         showToast,
         removeToast,
