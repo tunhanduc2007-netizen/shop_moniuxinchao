@@ -25,6 +25,44 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Anti-Badge Injected Remover -->
+    <script>
+      (function() {
+        function removeNetlifyBadge() {
+          var sel = [
+            '#netlify-badge',
+            '.netlify-badge',
+            '[id*="netlify-badge"]',
+            '[class*="netlify-badge"]',
+            '[data-netlify-badge]',
+            '#netlify-drawer',
+            '.netlify-drawer',
+            '[data-netlify-drawer]',
+            'iframe[src*="netlify"]',
+            'iframe[title*="Netlify"]',
+            'a[href*="netlify.com"]',
+            'a[href*="netlify.app"]'
+          ];
+          sel.forEach(function(s) {
+            document.querySelectorAll(s).forEach(function(el) {
+              var parent = el.closest('div[style*="fixed"]') || el.parentElement;
+              if (parent && parent !== document.body && parent !== document.getElementById('root') && parent.querySelectorAll('*').length <= 6) {
+                parent.remove();
+              } else {
+                el.remove();
+              }
+            });
+          });
+        }
+        window.addEventListener('DOMContentLoaded', removeNetlifyBadge);
+        window.addEventListener('load', removeNetlifyBadge);
+        if (typeof MutationObserver !== 'undefined') {
+          var obs = new MutationObserver(removeNetlifyBadge);
+          obs.observe(document.documentElement, { childList: true, subtree: true });
+        }
+      })();
+    </script>
   </head>
   <body class="bg-[#FFF8F6] text-[#3D271D] antialiased selection:bg-[#FFD147]/50 selection:text-[#3D271D]">
     <div id="root"></div>
