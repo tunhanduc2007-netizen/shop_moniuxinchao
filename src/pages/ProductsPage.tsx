@@ -45,10 +45,18 @@ export const ProductsPage: React.FC = () => {
 
   // Brand counts
   const brandStats = useMemo(() => {
-    const nous = products.filter((p) => p.brand === 'NOUS').length;
-    const lapomme = products.filter((p) => p.brand === 'LA POMME').length;
-    const monona = products.filter((p) => p.brand === 'MONONA').length;
-    return { nous, lapomme, monona, total: products.length };
+    const counts: Record<string, number> = {};
+    products.forEach((p) => {
+      const b = p.brand || 'Khác';
+      counts[b] = (counts[b] || 0) + 1;
+    });
+    return {
+      nous: counts['NOUS'] || 0,
+      lapomme: counts['LA POMME'] || 0,
+      monona: counts['MONONA'] || 0,
+      moniu: counts['Moniu'] || 0,
+      total: products.length,
+    };
   }, [products]);
 
   // Category counts
@@ -206,7 +214,7 @@ export const ProductsPage: React.FC = () => {
           </div>
         </div>
 
-        <div className="bg-white rounded-3xl p-4.5 border border-[#B8ECE1] shadow-2xs flex items-center gap-3">
+        <div className="bg-white rounded-3xl p-4.5 border border-[#B8ECE1] shadow-2xs flex items-center gap-3 notranslate" translate="no">
           <div className="w-11 h-11 rounded-2xl bg-[#EBF9F6] text-[#238774] flex items-center justify-center shrink-0 shadow-2xs font-black text-xs font-mono">
             NOUS
           </div>
@@ -218,7 +226,7 @@ export const ProductsPage: React.FC = () => {
           </div>
         </div>
 
-        <div className="bg-white rounded-3xl p-4.5 border border-[#FDE199] shadow-2xs flex items-center gap-3">
+        <div className="bg-white rounded-3xl p-4.5 border border-[#FDE199] shadow-2xs flex items-center gap-3 notranslate" translate="no">
           <div className="w-11 h-11 rounded-2xl bg-[#FFF8E6] text-[#B87B00] flex items-center justify-center shrink-0 shadow-2xs font-black text-xs font-mono">
             LAP
           </div>
@@ -230,7 +238,7 @@ export const ProductsPage: React.FC = () => {
           </div>
         </div>
 
-        <div className="bg-white rounded-3xl p-4.5 border border-[#E7DBFC] shadow-2xs flex items-center gap-3">
+        <div className="bg-white rounded-3xl p-4.5 border border-[#E7DBFC] shadow-2xs flex items-center gap-3 notranslate" translate="no">
           <div className="w-11 h-11 rounded-2xl bg-[#F6F1FE] text-[#8050D9] flex items-center justify-center shrink-0 shadow-2xs font-black text-xs font-mono">
             MON
           </div>
@@ -313,21 +321,23 @@ export const ProductsPage: React.FC = () => {
 
         {/* Brand Filter Buttons */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-3 border-t border-[#FFF0F1]">
-          <div className="flex items-center gap-1.5 overflow-x-auto pb-1 sm:pb-0 scrollbar-none">
+          <div className="flex items-center gap-1.5 overflow-x-auto pb-1 sm:pb-0 scrollbar-none notranslate" translate="no">
             <span className="text-[11px] font-bold text-[#8C7065] mr-1 shrink-0">Hãng:</span>
             {[
               { id: 'all', label: `Tất cả (${brandStats.total})` },
               { id: 'NOUS', label: `NOUS (${brandStats.nous})` },
               { id: 'LA POMME', label: `LA POMME (${brandStats.lapomme})` },
               { id: 'MONONA', label: `MONONA (${brandStats.monona})` },
+              ...(brandStats.moniu > 0 ? [{ id: 'Moniu', label: `Moniu (${brandStats.moniu})` }] : []),
             ].map((b) => (
               <button
                 key={b.id}
+                translate="no"
                 onClick={() => {
                   setBrandFilter(b.id);
                   setCurrentPage(1);
                 }}
-                className={`px-3 py-1.5 rounded-xl text-xs font-bold whitespace-nowrap transition-all cursor-pointer ${
+                className={`px-3 py-1.5 rounded-xl text-xs font-bold whitespace-nowrap transition-all cursor-pointer notranslate ${
                   brandFilter === b.id
                     ? 'bg-[#FF5B65] text-white shadow-xs'
                     : 'bg-[#FFF9F6] text-[#8C7065] hover:bg-[#FFF0F1] hover:text-[#FF5B65] border border-[#FDE2E4]'
@@ -440,7 +450,10 @@ export const ProductsPage: React.FC = () => {
                       {prod.code}
                     </span>
                     {prod.brand && (
-                      <span className="font-extrabold text-[9px] text-[#238774] bg-white/95 px-2 py-0.5 rounded-lg shadow-xs backdrop-blur-xs">
+                      <span
+                        translate="no"
+                        className="font-extrabold text-[9px] text-[#238774] bg-white/95 px-2 py-0.5 rounded-lg shadow-xs backdrop-blur-xs notranslate"
+                      >
                         {prod.brand}
                       </span>
                     )}
@@ -571,7 +584,10 @@ export const ProductsPage: React.FC = () => {
                       </div>
                     </td>
                     <td className="py-3.5 px-3 text-center">
-                      <span className="inline-block text-[10px] font-black px-2 py-0.5 rounded-md bg-[#EBF9F6] text-[#238774] border border-[#B8ECE1]">
+                      <span
+                        translate="no"
+                        className="inline-block text-[10px] font-black px-2 py-0.5 rounded-md bg-[#EBF9F6] text-[#238774] border border-[#B8ECE1] notranslate"
+                      >
                         {prod.brand || 'Moniu'}
                       </span>
                     </td>
@@ -646,7 +662,10 @@ export const ProductsPage: React.FC = () => {
                 <span className="font-mono font-black text-xs text-[#FF5B65] bg-[#FFF0F1] px-2.5 py-1 rounded-xl border border-[#FCD2D6]">
                   {selectedProduct.code}
                 </span>
-                <span className="font-bold text-xs px-2.5 py-1 rounded-xl bg-[#EBF9F6] text-[#238774] border border-[#B8ECE1]">
+                <span
+                  translate="no"
+                  className="font-bold text-xs px-2.5 py-1 rounded-xl bg-[#EBF9F6] text-[#238774] border border-[#B8ECE1] notranslate"
+                >
                   {selectedProduct.brand || 'Moniu'}
                 </span>
                 <span className="text-xs text-[#8C7065] font-semibold">

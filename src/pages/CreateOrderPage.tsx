@@ -67,6 +67,22 @@ export const CreateOrderPage: React.FC = () => {
   const [activeRowForPicker, setActiveRowForPicker] = useState<number | null>(null);
   const [pickerProductForSize, setPickerProductForSize] = useState<ProductCatalogItem | null>(null);
 
+  // Dynamic brand counts for picker
+  const pickerBrandStats = useMemo(() => {
+    const counts: Record<string, number> = {};
+    products.forEach((p) => {
+      const b = p.brand || 'Khác';
+      counts[b] = (counts[b] || 0) + 1;
+    });
+    return {
+      all: products.length,
+      nous: counts['NOUS'] || 0,
+      lapomme: counts['LA POMME'] || 0,
+      monona: counts['MONONA'] || 0,
+      moniu: counts['Moniu'] || 0,
+    };
+  }, [products]);
+
   // Tự động nhận sản phẩm đã chọn size khi chốt đơn từ Kho 330 SP
   useEffect(() => {
     if (pendingOrderItem) {
@@ -854,19 +870,21 @@ export const CreateOrderPage: React.FC = () => {
               </div>
 
               {/* Brand Filters */}
-              <div className="flex items-center gap-1.5 overflow-x-auto pb-1 scrollbar-none">
+              <div className="flex items-center gap-1.5 overflow-x-auto pb-1 scrollbar-none notranslate" translate="no">
                 <span className="text-[11px] font-bold text-[#8C7065] mr-1">Thương hiệu:</span>
                 {[
-                  { id: 'all', label: 'Tất cả (330)' },
-                  { id: 'NOUS', label: 'NOUS (137)' },
-                  { id: 'LA POMME', label: 'LA POMME (31)' },
-                  { id: 'MONONA', label: 'MONONA (21)' },
+                  { id: 'all', label: `Tất cả (${pickerBrandStats.all})` },
+                  { id: 'NOUS', label: `NOUS (${pickerBrandStats.nous})` },
+                  { id: 'LA POMME', label: `LA POMME (${pickerBrandStats.lapomme})` },
+                  { id: 'MONONA', label: `MONONA (${pickerBrandStats.monona})` },
+                  ...(pickerBrandStats.moniu > 0 ? [{ id: 'Moniu', label: `Moniu (${pickerBrandStats.moniu})` }] : []),
                 ].map((b) => (
                   <button
                     key={b.id}
                     type="button"
+                    translate="no"
                     onClick={() => setPickerBrand(b.id)}
-                    className={`px-3 py-1 rounded-xl text-xs font-bold transition-all cursor-pointer ${
+                    className={`px-3 py-1 rounded-xl text-xs font-bold transition-all cursor-pointer notranslate ${
                       pickerBrand === b.id
                         ? 'bg-[#FF5B65] text-white shadow-xs'
                         : 'bg-white text-[#8C7065] hover:bg-[#FFF0F1] border border-[#FDE2E4]'
