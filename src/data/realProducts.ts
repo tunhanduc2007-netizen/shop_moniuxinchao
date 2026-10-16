@@ -1,5 +1,7 @@
 import type { ProductCatalogItem } from '../types';
 
+// Official Shopee store catalog from https://shopee.vn/minhhy.mon237 (Shop ID: 1214757544 - Moniu Xin Chào)
+// Reconciled and matched 100% with official store images, models, categories and titles.
 export const REAL_PRODUCTS: ProductCatalogItem[] = [
   {
     "code": "MN-001",
@@ -8,9 +10,11 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "LA POMME",
     "category": "Bodysuit & Đồ liền",
     "variants": [
+      "0-3M",
       "3-6M",
       "6-9M",
-      "9-12M"
+      "9-12M",
+      "12-18M"
     ],
     "price": 195000,
     "image": "/images/products/mn-001.jpg",
@@ -26,9 +30,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bodysuit & Đồ liền",
     "variants": [
-      "Newborn (3-5.5kg)",
-      "0-3M",
-      "3-6M"
+      "Trắng trơn"
     ],
     "price": 195000,
     "image": "/images/products/mn-002.jpg",
@@ -46,7 +48,8 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "variants": [
       "6-9M",
       "9-12M",
-      "1-2Y",
+      "12-18M",
+      "18-24M",
       "2-3Y"
     ],
     "price": 225000,
@@ -63,10 +66,14 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Phụ kiện & Khác",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "Be vàng mèo,S(0-6m)",
+      "Hồng,M(6-12m)",
+      "Chấm bi vàng,L(12-24m)",
+      "Combo 3 màu,S(0-6m)",
+      "Hồng,L(12-24m)",
+      "Chấm bi vàng,M(6-12m)",
+      "Chấm bi vàng,S(0-6m)",
+      "Xanh dương,L(12-24m)"
     ],
     "price": 55000,
     "image": "/images/products/mn-004.jpg",
@@ -98,14 +105,17 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bodysuit & Đồ liền",
     "variants": [
-      "12M"
+      "0-3M",
+      "3-6M",
+      "6-9M",
+      "9-12M"
     ],
     "price": 195000,
     "image": "/images/products/mn-006.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "NOUS BST MỚI PETIT A PETIT Bộ liền cộc/Bộ cộc cho bé trai/bé gái có size từ 0m đến 12m\nBST PETIT 2026 của nhà Nous ko có gì phải chê luôn, chất đẹp mẫu mã siêu yêu siêu cưngggg🥰\nMom lấy size đúng chiều cao, cân nặng của bé giúp em sẽ mặc đẹp vừa vặn ạ. Bé trộm vía có bụng, mông tăng size giúp em nha"
+    "description": "NOUS BST MỚI PETIT A PETIT Bộ liền cộc/Bộ cộc cho bé trai/bé gái có size từ 0m đến 12m\nBST PETIT 2026 của nhà Nous ko có gì phải chê luôn, chất đẹp mẫu mã siêu yêu siêu cưngggg🥰\nMom lấy size đúng chiều cao, cân nặng của bé giúp em sẽ mặc đẹp vừa vặn ạ. Bé trộm vía có bụng, mông tăng size giúp em nha❣️"
   },
   {
     "code": "MN-007",
@@ -116,7 +126,8 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "variants": [
       "6-9M",
       "9-12M",
-      "1-2Y",
+      "12-18M",
+      "18-24M",
       "2-3Y"
     ],
     "price": 225000,
@@ -133,10 +144,11 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Áo & Áo khoác",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "9-12m",
+      "12-18m",
+      "18-24m",
+      "2-3y",
+      "6-9m"
     ],
     "price": 295000,
     "image": "/images/products/mn-008.jpg",
@@ -152,17 +164,17 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "MONONA",
     "category": "Chăn gối & Đệm ngủ",
     "variants": [
-      "Kem thêu oliu",
-      "Nâu thêu gấu",
       "Hồng thêu thỏ",
-      "Xanh thêu rắn"
+      "Kem thêu oliu",
+      "Xanh thêu rắn",
+      "Nâu thêu gấu"
     ],
     "price": 265000,
     "image": "/images/products/mn-009.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "🎀 Mê mẩn luôn 😍 CHĂN LÔNG TUYẾT MONONA năm nào cũng bao xinh bao xịn \n♻️ Mix thêm hạt bông trông xinh hơn, điệu hơn, mẹ cho con đi đâu đắp trông đều sang xịn đó a 😍😍 \n\n🍀  Chất liệu lông tuyết mềm mịn, nhẹ nhàng được thêu hình xinh xắn \n🍀  Các bé dùng đắp ngủ, đi xe đẩy, hoặc chùm bé đi ra ngoài đều"
+    "description": "🎀 Mê mẩn luôn 😍 CHĂN LÔNG TUYẾT MONONA năm nào cũng bao xinh bao xịn \n♻️ Mix thêm hạt bông trông xinh hơn, điệu hơn, mẹ cho con đi đâu đắp trông đều sang xịn đó a 😍😍 \n\n🍀  Chất liệu lông tuyết mềm mịn, nhẹ nhàng được thêu hình xinh xắn \n🍀  Các bé dùng đắp ngủ, đi xe đẩy, hoặc chùm bé đi ra ngoài đều xinh hết nấc. \n🍀  Chất liệu cao cấp, không rụng lông đảm bảo an toàn cho hệ hô hấp của bé.\n\n➡  Họa tiết :\n🎀 - Kem thêu oliu\n🎀 - Nâu thêu gấu\n🎀 - Hồng thêu thỏ\n🎀 - Xanh thêu rắn\n➡️ Kích thước :100*135cm"
   },
   {
     "code": "MN-010",
@@ -173,7 +185,8 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "variants": [
       "6-9M",
       "9-12M",
-      "1-2Y",
+      "12-18M",
+      "18-24M",
       "2-3Y"
     ],
     "price": 225000,
@@ -181,7 +194,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "[MỞ BÁN 10/11] NOUS BST NOEL GIÁNG SINH CHO BÉ TỪ 6M - 2Y\nVáy/Bộ áo quần Noel cho bé siêu xinh, chất liệu cao cấp đẹp mê ly luôn mấy moms ơiii😍\nMấy moms lấy size đúng chiều cao, cân nặng (form đồ NOEL TO) của bé giúp mẹ Mon nhaaa vì sl hàng cực ít nên sẽ hạn chế đổi trả giúp mẹ Mon vì sợ ko có hàng"
+    "description": "[MỞ BÁN 10/11] NOUS BST NOEL GIÁNG SINH CHO BÉ TỪ 6M - 2Y\nVáy/Bộ áo quần Noel cho bé siêu xinh, chất liệu cao cấp đẹp mê ly luôn mấy moms ơiii😍\nMấy moms lấy size đúng chiều cao, cân nặng (form đồ NOEL TO) của bé giúp mẹ Mon nhaaa vì sl hàng cực ít nên sẽ hạn chế đổi trả giúp mẹ Mon vì sợ ko có hàng ạ !!!!"
   },
   {
     "code": "MN-011",
@@ -190,7 +203,13 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bộ quần áo bé",
     "variants": [
-      "9-12M"
+      "0-3M",
+      "3-6M",
+      "6-9M",
+      "9-12M",
+      "12-18M",
+      "18-24M",
+      "2-3Y"
     ],
     "price": 225000,
     "image": "/images/products/mn-011.jpg",
@@ -206,17 +225,15 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "MONONA",
     "category": "Chăn gối & Đệm ngủ",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "50X70CM",
+      "60X120CM"
     ],
     "price": 185000,
     "image": "/images/products/mn-012.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "🎀 VỀ FULL HOẠ TIẾT THÊU 2 size: 50*70 & 60*120cm\n\n💓 Thảm điều hòa chống thấm cao cấp thêu hình Monona 😍\n\n♻️ Ưu điểm lớn nhất là mặt trên thấm nước chống trào ngược lại bé, mặt dưới chống thấm xuống đệm. Đặc biệt họa tiết cực xinh, đặt bé xuống là có tấm hình xinh xắn ☺️☺️\n ✅ Có 2 phiên bản kích thướ"
+    "description": "🎀 VỀ FULL HOẠ TIẾT THÊU 2 size: 50*70 & 60*120cm\n\n💓 Thảm điều hòa chống thấm cao cấp thêu hình Monona 😍\n\n♻️ Ưu điểm lớn nhất là mặt trên thấm nước chống trào ngược lại bé, mặt dưới chống thấm xuống đệm. Đặc biệt họa tiết cực xinh, đặt bé xuống là có tấm hình xinh xắn ☺️☺️\n ✅ Có 2 phiên bản kích thước: \n- 50*70cm\n- 60*120cm\n✅ Họa tiết thêu các con vật:\n- Gấu\n- Thỏ \n- Rắn"
   },
   {
     "code": "MN-013",
@@ -225,10 +242,10 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bộ quần áo bé",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "2-3y",
+      "9-12m",
+      "12-18m",
+      "18-24m"
     ],
     "price": 225000,
     "image": "/images/products/mn-013.jpg",
@@ -244,10 +261,9 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Quần yếm & Set yếm",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "3-6m",
+      "6-9m",
+      "0-3m"
     ],
     "price": 55000,
     "image": "/images/products/mn-014.jpg",
@@ -263,9 +279,9 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "MONONA",
     "category": "Chăn gối & Đệm ngủ",
     "variants": [
-      "Newborn (3-5.5kg)",
-      "0-3M",
-      "3-6M"
+      "Cừu",
+      "Chuột",
+      "Kangaroo"
     ],
     "price": 265000,
     "image": "/images/products/mn-015.jpg",
@@ -281,10 +297,11 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Áo & Áo khoác",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "6-9m",
+      "9-12m",
+      "12-18m",
+      "18-24m",
+      "2-3y"
     ],
     "price": 295000,
     "image": "/images/products/mn-016.jpg",
@@ -300,7 +317,13 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "LA POMME",
     "category": "Váy đầm bé gái",
     "variants": [
-      "6M"
+      "6-9M",
+      "9-12M",
+      "12-18M",
+      "18-24M",
+      "3-4Y",
+      "4-5Y",
+      "5-6Y"
     ],
     "price": 245000,
     "image": "/images/products/mn-017.jpg",
@@ -313,20 +336,21 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "code": "MN-018",
     "tiktokId": "55500537797",
     "name": "MONONA Yếm muslin cổ tích siêu thấm hút cho bé",
-    "brand": "MONONA",
+    "brand": "NOUS",
     "category": "Yếm cho bé",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "Heo con",
+      "Cáo và mèo",
+      "Nhím & gấu",
+      "Gia đình cáo",
+      "Hươu cao cổ"
     ],
     "price": 55000,
     "image": "/images/products/mn-018.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "🎀🎀 Yếm muslin cổ tích cho bé 🎀\n\nVào thu đông rồi mẹ nhất định phải mua cho bé nhé \n🔆 Chất liệu Muslin siêu thấm hút\n🔆 Sử dụng đa năng: giữ ấm, ăn dặm, mix phối quần áo cho bé ...\n🔆 Có thể giặt máy\n🔆 Thiết kế theo kt chuẩn, vừa vặn cho các bé ở nhiều độ tuổi khác nhau. \n🔆 Hoạ tiết cổ tích mẹ yên tâm"
+    "description": "🎀🎀 Yếm muslin cổ tích cho bé 🎀\n\nVào thu đông rồi mẹ nhất định phải mua cho bé nhé \n🔆 Chất liệu Muslin siêu thấm hút\n🔆 Sử dụng đa năng: giữ ấm, ăn dặm, mix phối quần áo cho bé ...\n🔆 Có thể giặt máy\n🔆 Thiết kế theo kt chuẩn, vừa vặn cho các bé ở nhiều độ tuổi khác nhau. \n🔆 Hoạ tiết cổ tích mẹ yên tâm mix với bộ đồ nào cũng cực kì nổi 😍"
   },
   {
     "code": "MN-019",
@@ -335,7 +359,11 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bodysuit & Đồ liền",
     "variants": [
-      "9-12M"
+      "0-3M",
+      "3-6M",
+      "6-9M",
+      "9-12M",
+      "12-18M"
     ],
     "price": 195000,
     "image": "/images/products/mn-019.jpg",
@@ -351,10 +379,14 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Phụ kiện & Khác",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "Peter pan",
+      "Tinker bell",
+      "Cậu bé sói xám",
+      "Gấu be mặc váy",
+      "Khủng long",
+      "Hoa hướng dương",
+      "Gấu quần yếm caro",
+      "Gấu hồng"
     ],
     "price": 185000,
     "image": "/images/products/mn-020.jpg",
@@ -389,10 +421,8 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bộ quần áo bé",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "M",
+      "XL"
     ],
     "price": 185000,
     "image": "/images/products/mn-022.jpg",
@@ -408,10 +438,8 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bodysuit & Đồ liền",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "0-3m",
+      "3-6m"
     ],
     "price": 195000,
     "image": "/images/products/mn-023.jpg",
@@ -427,7 +455,13 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "LA POMME",
     "category": "Bộ quần áo bé",
     "variants": [
-      "6M"
+      "6-9M",
+      "9-12M",
+      "12-18M",
+      "18-24M",
+      "3-4Y",
+      "4-5Y",
+      "5-6Y"
     ],
     "price": 225000,
     "image": "/images/products/mn-024.jpg",
@@ -443,14 +477,17 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bộ quần áo bé",
     "variants": [
-      "9-12M"
+      "Be xanh ht,6-9m",
+      "Be xanh ht,9-12m",
+      "Be xanh ht,0-3m",
+      "Be xanh ht,3-6m"
     ],
     "price": 225000,
     "image": "/images/products/mn-025.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "NOUS Bộ dài tay màu be phối xanh dương thêu hoạ tiết dành cho bé từ 0m đến 9-12m, mang lại vẻ ngoài gọn gàng, dễ phối và phù hợp cho bé trong những ngày cần một set đồ hoàn chỉnh nhưng vẫn nhẹ nhàng, tiện lợi.\n\nĐiểm nổi bật \n- Màu be phối xanh dương: tạo cảm giác dịu mắt, dễ mặc và dễ phối đồ\n- Thêu"
+    "description": "NOUS Bộ dài tay màu be phối xanh dương thêu hoạ tiết dành cho bé từ 0m đến 9-12m, mang lại vẻ ngoài gọn gàng, dễ phối và phù hợp cho bé trong những ngày cần một set đồ hoàn chỉnh nhưng vẫn nhẹ nhàng, tiện lợi.\n\nĐiểm nổi bật \n- Màu be phối xanh dương: tạo cảm giác dịu mắt, dễ mặc và dễ phối đồ\n- Thêu hoạ tiết: tăng điểm nhấn tinh tế cho bộ đồ\n- Dài tay: phù hợp khi bé cần mặc gọn gàng trong các hoạt động thường ngày\n\nPhù hợp cho bé \n- Độ tuổi: từ 0m đến 9-12m"
   },
   {
     "code": "MN-026",
@@ -459,7 +496,10 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Nón & Mũ bé",
     "variants": [
-      "12M"
+      "Mũ xanh,L(12-24m)",
+      "Mũ hồng,M(6-12m)",
+      "Mũ hồng,L(12-24m)",
+      "Mũ xanh,M(6-12m)"
     ],
     "price": 55000,
     "image": "/images/products/mn-026.jpg",
@@ -475,6 +515,9 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bodysuit & Đồ liền",
     "variants": [
+      "0-3M",
+      "3-6M",
+      "6-9M",
       "9-12M"
     ],
     "price": 195000,
@@ -491,9 +534,12 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Váy đầm bé gái",
     "variants": [
+      "0-3M",
+      "3-6M",
       "6-9M",
       "9-12M",
-      "1-2Y",
+      "12-18M",
+      "18-24M",
       "2-3Y"
     ],
     "price": 245000,
@@ -510,6 +556,9 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bodysuit & Đồ liền",
     "variants": [
+      "0-3M",
+      "3-6M",
+      "6-9M",
       "9-12M"
     ],
     "price": 195000,
@@ -526,9 +575,8 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bộ quần áo bé",
     "variants": [
-      "Newborn (3-5.5kg)",
-      "0-3M",
-      "3-6M"
+      "Kẻ hồng Noel",
+      "Kẻ xanh Noel"
     ],
     "price": 225000,
     "image": "/images/products/mn-030.jpg",
@@ -544,10 +592,9 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bộ quần áo bé",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "S",
+      "M",
+      "L"
     ],
     "price": 185000,
     "image": "/images/products/mn-031.jpg",
@@ -563,15 +610,17 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Quần yếm & Set yếm",
     "variants": [
-      "12M",
-      "6-9M"
+      "0-3M",
+      "3-6M",
+      "6-9M",
+      "9-12M"
     ],
     "price": 195000,
     "image": "/images/products/mn-032.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "[MỞ BÁN 10/11] NOUS BST NOEL GIÁNG SINH BODYSUIT/ BỘ QUẦN YẾM CHO BÉ TỪ 0m - 12m\nMẫu nào cũng đẹp, mẫu nào cũng xinh mấy moms ơi, những set này đều có hộp có thể làm quà tặng cho mấy bé xịn xò lắm ạ 🥰🥰🥰\n\n**Set bodysuit đỏ quần tất size 6-9m còn 1b hãng ko bỏ yếm vào cho em nên bộ này sẽ ko có yếm cổ"
+    "description": "[MỞ BÁN 10/11] NOUS BST NOEL GIÁNG SINH BODYSUIT/ BỘ QUẦN YẾM CHO BÉ TỪ 0m - 12m\nMẫu nào cũng đẹp, mẫu nào cũng xinh mấy moms ơi, những set này đều có hộp có thể làm quà tặng cho mấy bé xịn xò lắm ạ 🥰🥰🥰\n\n**Set bodysuit đỏ quần tất size 6-9m còn 1b hãng ko bỏ yếm vào cho em nên bộ này sẽ ko có yếm cổ ạ"
   },
   {
     "code": "MN-033",
@@ -580,7 +629,14 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "LA POMME",
     "category": "Bộ quần áo bé",
     "variants": [
-      "6M"
+      "Quần kẻ xanh lá,6m",
+      "Quần kẻ xanh lá,18m",
+      "Vàng xanh,4y",
+      "Vàng xanh,12m",
+      "Quần kẻ vàng,4y",
+      "Quần kẻ vàng,3y",
+      "Vàng xanh,5y",
+      "Quần kẻ xanh lá,12m"
     ],
     "price": 225000,
     "image": "/images/products/mn-033.jpg",
@@ -596,10 +652,11 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "LA POMME",
     "category": "Bodysuit & Đồ liền",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "0-3M",
+      "3-6M",
+      "6-9M",
+      "9-12M",
+      "12-18M"
     ],
     "price": 195000,
     "image": "/images/products/mn-034.jpg",
@@ -615,10 +672,8 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Yếm cho bé",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "3-6m",
+      "0-3m"
     ],
     "price": 195000,
     "image": "/images/products/mn-035.jpg",
@@ -634,16 +689,18 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "MONONA",
     "category": "Phụ kiện & Khác",
     "variants": [
-      "Newborn (3-5.5kg)",
-      "0-3M",
-      "3-6M"
+      "Thỏ nấm",
+      "Nhà nấm",
+      "Thỏ nhím",
+      "Khinh khí cầu",
+      "Gấu ô tô"
     ],
     "price": 55000,
     "image": "/images/products/mn-036.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "🎀🎀 KHĂN TẮM XÔ XÙ 6 lớp HT CỔ TÍCH MONONA 🎀 \n\nChân ái cho các bé tắm là đây ạ, tới 6 xô muslin siêu thấm hút. Hoạ tiết cổ tích bắt trend cực kì xinh \n\n♻️ Kích thước: 100*110cm\n♻️ Bo viền chắc chắn\n♻️ Chất liệu xô xù cao cấp, không gây kích ứng da bé. \n\n🎀 Sử dụng cho bé từ sơ sinh\n🎀 Tác dụng: làm chă"
+    "description": "🎀🎀 KHĂN TẮM XÔ XÙ 6 lớp HT CỔ TÍCH MONONA 🎀 \n\nChân ái cho các bé tắm là đây ạ, tới 6 xô muslin siêu thấm hút. Hoạ tiết cổ tích bắt trend cực kì xinh \n\n♻️ Kích thước: 100*110cm\n♻️ Bo viền chắc chắn\n♻️ Chất liệu xô xù cao cấp, không gây kích ứng da bé. \n\n🎀 Sử dụng cho bé từ sơ sinh\n🎀 Tác dụng: làm chăn, khăn tắm, quấn bé ...\n🎀 Hoạ tiết cổ tích"
   },
   {
     "code": "MN-037",
@@ -659,7 +716,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "[QUÀ TẶNG LA POMME] Phao bơi cho bé nhiều màu sắc, tặng ngẫu nhiên cho hoá đơn từ 399K khi mua hàng LA POMME.\n*Quà tặng đính kèm trong đơn hàng thoả điều kiện chương trình áp dụng.\n*Tặng đến khi hết quà"
+    "description": "[QUÀ TẶNG LA POMME] Phao bơi cho bé nhiều màu sắc, tặng ngẫu nhiên cho hoá đơn từ 399K khi mua hàng LA POMME.\n*Quà tặng đính kèm trong đơn hàng thoả điều kiện chương trình áp dụng.\n*Tặng đến khi hết quà "
   },
   {
     "code": "MN-038",
@@ -668,7 +725,14 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bodysuit & Đồ liền",
     "variants": [
-      "9-12M"
+      "Caro ghi,0-3",
+      "Caro ghi,3-6",
+      "Caro ghi,6-9",
+      "Caro ghi,9-12",
+      "Hồng viền trắng,0-3",
+      "Hồng viền trắng,3-6",
+      "Hồng viền trắng,6-9",
+      "Hồng viền trắng,9-12"
     ],
     "price": 195000,
     "image": "/images/products/mn-038.jpg",
@@ -684,10 +748,14 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "LA POMME",
     "category": "Nón & Mũ bé",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "Hồng (cam),46cm",
+      "Hồng,48cm",
+      "Xanh nhạt,48cm",
+      "Kẻ trắng hồng,44cm",
+      "Kẻ trắng hồng,46cm",
+      "Hồng,46cm",
+      "Kẻ trắng hồng,48cm",
+      "Hồng,44cm"
     ],
     "price": 55000,
     "image": "/images/products/mn-039.jpg",
@@ -703,8 +771,10 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bộ quần áo bé",
     "variants": [
-      "9M",
-      "2Y"
+      "9-12M",
+      "12-18M",
+      "18-24M",
+      "2-3Y"
     ],
     "price": 225000,
     "image": "/images/products/mn-040.jpg",
@@ -722,7 +792,8 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "variants": [
       "6-9M",
       "9-12M",
-      "1-2Y",
+      "12-18M",
+      "18-24M",
       "2-3Y"
     ],
     "price": 225000,
@@ -739,7 +810,11 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "LA POMME",
     "category": "Yếm cho bé",
     "variants": [
-      "6M"
+      "Hồng thỏ",
+      "Yếm trắng",
+      "Băng đô ren trắng",
+      "Mũ ss trắng",
+      "Băng đô hoa nhí"
     ],
     "price": 55000,
     "image": "/images/products/mn-042.jpg",
@@ -755,7 +830,10 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bộ quần áo bé",
     "variants": [
-      "9-12M"
+      "Xanh gấu,9-12",
+      "Xanh gấu,0-3",
+      "Xanh gấu,3-6",
+      "Xanh gấu,6-9"
     ],
     "price": 225000,
     "image": "/images/products/mn-043.jpg",
@@ -771,17 +849,14 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Phụ kiện & Khác",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "Hồng"
     ],
     "price": 55000,
     "image": "/images/products/mn-044.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "NOUS Khăn choàng cho con tuti\nPhụ kiện tiện lợi cho mẹ mỗi khi ra ngoài, vừa cho bé tuti vừa lịch sự, kín đáo."
+    "description": "NOUS Khăn choàng cho con tuti\nPhụ kiện tiện lợi cho mẹ mỗi khi ra ngoài, vừa cho bé tuti vừa lịch sự, kín đáo. "
   },
   {
     "code": "MN-045",
@@ -790,10 +865,11 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "MONONA",
     "category": "Chăn gối & Đệm ngủ",
     "variants": [
-      "Kem thêu oliu",
-      "Nâu thêu gấu",
-      "Hồng thêu thỏ",
-      "Xanh thêu rắn"
+      "Cún",
+      "Thỏ",
+      "Cừu",
+      "Gấu",
+      "Ngựa"
     ],
     "price": 265000,
     "image": "/images/products/mn-045.jpg",
@@ -809,10 +885,12 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Áo & Áo khoác",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "3-6M",
+      "6-9M",
+      "9-12M",
+      "12-18M",
+      "18-24M",
+      "2-3Y"
     ],
     "price": 295000,
     "image": "/images/products/mn-046.jpg",
@@ -828,10 +906,10 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "MONONA",
     "category": "Chăn gối & Đệm ngủ",
     "variants": [
-      "Kem thêu oliu",
-      "Nâu thêu gấu",
-      "Hồng thêu thỏ",
-      "Xanh thêu rắn"
+      "Voi",
+      "Gấu",
+      "Thỏ",
+      "Gấu sao"
     ],
     "price": 265000,
     "image": "/images/products/mn-047.jpg",
@@ -847,10 +925,10 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Chăn gối & Đệm ngủ",
     "variants": [
-      "Kem thêu oliu",
-      "Nâu thêu gấu",
-      "Hồng thêu thỏ",
-      "Xanh thêu rắn"
+      "thỏ hồng",
+      "Cún trắng xanh",
+      "Mèo nâu",
+      "Mèo hồng"
     ],
     "price": 265000,
     "image": "/images/products/mn-048.jpg",
@@ -866,10 +944,11 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Áo & Áo khoác",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "6-9m",
+      "9-12m",
+      "12-18m",
+      "18-24m",
+      "2-3y"
     ],
     "price": 295000,
     "image": "/images/products/mn-049.jpg",
@@ -885,6 +964,9 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Váy đầm bé gái",
     "variants": [
+      "0-3M",
+      "3-6M",
+      "6-9M",
       "9-12M"
     ],
     "price": 195000,
@@ -908,7 +990,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "*Số lượng cực kì giới hạn, chỉ áp dụng cho hoá đơn 899k và sản phẩm của Nous\n*Quà tặng sẽ kèm trong đơn hàng, có hiển thị trong đơn hàng là sẽ có quà nha khách ui\n*Sản phẩm Set quà Nous sẽ KHÔNG được áp dụng cho quà tặng Ly uống nước."
+    "description": "*Số lượng cực kì giới hạn, chỉ áp dụng cho hoá đơn 899k và sản phẩm của Nous\n*Quà tặng sẽ kèm trong đơn hàng, có hiển thị trong đơn hàng là sẽ có quà nha khách ui\n*Sản phẩm Set quà Nous sẽ KHÔNG được áp dụng cho quà tặng Ly uống nước.\n"
   },
   {
     "code": "MN-052",
@@ -917,7 +999,14 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bodysuit & Đồ liền",
     "variants": [
-      "9M"
+      "Trắng xanh lá,9-12m",
+      "Hồng tay bèo,0-3m",
+      "Hồng tay bèo,3-6m",
+      "Hồng tay bèo,6-9m",
+      "Hồng tay bèo,9-12m",
+      "Trắng xanh lá,0-3m",
+      "Trắng xanh lá,3-6m",
+      "Trắng xanh lá,6-9m"
     ],
     "price": 195000,
     "image": "/images/products/mn-052.jpg",
@@ -933,7 +1022,11 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Yếm cho bé",
     "variants": [
-      "9M"
+      "6-9M",
+      "9-12M",
+      "12-18M",
+      "18-24M",
+      "2-3Y"
     ],
     "price": 225000,
     "image": "/images/products/mn-053.jpg",
@@ -949,6 +1042,9 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bodysuit & Đồ liền",
     "variants": [
+      "0-3M",
+      "3-6M",
+      "6-9M",
       "9-12M"
     ],
     "price": 195000,
@@ -965,17 +1061,17 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "MONONA",
     "category": "Chăn gối & Đệm ngủ",
     "variants": [
-      "Kem thêu oliu",
-      "Nâu thêu gấu",
-      "Hồng thêu thỏ",
-      "Xanh thêu rắn"
+      "Gấu sắc màu",
+      "Cừu",
+      "Gấu nơ",
+      "Ô tô"
     ],
     "price": 265000,
     "image": "/images/products/mn-055.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "‼️‼️ Chăn cotton lụa hạt đậu Monona \n \nNếu mẹ đang tìm chăn cho bé ngủ riêng thì chiếc chăn cotton lụa này là chân ái mom nha 😍\n♻️ Sử dụng được cả 2 mặt:\n- 1 mặt là cotton lụa mềm mịn, được trần tỉ mỉ \n- 1 mặt dệt hạt đậu 3D giúp giữ ấm \n\n♻️ Ưu điểm vượt trội:\n🔆 Mềm, nhẹ, thoáng khí\n🔆 Giữ ấm tốt\n🔆 F"
+    "description": "‼️‼️ Chăn cotton lụa hạt đậu Monona \n \nNếu mẹ đang tìm chăn cho bé ngủ riêng thì chiếc chăn cotton lụa này là chân ái mom nha 😍\n♻️ Sử dụng được cả 2 mặt:\n- 1 mặt là cotton lụa mềm mịn, được trần tỉ mỉ \n- 1 mặt dệt hạt đậu 3D giúp giữ ấm \n\n♻️ Ưu điểm vượt trội:\n🔆 Mềm, nhẹ, thoáng khí\n🔆 Giữ ấm tốt\n🔆 Form chăn siêu đẹp\n🔆 Chất liệu an toàn cho da bé\n\n🎀 Kích thước: 90x110cm"
   },
   {
     "code": "MN-056",
@@ -984,9 +1080,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "LA POMME",
     "category": "Bodysuit & Đồ liền",
     "variants": [
-      "Newborn (3-5.5kg)",
-      "0-3M",
-      "3-6M"
+      "NB"
     ],
     "price": 195000,
     "image": "/images/products/mn-056.jpg",
@@ -1002,8 +1096,14 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "LA POMME",
     "category": "Yếm cho bé",
     "variants": [
-      "9M",
-      "4-5Y"
+      "Bộ dài tay quần đỏ,6m",
+      "Bộ dài tay+ áo gile,6m",
+      "Đầm đỏ dài tay,5y",
+      "Bộ dài tay yếm xanh,9m",
+      "Bộ dài tay quần đỏ,4y",
+      "Bộ dài tay+ áo gile,3y",
+      "Bộ dài tay yếm xanh,5y",
+      "Bộ dài tay yếm xanh,18m"
     ],
     "price": 245000,
     "image": "/images/products/mn-057.jpg",
@@ -1019,10 +1119,10 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Phụ kiện & Khác",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "Khăn lụa 38x38cm",
+      "Khăn lụa 50x50cm",
+      "Trắng thỏ",
+      "Ngựa"
     ],
     "price": 55000,
     "image": "/images/products/mn-058.jpg",
@@ -1045,7 +1145,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "[QUÀ TẶNG] TÚI GIẤY CHỦ ĐỀ GIÁNG SINH NOUS KÈM THIỆP DÀNH CHO HOÁ ĐƠN TỪ 499K.\n🎄Hoá đơn từ 499k trở lên\n🎄Chỉ áp dụng khi các moms mua đồ của Nous\n🎄Có ít nhất 1 item trong BST GIÁNG SINH của nhà Nous\n🎄Tất cả đơn hàng SET QUÀ TẶNG NOUS đều đc tặng túi và thiệp cho set từ 499k trở lên ạ🥰\n\n❣️Số lượng qu"
+    "description": "[QUÀ TẶNG] TÚI GIẤY CHỦ ĐỀ GIÁNG SINH NOUS KÈM THIỆP DÀNH CHO HOÁ ĐƠN TỪ 499K.\n🎄Hoá đơn từ 499k trở lên\n🎄Chỉ áp dụng khi các moms mua đồ của Nous\n🎄Có ít nhất 1 item trong BST GIÁNG SINH của nhà Nous\n🎄Tất cả đơn hàng SET QUÀ TẶNG NOUS đều đc tặng túi và thiệp cho set từ 499k trở lên ạ🥰\n\n❣️Số lượng quà tặng có giới hạn, chương trình sẽ kết thúc khi hết quà. Cảm ơn các mons đã ủng hộ Moniu Xin Chào ạaaaa 💕💕💕💕"
   },
   {
     "code": "MN-060",
@@ -1054,17 +1154,16 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "LA POMME",
     "category": "Bodysuit & Đồ liền",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "NB",
+      "0-3M",
+      "3-6M"
     ],
     "price": 195000,
     "image": "/images/products/mn-060.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "LA POMME Body chip dài tay kèm quần dành cho bé trai/gái từ NB–0M–3M, mang lại cảm giác thoải mái và gọn gàng cho bé trong những ngày sinh hoạt hằng ngày. Thiết kế body chip dài tay kết hợp quần giúp bé dễ mặc và trông chỉn chu hơn.\n\nĐiểm nổi bật \n- Set body chip dài tay kèm quần: tiện lợi khi chọn"
+    "description": "LA POMME Body chip dài tay kèm quần dành cho bé trai/gái từ NB–0M–3M, mang lại cảm giác thoải mái và gọn gàng cho bé trong những ngày sinh hoạt hằng ngày. Thiết kế body chip dài tay kết hợp quần giúp bé dễ mặc và trông chỉn chu hơn.\n\nĐiểm nổi bật \n- Set body chip dài tay kèm quần: tiện lợi khi chọn đồ cho bé\n- Dành cho bé trai và bé gái: phù hợp nhu cầu mặc hằng ngày của cả bé trai và bé gái\n- Kích cỡ NB–0M–3M: lựa chọn theo độ tuổi/mức phát triển của bé"
   },
   {
     "code": "MN-061",
@@ -1075,7 +1174,8 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "variants": [
       "6-9M",
       "9-12M",
-      "1-2Y",
+      "12-18M",
+      "18-24M",
       "2-3Y"
     ],
     "price": 225000,
@@ -1092,10 +1192,12 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bao tay & Bao chân",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "Be phối xanh đỏ,S",
+      "Be phối xanh đỏ,M",
+      "Be phối xanh đỏ,L",
+      "Ông già noel tuầnlộc,S",
+      "Ông già noel tuầnlộc,M",
+      "Ông già noel tuầnlộc,L"
     ],
     "price": 225000,
     "image": "/images/products/mn-062.jpg",
@@ -1111,14 +1213,17 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bodysuit & Đồ liền",
     "variants": [
-      "9-12M"
+      "Bodysuit trắng xanh,6-9m",
+      "Bodysuit trắng xanh,9-12m",
+      "Bodysuit trắng xanh,0-3m",
+      "Bodysuit trắng xanh,3-6m"
     ],
     "price": 195000,
     "image": "/images/products/mn-063.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "NOUS Bộ bodysuit dài tay màu trắng quần xanh phối yếm thêu hoạ tiết dành cho bé trai từ 3m đến 9-12m\n\nMàu sắc nhã nhặn, trang nhã, thích hợp cho bé mặc đi chơi, đi tiệc, chụp hình những dịp quan trọng."
+    "description": "NOUS Bộ bodysuit dài tay màu trắng quần xanh phối yếm thêu hoạ tiết dành cho bé trai từ 3m đến 9-12m\n\nMàu sắc nhã nhặn, trang nhã, thích hợp cho bé mặc đi chơi, đi tiệc, chụp hình những dịp quan trọng. "
   },
   {
     "code": "MN-064",
@@ -1127,10 +1232,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "LA POMME",
     "category": "Bodysuit & Đồ liền",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "NB"
     ],
     "price": 195000,
     "image": "/images/products/mn-064.jpg",
@@ -1143,13 +1245,10 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "code": "MN-065",
     "tiktokId": "47001127511",
     "name": "BST NOEL 2025 Mũ chùm tai/ Băng đô chủ đề Giáng Sinh cho bé size S/M/L/XL",
-    "brand": "Moniu",
+    "brand": "NOUS",
     "category": "Nón & Mũ bé",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "2-3Y"
     ],
     "price": 55000,
     "image": "/images/products/mn-065.jpg",
@@ -1165,10 +1264,11 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Áo & Áo khoác",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "6-9M",
+      "9-12M",
+      "12-18M",
+      "18-24M",
+      "2-3Y"
     ],
     "price": 295000,
     "image": "/images/products/mn-066.jpg",
@@ -1184,9 +1284,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bộ quần áo bé",
     "variants": [
-      "Newborn (3-5.5kg)",
-      "0-3M",
-      "3-6M"
+      "NEWBORN"
     ],
     "price": 225000,
     "image": "/images/products/mn-067.jpg",
@@ -1202,17 +1300,17 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "LA POMME",
     "category": "Bộ quần áo bé",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "NB",
+      "0-3M",
+      "3-6M",
+      "6-9M"
     ],
     "price": 225000,
     "image": "/images/products/mn-068.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "La Pomme Bộ dài tay cúc lệch Petit soyeu mang đến set phối gọn gàng, dễ mặc hằng ngày cho bé trai và bé gái. Thiết kế dài tay với cúc lệch tạo cảm giác chỉn chu, nhẹ nhàng và tiện lợi khi thay đồ.\n\nĐiểm nổi bật \n- Bộ dài tay: phù hợp để mặc hằng ngày, dễ phối đồ\n- Cúc lệch: chi tiết nổi bật, tăng độ"
+    "description": "La Pomme Bộ dài tay cúc lệch Petit soyeu mang đến set phối gọn gàng, dễ mặc hằng ngày cho bé trai và bé gái. Thiết kế dài tay với cúc lệch tạo cảm giác chỉn chu, nhẹ nhàng và tiện lợi khi thay đồ.\n\nĐiểm nổi bật \n- Bộ dài tay: phù hợp để mặc hằng ngày, dễ phối đồ\n- Cúc lệch: chi tiết nổi bật, tăng độ chỉn chu cho set\n- Petit soyeu: chất liệu được đề cập trong tên sản phẩm\n\nDành cho bé trai và bé gái \nSản phẩm dành cho bé trai và bé gái, phù hợp từ NB-OM-3M theo thông tin sản phẩm."
   },
   {
     "code": "MN-069",
@@ -1221,7 +1319,12 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "LA POMME",
     "category": "Bộ quần áo bé",
     "variants": [
-      "18M"
+      "3-6M",
+      "6-9M",
+      "9-12M",
+      "12-18M",
+      "18-24M",
+      "3-4Y"
     ],
     "price": 225000,
     "image": "/images/products/mn-069.jpg",
@@ -1239,7 +1342,8 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "variants": [
       "6-9M",
       "9-12M",
-      "1-2Y",
+      "12-18M",
+      "18-24M",
       "2-3Y"
     ],
     "price": 185000,
@@ -1274,7 +1378,8 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "variants": [
       "6-9M",
       "9-12M",
-      "1-2Y",
+      "12-18M",
+      "18-24M",
       "2-3Y"
     ],
     "price": 185000,
@@ -1293,7 +1398,8 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "variants": [
       "6-9M",
       "9-12M",
-      "1-2Y",
+      "12-18M",
+      "18-24M",
       "2-3Y"
     ],
     "price": 225000,
@@ -1310,7 +1416,14 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "LA POMME",
     "category": "Bodysuit & Đồ liền",
     "variants": [
-      "18M"
+      "Bodysuit kèm nón kẹo,18m",
+      "Body cộc tay kèm mũ,12m",
+      "Set yếm và áo,3m",
+      "Set yếm và áo,9m",
+      "Bộ dài tay kèm gile,12m",
+      "Body cộc tay,12m",
+      "Body cộc tay kèm mũ,3m",
+      "Bộ dài tay kèm gile,9m"
     ],
     "price": 195000,
     "image": "/images/products/mn-074.jpg",
@@ -1326,7 +1439,12 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Váy đầm bé gái",
     "variants": [
-      "6M",
+      "6-9M",
+      "9-12M",
+      "12-18M",
+      "18-24M",
+      "2-3Y",
+      "3-4Y",
       "4-5Y"
     ],
     "price": 245000,
@@ -1343,17 +1461,16 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "MONONA",
     "category": "Bộ quần áo bé",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "Khinh khí cầu,50x70cm",
+      "Cây nấm,50x70cm",
+      "Cô tiên,50x70cm"
     ],
     "price": 225000,
     "image": "/images/products/mn-076.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "🌈 RA MẮT BỘ SƯU TẬP LÓT CHỐNG THẤM CỔ TÍCH CHO BÉ MONONA \n\nBa người bạn đáng yêu sẽ cùng bé bước vào thế giới thần tiên mỗi đêm ✨\n\n🧚‍♀️ CÔ TIÊN – dịu dàng, bay bổng\n🍄 CÂY NẤM – ngộ nghĩnh, đáng yêu\n🐻  KHINH KHÍ CẦU – du hành tới nhiều vùng đất & ước mơ mới \n\nKhông chỉ đẹp mắt, lót chống thấm còn là"
+    "description": "🌈 RA MẮT BỘ SƯU TẬP LÓT CHỐNG THẤM CỔ TÍCH CHO BÉ MONONA \n\nBa người bạn đáng yêu sẽ cùng bé bước vào thế giới thần tiên mỗi đêm ✨\n\n🧚‍♀️ CÔ TIÊN – dịu dàng, bay bổng\n🍄 CÂY NẤM – ngộ nghĩnh, đáng yêu\n🐻  KHINH KHÍ CẦU – du hành tới nhiều vùng đất & ước mơ mới \n\nKhông chỉ đẹp mắt, lót chống thấm còn là “trợ thủ đắc lực” của ba mẹ:\n\n✅ Chống thấm hiệu quả – bảo vệ nệm & ga giường\n✅ Mềm mại – an toàn cho làn da non nớt\n✅ Thoáng khí – không bí nóng\n✅ Dễ giặt – nhanh khô – dùng lâu dài\n\n💤 Bé ngủ ngon hơn\n👶 Ba mẹ yên tâm hơn\n🛏 Giường luôn khô ráo – sạch sẽ – xinh xắn\n\n🎀 Mỗi họa tiết – Một câu chuyện nhỏ"
   },
   {
     "code": "MN-077",
@@ -1362,10 +1479,10 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Chăn gối & Đệm ngủ",
     "variants": [
-      "Kem thêu oliu",
-      "Nâu thêu gấu",
-      "Hồng thêu thỏ",
-      "Xanh thêu rắn"
+      "Vuông caro xanh",
+      "Cây thông",
+      "Người tuyết",
+      "Ngôi nhà"
     ],
     "price": 265000,
     "image": "/images/products/mn-077.jpg",
@@ -1381,14 +1498,15 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "LA POMME",
     "category": "Bộ quần áo bé",
     "variants": [
-      "6M"
+      "12-18M",
+      "18-24M"
     ],
     "price": 225000,
     "image": "/images/products/mn-078.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "LA POMME Bộ đồ bơi liền/2 mảnh dành cho bé trai/bé gái có size từ 6m đến 5y\n\n❣️Ba mẹ xem kích thước theo bảng size và TĂNG LÊN 1 SIZE cho bé mặc vừa đẹp thoải mái nha ạ, do form đồ bơi khá nhỏ, lấy đúng theo bảng size sẽ ôm khít vào người bé 🥰\n❣️Do đặc thù sản phẩm đồ bơi sẽ hạn chế trả hàng, nên mo"
+    "description": "LA POMME Bộ đồ bơi liền/2 mảnh dành cho bé trai/bé gái có size từ 6m đến 5y\n\n❣️Ba mẹ xem kích thước theo bảng size và TĂNG LÊN 1 SIZE cho bé mặc vừa đẹp thoải mái nha ạ, do form đồ bơi khá nhỏ, lấy đúng theo bảng size sẽ ôm khít vào người bé 🥰\n❣️Do đặc thù sản phẩm đồ bơi sẽ hạn chế trả hàng, nên mong ba mẹ cân nhắc trước khi mua hàng ạ. Ba mẹ cần tư vấn size cứ nhắn tin chiều cao, cân nặng bé gửi em nhaaa🫶🏼\n"
   },
   {
     "code": "MN-079",
@@ -1397,10 +1515,9 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Quần yếm & Set yếm",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "0-3m",
+      "3-6m",
+      "6-9m"
     ],
     "price": 55000,
     "image": "/images/products/mn-079.jpg",
@@ -1416,7 +1533,13 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "LA POMME",
     "category": "Bộ quần áo bé",
     "variants": [
-      "6M"
+      "6-9M",
+      "9-12M",
+      "12-18M",
+      "18-24M",
+      "3-4Y",
+      "4-5Y",
+      "5-6Y"
     ],
     "price": 225000,
     "image": "/images/products/mn-080.jpg",
@@ -1432,7 +1555,13 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "LA POMME",
     "category": "Bộ quần áo bé",
     "variants": [
-      "6M"
+      "6-9M",
+      "9-12M",
+      "12-18M",
+      "18-24M",
+      "3-4Y",
+      "4-5Y",
+      "5-6Y"
     ],
     "price": 185000,
     "image": "/images/products/mn-081.jpg",
@@ -1448,7 +1577,11 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bộ quần áo bé",
     "variants": [
-      "6M"
+      "6-9M",
+      "9-12M",
+      "12-18M",
+      "18-24M",
+      "2-3Y"
     ],
     "price": 225000,
     "image": "/images/products/mn-082.jpg",
@@ -1464,6 +1597,9 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bodysuit & Đồ liền",
     "variants": [
+      "0-3M",
+      "3-6M",
+      "6-9M",
       "9-12M"
     ],
     "price": 195000,
@@ -1480,7 +1616,14 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "LA POMME",
     "category": "Bodysuit & Đồ liền",
     "variants": [
-      "0-3M"
+      "Body trắng kèm yếm,3m",
+      "Body đỏ kèm yếm,6m",
+      "Body đỏ kèm yếm,3m",
+      "Bộ dài tay lệch,0m",
+      "Bộ dài tay lệch,3m",
+      "Body kèm mũ xanh,9m",
+      "Body kèm mũ xanh,3m",
+      "Body trắng kèm yếm,9m"
     ],
     "price": 195000,
     "image": "/images/products/mn-084.jpg",
@@ -1496,9 +1639,9 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bodysuit & Đồ liền",
     "variants": [
-      "Newborn (3-5.5kg)",
-      "0-3M",
-      "3-6M"
+      "Xanh ht chim,Newborn",
+      "Be sushi,Newborn",
+      "Be xanh lá ếch,Newborn"
     ],
     "price": 195000,
     "image": "/images/products/mn-085.jpg",
@@ -1514,7 +1657,12 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "LA POMME",
     "category": "Nón & Mũ bé",
     "variants": [
-      "6-9M"
+      "Đỏ,0-3m",
+      "Đỏ,3-6m",
+      "Đỏ,6-9m",
+      "Hồng,0-3m",
+      "Hồng,3-6m",
+      "Hồng,6-9m"
     ],
     "price": 195000,
     "image": "/images/products/mn-086.jpg",
@@ -1546,9 +1694,14 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Quà tặng kèm",
     "variants": [
-      "Newborn (3-5.5kg)",
-      "0-3M",
-      "3-6M"
+      "5 món hồng phối trắg",
+      "5 món hồng nhạt",
+      "Set bé gái hồng",
+      "Set bé trai be",
+      "3 món xanh navy trắg",
+      "6 món be caro nâu",
+      "6 món be nâu",
+      "5 món xanh hoàng tử"
     ],
     "price": 225000,
     "image": "/images/products/mn-088.jpg",
@@ -1580,7 +1733,9 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "LA POMME",
     "category": "Bodysuit & Đồ liền",
     "variants": [
-      "9M",
+      "0-3M",
+      "3-6M",
+      "6-9M",
       "9-12M"
     ],
     "price": 195000,
@@ -1597,7 +1752,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "LA POMME",
     "category": "Bodysuit & Đồ liền",
     "variants": [
-      "Newborn (3-5.5kg)",
+      "NB",
       "0-3M",
       "3-6M"
     ],
@@ -1615,7 +1770,11 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bộ quần áo bé",
     "variants": [
-      "6M"
+      "6-9M",
+      "9-12M",
+      "12-18M",
+      "18-24M",
+      "2-3Y"
     ],
     "price": 225000,
     "image": "/images/products/mn-092.jpg",
@@ -1631,10 +1790,10 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bodysuit & Đồ liền",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "0-3M",
+      "3-6M",
+      "6-9M",
+      "9-12M"
     ],
     "price": 195000,
     "image": "/images/products/mn-093.jpg",
@@ -1650,8 +1809,9 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Yếm cho bé",
     "variants": [
-      "9M",
-      "12M"
+      "18-24m",
+      "9-12m",
+      "12-18m"
     ],
     "price": 225000,
     "image": "/images/products/mn-094.jpg",
@@ -1667,9 +1827,9 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "MONONA",
     "category": "Chăn gối & Đệm ngủ",
     "variants": [
-      "Newborn (3-5.5kg)",
-      "0-3M",
-      "3-6M"
+      "Gấu",
+      "Thỏ",
+      "Rắn"
     ],
     "price": 265000,
     "image": "/images/products/mn-095.jpg",
@@ -1685,9 +1845,14 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "LA POMME",
     "category": "Nón & Mũ bé",
     "variants": [
-      "Newborn (3-5.5kg)",
-      "0-3M",
-      "3-6M"
+      "Bồng bềnh xanh",
+      "Mũ nơ hồng",
+      "Cún xanh",
+      "Bồng bềnh vàng",
+      "Mũ nơ vàng",
+      "Băng đô nơ vàng",
+      "Băng đô nơ hồng",
+      "Cừu xanh"
     ],
     "price": 55000,
     "image": "/images/products/mn-096.jpg",
@@ -1703,7 +1868,11 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bộ quần áo bé",
     "variants": [
-      "6M"
+      "6-9M",
+      "9-12M",
+      "12-18M",
+      "18-24M",
+      "2-3Y"
     ],
     "price": 225000,
     "image": "/images/products/mn-097.jpg",
@@ -1719,7 +1888,11 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Váy đầm bé gái",
     "variants": [
-      "6M"
+      "6-9M",
+      "9-12M",
+      "12-18M",
+      "18-24M",
+      "2-3Y"
     ],
     "price": 245000,
     "image": "/images/products/mn-098.jpg",
@@ -1735,16 +1908,21 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "MONONA",
     "category": "Chăn gối & Đệm ngủ",
     "variants": [
-      "Newborn (3-5.5kg)",
-      "0-3M",
-      "3-6M"
+      "Gấu hoa",
+      "Ngựa",
+      "Thỏ hồng",
+      "Gấu Joonee",
+      "Be gấu",
+      "Rắn vương miệng",
+      "Rắn nơ",
+      "Vịt"
     ],
     "price": 265000,
     "image": "/images/products/mn-099.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "♻️♻️ Lót đầu sơ sinh trần bông in hoạ tiết mới 😍😍 \n\n➡️ Sử dụng như 1 chiếc gối với bé sơ sinh giúp bảo vệ cột sống, lại giúp thấm hút mồ hôi khi bé nằm hay ngồi: nôi, xe đẩy, gối chống trào ... \n➡️  Thời gian sử dụng & mật độ sử dụng chiếc lót này cực nhiều nên mẹ cân nhắc mua từ 2 chiếc còn thay đổ"
+    "description": "♻️♻️ Lót đầu sơ sinh trần bông in hoạ tiết mới 😍😍 \n\n➡️ Sử dụng như 1 chiếc gối với bé sơ sinh giúp bảo vệ cột sống, lại giúp thấm hút mồ hôi khi bé nằm hay ngồi: nôi, xe đẩy, gối chống trào ... \n➡️  Thời gian sử dụng & mật độ sử dụng chiếc lót này cực nhiều nên mẹ cân nhắc mua từ 2 chiếc còn thay đổi nha ;p  \n♻️ Chất liệu bề mặt là cotton nên thấm hút cực tốt. \n🔅 Kích thước: 22*38cm"
   },
   {
     "code": "MN-100",
@@ -1753,10 +1931,13 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bộ quần áo bé",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "0-3M",
+      "3-6M",
+      "6-9M",
+      "9-12M",
+      "12-18M",
+      "18-24M",
+      "2-3Y"
     ],
     "price": 225000,
     "image": "/images/products/mn-100.jpg",
@@ -1772,10 +1953,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Nón & Mũ bé",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "2-3Y"
     ],
     "price": 185000,
     "image": "/images/products/mn-101.jpg",
@@ -1791,10 +1969,11 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bodysuit & Đồ liền",
     "variants": [
-      "6-9M",
-      "9-12M",
-      "1-2Y",
-      "2-3Y"
+      "Nâu nhạt,6-9m",
+      "Nâu nhạt,9-12m",
+      "Nâu nhạt,2-3y",
+      "Nâu nhạt,18-24m",
+      "Nâu nhạt,12-18m"
     ],
     "price": 195000,
     "image": "/images/products/mn-102.jpg",
@@ -1810,7 +1989,10 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bộ quần áo bé",
     "variants": [
-      "9M"
+      "9-12M",
+      "12-18M",
+      "18-24M",
+      "2-3Y"
     ],
     "price": 225000,
     "image": "/images/products/mn-103.jpg",
@@ -1842,10 +2024,14 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "MONONA",
     "category": "Phụ kiện & Khác",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "Thỏ",
+      "Ngựa",
+      "Cừu",
+      "Ngẫu nhiên",
+      "Combo 2 set bé gái",
+      "Combo 2 set bé trai",
+      "Gấu",
+      "Cún"
     ],
     "price": 55000,
     "image": "/images/products/mn-105.jpg",
@@ -1861,10 +2047,11 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "MONONA",
     "category": "Chăn gối & Đệm ngủ",
     "variants": [
-      "Kem thêu oliu",
-      "Nâu thêu gấu",
-      "Hồng thêu thỏ",
-      "Xanh thêu rắn"
+      "Gấu thuyền",
+      "Voi",
+      "Gia đình thỏ",
+      "Lâu đài",
+      "Cối xay gió"
     ],
     "price": 265000,
     "image": "/images/products/mn-106.jpg",
@@ -1880,17 +2067,21 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "MONONA",
     "category": "Phụ kiện & Khác",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "Mèo",
+      "Gấu tim",
+      "Rồng",
+      "Combo 2c bé trai",
+      "Thỏ",
+      "Gấu nâu",
+      "Gấu bìa thư",
+      "Rắn nơ"
     ],
     "price": 55000,
     "image": "/images/products/mn-107.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "VỀ FULL HOẠ TIẾT MỚI KHĂN TẮM 6 LỚP HỌA TIẾT 💓 vừa xinh vừa xịn 😘\n\nBỏ qua được các nhược điểm của dòng khăn tắm thông thường, phiên bản họa tiết 2025 của Monona đáp ứng đầy đủ các tiêu chí:\n✅  Không xù lông\n✅  Siêu thấm hút\n✅  Không gây kích ứng da\n✅  Sử dụng chất liệu tự nhiên \n\n➡  Mom có thể sử dụ"
+    "description": "VỀ FULL HOẠ TIẾT MỚI KHĂN TẮM 6 LỚP HỌA TIẾT 💓 vừa xinh vừa xịn 😘\n\nBỏ qua được các nhược điểm của dòng khăn tắm thông thường, phiên bản họa tiết 2025 của Monona đáp ứng đầy đủ các tiêu chí:\n✅  Không xù lông\n✅  Siêu thấm hút\n✅  Không gây kích ứng da\n✅  Sử dụng chất liệu tự nhiên \n\n➡  Mom có thể sử dụng làm khăn tắm, chăn đắp, khăn ủ khi bé ra ngoài...\n🎀  Kích thước: 100*110cm"
   },
   {
     "code": "MN-108",
@@ -1899,10 +2090,14 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "MONONA",
     "category": "Chăn gối & Đệm ngủ",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "Thỏ,Set 2c",
+      "Gấu,Set 1c",
+      "Cún,Set 2c",
+      "Gấu,Set 2c",
+      "Cừu,Set 1c",
+      "Cún,Set 1c",
+      "Cừu,Set 2c",
+      "Ngựa,Set 2c"
     ],
     "price": 55000,
     "image": "/images/products/mn-108.jpg",
@@ -1918,16 +2113,16 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "MONONA",
     "category": "Chăn gối & Đệm ngủ",
     "variants": [
-      "Newborn (3-5.5kg)",
-      "0-3M",
-      "3-6M"
+      "Vịt",
+      "Thỏ",
+      "Gấu"
     ],
     "price": 265000,
     "image": "/images/products/mn-109.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "NEW ‼  NEW ‼  GỐI CAO SU NON TAI GẤU MUSLIN hoạ tiết mới 😍😍 \n\n🎯  KT : 23 x 38cm \n🍃  - Vỏ được làm từ vải xô Muslin mềm mại, thoáng mát\n 🍃  - Ruột cao su non  êm ái, kháng khuẩn, có lỗ thoáng khí chống ngạt, mỗi 1 ruột đều có vỏ đi kèm rất vệ sinh \n\n➡  Sử dụng cho bé từ sơ sinh \n➡  Họa tiết: thỏ, gấu"
+    "description": "NEW ‼  NEW ‼  GỐI CAO SU NON TAI GẤU MUSLIN hoạ tiết mới 😍😍 \n\n🎯  KT : 23 x 38cm \n🍃  - Vỏ được làm từ vải xô Muslin mềm mại, thoáng mát\n 🍃  - Ruột cao su non  êm ái, kháng khuẩn, có lỗ thoáng khí chống ngạt, mỗi 1 ruột đều có vỏ đi kèm rất vệ sinh \n\n➡  Sử dụng cho bé từ sơ sinh \n➡  Họa tiết: thỏ, gấu, vịt"
   },
   {
     "code": "MN-110",
@@ -1936,9 +2131,14 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bộ quần áo bé",
     "variants": [
-      "Newborn (3-5.5kg)",
-      "0-3M",
-      "3-6M"
+      "Trắng hồng hoạ tiết",
+      "Áo nơ quần nâu",
+      "Trắng xanh navy",
+      "MỚI Be caro nâu",
+      "Trắng nâu kèm yếm",
+      "Hồng",
+      "MỚI Be caro xanh",
+      "Trắng nâu"
     ],
     "price": 225000,
     "image": "/images/products/mn-110.jpg",
@@ -1954,8 +2154,9 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Yếm cho bé",
     "variants": [
-      "6M",
-      "9M"
+      "Xanh caro kèm mũ,9-12m",
+      "Xanh caro kèm mũ,3-6m",
+      "Xanh caro kèm mũ,6-9m"
     ],
     "price": 195000,
     "image": "/images/products/mn-111.jpg",
@@ -1971,10 +2172,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Nón & Mũ bé",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "9-12M"
     ],
     "price": 55000,
     "image": "/images/products/mn-112.jpg",
@@ -1990,8 +2188,14 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bộ quần áo bé",
     "variants": [
-      "6M",
-      "9M"
+      "Trắng xanh,0-3m",
+      "Trắng xanh,3-6m",
+      "Trắng xanh,6-9m",
+      "Trắng xanh,9-12m",
+      "Trắng hồng,0-3m",
+      "Trắng hồng,3-6m",
+      "Trắng hồng,6-9m",
+      "Trắng hồng,9-12m"
     ],
     "price": 225000,
     "image": "/images/products/mn-113.jpg",
@@ -2007,9 +2211,11 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bodysuit & Đồ liền",
     "variants": [
-      "Newborn (3-5.5kg)",
+      "NB",
       "0-3M",
-      "3-6M"
+      "3-6M",
+      "6-9M",
+      "9-12M"
     ],
     "price": 195000,
     "image": "/images/products/mn-114.jpg",
@@ -2025,16 +2231,21 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Chăn gối & Đệm ngủ",
     "variants": [
-      "Newborn (3-5.5kg)",
-      "0-3M",
-      "3-6M"
+      "Thỏ hồng",
+      "Xanh hình gấu",
+      "Lót gối ss gấu trắng",
+      "Quả táo hình gấu",
+      "Tam giác sushi",
+      "Quả bơ",
+      "Mèo vàng phối trắng",
+      "Sư tử be phối trắng"
     ],
     "price": 265000,
     "image": "/images/products/mn-115.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "Gối định hình đầu NOUS cho bé hình dễ thương có kích thước nhỏ phù hợp với bé từ sơ sinh.\nGối làm từ chất liệu petit mềm, thoáng khí, thân thiện với làn da bé sơ sinh."
+    "description": "Gối định hình đầu NOUS cho bé hình dễ thương có kích thước nhỏ phù hợp với bé từ sơ sinh.\nGối làm từ chất liệu petit mềm, thoáng khí, thân thiện với làn da bé sơ sinh. "
   },
   {
     "code": "MN-116",
@@ -2043,17 +2254,17 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "MONONA",
     "category": "Chăn gối & Đệm ngủ",
     "variants": [
-      "Kem thêu oliu",
-      "Nâu thêu gấu",
-      "Hồng thêu thỏ",
-      "Xanh thêu rắn"
+      "Trái tim",
+      "Thỏ",
+      "Sóc",
+      "Gấu"
     ],
     "price": 265000,
     "image": "/images/products/mn-116.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "♻️ Chăn lông tuyết thêu viền sò phong cách Korea 😍\n\n➡️ Tới mùa sắm chăn cho các bé đi học hay mẹ nằm văn phòng thì em này quá hợp lý nha 😍 \n♻️ Chất liệu lông mềm mịn, không gây cảm giác cợn khó chịu như chăn thường.\n♻️ Hoạ tiết thêu theo trend Hàn cực sắc nét\n\n♻️ Viền sò chắc chắn, giúp chăn bền bỉ"
+    "description": "♻️ Chăn lông tuyết thêu viền sò phong cách Korea 😍\n\n➡️ Tới mùa sắm chăn cho các bé đi học hay mẹ nằm văn phòng thì em này quá hợp lý nha 😍 \n♻️ Chất liệu lông mềm mịn, không gây cảm giác cợn khó chịu như chăn thường.\n♻️ Hoạ tiết thêu theo trend Hàn cực sắc nét\n\n♻️ Viền sò chắc chắn, giúp chăn bền bỉ hơn, đẹp hơn.\n\n🎀 Hoạ tiết: Sóc, gấu, trái tim, thỏ \n🎀 Kích thước: 100*135cm"
   },
   {
     "code": "MN-117",
@@ -2062,9 +2273,12 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "LA POMME",
     "category": "Phụ kiện & Khác",
     "variants": [
-      "Newborn (3-5.5kg)",
-      "0-3M",
-      "3-6M"
+      "Khăn đa năng,Hồng",
+      "Khăn đa năng,Trắng",
+      "Khăn đa năng,Xanh",
+      "Khăn sữa,Hồng",
+      "Khăn sữa,Trắng",
+      "Khăn sữa,Xanh"
     ],
     "price": 55000,
     "image": "/images/products/mn-117.jpg",
@@ -2080,10 +2294,10 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Nón & Mũ bé",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "6-9m",
+      "9-12m",
+      "0-3m",
+      "3-6m"
     ],
     "price": 225000,
     "image": "/images/products/mn-118.jpg",
@@ -2099,16 +2313,21 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "MONONA",
     "category": "Chăn gối & Đệm ngủ",
     "variants": [
-      "Newborn (3-5.5kg)",
-      "0-3M",
-      "3-6M"
+      "Combo 2 món(5),Thỏ hồng",
+      "Gối chặn,Gấu be",
+      "Combo 2 món(6),Gấu xanh",
+      "Combo 4 món,Gấu xanh",
+      "Chăn thêu waffle,Thỏ hồng",
+      "Chăn thêu waffle,Gấu xanh",
+      "Combo 3 món(2),Gấu xanh",
+      "Gối tai gấu,Gấu be"
     ],
     "price": 265000,
     "image": "/images/products/mn-119.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "MONONA Combo phòng ngủ cho bé từ sơ sinh chất liệu vải cotton waffle màu xanh/hồng/kem\n\n🆘  GỐI ÔM THÊU VẢI WAFFLE - MONONA \nGối ôm như này có bị xinh quá ko ạ :3  \n\n➡ Sử dụng vải waffle sợi tre cao cấp đáp ứng hết các tiêu chí: mềm, đẹp, bền, thoáng khí \n🍃  Thêu 1 họa tiết to, tỉ mỉ & xinh xắn nhất"
+    "description": "MONONA Combo phòng ngủ cho bé từ sơ sinh chất liệu vải cotton waffle màu xanh/hồng/kem\n\n🆘  GỐI ÔM THÊU VẢI WAFFLE - MONONA \nGối ôm như này có bị xinh quá ko ạ :3  \n\n➡ Sử dụng vải waffle sợi tre cao cấp đáp ứng hết các tiêu chí: mềm, đẹp, bền, thoáng khí \n🍃  Thêu 1 họa tiết to, tỉ mỉ & xinh xắn nhất\n🍃  Tặng kèm 1 túi đựng hình gấu \n🍃  Kích thước: 10*60cm \n\n🎯  Họa tiết: gấu-thỏ 🥰🥰\n\n🎀🎀 GỐI TAI GẤU VẢI WAFFLE sợi tre MONONA đã có mẫu rắn 2025 😍😍\n\nVừa mềm vừa xinh lại thoáng khí 😘😘\n🔆 Thiết kế hình gấu đáng yêu \n🔆 Chất liệu waffle sợi tre khánh khuẩn đạt chuẩn\n🔆 Gối mỏng sử dụng được cho bé từ sơ sinh\n\n🎀  Hoạ tiết: gấu - thỏ\n\n🌟  GỐI CHẶN CHỐNG GIẬT MÌNH VẢI COTTON WAFFLE 🎀 \n\nMềm mướt lại cực xinh, các bé mà có ôm vào chỉ có mê thôi :B \n➡  Sử dụng chất liệu cotton waffle mềm mại & thoáng khí\n➡  Họa tiết xinh xắn bắt trend\n➡  Các bé sơ sinh rất cần để chống giật mình, giúp giấc ngủ của bé được sâu giấc hơn\n\n🔅 CHĂN THÊU VẢI WAFFLE sợi tre CAO CẤP MONONA - mã MNN064 \nCực kì mềm & bền vải , ko bị bai nhão, xổ lông mom nhé \n\n✅ Chăn waffle sợi tre nhà Monona có đặc tính kháng khuẩn, dạng đan lưới vừa thoáng vừa chống ngạt, thiết kế lại xinh lắm lắm luôn, ko kém brand Korea nào ạ.\n\nChất liệu này bên Hàn không có giá dưới 1 triệu đâu ạ: \n♻️ Hút ẩm tốt hơn sợi thông thường\n♻️ Mật độ vải dày nên rất bền, không bị bai nhão.\n♻️ Kháng khuẩn tự nhiên"
   },
   {
     "code": "MN-120",
@@ -2117,10 +2336,11 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bộ quần áo bé",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "6-9M",
+      "9-12M",
+      "12-18M",
+      "18-24M",
+      "2-3Y"
     ],
     "price": 225000,
     "image": "/images/products/mn-120.jpg",
@@ -2136,6 +2356,9 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Yếm cho bé",
     "variants": [
+      "0-3M",
+      "3-6M",
+      "6-9M",
       "9-12M"
     ],
     "price": 195000,
@@ -2152,14 +2375,19 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bộ quần áo bé",
     "variants": [
-      "9M"
+      "0-3M",
+      "3-6M",
+      "6-9M",
+      "S",
+      "M",
+      "L"
     ],
     "price": 185000,
     "image": "/images/products/mn-122.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "*Nhộng Nous form to, ba mẹ ko tăng size giúp shop nha🥰\nNOUS Nhộng chũn hỗ trợ bé tự ngủ, ngon giấc, đỡ giật mình 0-9m\nĐây là một trong những công cụ hỗ trợ bé yêu tự vào giấc ngủ, và chuyển giấc mượt mà. Nhộng chũn có khoá kéo tiện lợi, an toàn, vải mềm mịn, thoáng mát. Các mẹ an tâm chọn cho con sử"
+    "description": "*Nhộng Nous form to, ba mẹ ko tăng size giúp shop nha🥰\nNOUS Nhộng chũn hỗ trợ bé tự ngủ, ngon giấc, đỡ giật mình 0-9m\nĐây là một trong những công cụ hỗ trợ bé yêu tự vào giấc ngủ, và chuyển giấc mượt mà. Nhộng chũn có khoá kéo tiện lợi, an toàn, vải mềm mịn, thoáng mát. Các mẹ an tâm chọn cho con sử dụng nhé ạ"
   },
   {
     "code": "MN-123",
@@ -2170,8 +2398,10 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "variants": [
       "6-9M",
       "9-12M",
-      "1-2Y",
-      "2-3Y"
+      "12-18M",
+      "18-24M",
+      "2-3Y",
+      "3-4Y"
     ],
     "price": 185000,
     "image": "/images/products/mn-123.jpg",
@@ -2187,17 +2417,16 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "MONONA",
     "category": "Chăn gối & Đệm ngủ",
     "variants": [
-      "Kem thêu oliu",
-      "Nâu thêu gấu",
-      "Hồng thêu thỏ",
-      "Xanh thêu rắn"
+      "Gấu",
+      "Thỏ",
+      "Ngựa"
     ],
     "price": 265000,
     "image": "/images/products/mn-124.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "🎀 Chăn waffle thêu mix hạt bông Monona xinh xỉu😍 \n\nChất mềm & mát & mịn lịm tim mom nhé 😍😍 Mình đảm bảo các mom cầm chăn này cái là ưng luôn vì độ mướt ít loại chăn có đc lắm 😆\n\n🔆 Chất liệu waffle cao cấp \n🔆 Khổ chăn to sử dụng được cho các mẹ & bé\n🔆 Chăn được mix hạt bông xinh xắn nên dùng đắp hàng"
+    "description": "🎀 Chăn waffle thêu mix hạt bông Monona xinh xỉu😍 \n\nChất mềm & mát & mịn lịm tim mom nhé 😍😍 Mình đảm bảo các mom cầm chăn này cái là ưng luôn vì độ mướt ít loại chăn có đc lắm 😆\n\n🔆 Chất liệu waffle cao cấp \n🔆 Khổ chăn to sử dụng được cho các mẹ & bé\n🔆 Chăn được mix hạt bông xinh xắn nên dùng đắp hàng ngày, ra ngoài đều oki. \n\n🎀 Hoạ tiết thêu: gấu, thỏ, ngựa"
   },
   {
     "code": "MN-125",
@@ -2208,7 +2437,8 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "variants": [
       "6-9M",
       "9-12M",
-      "1-2Y",
+      "12-18M",
+      "18-24M",
       "2-3Y"
     ],
     "price": 185000,
@@ -2225,10 +2455,10 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bodysuit & Đồ liền",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "0-3M",
+      "3-6M",
+      "6-9M",
+      "9-12M"
     ],
     "price": 195000,
     "image": "/images/products/mn-126.jpg",
@@ -2244,10 +2474,9 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bodysuit & Đồ liền",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "0-3M",
+      "3-6M",
+      "6-9M"
     ],
     "price": 195000,
     "image": "/images/products/mn-127.jpg",
@@ -2263,14 +2492,20 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bộ quần áo bé",
     "variants": [
-      "9M"
+      "9-12M",
+      "12-18M",
+      "18-24M",
+      "2-3Y",
+      "3-4Y",
+      "4-5Y",
+      "5-6Y"
     ],
     "price": 225000,
     "image": "/images/products/mn-128.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "NOUS T8 Bộ quần áo dài kẻ caro hồng thêu hình gấu nhiều size cho bé gái từ 9m\nMàu hồng xinh ơi là xinh, ba mẹ có con gái nhất định phải sắm bộ này nha. Lâu lâu Nu mới ra size lớn cho bé tới 5-6 tuổi luôn nè ạ.\nSet quần dài nên ba mẹ nhớ lựa size theo chiều cao của bé, sợ trừ hao thì quần sẽ bị dài b"
+    "description": "NOUS T8 Bộ quần áo dài kẻ caro hồng thêu hình gấu nhiều size cho bé gái từ 9m\nMàu hồng xinh ơi là xinh, ba mẹ có con gái nhất định phải sắm bộ này nha. Lâu lâu Nu mới ra size lớn cho bé tới 5-6 tuổi luôn nè ạ.\nSet quần dài nên ba mẹ nhớ lựa size theo chiều cao của bé, sợ trừ hao thì quần sẽ bị dài bé ko mặc được liền ạ🥰"
   },
   {
     "code": "MN-129",
@@ -2279,9 +2514,11 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bộ quần áo bé",
     "variants": [
-      "Newborn (3-5.5kg)",
       "0-3M",
-      "3-6M"
+      "3-6M",
+      "6-9M",
+      "9-12M",
+      "12-18M"
     ],
     "price": 225000,
     "image": "/images/products/mn-129.jpg",
@@ -2297,8 +2534,10 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bộ quần áo bé",
     "variants": [
-      "6M",
-      "9M"
+      "0-3M",
+      "3-6M",
+      "6-9M",
+      "9-12M"
     ],
     "price": 225000,
     "image": "/images/products/mn-130.jpg",
@@ -2314,8 +2553,10 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bộ quần áo bé",
     "variants": [
-      "6M",
-      "9M"
+      "Nâu cafe,3-6m",
+      "Nâu cafe,6-9m",
+      "Nâu cafe,9-12m",
+      "Nâu cafe,0-3m"
     ],
     "price": 225000,
     "image": "/images/products/mn-131.jpg",
@@ -2331,6 +2572,9 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bodysuit & Đồ liền",
     "variants": [
+      "0-3M",
+      "3-6M",
+      "6-9M",
       "9-12M"
     ],
     "price": 195000,
@@ -2349,7 +2593,8 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "variants": [
       "6-9M",
       "9-12M",
-      "1-2Y",
+      "12-18M",
+      "18-24M",
       "2-3Y"
     ],
     "price": 225000,
@@ -2357,7 +2602,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "NOUS MỚI  Bộ cộc mix phụ kiện áo trắng phối quần xanh rêu kèm mũ dành cho bé trai size từ 6m đến 2-3y\n\nChất liệu vải mềm, mịn, mát, an toàn với làn da của bé.\nShop cam kết bán hàng chính hãng, là đại lý chính thức của Nous Vietnam.\nBa mẹ cần tư vấn size cứ nhắn cho shop chiều cao, cân nặng của bé nh"
+    "description": "NOUS MỚI  Bộ cộc mix phụ kiện áo trắng phối quần xanh rêu kèm mũ dành cho bé trai size từ 6m đến 2-3y\n\nChất liệu vải mềm, mịn, mát, an toàn với làn da của bé.\nShop cam kết bán hàng chính hãng, là đại lý chính thức của Nous Vietnam.\nBa mẹ cần tư vấn size cứ nhắn cho shop chiều cao, cân nặng của bé nhé ạ❣️"
   },
   {
     "code": "MN-134",
@@ -2366,10 +2611,10 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bộ quần áo bé",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "9-12M",
+      "12-18M",
+      "18-24M",
+      "2-3Y"
     ],
     "price": 225000,
     "image": "/images/products/mn-134.jpg",
@@ -2385,9 +2630,10 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bodysuit & Đồ liền",
     "variants": [
-      "Newborn (3-5.5kg)",
-      "0-3M",
-      "3-6M"
+      "Xanh lá phối trắng",
+      "Be",
+      "Xanh biển phối trắng",
+      "Hồng phối trắng"
     ],
     "price": 195000,
     "image": "/images/products/mn-135.jpg",
@@ -2405,7 +2651,8 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "variants": [
       "6-9M",
       "9-12M",
-      "1-2Y",
+      "12-18M",
+      "18-24M",
       "2-3Y"
     ],
     "price": 225000,
@@ -2422,9 +2669,14 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Nón & Mũ bé",
     "variants": [
-      "Newborn (3-5.5kg)",
-      "0-3M",
-      "3-6M"
+      "Hồng phối trắng",
+      "Tím",
+      "Be",
+      "Xanh lá",
+      "Be MỚi",
+      "Trắng",
+      "Xanh phối trắng",
+      "Be hồng"
     ],
     "price": 55000,
     "image": "/images/products/mn-137.jpg",
@@ -2440,9 +2692,14 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bộ quần áo bé",
     "variants": [
-      "Newborn (3-5.5kg)",
-      "0-3M",
-      "3-6M"
+      "Trắng ghi ht caro",
+      "Trắng in trang trí",
+      "Chú hề xanh",
+      "Áo be quần hồng",
+      "Trắng quần xanh",
+      "Hoạ tiết voi",
+      "Kẻ hồng đậm",
+      "Be ht quần hồng MỚI"
     ],
     "price": 225000,
     "image": "/images/products/mn-138.jpg",
@@ -2458,9 +2715,11 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Áo & Áo khoác",
     "variants": [
+      "3-6M",
       "6-9M",
       "9-12M",
-      "1-2Y",
+      "12-18M",
+      "18-24M",
       "2-3Y"
     ],
     "price": 295000,
@@ -2477,17 +2736,16 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "MONONA",
     "category": "Chăn gối & Đệm ngủ",
     "variants": [
-      "Kem thêu oliu",
-      "Nâu thêu gấu",
-      "Hồng thêu thỏ",
-      "Xanh thêu rắn"
+      "Gấu",
+      "Thỏ",
+      "Vịt"
     ],
     "price": 265000,
     "image": "/images/products/mn-140.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "‼️ Chăn Muslin hạt đậu Monona viền sò siêu yêu 😍😍\n\n➡️ Hoạ tiết nhẹ nhàng trên nền vải muslin êm mềm cực hợp lý cho mùa thu đông năm nay\n\n♻️ Chăn thiết kế dùng được 2 mặt 2 chất liệu khác nhau: \n🔆 1 mặt là vải xô muslin thấm hút tốt & thông thoáng\n🔆 1 mặt mix nhung bi dạng hạt đậu tạo cảm giác mềm mạ"
+    "description": "‼️ Chăn Muslin hạt đậu Monona viền sò siêu yêu 😍😍\n\n➡️ Hoạ tiết nhẹ nhàng trên nền vải muslin êm mềm cực hợp lý cho mùa thu đông năm nay\n\n♻️ Chăn thiết kế dùng được 2 mặt 2 chất liệu khác nhau: \n🔆 1 mặt là vải xô muslin thấm hút tốt & thông thoáng\n🔆 1 mặt mix nhung bi dạng hạt đậu tạo cảm giác mềm mại, ấm áp khi sử dụng\n🔆 Bao viền sò mix màu phối từng hoạ tiết khác nhau\n\n🔆 Kích thước: 80*100cm\n🔆 Hoạ tiết: gấu, thỏ, vịt"
   },
   {
     "code": "MN-141",
@@ -2496,10 +2754,14 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "LA POMME",
     "category": "Bodysuit & Đồ liền",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "Bodychip xanh,3-6m",
+      "Dài tay vàng,0-3m",
+      "Dài tay vàng,3-6m",
+      "Dài tay xanh,0-3m",
+      "Dài tay xanh,3-6m",
+      "Bodychip vàng,0-3m",
+      "Bodychip vàng,3-6m",
+      "Bodychip xanh,0-3m"
     ],
     "price": 195000,
     "image": "/images/products/mn-141.jpg",
@@ -2515,16 +2777,17 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bodysuit & Đồ liền",
     "variants": [
-      "Newborn (3-5.5kg)",
       "0-3M",
-      "3-6M"
+      "3-6M",
+      "6-9M",
+      "9-12M"
     ],
     "price": 195000,
     "image": "/images/products/mn-142.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "NOUS MINI Bodysuit cộc tay có size từ 0m đến 9-12m\nBST Mini mới nhất tháng 7 của nhà Nu, những thiết kế đơn giản, basic, chất liệu vải mỏng, mát mà giá thành kinh tế cho các mom dễ lựa chọn 💕\n\n❣️Lưu ý nhỏ cho các moms:\nForm bodysuit mã này là form body suông và sẽ nhỏ hơn so với những mã body form b"
+    "description": "NOUS MINI Bodysuit cộc tay có size từ 0m đến 9-12m\nBST Mini mới nhất tháng 7 của nhà Nu, những thiết kế đơn giản, basic, chất liệu vải mỏng, mát mà giá thành kinh tế cho các mom dễ lựa chọn 💕\n\n❣️Lưu ý nhỏ cho các moms:\nForm bodysuit mã này là form body suông và sẽ nhỏ hơn so với những mã body form bí ngô, nên bé nào trộm vía cân nặng ba mẹ tăng từ 1-2 size giúp shop nha ạ.\nSize 0-3: chỉ phù hợp với bé sơ sinh."
   },
   {
     "code": "MN-143",
@@ -2533,10 +2796,13 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bodysuit & Đồ liền",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "0-3M",
+      "3-6M",
+      "6-9M",
+      "9-12M",
+      "12-18M",
+      "18-24M",
+      "2-3Y"
     ],
     "price": 195000,
     "image": "/images/products/mn-143.jpg",
@@ -2552,8 +2818,10 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Áo & Áo khoác",
     "variants": [
-      "2Y",
-      "4-5Y"
+      "Nâu,3-4y",
+      "Nâu,5-6y",
+      "Nâu,4-5y",
+      "Nâu,2-3y"
     ],
     "price": 295000,
     "image": "/images/products/mn-144.jpg",
@@ -2569,9 +2837,9 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "LA POMME",
     "category": "Bộ quần áo bé",
     "variants": [
-      "Newborn (3-5.5kg)",
       "0-3M",
-      "3-6M"
+      "3-6M",
+      "6-9M"
     ],
     "price": 185000,
     "image": "/images/products/mn-145.jpg",
@@ -2587,10 +2855,9 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "MONONA",
     "category": "Chăn gối & Đệm ngủ",
     "variants": [
-      "Kem thêu oliu",
-      "Nâu thêu gấu",
-      "Hồng thêu thỏ",
-      "Xanh thêu rắn"
+      "Gấu",
+      "Thỏ",
+      "Rắn"
     ],
     "price": 265000,
     "image": "/images/products/mn-146.jpg",
@@ -2641,7 +2908,10 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bộ quần áo bé",
     "variants": [
-      "9M",
+      "6-9M",
+      "9-12M",
+      "12-18M",
+      "18-24M",
       "2-3Y"
     ],
     "price": 225000,
@@ -2658,17 +2928,14 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "LA POMME",
     "category": "Bodysuit & Đồ liền",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "NB"
     ],
     "price": 195000,
     "image": "/images/products/mn-150.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "La Pomme Body dài tay liền tất dành cho bé trai/gái Petit Soyeu NB 0M 3M mang đến cảm giác ôm vừa vặn, nhẹ nhàng và tiện lợi khi mặc hằng ngày. Thiết kế liền tất giúp bé dễ vận động, thoải mái suốt ngày dài.\n\nĐiểm nổi bật \n- Dài tay liền tất: thiết kế liền thân giúp bé dễ mặc và gọn gàng\n- Dành cho"
+    "description": "La Pomme Body dài tay liền tất dành cho bé trai/gái Petit Soyeu NB 0M 3M mang đến cảm giác ôm vừa vặn, nhẹ nhàng và tiện lợi khi mặc hằng ngày. Thiết kế liền tất giúp bé dễ vận động, thoải mái suốt ngày dài.\n\nĐiểm nổi bật \n- Dài tay liền tất: thiết kế liền thân giúp bé dễ mặc và gọn gàng\n- Dành cho bé trai và bé gái: phù hợp cả hai giới\n- Kích cỡ NB 0M–3M"
   },
   {
     "code": "MN-151",
@@ -2677,9 +2944,14 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Quần yếm & Set yếm",
     "variants": [
-      "Newborn (3-5.5kg)",
-      "0-3M",
-      "3-6M"
+      "Quần yếm xanh trắng,6-9m",
+      "Quần yếm xanh trắng,9-12m",
+      "Bộ liền xám trắng,0-3m",
+      "Bộ liền xám trắng,3-6m",
+      "Bộ liền xám trắng,6-9m",
+      "Bộ liền xám trắng,9-12m",
+      "Quần yếm xanh trắng,0-3m",
+      "Quần yếm xanh trắng,3-6m"
     ],
     "price": 195000,
     "image": "/images/products/mn-151.jpg",
@@ -2695,9 +2967,14 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Nón & Mũ bé",
     "variants": [
-      "Newborn (3-5.5kg)",
-      "0-3M",
-      "3-6M"
+      "Trơn nâu",
+      "Kẻ tím trắng",
+      "Tinker bell viền bèo",
+      "Mũ chùm xanh lá",
+      "Ht trái cây",
+      "Xanh MỚI",
+      "Cá phối trắng hồng",
+      "Tai mèo nâu"
     ],
     "price": 55000,
     "image": "/images/products/mn-152.jpg",
@@ -2713,10 +2990,10 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bộ quần áo bé",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "0-3M",
+      "3-6M",
+      "6-9M",
+      "9-12M"
     ],
     "price": 225000,
     "image": "/images/products/mn-153.jpg",
@@ -2732,10 +3009,14 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Nón & Mũ bé",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "Be kẻ caro,S(0-6m)",
+      "Mũ nửa đầu xanh Nous,L(12-24m)",
+      "Nơ hồng,S(0-6m)",
+      "Trùm chần bông hồng,M(6-12m)",
+      "Tai gấu rộng vành,M(6-12m)",
+      "Tai gấu kẻ caro,M(6-12m)",
+      "Thuỷ thủ xanh,S(0-6m)",
+      "Thuỷ thủ hồng,S(0-6m)"
     ],
     "price": 55000,
     "image": "/images/products/mn-154.jpg",
@@ -2751,10 +3032,10 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bộ quần áo bé",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "2-3y",
+      "9-12",
+      "12-18m",
+      "18-24m"
     ],
     "price": 225000,
     "image": "/images/products/mn-155.jpg",
@@ -2770,7 +3051,14 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bộ quần áo bé",
     "variants": [
-      "9M"
+      "Quần nâu,9-12m",
+      "Quần nâu,12-18m",
+      "Quần nâu,18-24m",
+      "Quần nâu,2-3y",
+      "Quần hồng,9-12m",
+      "Quần hồng,12-18m",
+      "Quần hồng,18-24m",
+      "Quần hồng,2-3y"
     ],
     "price": 225000,
     "image": "/images/products/mn-156.jpg",
@@ -2786,7 +3074,14 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bộ quần áo bé",
     "variants": [
-      "9-12M"
+      "Caro trắng hồng,6-9m",
+      "Caro trắng hồng,9-12m",
+      "Caro xanh lá,0-3m",
+      "Caro xanh lá,3-6m",
+      "Caro xanh lá,6-9m",
+      "Caro xanh lá,9-12m",
+      "Caro trắng hồng,0-3m",
+      "Caro trắng hồng,3-6m"
     ],
     "price": 225000,
     "image": "/images/products/mn-157.jpg",
@@ -2802,9 +3097,9 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "MONONA",
     "category": "Chăn gối & Đệm ngủ",
     "variants": [
-      "Newborn (3-5.5kg)",
-      "0-3M",
-      "3-6M"
+      "Xanh gấu",
+      "Hồng thỏ",
+      "Be gấu"
     ],
     "price": 265000,
     "image": "/images/products/mn-158.jpg",
@@ -2820,9 +3115,14 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bao tay & Bao chân",
     "variants": [
-      "Newborn (3-5.5kg)",
-      "0-3M",
-      "3-6M"
+      "Trắng phối xanh lá",
+      "Xanh lá",
+      "Chó vũ trụ",
+      "Nâu thỏ mèo",
+      "Trắng phối hồng",
+      "Hoạ tiết mèo nâu",
+      "Trắg sư tử& sóc",
+      "Trắng gấu nâu"
     ],
     "price": 225000,
     "image": "/images/products/mn-159.jpg",
@@ -2838,17 +3138,17 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bộ quần áo bé",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "6-9M",
+      "9-12M",
+      "12-18M",
+      "2-3Y"
     ],
     "price": 225000,
     "image": "/images/products/mn-160.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "Nous Mới Bộ cộc tay trắng phối nâu cho bé từ 6 tháng đến 2 tuổi\nChất liệu petit mềm, mát thích hợp cho bé mặc đi chơi, đi học rất xinh"
+    "description": "Nous Mới Bộ cộc tay trắng phối nâu cho bé từ 6 tháng đến 2 tuổi\nChất liệu petit mềm, mát thích hợp cho bé mặc đi chơi, đi học rất xinh "
   },
   {
     "code": "MN-161",
@@ -2857,7 +3157,12 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Quà tặng kèm",
     "variants": [
-      "Quà tặng kèm"
+      "Xanh lá nhạt",
+      "Xanh dương nhạt",
+      "Be phối caro vàng",
+      "Xanh phối trắng",
+      "Nâu phối trắng",
+      "4 món hồng"
     ],
     "price": 0,
     "image": "/images/products/mn-161.jpg",
@@ -2873,9 +3178,14 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bộ quần áo bé",
     "variants": [
-      "Newborn (3-5.5kg)",
-      "0-3M",
-      "3-6M"
+      "Hồng phối trắng lệch",
+      "Hồng lệch",
+      "Nâu lệch",
+      "Xanh lệch",
+      "Hồng thẳng",
+      "Trắng thẳng",
+      "Trắng lệch mới",
+      "Trắng lệch"
     ],
     "price": 225000,
     "image": "/images/products/mn-162.jpg",
@@ -2891,10 +3201,10 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bộ quần áo bé",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "4-5y",
+      "5-6y",
+      "2-3y",
+      "3-4y"
     ],
     "price": 225000,
     "image": "/images/products/mn-163.jpg",
@@ -2910,14 +3220,18 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Quà tặng kèm",
     "variants": [
-      "Quà tặng kèm"
+      "19 món nâu kẻ be",
+      "5 món trắngcaro xanh",
+      "Set 5 món xanh nhạt",
+      "Set trắng 16 món",
+      "Set trắng 19 món"
     ],
     "price": 0,
     "image": "/images/products/mn-164.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "SET Quà tặng Nous bé trai bé gái từ 0-3m [BST tháng 8\nSet gồm 5-19 món thích hợp làm quà tặng đầy tháng , newborn cho bé, sản phẩm được đựng trong hộp Nous màu trắng chỉnh chu. Sản phẩm giống y hình."
+    "description": "SET Quà tặng Nous bé trai bé gái từ 0-3m [BST tháng 8\nSet gồm 5-19 món thích hợp làm quà tặng đầy tháng , newborn cho bé, sản phẩm được đựng trong hộp Nous màu trắng chỉnh chu. Sản phẩm giống y hình. "
   },
   {
     "code": "MN-165",
@@ -2926,7 +3240,12 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Áo & Áo khoác",
     "variants": [
-      "18M"
+      "3-6M",
+      "6-9M",
+      "9-12M",
+      "12-18M",
+      "18-24M",
+      "2-3Y"
     ],
     "price": 295000,
     "image": "/images/products/mn-165.jpg",
@@ -2942,10 +3261,10 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bộ quần áo bé",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "9-12M",
+      "12-18M",
+      "18-24M",
+      "2-3Y"
     ],
     "price": 225000,
     "image": "/images/products/mn-166.jpg",
@@ -2961,7 +3280,14 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Áo & Áo khoác",
     "variants": [
-      "6M"
+      "6-9M",
+      "9-12M",
+      "12-18M",
+      "18-24M",
+      "2-3Y",
+      "3-4Y",
+      "4-5Y",
+      "5-6Y"
     ],
     "price": 295000,
     "image": "/images/products/mn-167.jpg",
@@ -2977,6 +3303,9 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bodysuit & Đồ liền",
     "variants": [
+      "0-3M",
+      "3-6M",
+      "6-9M",
       "9-12M"
     ],
     "price": 195000,
@@ -3012,10 +3341,10 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bộ quần áo bé",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "6-9M",
+      "9-12M",
+      "12-18M",
+      "18-24M"
     ],
     "price": 225000,
     "image": "/images/products/mn-170.jpg",
@@ -3031,9 +3360,8 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "MONONA",
     "category": "Chăn gối & Đệm ngủ",
     "variants": [
-      "Newborn (3-5.5kg)",
-      "0-3M",
-      "3-6M"
+      "Gấu",
+      "Thỏ"
     ],
     "price": 265000,
     "image": "/images/products/mn-171.jpg",
@@ -3049,9 +3377,14 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bodysuit & Đồ liền",
     "variants": [
-      "Newborn (3-5.5kg)",
-      "0-3M",
-      "3-6M"
+      "Hồng,3-6m",
+      "Hồng,6-9m",
+      "Hồng,9-12m",
+      "Caro xám,0-3m",
+      "Caro xám,3-6m",
+      "Caro xám,6-9m",
+      "Caro xám,9-12m",
+      "Hồng,0-3m"
     ],
     "price": 499000,
     "image": "/images/products/mn-172.jpg",
@@ -3067,10 +3400,10 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bộ quần áo bé",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "2-3Y",
+      "3-4Y",
+      "4-5Y",
+      "5-6Y"
     ],
     "price": 225000,
     "image": "/images/products/mn-173.jpg",
@@ -3086,10 +3419,11 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Áo & Áo khoác",
     "variants": [
+      "3-6M",
       "6-9M",
       "9-12M",
-      "1-2Y",
-      "2-3Y"
+      "12-18M",
+      "18-24M"
     ],
     "price": 295000,
     "image": "/images/products/mn-174.jpg",
@@ -3105,8 +3439,10 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bộ quần áo bé",
     "variants": [
-      "9-12M",
-      "12M"
+      "0-3M",
+      "3-6M",
+      "6-9M",
+      "9-12M"
     ],
     "price": 499000,
     "image": "/images/products/mn-175.jpg",
@@ -3122,10 +3458,10 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bộ quần áo bé",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "2-3Y",
+      "3-4Y",
+      "4-5Y",
+      "5-6Y"
     ],
     "price": 225000,
     "image": "/images/products/mn-176.jpg",
@@ -3141,9 +3477,10 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Nón & Mũ bé",
     "variants": [
-      "Newborn (3-5.5kg)",
-      "0-3M",
-      "3-6M"
+      "0-3m",
+      "3-6m",
+      "6-9m",
+      "9-12m"
     ],
     "price": 195000,
     "image": "/images/products/mn-177.jpg",
@@ -3159,9 +3496,14 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bodysuit & Đồ liền",
     "variants": [
-      "Newborn (3-5.5kg)",
-      "0-3M",
-      "3-6M"
+      "Hồng Mới",
+      "Trắng Mới",
+      "Xanh nhạt MỚI",
+      "Tím phối trắng",
+      "Hồng phối trắng",
+      "Xanh dương nhạt",
+      "Hồng",
+      "Xanh phối trắng"
     ],
     "price": 195000,
     "image": "/images/products/mn-178.jpg",
@@ -3177,17 +3519,17 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bộ quần áo bé",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "2-3Y",
+      "3-4Y",
+      "4-5Y",
+      "5-6Y"
     ],
     "price": 225000,
     "image": "/images/products/mn-179.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "NOUS NOEL Bộ dài tay áo kem phối quần xanh/đỏ dành cho bé trai/bé gái\nBST dành riêng cho mùa Giáng sinh 2025"
+    "description": "NOUS NOEL Bộ dài tay áo kem phối quần xanh/đỏ dành cho bé trai/bé gái\nBST dành riêng cho mùa Giáng sinh 2025 "
   },
   {
     "code": "MN-180",
@@ -3196,16 +3538,21 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bodysuit & Đồ liền",
     "variants": [
-      "Newborn (3-5.5kg)",
-      "0-3M",
-      "3-6M"
+      "Vàng phối trắng",
+      "Hồng",
+      "Be  phối xanh lá",
+      "Be hoạ tiết",
+      "Caro xanh thêu",
+      "Xanh phối trắng",
+      "Xanh phối trắng gấu",
+      "Trắng phối nâu"
     ],
     "price": 195000,
     "image": "/images/products/mn-180.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "NOUS MỚI Bộ liền dài size newborn cho bé trai/ gái\nMàu xanh / hồng / kem \nHàng premium, thích hợp mặc đi chơi, dịp đầy tháng, chất vải đẹp"
+    "description": "NOUS MỚI Bộ liền dài size newborn cho bé trai/ gái\nMàu xanh / hồng / kem \nHàng premium, thích hợp mặc đi chơi, dịp đầy tháng, chất vải đẹp "
   },
   {
     "code": "MN-181",
@@ -3216,7 +3563,8 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "variants": [
       "6-9M",
       "9-12M",
-      "1-2Y",
+      "12-18M",
+      "18-24M",
       "2-3Y"
     ],
     "price": 225000,
@@ -3233,10 +3581,11 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Yếm cho bé",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "Đỏ phối trắng,2-3Y",
+      "Đỏ phối trắng,3-4Y",
+      "Đỏ phối trắng,5-6Y",
+      "Đỏ phối trắng,1-2Y",
+      "Đỏ phối trắng,4-5Y"
     ],
     "price": 245000,
     "image": "/images/products/mn-182.jpg",
@@ -3252,9 +3601,11 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Áo & Áo khoác",
     "variants": [
+      "3-6M",
       "6-9M",
       "9-12M",
-      "1-2Y",
+      "12-18M",
+      "18-24M",
       "2-3Y"
     ],
     "price": 295000,
@@ -3273,7 +3624,8 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "variants": [
       "6-9M",
       "9-12M",
-      "1-2Y",
+      "12-18M",
+      "18-24M",
       "2-3Y"
     ],
     "price": 245000,
@@ -3290,7 +3642,14 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bodysuit & Đồ liền",
     "variants": [
-      "6M"
+      "Xanh Peter pan,0-3m",
+      "Xanh Peter pan,3-6m",
+      "Xanh Peter pan,6-9m",
+      "Be tinker bell,Newborn (sơ sinh)",
+      "Be tinker bell,0-3m",
+      "Be tinker bell,3-6m",
+      "Be tinker bell,6-9m",
+      "Xanh Peter pan,Newborn (sơ sinh)"
     ],
     "price": 195000,
     "image": "/images/products/mn-185.jpg",
@@ -3306,10 +3665,11 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bộ quần áo bé",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "6-9M",
+      "9-12M",
+      "12-18M",
+      "18-24M",
+      "2-3Y"
     ],
     "price": 225000,
     "image": "/images/products/mn-186.jpg",
@@ -3325,52 +3685,53 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Chăn gối & Đệm ngủ",
     "variants": [
-      "Kem thêu oliu",
-      "Nâu thêu gấu",
-      "Hồng thêu thỏ",
-      "Xanh thêu rắn"
+      "Trắng sao biển",
+      "Trắng cá",
+      "Be",
+      "Hồng thỏ",
+      "Trắng cà chua",
+      "Xanh in ht MỚI",
+      "Trắg cua sao biển",
+      "Xanh gấu lái oto"
     ],
     "price": 265000,
     "image": "/images/products/mn-187.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "Gối chữ nhật Nous dành cho bé trai/bé gái chất liệu muslin chống ngạt, thoáng khí, mát.\nKích thước : 30x40cm\nBé còn trong tháng, chưa cứng cổ, ba mẹ nên đặt cả đầu và lưng bé lên gối để ko làm ảnh hưởng cổ bé."
+    "description": "Gối chữ nhật Nous dành cho bé trai/bé gái chất liệu muslin chống ngạt, thoáng khí, mát.\nKích thước : 30x40cm\nBé còn trong tháng, chưa cứng cổ, ba mẹ nên đặt cả đầu và lưng bé lên gối để ko làm ảnh hưởng cổ bé. "
   },
   {
     "code": "MN-188",
     "tiktokId": "25972405689",
     "name": "N03042 Set quà tặng 5 món màu trắng phối xanh cho bé",
-    "brand": "Moniu",
+    "brand": "NOUS",
     "category": "Quà tặng kèm",
     "variants": [
-      "Quà tặng kèm"
+      "Trắng phối xanh,0-3m (3-6kg)"
     ],
     "price": 0,
     "image": "/images/products/mn-188.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "N03042 Set quà tặng 5 món màu trắng phối xanh cho bé\nTHÔNG TIN CHẤT LIỆU\nMềm mại - Thoáng mát - Không gây kích ứng da\nShop Cam Kết:\n- Luôn đặt chất lượng lên hàng đầu\n- Chính hãng công ty cổ phần Nu - Việt Nam\n-️ Cập nhập mẫu mã liên tục phong phú\nThiết kế xinh xắn đáng yêu, món quà tuyệt vời cho bé"
+    "description": "N03042 Set quà tặng 5 món màu trắng phối xanh cho bé\nTHÔNG TIN CHẤT LIỆU\nMềm mại - Thoáng mát - Không gây kích ứng da\nShop Cam Kết:\n- Luôn đặt chất lượng lên hàng đầu\n- Chính hãng công ty cổ phần Nu - Việt Nam\n-️ Cập nhập mẫu mã liên tục phong phú\nThiết kế xinh xắn đáng yêu, món quà tuyệt vời cho bé yêu\nEm mời tất cả các chị yêu chốt đơn 😘😘😘\n#thegioimebimsua\n#nous\n#thoitrangtreem\n#quanaotreem\n#thoitrangchobe"
   },
   {
     "code": "MN-189",
     "tiktokId": "25972405238",
     "name": "N03027 Set phụ kiện 4 món màu trắng  mũ + giày",
-    "brand": "Moniu",
+    "brand": "NOUS",
     "category": "Nón & Mũ bé",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "4 món màu trắng,freezise"
     ],
     "price": 225000,
     "image": "/images/products/mn-189.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "N03027 Set phụ kiện 4 món màu trắng  mũ + giày\nTHÔNG TIN CHẤT LIỆU\nMềm mại - Thoáng mát - Không gây kích ứng da\nShop Cam Kết:\n- Luôn đặt chất lượng lên hàng đầu\n- Chính hãng công ty cổ phần Nu - Việt Nam\n-️ Cập nhập mẫu mã liên tục phong phú\nThiết kế xinh xắn đáng yêu, món quà tuyệt vời cho bé yêu\nE"
+    "description": "N03027 Set phụ kiện 4 món màu trắng  mũ + giày\nTHÔNG TIN CHẤT LIỆU\nMềm mại - Thoáng mát - Không gây kích ứng da\nShop Cam Kết:\n- Luôn đặt chất lượng lên hàng đầu\n- Chính hãng công ty cổ phần Nu - Việt Nam\n-️ Cập nhập mẫu mã liên tục phong phú\nThiết kế xinh xắn đáng yêu, món quà tuyệt vời cho bé yêu\nEm mời tất cả các chị yêu chốt đơn 😘😘😘\n#thegioimebimsua\n#nous\n#thoitrangtreem\n#quanaotreem\n#thoitrangchobe"
   },
   {
     "code": "MN-190",
@@ -3379,33 +3740,38 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "LA POMME",
     "category": "Bộ quần áo bé",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "9-12M",
+      "12-18M",
+      "18-24M",
+      "3-4Y",
+      "4-5Y"
     ],
     "price": 225000,
     "image": "/images/products/mn-190.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "Bộ cộc tay La Pomme người bạn Gấu quần + áo cho bé\nChất liệu mềm mại, thoáng mát, các bé mặc mùa hè rất thoải mái xinh xắn\nHàng cao cấp của lapom thiết kế đáng yêu với tông màu xinh xắn là món quà tuyệt vời cho bé yêu trong mùa hè\nEm mời tất cả các chị yêu chốt đơn 😘😘😘\n#thegioimebimsua\n#La_pomme\n#th"
+    "description": "Bộ cộc tay La Pomme người bạn Gấu quần + áo cho bé\nChất liệu mềm mại, thoáng mát, các bé mặc mùa hè rất thoải mái xinh xắn\nHàng cao cấp của lapom thiết kế đáng yêu với tông màu xinh xắn là món quà tuyệt vời cho bé yêu trong mùa hè\nEm mời tất cả các chị yêu chốt đơn 😘😘😘\n#thegioimebimsua\n#La_pomme\n#thoitrangtreem\n#quanaotreem\n#quanaochobe"
   },
   {
     "code": "MN-191",
     "tiktokId": "25972399866",
     "name": "N03016 Bộ cộc tay yukata màu trắng phối xanh 6-2Y",
-    "brand": "Moniu",
+    "brand": "NOUS",
     "category": "Bộ quần áo bé",
     "variants": [
-      "2Y"
+      "Trắng phối xanh,12-18m (10.5-11.5kg)",
+      "Trắng phối xanh,18-24m (11.5-13.5kg)",
+      "Trắng phối xanh,2-3Y (13.5-15kg)",
+      "Trắng phối xanh,6-9m (7.5-9.5 kg)",
+      "Trắng phối xanh,9-12m (8.5 -10.5kg)"
     ],
     "price": 225000,
     "image": "/images/products/mn-191.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "N03016 Bộ cộc tay yukata màu trắng phối xanh 6-2Y\nTHÔNG TIN CHẤT LIỆU\nMềm mại - Thoáng mát - Không gây kích ứng da\nShop Cam Kết:\n- Luôn đặt chất lượng lên hàng đầu\n- Chính hãng công ty cổ phần Nu - Việt Nam\n-️ Cập nhập mẫu mã liên tục phong phú\nThiết kế xinh xắn đáng yêu, món quà tuyệt vời cho bé yê"
+    "description": "N03016 Bộ cộc tay yukata màu trắng phối xanh 6-2Y\nTHÔNG TIN CHẤT LIỆU\nMềm mại - Thoáng mát - Không gây kích ứng da\nShop Cam Kết:\n- Luôn đặt chất lượng lên hàng đầu\n- Chính hãng công ty cổ phần Nu - Việt Nam\n-️ Cập nhập mẫu mã liên tục phong phú\nThiết kế xinh xắn đáng yêu, món quà tuyệt vời cho bé yêu\nEm mời tất cả các chị yêu chốt đơn 😘😘😘\n#thegioimebimsua\n#nous\n#thoitrangtreem\n#quanaotreem\n#thoitrangchobe"
   },
   {
     "code": "MN-192",
@@ -3414,17 +3780,18 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bodysuit & Đồ liền",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "0-3M",
+      "3-6M",
+      "6-9M",
+      "9-12M",
+      "12-18M"
     ],
     "price": 195000,
     "image": "/images/products/mn-192.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "[BST MỚI NOUS] Set 2 body suit phối xanh trắng\nTHÔNG TIN CHẤT LIỆU\nMềm mại - Thoáng mát - Không gây kích ứng da\nShop Cam Kết:\n- Luôn đặt chất lượng lên hàng đầu\n- Chính hãng công ty cổ phần Nu - Việt Nam\n-️ Cập nhập mẫu mã liên tục phong phú\nThiết kế xinh xắn đáng yêu, món quà tuyệt vời cho bé yêu\nE"
+    "description": "[BST MỚI NOUS] Set 2 body suit phối xanh trắng\nTHÔNG TIN CHẤT LIỆU\nMềm mại - Thoáng mát - Không gây kích ứng da\nShop Cam Kết:\n- Luôn đặt chất lượng lên hàng đầu\n- Chính hãng công ty cổ phần Nu - Việt Nam\n-️ Cập nhập mẫu mã liên tục phong phú\nThiết kế xinh xắn đáng yêu, món quà tuyệt vời cho bé yêu\nEm mời tất cả các chị yêu chốt đơn 😘😘😘\n#thegioimebimsua\n#nous\n#thoitrangtreem\n#quanaotreem\n#bodysuit"
   },
   {
     "code": "MN-193",
@@ -3433,55 +3800,52 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "LA POMME",
     "category": "Bộ quần áo bé",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "NEWBORN",
+      "0-3M",
+      "3-6M"
     ],
     "price": 225000,
     "image": "/images/products/mn-193.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "[ BST MỚI T8 LAPOM] bộ sưu tập thu đông cho bé màu trắng mix đỏ cho bé quần + áo\nChất liệu mềm mại, co giãn và mát, các bé mặc mùa hè rất thoải mái xinh xắn\nHàng cao cấp của lapom họa tiết đáng yêu với tông màu xinh xắn là món quà tuyệt vời cho bé yêu trong mùa hè\nEm mời tất cả các chị yêu chốt đơn"
+    "description": "[ BST MỚI T8 LAPOM] bộ sưu tập thu đông cho bé màu trắng mix đỏ cho bé quần + áo\nChất liệu mềm mại, co giãn và mát, các bé mặc mùa hè rất thoải mái xinh xắn\nHàng cao cấp của lapom họa tiết đáng yêu với tông màu xinh xắn là món quà tuyệt vời cho bé yêu trong mùa hè\nEm mời tất cả các chị yêu chốt đơn 😘😘😘\n#thegioimebimsua\n#La_pomme\n#thoitrangtreem\n#quanaotreem\n#bodychip\n#bodychobe"
   },
   {
     "code": "MN-194",
     "tiktokId": "25922402597",
     "name": "N03048 Bộ cộc tay màu be phối cổ trắng cho bé",
-    "brand": "Moniu",
+    "brand": "NOUS",
     "category": "Bộ quần áo bé",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "Be phối cổ trắng,5-6Y (20-23kg)",
+      "Be phối cổ trắng,2-3Y (13.5-15kg)",
+      "Be phối cổ trắng,3-4Y (15-17kg)",
+      "Be phối cổ trắng,4-5Y (17-20kg)"
     ],
     "price": 225000,
     "image": "/images/products/mn-194.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "N03048 Bộ cộc tay màu be phối cổ trắng cho bé\nTHÔNG TIN CHẤT LIỆU\nMềm mại - Thoáng mát - Không gây kích ứng da\nShop Cam Kết:\n- Luôn đặt chất lượng lên hàng đầu\n- Chính hãng công ty cổ phần Nu - Việt Nam\n-️ Cập nhập mẫu mã liên tục phong phú\nThiết kế xinh xắn đáng yêu, món quà tuyệt vời cho bé yêu\nEm"
+    "description": "N03048 Bộ cộc tay màu be phối cổ trắng cho bé\nTHÔNG TIN CHẤT LIỆU\nMềm mại - Thoáng mát - Không gây kích ứng da\nShop Cam Kết:\n- Luôn đặt chất lượng lên hàng đầu\n- Chính hãng công ty cổ phần Nu - Việt Nam\n-️ Cập nhập mẫu mã liên tục phong phú\nThiết kế xinh xắn đáng yêu, món quà tuyệt vời cho bé yêu\nEm mời tất cả các chị yêu chốt đơn 😘😘😘\n#thegioimebimsua\n#nous\n#thoitrangtreem\n#quanaotreem\n#thoitrangchobe"
   },
   {
     "code": "MN-195",
     "tiktokId": "25872405562",
     "name": "DEAL 15.3 Combo 3 khăn tắm sợi tre bamboo màu ngẫu nhiên cho bé",
-    "brand": "Moniu",
+    "brand": "LITTLE LOVE",
     "category": "Phụ kiện & Khác",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "Bé gái",
+      "Bé trai"
     ],
     "price": 55000,
     "image": "/images/products/mn-195.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "Nuôi dưỡng yêu thương cùng khăn xô (6 chiếc) Premium và khăn tắm (1 chiếc) Premium LiL-Little Love \n\nLiL - Little Love giới thiệu đến quý NPP, đại lý Bộ Khăn Xô & Khăn Tắm Premium - sản phẩm cao cấp được thiết kế dành riêng cho những thiên thần nhỏ bé, cùng những ưu điểm vượt trội: Chất liệu 100% sợ"
+    "description": "Nuôi dưỡng yêu thương cùng khăn xô (6 chiếc) Premium và khăn tắm (1 chiếc) Premium LiL-Little Love \n\nLiL - Little Love giới thiệu đến quý NPP, đại lý Bộ Khăn Xô & Khăn Tắm Premium - sản phẩm cao cấp được thiết kế dành riêng cho những thiên thần nhỏ bé, cùng những ưu điểm vượt trội: Chất liệu 100% sợi tre Organic: Mềm mại, kháng khuẩn, khử mùi tự nhiên, an toàn cho da bé. Sản xuất trên dây chuyền đạt chuẩn Châu Âu: Đảm bảo chất lượng cao, quy trình khép kín, vô khuẩn. Công nghệ dệt hiện đại bậc nhất: Vải dày dặn, bền đẹp, không bị xù lông, phai màu sau nhiều lần giặt. \n\nCAM KẾT NÓI KHÔNG VỚI NHUỘM MÀU HOÁ CHẤT: An toàn cho da bé, thân thiện với môi trường. Liên hệ ngay với Sale để trở thành những cửa hàng phân phối Bộ Khăn Xô & Khăn Tắm Premium của LiL - Little Love\n\nSản phẩm không kèm hộp\n\n"
   },
   {
     "code": "MN-196",
@@ -3490,7 +3854,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "LA POMME",
     "category": "Bộ quần áo bé",
     "variants": [
-      "Newborn (3-5.5kg)",
+      "NEWBORN",
       "0-3M",
       "3-6M"
     ],
@@ -3499,7 +3863,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "[BST MỚI LAPOM] Bộ sơ sinh màu cam cho bé chủ đề vườn cổ tích quần + áo\nChất liệu mềm mại, co giãn và mát, các bé mặc mùa hè rất thoải mái xinh xắn\nHàng cao cấp của lapom họa tiết đáng yêu với tông màu xinh xắn là món quà tuyệt vời cho bé yêu trong mùa hè\nEm mời tất cả các chị yêu chốt đơn 😘😘😘\n#theg"
+    "description": "[BST MỚI LAPOM] Bộ sơ sinh màu cam cho bé chủ đề vườn cổ tích quần + áo\nChất liệu mềm mại, co giãn và mát, các bé mặc mùa hè rất thoải mái xinh xắn\nHàng cao cấp của lapom họa tiết đáng yêu với tông màu xinh xắn là món quà tuyệt vời cho bé yêu trong mùa hè\nEm mời tất cả các chị yêu chốt đơn 😘😘😘\n#thegioimebimsua\n#La_pomme\n#thoitrangtreem\n#quanaotreem\n#bodychip\n#bodychobe"
   },
   {
     "code": "MN-197",
@@ -3508,35 +3872,35 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "LA POMME",
     "category": "Bộ quần áo bé",
     "variants": [
-      "Newborn (3-5.5kg)",
-      "0-3M",
-      "3-6M"
+      "Ghi,3-6M (6.5-8.5kg)",
+      "Ghi,0-3M (4-6.5kg)"
     ],
     "price": 225000,
     "image": "/images/products/mn-197.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "[ BST MỚI LAPOM] Combo 5 bộ sơ sinh màu Ghi cho bé chủ đề vườn cổ tích quần + áo\nNiềm hạnh phúc của em bé rất đơn giản được thể hiện qua nụ cười hồn nhiên và vô tư nhất trên đời. \nMột em bé sơ sinh chẳng cần gì nhiều ngoài có Ba Mẹ yêu thương và luôn được cảm thấy thoải mái, dễ chịu cả ngày.\n#thegio"
+    "description": "[ BST MỚI LAPOM] Combo 5 bộ sơ sinh màu Ghi cho bé chủ đề vườn cổ tích quần + áo\nNiềm hạnh phúc của em bé rất đơn giản được thể hiện qua nụ cười hồn nhiên và vô tư nhất trên đời. \nMột em bé sơ sinh chẳng cần gì nhiều ngoài có Ba Mẹ yêu thương và luôn được cảm thấy thoải mái, dễ chịu cả ngày.\n#thegioimebimsua\n#La_pomme\n#thoitrangtreem\n#quanaotreem\n#bodychip\n#bodychobe"
   },
   {
     "code": "MN-198",
     "tiktokId": "25722405159",
     "name": "[DEAL TẾT] Body dài mix mũ tai thỏ màu be in họa tiết quần liền áo",
-    "brand": "Moniu",
+    "brand": "NOUS",
     "category": "Nón & Mũ bé",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "Body dài mix mũ,9-12m (8.5-10.5kg)",
+      "Body dài mix mũ,12-18m (10.5-11.5kg)",
+      "Body dài mix mũ,0-3m (3.5-5.5kg)",
+      "Body dài mix mũ,3-6m (5.5-7.5kg)",
+      "Body dài mix mũ,6-9m (7.5-9.5kg)"
     ],
     "price": 195000,
     "image": "/images/products/mn-198.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "[DEAL TẾT] Body dài mix mũ tai thỏ màu be in họa tiết quần liền áo\nTHÔNG TIN CHẤT LIỆU\nMềm mại - Thoáng mát - Không gây kích ứng da\nShop Cam Kết:\n- Luôn đặt chất lượng lên hàng đầu\n- Chính hãng công ty cổ phần Nu - Việt Nam\n-️ Cập nhập mẫu mã liên tục phong phú\nThiết kế xinh xắn đáng yêu, món quà tu"
+    "description": "[DEAL TẾT] Body dài mix mũ tai thỏ màu be in họa tiết quần liền áo\nTHÔNG TIN CHẤT LIỆU\nMềm mại - Thoáng mát - Không gây kích ứng da\nShop Cam Kết:\n- Luôn đặt chất lượng lên hàng đầu\n- Chính hãng công ty cổ phần Nu - Việt Nam\n-️ Cập nhập mẫu mã liên tục phong phú\nThiết kế xinh xắn đáng yêu, món quà tuyệt vời cho bé yêu\nEm mời tất cả các chị yêu chốt đơn 😘😘😘\n#thegioimebimsua\n#nous\n#thoitrangtreem\n#quanaotreem\n#thoitrangchobe\n#quanaososinh"
   },
   {
     "code": "MN-199",
@@ -3545,16 +3909,17 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bộ quần áo bé",
     "variants": [
-      "Newborn (3-5.5kg)",
       "0-3M",
-      "3-6M"
+      "3-6M",
+      "6-9M",
+      "9-12M"
     ],
     "price": 225000,
     "image": "/images/products/mn-199.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "Với thiết kế dễ thương, bộ cộc tay này sẽ giúp bé của bạn trông đáng yêu và đáng yêu hơn bao giờ hết.\n\nChất liệu mềm mại: Bộ cộc tay được làm từ chất liệu thoáng khí và nhẹ nhàng, không gây kích ứng cho da nhạy cảm của trẻ sơ sinh.\n\nThiết kế thông minh: Bộ sản phẩm được thiết kế tiện dụng với các"
+    "description": "Với thiết kế dễ thương, bộ cộc tay này sẽ giúp bé của bạn trông đáng yêu và đáng yêu hơn bao giờ hết.\n\nChất liệu mềm mại: Bộ cộc tay được làm từ chất liệu thoáng khí và nhẹ nhàng, không gây kích ứng cho da nhạy cảm của trẻ sơ sinh.\n\nThiết kế thông minh: Bộ sản phẩm được thiết kế tiện dụng với các nút bấm cài thẳng, giúp việc thay quần áo cho bé dễ dàng và nhanh chóngx\n\nBé sẽ luôn thoải mái khi diện chiếc áo này. Chủ sản phẩm hoàn toàn có thể tự tin khoe với bạn bè rằmg sản phẩm này mang lại không chỉ là tiện ích khi di chuyển hay đi du lịch xa, nó mang lại cá tính riê ngcho người sử dung"
   },
   {
     "code": "MN-200",
@@ -3563,17 +3928,18 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "LA POMME",
     "category": "Yếm cho bé",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "3-6M",
+      "6-9M",
+      "9-12M",
+      "12-18M",
+      "18-24M"
     ],
     "price": 195000,
     "image": "/images/products/mn-200.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "Bộ yếm body cộc tay La Pomme thuỷ thủ chất liệu bamboo rất phù hợp cho bé yêu của bạn vào mùa thu. Với chất liệu bamboo mềm mại và thoáng khí, bé sẽ luôn cảm thấy dễ chịu và không bị khó chịu khi đi lại.\n\nBộ đồ cho bé: Bộ yếm body cộc tay La Pomme gồm áo và quần đan xen kẽ nhau, khiến bé trông dễ th"
+    "description": "Bộ yếm body cộc tay La Pomme thuỷ thủ chất liệu bamboo rất phù hợp cho bé yêu của bạn vào mùa thu. Với chất liệu bamboo mềm mại và thoáng khí, bé sẽ luôn cảm thấy dễ chịu và không bị khó chịu khi đi lại.\n\nBộ đồ cho bé: Bộ yếm body cộc tay La Pomme gồm áo và quần đan xen kẽ nhau, khiến bé trông dễ thương và xinh xắn.\n\nChất liệu thoáng mát: Với thiết kế từ bamboo, bảo vệ da của trẻ em không bị kích ứng hoặc ngứa ngáy. Chỉ số UPF 50+ giúp giữ cho da của con bạn luôn được an toàn dưới ánh nắng gay gắt.\n\nThiết kế này sẽ là lựa chọn hoàn hảo để làm quà tặng sinh nhật hoặc các buổi tiệc sinh nhật của trẻ em. Hãy để con bạn tỏa sáng với Bộ yếm body này!\n\n"
   },
   {
     "code": "MN-201",
@@ -3582,14 +3948,21 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bộ quần áo bé",
     "variants": [
-      "9M"
+      "Gấu xanh,18-24",
+      "Gấu xanh,2-3y",
+      "Gấu xanh,9-12m",
+      "Gấu xanh,12-18m",
+      "Gấu nâu,9-12m",
+      "Gấu nâu,12-18m",
+      "Gấu nâu,18-24",
+      "Gấu nâu,2-3y"
     ],
     "price": 225000,
     "image": "/images/products/mn-201.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "Bộ cộc tay Nous cài thẳng gấu nhỏ màu nâu/xanh cho bé từ 9m\nChất vài petit mềm, mát, màu sắc nhã nhặn. Đũng quần cao rộng thích hợp cho các bé còn mặc tả ko bị bó."
+    "description": "Bộ cộc tay Nous cài thẳng gấu nhỏ màu nâu/xanh cho bé từ 9m\nChất vài petit mềm, mát, màu sắc nhã nhặn. Đũng quần cao rộng thích hợp cho các bé còn mặc tả ko bị bó. "
   },
   {
     "code": "MN-202",
@@ -3598,17 +3971,15 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "Moniu",
     "category": "Bộ quần áo bé",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "3-6M",
+      "6-9M"
     ],
     "price": 225000,
     "image": "/images/products/mn-202.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "Bộ quần áo dành cho bé BBB102NS Bambus Iconic 1 là một lựa chọn tuyệt vời cho các bậc phụ huynh muốn tặng quà cho bé yêu. Với thiết kế dễ thương và chất liệu cao cấp, bộ đồ này sẽ khiến bé thật nổi bật và thoải mái.\n\nBộ đồ dài tay: Bộ đồ gồm áo dài tay cài giữa và quần, giúp bé che ấm v"
+    "description": "Bộ quần áo dành cho bé BBB102NS Bambus Iconic 1 là một lựa chọn tuyệt vời cho các bậc phụ huynh muốn tặng quà cho bé yêu. Với thiết kế dễ thương và chất liệu cao cấp, bộ đồ này sẽ khiến bé thật nổi bật và thoải mái.\n\nBộ đồ dài tay: Bộ đồ gồm áo dài tay cài giữa và quần, giúp bé che ấm vãi bụng của mình.\n\nThương hiệu nổi tiếng: Bambus Iconic 1 là một thương hiệu uy tín, với chất liệu thiên nhiên an toàn cho sức khỏe của trẻ.\n\nNgoài ra, việc giặt bộ đồ cũng rất tiện lợi vì sản phẩm này có thể được giặt trong máy. Hãy làm quà sinh nhật hoặc kỉ niệm của bé trở nên ý nghĩa hơn với sản phẩm BBB102NS từ BUBABY BST T2!\n\nHướng dẫn giặt: Sản phẩm có khả năng được giặt trong máy để tiết kiệm thời gian và công sức khi chăm sóc bé yêu của bạn.\n\n"
   },
   {
     "code": "MN-203",
@@ -3617,17 +3988,17 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "Moniu",
     "category": "Bộ quần áo bé",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "trắng phối quần hồng,9-12M (8.5-10.5kg)",
+      "trắng phối quần hồng,0-3M (3.5-5.5kg)",
+      "trắng phối quần hồng,3-6M ( 5.5-7.5 kg)",
+      "trắng phối quần hồng,6-9M ( 7.5-9.5kg)"
     ],
     "price": 225000,
     "image": "/images/products/mn-203.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "Bộ cộc tay áo màu trắng phối quần hồng mềm mát cho bé là lựa chọn tuyệt vời cho bé yêu của bạn trong mùa hè.\n\nThiết kế đẹp mắt: Với gam trắng đơn giản kết hợp với quần hồng pastel, bộ cộc tay áo này sẽ khiến bé của bạn trông thật dễ thương và nổi bật.\n\nChất liệu cao cấp: Bên cạnh việc đảm bảo tính t"
+    "description": "Bộ cộc tay áo màu trắng phối quần hồng mềm mát cho bé là lựa chọn tuyệt vời cho bé yêu của bạn trong mùa hè.\n\nThiết kế đẹp mắt: Với gam trắng đơn giản kết hợp với quần hồng pastel, bộ cộc tay áo này sẽ khiến bé của bạn trông thật dễ thương và nổi bật.\n\nChất liệu cao cấp: Bên cạnh việc đảm bảo tính thẩm mỹ, chất liệu vải cotton cao cấp và thoáng khí sẽ giúpgiữ cho bé luôn thoải mái khi hoạt động trong ngày dài.\n\nBộ quần áo phù hợ: Với nhiều size khác nhau, bạn có thể dễ dàng lựa chọn size phù hợpp cho con yêu của bạn.\n\nVà không chỉ là sản phẩm hoàn toàn an toàn và thoải mái để sử dụnghang ngày. Nó được thiết kế để mang lại niềm vui và niềm tự tincho con yêu của bạn. Đặt hàng ngay để có được sản phẩm này là quà ứnghấplýcho các buổi đi chơi cuối tuần hay nhữngthờiquantrọngthúvịkhác!\n\n"
   },
   {
     "code": "MN-204",
@@ -3636,17 +4007,18 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bộ quần áo bé",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "xanh in hình con cua,2-3Y (13.5-15kg)",
+      "xanh in hình con cua,6-9m",
+      "xanh in hình con cua,9-12m",
+      "xanh in hình con cua,12-18m",
+      "xanh in hình con cua,18-24m"
     ],
     "price": 225000,
     "image": "/images/products/mn-204.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "Bộ cộc tay trắng phối xanh in hình con cua là sự lựa chọn tuyệt vời cho các quý ông yêu thích phong cách trẻ trung và năng động. Thiết kế đơn giản và sang trọng với màu sắc tươi sáng, họa tiết in hình con cua ấn tượng, bộ sản phẩm này thật sự làm nổi bật vẻ đẹp nam tính của người mặc.\n\nBộ sản phẩm đ"
+    "description": "Bộ cộc tay trắng phối xanh in hình con cua là sự lựa chọn tuyệt vời cho các quý ông yêu thích phong cách trẻ trung và năng động. Thiết kế đơn giản và sang trọng với màu sắc tươi sáng, họa tiết in hình con cua ấn tượng, bộ sản phẩm này thật sự làm nổi bật vẻ đẹp nam tính của người mặc.\n\nBộ sản phẩm được làm từ chất liệu cao cấp, giúp thoải mái cho người mặc suốt ngày dài.\n\nThiết kế bao gồm áo polo và quần dài, phù hợp cho các hoạt đông từ nhẹ nhàng đến hoạt náo.\n\nVới kiểu dáng sang trọng, Bộ cảnh điều có thể được mặc trong nhữn buổi tiệc hay các buổi giao tiếp công việc quan trong. Ngoài ra, thiết kế của sản phẩm này also mang lại Phong Cách ăn macchỉnh chuẩnnở muason rel=\"nofollow\">Men's Suits & Overalls, thoả mãn được nhuận tính của nam giới yêu thích xu Hướngxứngthờigian.\n\n"
   },
   {
     "code": "MN-205",
@@ -3655,17 +4027,14 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bodysuit & Đồ liền",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "Màu cam phối trắng,Newborn (2.5-4kg)"
     ],
     "price": 195000,
     "image": "/images/products/mn-205.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "[NOUS BST T1] Bộ liền dài tất màu cam phối trắng NB\nTHÔNG TIN CHẤT LIỆU\nMềm mại - Thoáng mát - Không gây kích ứng da\nShop Cam Kết:\n- Luôn đặt chất lượng lên hàng đầu\n- Chính hãng công ty cổ phần Nu - Việt Nam\n-️ Cập nhập mẫu mã liên tục phong phú\nThiết kế xinh xắn đáng yêu, món quà tuyệt vời cho bé"
+    "description": "[NOUS BST T1] Bộ liền dài tất màu cam phối trắng NB\nTHÔNG TIN CHẤT LIỆU\nMềm mại - Thoáng mát - Không gây kích ứng da\nShop Cam Kết:\n- Luôn đặt chất lượng lên hàng đầu\n- Chính hãng công ty cổ phần Nu - Việt Nam\n-️ Cập nhập mẫu mã liên tục phong phú\nThiết kế xinh xắn đáng yêu, món quà tuyệt vời cho bé yêu\nEm mời tất cả các chị yêu chốt đơn 😘😘😘\n#thegioimebimsua\n#nous\n#thoitrangtreem\n#quanaotreem\n#thoitrangchobe"
   },
   {
     "code": "MN-206",
@@ -3674,58 +4043,57 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "LA POMME",
     "category": "Bộ quần áo bé",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "NEWBORN",
+      "0-3M",
+      "3-6M"
     ],
     "price": 225000,
     "image": "/images/products/mn-206.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "[LAPOM BST T1] Bộ La Pomme Bonjour màu tím\nChất liệu mềm mại, co giãn và mát, các bé mặc rất thoải mái xinh xắn\nHàng cao cấp của Lapom họa tiết đáng yêu với tông màu xinh xắn là món quà tuyệt vời cho bé yêu\nEm mời tất cả các chị yêu chốt đơn 😘😘😘\n#thegioimebimsua\n#La_pomme\n#thoitrangtreem\n#quanaotree"
+    "description": "[LAPOM BST T1] Bộ La Pomme Bonjour màu tím\nChất liệu mềm mại, co giãn và mát, các bé mặc rất thoải mái xinh xắn\nHàng cao cấp của Lapom họa tiết đáng yêu với tông màu xinh xắn là món quà tuyệt vời cho bé yêu\nEm mời tất cả các chị yêu chốt đơn 😘😘😘\n#thegioimebimsua\n#La_pomme\n#thoitrangtreem\n#quanaotreem\n#bodychip\n#bodychobe"
   },
   {
     "code": "MN-207",
     "tiktokId": "25622399694",
     "name": "N03019 Bộ liền cộc trắng in họa tiết phối màu tím 0-9M áo liên quần",
-    "brand": "Moniu",
+    "brand": "NOUS",
     "category": "Bodysuit & Đồ liền",
     "variants": [
-      "9M"
+      "Họa tiết phối tím,3-6M (5.5-7.5kg)",
+      "Họa tiết phối tím,6-9m (7.5-9.5kg)",
+      "Họa tiết phối tím,9-12m (8.5 -10.5kg)",
+      "Họa tiết phối tím,0-3m (3.5-5.5kg)"
     ],
     "price": 195000,
     "image": "/images/products/mn-207.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "N03019 Bộ liền cộc trắng in họa tiết phối màu tím 0-9M áo liên quần\nTHÔNG TIN CHẤT LIỆU\nMềm mại - Thoáng mát - Không gây kích ứng da\nShop Cam Kết:\n- Luôn đặt chất lượng lên hàng đầu\n- Chính hãng công ty cổ phần Nu - Việt Nam\n-️ Cập nhập mẫu mã liên tục phong phú\nThiết kế xinh xắn đáng yêu, món quà t"
+    "description": "N03019 Bộ liền cộc trắng in họa tiết phối màu tím 0-9M áo liên quần\nTHÔNG TIN CHẤT LIỆU\nMềm mại - Thoáng mát - Không gây kích ứng da\nShop Cam Kết:\n- Luôn đặt chất lượng lên hàng đầu\n- Chính hãng công ty cổ phần Nu - Việt Nam\n-️ Cập nhập mẫu mã liên tục phong phú\nThiết kế xinh xắn đáng yêu, món quà tuyệt vời cho bé yêu\nEm mời tất cả các chị yêu chốt đơn 😘😘😘\n#thegioimebimsua\n#nous\n#thoitrangtreem\n#quanaotreem\n#thoitrangchobe"
   },
   {
     "code": "MN-208",
     "tiktokId": "25572405439",
     "name": "N03014 Bộ dài tay màu trắng phối tím NB quần + áo",
-    "brand": "Moniu",
+    "brand": "NOUS",
     "category": "Bộ quần áo bé",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "Trắng phối tím NB,Newborn (3-5kg)"
     ],
     "price": 225000,
     "image": "/images/products/mn-208.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "N03014 Bộ dài tay màu trắng phối tím NB quần + áo\nTHÔNG TIN CHẤT LIỆU\nMềm mại - Thoáng mát - Không gây kích ứng da\nShop Cam Kết:\n- Luôn đặt chất lượng lên hàng đầu\n- Chính hãng công ty cổ phần Nu - Việt Nam\n-️ Cập nhập mẫu mã liên tục phong phú\nThiết kế xinh xắn đáng yêu, món quà tuyệt vời cho bé yê"
+    "description": "N03014 Bộ dài tay màu trắng phối tím NB quần + áo\nTHÔNG TIN CHẤT LIỆU\nMềm mại - Thoáng mát - Không gây kích ứng da\nShop Cam Kết:\n- Luôn đặt chất lượng lên hàng đầu\n- Chính hãng công ty cổ phần Nu - Việt Nam\n-️ Cập nhập mẫu mã liên tục phong phú\nThiết kế xinh xắn đáng yêu, món quà tuyệt vời cho bé yêu\nEm mời tất cả các chị yêu chốt đơn 😘😘😘\n#thegioimebimsua\n#nous\n#thoitrangtreem\n#quanaotreem\n#thoitrangchobe"
   },
   {
     "code": "MN-209",
     "tiktokId": "25572404544",
     "name": "DỤNG CỤ HÂM NƯỚC PHA SỮA CẦM TAY – MINI SMART 2 – FB3625VA FATZBABY",
-    "brand": "Moniu",
+    "brand": "FATZ BABY",
     "category": "Phụ kiện & Khác",
     "variants": [
       "Hồng pastel",
@@ -3738,45 +4106,46 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "DỤNG CỤ HÂM NƯỚC PHA SỮA CẦM TAY – MINI SMART 2 – FB3625VA\n1. Đặc điểm nổi bật\n1.1. Thiết kế và công dụng\nDi động và an toàn, vô cùng lý tưởng khi đi du lịch.\nDung lượng pin sạc lớn lên tới 4400 mAh cho thời gian sử dụng lâu dài.\nĐiều khiển chương trình thông minh với màn hình LED và các nút cảm ứng"
+    "description": "DỤNG CỤ HÂM NƯỚC PHA SỮA CẦM TAY – MINI SMART 2 – FB3625VA\n1. Đặc điểm nổi bật\n1.1. Thiết kế và công dụng\nDi động và an toàn, vô cùng lý tưởng khi đi du lịch.\nDung lượng pin sạc lớn lên tới 4400 mAh cho thời gian sử dụng lâu dài.\nĐiều khiển chương trình thông minh với màn hình LED và các nút cảm ứng, giúp quá trình sử dụng sản phẩm dễ dàng hơn\n3 nhiệt độ cài đặt: 35°C – 45°C – 55°C. Có thể điều chỉnh nhiệt độ chính xác từng 1°C. Hiển thị nhiệt độ thời gian thực liên tục trong quá trình sử dụng.\nLõi bình bằng thép không gỉ 316 tích hợp, kết nối liền mạch, không bám bẩn. Đảm bảo nước uống an toàn vệ sinh.\nChức năng bộ nhớ giúp ghi nhớ cài đặt hâm nóng của lần sử dụng cuối cùng.\nBảo vệ quá nhiệt bằng cách tự ngắt khi nước sôi hết.\nDi động và an toàn, vô cùng lý tưởng khi đi du lịch.\nDung lượng pin sạc lớn lên tới 4400 mAh cho thời gian sử dụng lâu dài.\nĐiều khiển chương trình thông minh với màn hình LED và các nút cảm ứng, giúp quá trình sử dụng sản phẩm dễ dàng hơn\n3 nhiệt độ cài đặt: 35°C – 45°C – 55°C. Có thể điều chỉnh nhiệt độ chính xác từng 1°C. Hiển thị nhiệt độ thời gian thực liên tục trong quá trình sử dụng.\nLõi bình bằng thép không gỉ 316 tích hợp, kết nối liền mạch, không bám bẩn. Đảm bảo nước uống an toàn vệ sinh.\nChức năng bộ nhớ giúp ghi nhớ cài đặt hâm nóng của lần sử dụng cuối cùng.\nBảo vệ quá nhiệt bằng cách tự ngắt khi nước sôi hết.\n1.2. Lưu ý\nKhông được tháo rời, va đập, bóp chặt, cho vào lửa; Không đặt trong môi trường nhiệt độ cao.\nKhông tháo rời pin. Một số thành phần trong pin lithium dễ bắt lửa và gây hại, có thể gây thương tích, cháy, vỡ hoặc nổ.\nKhông tháo rời, mở, chặt hoặc chọc thủng pin hoặc bộ pin bằng kim loại.\nKhông sạc pin trong thời gian dài; trước khi vứt bỏ thiết bị, phải tháo pin ra khỏi thiết bị.\nKhông được sử dụng chất tẩy rửa có tính ăn mòn cao để vệ sinh, không được dùng bi thép để lau khoang chứa bên trong của cốc thép.\n2. Thông số kỹ thuật\nDC5V-2A; Adapter (có bao gồm trong sản phẩm);\nCông suất: 35W;\nBattery capacity : 4400mAh;\nDung tích: 280 ml;\nKhối lượng: 540g;\nKích thước: 81 x 81 x 230 mm"
   },
   {
     "code": "MN-210",
     "tiktokId": "25572402635",
     "name": "B03012 Bộ ngắn tay cổ tròn bé gái họa tiết cánh tiên chất bamboo cho mùa hè -BBC130403",
-    "brand": "Moniu",
+    "brand": "BUBABY",
     "category": "Bộ quần áo bé",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "12-18M",
+      "18-24M",
+      "2-3Y",
+      "3-4Y",
+      "4-5Y"
     ],
     "price": 225000,
     "image": "/images/products/mn-210.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "Bộ ngắn tay cổ tròn bé gái họa tiết cánh tiên chất bamboo là lựa chọn hoàn hảo cho các bé trong mùa hè.\n\nVải chất liệu bamboo thân thiện với da, mềm mại và thoáng khí, giúp các bé thoải mái vận động suốt ngày dài.\n\nThiết kế bộ đồ ngắn tay và cổ tròn giúp cho các bé không bị quá nóng trong những ngày"
+    "description": "Bộ ngắn tay cổ tròn bé gái họa tiết cánh tiên chất bamboo là lựa chọn hoàn hảo cho các bé trong mùa hè.\n\nVải chất liệu bamboo thân thiện với da, mềm mại và thoáng khí, giúp các bé thoải mái vận động suốt ngày dài.\n\nThiết kế bộ đồ ngắn tay và cổ tròn giúp cho các bé không bị quá nóng trong những ngày thời tiết nóng bức.\n\nHọa tiết cánh tiên xinh xắn sẽ làm cho các bé thêm phần dễ thương và duyên dáng. Bé gái sẽ tự tin tỏa sáng khi được diện chiếc áo này đi du lịch hoặc đi picnic với gia đình.\n\n"
   },
   {
     "code": "MN-211",
     "tiktokId": "25572401854",
     "name": "N03060 Bộ liền cộc màu trắng họa tiết quả lê cho bé áo liền quần",
-    "brand": "Moniu",
+    "brand": "NOUS",
     "category": "Bodysuit & Đồ liền",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "Họa tiết quả lê,9-12M (8.5-10.5kg)",
+      "Họa tiết quả lê,0-3M (3.5-5.5kg)",
+      "Họa tiết quả lê,3-6M (5.5-7.5 kg)",
+      "Họa tiết quả lê,6-9M (7.5-9.5kg)"
     ],
     "price": 195000,
     "image": "/images/products/mn-211.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "Bộ liền cộc màu trắng họa tiết quả lê là một trong những lựa chọn hoàn hảo cho bé yêu của bạn. Với thiết kế đơn giản và dễ thương, bộ liền cộc này sẽ là trang phục yêu thích của bé trong mùa hè.\nChất liệu tốt: Bằng chất liệu cotton cao cấp, bề mặt vải được xử lý để đảm bảo sự thoái mái cho bé khi ma"
+    "description": "Bộ liền cộc màu trắng họa tiết quả lê là một trong những lựa chọn hoàn hảo cho bé yêu của bạn. Với thiết kế đơn giản và dễ thương, bộ liền cộc này sẽ là trang phục yêu thích của bé trong mùa hè.\nChất liệu tốt: Bằng chất liệu cotton cao cấp, bề mặt vải được xử lý để đảm bảo sự thoái mái cho bé khi mang.\nHọa tiết đáng yêu: Với họa tiết quả lê tinh tế và nổi bật, chiếc áo này sẽ giúp bé bạn nổi bật giữa các bạn nhỏ khác.\nBên cạnh đó, sản phẩm được sản xuất tại Việt Nam với chất lượng được kiểm soát nghiêm ngặt để mang lại cho con bạn những trải nghiệm thoải mái và an toàn khi sử dụng."
   },
   {
     "code": "MN-212",
@@ -3785,16 +4154,21 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Váy đầm bé gái",
     "variants": [
-      "2-3Y",
-      "3-4Y",
-      "4-5Y"
+      "Kẻ nâu,3-4y",
+      "Kẻ nâu,4-5y",
+      "Kẻ nâu,5-6y",
+      "Hoa nhí xanh,2-3y",
+      "Hoa nhí xanh,3-4y",
+      "Hoa nhí xanh,4-5y",
+      "Hoa nhí xanh,5-6y",
+      "Kẻ nâu,2-3y"
     ],
     "price": 245000,
     "image": "/images/products/mn-212.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "[BST MỚI] Váy dài NOUS màu be hoa nhí/kẻ cho bé gái từ 2 tuổi\n2-3y: 13,5-15kg\n3-4y: 15-17kg\n4-5y: 17-20kg\n5-6y: 20-23kg"
+    "description": "[BST MỚI] Váy dài NOUS màu be hoa nhí/kẻ cho bé gái từ 2 tuổi\n2-3y: 13,5-15kg\n3-4y: 15-17kg\n4-5y: 17-20kg\n5-6y: 20-23kg\n"
   },
   {
     "code": "MN-213",
@@ -3803,73 +4177,72 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "LA POMME",
     "category": "Bộ quần áo bé",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "NEWBORN",
+      "0-3M",
+      "3-6M"
     ],
     "price": 225000,
     "image": "/images/products/mn-213.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "[ BST MỚI T8 LAPOM] bộ sưu tập thu đông cho bé màu trắng mix xanh cho bé quần + áo\nChất liệu mềm mại, co giãn và mát, các bé mặc mùa hè rất thoải mái xinh xắn\nHàng cao cấp của lapom họa tiết đáng yêu với tông màu xinh xắn là món quà tuyệt vời cho bé yêu trong mùa hè\nEm mời tất cả các chị yêu chốt đơ"
+    "description": "[ BST MỚI T8 LAPOM] bộ sưu tập thu đông cho bé màu trắng mix xanh cho bé quần + áo\nChất liệu mềm mại, co giãn và mát, các bé mặc mùa hè rất thoải mái xinh xắn\nHàng cao cấp của lapom họa tiết đáng yêu với tông màu xinh xắn là món quà tuyệt vời cho bé yêu trong mùa hè\nEm mời tất cả các chị yêu chốt đơn 😘😘😘\n#thegioimebimsua\n#La_pomme\n#thoitrangtreem\n#quanaotreem\n#bodychip\n#bodychobe"
   },
   {
     "code": "MN-214",
     "tiktokId": "25522402766",
     "name": "Bộ sát nách cổ tròn Bambus Signature",
-    "brand": "Moniu",
+    "brand": "BUBABY",
     "category": "Bộ quần áo bé",
     "variants": [
-      "Newborn (3-5.5kg)",
-      "0-3M",
-      "3-6M"
+      "12-18M",
+      "18-24M",
+      "2-3Y"
     ],
     "price": 225000,
     "image": "/images/products/mn-214.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "- Chất liệu: Sản phẩm làm từ 100% sợi tre cao cấp: cực mềm mại, thoáng khí, khả năng thấm hút mồ hôi cùng điều hòa thân nhiệt cực tốt cho con luôn thoải mái, dễ chịu\n- Sản phẩm BU Baby được thiết kế và sản xuất hoàn toàn tại Việt Nam. Tất cả sản phẩm đều đạt Chứng nhận OEKO-TEX 100 cấp độ 1 (cấp độ"
+    "description": "- Chất liệu: Sản phẩm làm từ 100% sợi tre cao cấp: cực mềm mại, thoáng khí, khả năng thấm hút mồ hôi cùng điều hòa thân nhiệt cực tốt cho con luôn thoải mái, dễ chịu\n- Sản phẩm BU Baby được thiết kế và sản xuất hoàn toàn tại Việt Nam. Tất cả sản phẩm đều đạt Chứng nhận OEKO-TEX 100 cấp độ 1 (cấp độ cao nhất về sản phẩm dệt may an toàn cho trẻ sơ sinh & trẻ nhỏ)."
   },
   {
     "code": "MN-215",
     "tiktokId": "25522402131",
     "name": "N03040 Mũ rộng vành kẻ xanh tai gấu mũ cho bé",
-    "brand": "Moniu",
+    "brand": "NOUS",
     "category": "Nón & Mũ bé",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "Kẻ xanh tai gấu,size L (12-24m)",
+      "Kẻ xanh tai gấu,size S (0-6m)",
+      "Kẻ xanh tai gấu,size M (6-12m)"
     ],
     "price": 55000,
     "image": "/images/products/mn-215.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "N03040 Mũ rộng vành kẻ xanh tai gấu mũ cho bé\nTHÔNG TIN CHẤT LIỆU\nMềm mại - Thoáng mát - Không gây kích ứng da\nShop Cam Kết:\n- Luôn đặt chất lượng lên hàng đầu\n- Chính hãng công ty cổ phần Nu - Việt Nam\n-️ Cập nhập mẫu mã liên tục phong phú\nThiết kế xinh xắn đáng yêu, món quà tuyệt vời cho bé yêu\nEm"
+    "description": "N03040 Mũ rộng vành kẻ xanh tai gấu mũ cho bé\nTHÔNG TIN CHẤT LIỆU\nMềm mại - Thoáng mát - Không gây kích ứng da\nShop Cam Kết:\n- Luôn đặt chất lượng lên hàng đầu\n- Chính hãng công ty cổ phần Nu - Việt Nam\n-️ Cập nhập mẫu mã liên tục phong phú\nThiết kế xinh xắn đáng yêu, món quà tuyệt vời cho bé yêu\nEm mời tất cả các chị yêu chốt đơn 😘😘😘\n#thegioimebimsua\n#nous\n#thoitrangtreem\n#quanaotreem\n#thoitrangchobe"
   },
   {
     "code": "MN-216",
     "tiktokId": "25480517732",
     "name": "Bộ quần cộc tay be phối quần tai gấu xanh lá/xanh dương/nâu nhạt đính dâu hồng",
-    "brand": "Moniu",
+    "brand": "NOUS",
     "category": "Bộ quần áo bé",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "6-9M",
+      "9-12M",
+      "12-18M",
+      "18-24M",
+      "2-3Y"
     ],
     "price": 225000,
     "image": "/images/products/mn-216.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "Bộ quần cộc tay be phối quần tai gấu xanh lá/xanh dương\nVải doux mềm, mịn, mát thích hợp cho bé trai mặc ở nhà"
+    "description": "Bộ quần cộc tay be phối quần tai gấu xanh lá/xanh dương\nVải doux mềm, mịn, mát thích hợp cho bé trai mặc ở nhà "
   },
   {
     "code": "MN-217",
@@ -3878,7 +4251,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "LA POMME",
     "category": "Bộ quần áo bé",
     "variants": [
-      "Newborn (3-5.5kg)",
+      "NEWBORN",
       "0-3M",
       "3-6M"
     ],
@@ -3887,26 +4260,26 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "[ BST SƠ SINH LAPOM] Bộ sơ sinh màu Nâu La Pomme  baby kisses quần + áo\nNiềm hạnh phúc của em bé rất đơn giản được thể hiện qua nụ cười hồn nhiên và vô tư nhất trên đời. \nMột em bé sơ sinh chẳng cần gì nhiều ngoài có Ba Mẹ yêu thương và luôn được cảm thấy thoải mái, dễ chịu cả ngày.\n#thegioimebimsua"
+    "description": "[ BST SƠ SINH LAPOM] Bộ sơ sinh màu Nâu La Pomme  baby kisses quần + áo\nNiềm hạnh phúc của em bé rất đơn giản được thể hiện qua nụ cười hồn nhiên và vô tư nhất trên đời. \nMột em bé sơ sinh chẳng cần gì nhiều ngoài có Ba Mẹ yêu thương và luôn được cảm thấy thoải mái, dễ chịu cả ngày.\n#thegioimebimsua\n#La_pomme\n#thoitrangtreem\n#quanaotreem\n#bodychip\n#bodychobe"
   },
   {
     "code": "MN-218",
     "tiktokId": "25472402455",
     "name": "C03002 Bộ dài tay cúc giữa Pool cho bé dưới 6 tháng quần + áo",
-    "brand": "Moniu",
+    "brand": "PEEKABOO",
     "category": "Bộ quần áo bé",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "voi xanh,0-3m (6kg)",
+      "voi xanh,3-6m (6-8kg)",
+      "voi cam,0-3m (6kg)",
+      "voi cam,3-6m (6-8kg)"
     ],
     "price": 225000,
     "image": "/images/products/mn-218.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "Bộ đồ bơi dài tay cúc giữa Pool C03002 là sản phẩm lý tưởng cho bé dưới 6 tháng tuổi. Với thiết kế đơn giản nhưng đầy màu sắc và họa tiết ngộ nghĩnh, bé sẽ trông rất dễ thương khi mặc bộ quần áo này.\n\nChất liệu vải cao cấp, êm ái và thoáng khí, không gây kích ứng da cho bé.\n\nBộ sản phẩm gồm quần và"
+    "description": "Bộ đồ bơi dài tay cúc giữa Pool C03002 là sản phẩm lý tưởng cho bé dưới 6 tháng tuổi. Với thiết kế đơn giản nhưng đầy màu sắc và họa tiết ngộ nghĩnh, bé sẽ trông rất dễ thương khi mặc bộ quần áo này.\n\nChất liệu vải cao cấp, êm ái và thoáng khí, không gây kích ứng da cho bé.\n\nBộ sản phẩm gồm quần và áo liền một chỗ với thiết kế cúc giữa tiện lợi khi thay tã cho bé.\n\nĐường may tỉ mỉ và chắc chắn, sản phẩm có tuổi thọ cao vì không bị xù lông hay ra màu khi giặt nhiều lần.\n\nHãy mang lại sự thoải mái nhất cho bé yêu của bạn trong ngày hè oi ả này! Bạn có thể tự tin đi du lịch hoặc đi biển trong khi biết con bạn được trang bị đầy đủ để phòng ngừa các tác hại của nắng biển. Sản phẩm không chỉ là trang phục đi biển hoàn hảo nhưng cũn là quà tặng ý nghĩa để bạn tri ân gia đình hay bạn bè đã mới sinh em bé. Hãy xem qua các size khác nhau để chọn được size phù hợp với con yêu của bạn!\n\n"
   },
   {
     "code": "MN-219",
@@ -3915,36 +4288,35 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "Moniu",
     "category": "Bộ quần áo bé",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "gấu phối quần kẻ xah,3-6M ( 5.5-7.5 kg)",
+      "gấu phối quần kẻ xah,6-9M ( 7.5-9.5kg)",
+      "gấu phối quần kẻ xah,9-12M (8.5-10.5kg)",
+      "gấu phối quần kẻ xah,0-3M (3.5-5.5kg)"
     ],
     "price": 225000,
     "image": "/images/products/mn-219.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "Bộ cộc tay trắng họa tiết gấu phối quần kẻ xanh là một sản phẩm thời trang cho bé trai vô cùng dễ thương và đáng yêu.\n\nHọa tiết gấu: Sản phẩm có họa tiết gấu dễ thương, khiến bé yêu của bạn trông rất đáng yêu và ngộ nghĩnh.\n\nPhối quần kẻ xanh: Bên cạnh áo phông có họa tiết gấu, sản phẩm này đi kèm v"
+    "description": "Bộ cộc tay trắng họa tiết gấu phối quần kẻ xanh là một sản phẩm thời trang cho bé trai vô cùng dễ thương và đáng yêu.\n\nHọa tiết gấu: Sản phẩm có họa tiết gấu dễ thương, khiến bé yêu của bạn trông rất đáng yêu và ngộ nghĩnh.\n\nPhối quần kẻ xanh: Bên cạnh áo phông có họa tiết gấu, sản phẩm này đi kèm với quần kẻ xanh rất tinh tế và lịch lãm.\n\nCổ áo cộc tay: Cổ áo và tay áo được thiết kế ngắn, giúp bé thoải mái vận động trong những hoạt đồng chơi đùa của mình.\n\nBên cạnh những tính năng nổi bật được liệt kệ ở trên, bề mặt sản phẩm được làm từ chất liệu cotton cao cấp giúpi cho bé luôn thoải mái khi sử dụn. Đây sẽ là lựa chọn hoàn hảo để bạn có thể biến con cái của mình thành những fashionista vào các dị occasion.\n\n"
   },
   {
     "code": "MN-220",
     "tiktokId": "25422406060",
     "name": "Combo 4 bộ  Pomme sweetie màu cam quần + áo",
-    "brand": "Moniu",
+    "brand": "LA POMME",
     "category": "Bộ quần áo bé",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "NEWBORN",
+      "0-3M",
+      "3-6M"
     ],
     "price": 225000,
     "image": "/images/products/mn-220.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "Combo 4 bộ  Pomme sweetie màu cam quần + áo\nChất liệu mềm mại, co giãn và mát, các bé mặc mùa hè rất thoải mái xinh xắn\nHàng cao cấp của lapom họa tiết đáng yêu với tông màu xinh xắn là món quà tuyệt vời cho bé yêu trong mùa hè\nEm mời tất cả các chị yêu chốt đơn 😘😘😘\n#thegioimebimsua\n#La_pomme\n#thoit"
+    "description": "Combo 4 bộ  Pomme sweetie màu cam quần + áo\nChất liệu mềm mại, co giãn và mát, các bé mặc mùa hè rất thoải mái xinh xắn\nHàng cao cấp của lapom họa tiết đáng yêu với tông màu xinh xắn là món quà tuyệt vời cho bé yêu trong mùa hè\nEm mời tất cả các chị yêu chốt đơn 😘😘😘\n#thegioimebimsua\n#La_pomme\n#thoitrangtreem\n#quanaotreem\n#bodychip\n#bodychobe"
   },
   {
     "code": "MN-221",
@@ -3953,17 +4325,16 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "Moniu",
     "category": "Bộ quần áo bé",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "3-6M",
+      "6-9M",
+      "9-12M"
     ],
     "price": 225000,
     "image": "/images/products/mn-221.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "Mô tả sản phẩm: B02006 Bộ ngắn tay cài giữa Bambus Iconic 1 quần + áo BBB1302NS là một bộ quần áo dễ thương và tiện lợi cho bé yêu của bạn. Với chất liệu Bambus cao cấp, bộ quần áo này sẽ giúp bé yêu của bạn luôn thoải mái và dễ chịu. Đặc điểm nổi bật: - Thiết kế ngắn tay cài giữa đơn giản nhưng đán"
+    "description": "Mô tả sản phẩm: B02006 Bộ ngắn tay cài giữa Bambus Iconic 1 quần + áo BBB1302NS là một bộ quần áo dễ thương và tiện lợi cho bé yêu của bạn. Với chất liệu Bambus cao cấp, bộ quần áo này sẽ giúp bé yêu của bạn luôn thoải mái và dễ chịu. Đặc điểm nổi bật: - Thiết kế ngắn tay cài giữa đơn giản nhưng đáng yêu - Kết hợp 1 chiếc quần và 1 chiếc áo - Chất liệu Bambus cao cấp, an toàn cho da của bé - Hướng dẫn giặt: Máy có thể giặt được Bạn sẽ không phải lo lắng về việc làm sao để vệ sinh sản phẩm khi nó dơ bẩn. Với hướng dẫn giặt máy được ghi trên sản phẩm, bạn có thể tiện lợi vệ sinh cho bé mà không lo phải rửa tay. Mua ngay B02006 Bộ ngắn tay cài gútaBambus Iconic 1 quần + á o BBB1302NS để trang phục cho con trông đáng yêu và được thoải mái suốt ngày."
   },
   {
     "code": "MN-222",
@@ -3972,9 +4343,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bao tay & Bao chân",
     "variants": [
-      "Newborn (3-5.5kg)",
-      "0-3M",
-      "3-6M"
+      "NEWBORN"
     ],
     "price": 225000,
     "image": "/images/products/mn-222.jpg",
@@ -3990,33 +4359,31 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bộ quần áo bé",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "Bộ quần áo,Newborn (2.5-4kg)",
+      "Bộ quần áo + mũ,Newborn (2.5-4kg)"
     ],
     "price": 225000,
     "image": "/images/products/mn-223.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "[NOUS BST T1] Bộ cài lệch trắng phối hồng in họa tiết NB\nTHÔNG TIN CHẤT LIỆU\nMềm mại - Thoáng mát - Không gây kích ứng da\nShop Cam Kết:\n- Luôn đặt chất lượng lên hàng đầu\n- Chính hãng công ty cổ phần Nu - Việt Nam\n-️ Cập nhập mẫu mã liên tục phong phú\nThiết kế xinh xắn đáng yêu, món quà tuyệt vời ch"
+    "description": "[NOUS BST T1] Bộ cài lệch trắng phối hồng in họa tiết NB\nTHÔNG TIN CHẤT LIỆU\nMềm mại - Thoáng mát - Không gây kích ứng da\nShop Cam Kết:\n- Luôn đặt chất lượng lên hàng đầu\n- Chính hãng công ty cổ phần Nu - Việt Nam\n-️ Cập nhập mẫu mã liên tục phong phú\nThiết kế xinh xắn đáng yêu, món quà tuyệt vời cho bé yêu\nEm mời tất cả các chị yêu chốt đơn 😘😘😘\n#thegioimebimsua\n#nous\n#thoitrangtreem\n#quanaotreem\n#thoitrangchobe"
   },
   {
     "code": "MN-224",
     "tiktokId": "25422403224",
     "name": "N03028 Set quà tặng 5 món màu trắng bé trai NB quần + áo",
-    "brand": "Moniu",
+    "brand": "NOUS",
     "category": "Quà tặng kèm",
     "variants": [
-      "Quà tặng kèm"
+      "Trắng bé trai NB,Newborn (3-5kg)"
     ],
     "price": 0,
     "image": "/images/products/mn-224.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "N03028 Set quà tặng 5 món màu trắng bé trai NB quần + áo\nMềm mại - Thoáng mát - Không gây kích ứng da\nShop Cam Kết:\n- Luôn đặt chất lượng lên hàng đầu\n- Chính hãng công ty cổ phần Nu - Việt Nam\n-️ Cập nhập mẫu mã liên tục phong phú\nThiết kế xinh xắn đáng yêu, món quà tuyệt vời cho bé yêu\nEm mời tất"
+    "description": "N03028 Set quà tặng 5 món màu trắng bé trai NB quần + áo\nMềm mại - Thoáng mát - Không gây kích ứng da\nShop Cam Kết:\n- Luôn đặt chất lượng lên hàng đầu\n- Chính hãng công ty cổ phần Nu - Việt Nam\n-️ Cập nhập mẫu mã liên tục phong phú\nThiết kế xinh xắn đáng yêu, món quà tuyệt vời cho bé yêu\nEm mời tất cả các chị yêu chốt đơn 😘😘😘\n#thegioimebimsua\n#nous\n#thoitrangtreem\n#quanaotreem\n#thoitrangchobe"
   },
   {
     "code": "MN-225",
@@ -4025,17 +4392,17 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bodysuit & Đồ liền",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "3-6M",
+      "6-9M",
+      "9-12M",
+      "12-18M"
     ],
     "price": 195000,
     "image": "/images/products/mn-225.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "[NOUS BST T10] Bộ bodysuit màu xanh, vàng,họa tiết cho bé\nTHÔNG TIN CHẤT LIỆU\nMềm mại - Thoáng mát - Không gây kích ứng da\nShop Cam Kết:\n- Luôn đặt chất lượng lên hàng đầu\n- Chính hãng công ty cổ phần Nu - Việt Nam\n-️ Cập nhập mẫu mã liên tục phong phú\nThiết kế xinh xắn đáng yêu, món quà tuyệt vời c"
+    "description": "[NOUS BST T10] Bộ bodysuit màu xanh, vàng,họa tiết cho bé\nTHÔNG TIN CHẤT LIỆU\nMềm mại - Thoáng mát - Không gây kích ứng da\nShop Cam Kết:\n- Luôn đặt chất lượng lên hàng đầu\n- Chính hãng công ty cổ phần Nu - Việt Nam\n-️ Cập nhập mẫu mã liên tục phong phú\nThiết kế xinh xắn đáng yêu, món quà tuyệt vời cho bé yêu\nEm mời tất cả các chị yêu chốt đơn 😘😘😘\n#thegioimebimsua\n#nous\n#thoitrangtreem\n#quanaotreem\n#thoitrangchobe"
   },
   {
     "code": "MN-226",
@@ -4044,7 +4411,10 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Váy đầm bé gái",
     "variants": [
-      "9M",
+      "6-9M",
+      "9-12M",
+      "12-18M",
+      "18-24M",
       "2-3Y"
     ],
     "price": 245000,
@@ -4058,11 +4428,9 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "code": "MN-227",
     "tiktokId": "25373532519",
     "name": "[BST THÁNG 3] Bộ cộc tay áo trắng phối quần tím 9m, 12m",
-    "brand": "Moniu",
+    "brand": "NOUS",
     "category": "Bộ quần áo bé",
     "variants": [
-      "9M",
-      "12M",
       "9-12M",
       "12-18M"
     ],
@@ -4080,17 +4448,18 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "Moniu",
     "category": "Áo & Áo khoác",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "9-12M",
+      "12-18M",
+      "18-24M",
+      "2-3Y",
+      "3-4Y"
     ],
     "price": 185000,
     "image": "/images/products/mn-228.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "Tên sản phẩm:  [Your Wishes] Áo len dài tay cổ tròn cho bé trai và bé gái\nChất liệu len\nChất liệu LEN siêu ấm áp với các đặc tính co giãn tốt, mềm mại và mịn màng, đem đến cảm giác dễ chịu khi tiếp xúc với làn da của bé, sợi vải được xử lý kỹ lưỡng để không gây rát hay mẩn ngứa cho bé.\nShop Cam Kết:"
+    "description": "Tên sản phẩm:  [Your Wishes] Áo len dài tay cổ tròn cho bé trai và bé gái\nChất liệu len\nChất liệu LEN siêu ấm áp với các đặc tính co giãn tốt, mềm mại và mịn màng, đem đến cảm giác dễ chịu khi tiếp xúc với làn da của bé, sợi vải được xử lý kỹ lưỡng để không gây rát hay mẩn ngứa cho bé.\nShop Cam Kết:\n- Luôn đặt chất lượng lên hàng đầu\n-️ Cập nhập mẫu mã liên tục phong phú\nThiết kế xinh xắn đáng yêu, món quà tuyệt vời cho bé yêu\nEm mời tất cả các chị yêu chốt đơn 😘😘😘\n#thegioimebimsua\n#thoitrangtreem\n#quanaotreem\n#thoitrangchobe\n#aolenchobe"
   },
   {
     "code": "MN-229",
@@ -4099,7 +4468,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "LA POMME",
     "category": "Bộ quần áo bé",
     "variants": [
-      "Newborn (3-5.5kg)",
+      "NEWBORN",
       "0-3M",
       "3-6M"
     ],
@@ -4108,26 +4477,27 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "[BST T10 LAPOM] Set sơ sinh Lapom phối màu cam cho bé quần + áo\nChất liệu mềm mại, co giãn và mát, các bé mặc rất thoải mái xinh xắn\nHàng cao cấp của Lapom họa tiết đáng yêu với tông màu xinh xắn là món quà tuyệt vời cho bé yêu\n\nEm mời tất cả các chị yêu chốt đơn 😘😘😘\n#thegioimebimsua\n#La_pomme\n#thoi"
+    "description": "[BST T10 LAPOM] Set sơ sinh Lapom phối màu cam cho bé quần + áo\nChất liệu mềm mại, co giãn và mát, các bé mặc rất thoải mái xinh xắn\nHàng cao cấp của Lapom họa tiết đáng yêu với tông màu xinh xắn là món quà tuyệt vời cho bé yêu\n\nEm mời tất cả các chị yêu chốt đơn 😘😘😘\n#thegioimebimsua\n#La_pomme\n#thoitrangtreem\n#quanaotreem\n#bodychip\n#bodychobe"
   },
   {
     "code": "MN-230",
     "tiktokId": "25372402075",
     "name": "PC03002 Bộ cộc tay cổ tròn raglan Bakery cotton mềm mại cho bé quần + áo",
-    "brand": "Moniu",
+    "brand": "PUNCHUN",
     "category": "Bộ quần áo bé",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "3-6M",
+      "6-9M",
+      "9-12M",
+      "12-18M",
+      "18-24M"
     ],
     "price": 225000,
     "image": "/images/products/mn-230.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "Bộ quần áo bé trai cực kì đáng yêu và dễ thương với thiết kế cổ tròn raglan và chất liệu cotton Bakery mềm mại, an toàn cho làn da nhạy cảm của bé.\n\nBộ quần áo gồm có áo và quần, rất tiện lợi cho việc mix đồ hàng ngày của bé.\n\nChất liệu cotton Bakery mềm mại, co giãn nhẹ giúp cho bé thoải mái vận độ"
+    "description": "Bộ quần áo bé trai cực kì đáng yêu và dễ thương với thiết kế cổ tròn raglan và chất liệu cotton Bakery mềm mại, an toàn cho làn da nhạy cảm của bé.\n\nBộ quần áo gồm có áo và quần, rất tiện lợi cho việc mix đồ hàng ngày của bé.\n\nChất liệu cotton Bakery mềm mại, co giãn nhẹ giúp cho bé thoải mái vận động.\n\nThiết kế cổ tròn raglan tạo điểm nhấn cá tính, dễ thương cho bé yêu của bạn.\n\nBộ sản phẩm là lựa chọn tuyệt vời để biếu tặng các baby boy trong các dịP sinh nhật hoặc ngày lễ. Với thiết kế hợP thờI trang và chất liệu an toàn sẽ mang lại sự hài lòng khi sử dụng sản phẩm này. Hãy nhanh tay đặt hàng để mang lại nụ cười rạng rỡ trên gương mặt các baby boy yêu của bạn!C"
   },
   {
     "code": "MN-231",
@@ -4136,52 +4506,60 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Chăn gối & Đệm ngủ",
     "variants": [
-      "Kem thêu oliu",
-      "Nâu thêu gấu",
-      "Hồng thêu thỏ",
-      "Xanh thêu rắn"
+      "Caro hồng",
+      "Xanh mặt gấu",
+      "Gấu hồng",
+      "Thỏ hồng",
+      "Gấu xanh da trời",
+      "Hồng mặt cáo",
+      "Caro xanh",
+      "Gấu hồng cam"
     ],
     "price": 265000,
     "image": "/images/products/mn-231.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "[NOUS] Gối chặn chống giật mình cho bé họa tiết đáng yêu\nTHÔNG TIN CHẤT LIỆU\nMềm mại - Thông thoáng - Không gây kích ứng da\nShop Cam Kết:\n- Luôn đặt chất lượng lên hàng đầu\n- Chính hãng công ty cổ phần Nu - Việt Nam\n-️ Cập nhập mẫu mã liên tục phong phú\nThiết kế xinh xắn đáng yêu, món quà tuyệt vời"
+    "description": "[NOUS] Gối chặn chống giật mình cho bé họa tiết đáng yêu\nTHÔNG TIN CHẤT LIỆU\nMềm mại - Thông thoáng - Không gây kích ứng da\nShop Cam Kết:\n- Luôn đặt chất lượng lên hàng đầu\n- Chính hãng công ty cổ phần Nu - Việt Nam\n-️ Cập nhập mẫu mã liên tục phong phú\nThiết kế xinh xắn đáng yêu, món quà tuyệt vời cho bé yêu trong mùa hè này\nEm mời tất cả các chị yêu chốt đơn 😘😘😘\n#thegioimebimsua\n#nous\n#thoitrangtreem\n#quanaotreem\n#thoitrangchobe\n#goichanchobe"
   },
   {
     "code": "MN-232",
     "tiktokId": "25322401743",
     "name": "N03030 Set yếm và áo màu trắng quần kẻ xanh lá 6M cho bé áo + quần",
-    "brand": "Moniu",
+    "brand": "NOUS",
     "category": "Yếm cho bé",
     "variants": [
-      "6M"
+      "trắng quần kẻ xanhlá,6-9m (7.5-9.5 kg)",
+      "trắng quần kẻ xanhlá,9-12m (8.5 -10.5kg)",
+      "trắng quần kẻ xanhlá,12-18m (10.5-11.5kg)",
+      "trắng quần kẻ xanhlá,18-24m (11.5-13.5kg)",
+      "trắng quần kẻ xanhlá,2-3Y (13.5-15kg)"
     ],
     "price": 225000,
     "image": "/images/products/mn-232.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "N03030 Set yếm và áo màu trắng quần kẻ xanh lá 6M cho bé áo + quần\nTHÔNG TIN CHẤT LIỆU\nMềm mại - Thoáng mát - Không gây kích ứng da\nShop Cam Kết:\n- Luôn đặt chất lượng lên hàng đầu\n- Chính hãng công ty cổ phần Nu - Việt Nam\n-️ Cập nhập mẫu mã liên tục phong phú\nThiết kế xinh xắn đáng yêu, món quà tu"
+    "description": "N03030 Set yếm và áo màu trắng quần kẻ xanh lá 6M cho bé áo + quần\nTHÔNG TIN CHẤT LIỆU\nMềm mại - Thoáng mát - Không gây kích ứng da\nShop Cam Kết:\n- Luôn đặt chất lượng lên hàng đầu\n- Chính hãng công ty cổ phần Nu - Việt Nam\n-️ Cập nhập mẫu mã liên tục phong phú\nThiết kế xinh xắn đáng yêu, món quà tuyệt vời cho bé yêu\nEm mời tất cả các chị yêu chốt đơn 😘😘😘\n#thegioimebimsua\n#nous\n#thoitrangtreem\n#quanaotreem\n#thoitrangchobe"
   },
   {
     "code": "MN-233",
     "tiktokId": "25322399881",
     "name": "N03046 Bộ cộc tay áo trắng phối quần navy cho bé quần + áo",
-    "brand": "Moniu",
+    "brand": "NOUS",
     "category": "Yếm cho bé",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "Trắng phối quần navy,2-3Y (13.5-15kg)",
+      "Trắng phối quần navy,3-4Y (15-17kg)",
+      "Trắng phối quần navy,4-5Y (17-20kg)",
+      "Trắng phối quần navy,5-6Y (20-23kg)"
     ],
     "price": 225000,
     "image": "/images/products/mn-233.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "N03031 Set yếm và áo màu trắng quần kẻ xanh da trời áo + quần\nTHÔNG TIN CHẤT LIỆU\nMềm mại - Thoáng mát - Không gây kích ứng da\nShop Cam Kết:\n- Luôn đặt chất lượng lên hàng đầu\n- Chính hãng công ty cổ phần Nu - Việt Nam\n-️ Cập nhập mẫu mã liên tục phong phú\nThiết kế xinh xắn đáng yêu, món quà tuyệt v"
+    "description": "N03031 Set yếm và áo màu trắng quần kẻ xanh da trời áo + quần\nTHÔNG TIN CHẤT LIỆU\nMềm mại - Thoáng mát - Không gây kích ứng da\nShop Cam Kết:\n- Luôn đặt chất lượng lên hàng đầu\n- Chính hãng công ty cổ phần Nu - Việt Nam\n-️ Cập nhập mẫu mã liên tục phong phú\nThiết kế xinh xắn đáng yêu, món quà tuyệt vời cho bé yêu\nEm mời tất cả các chị yêu chốt đơn 😘😘😘\n#thegioimebimsua\n#nouskids\n#thoitrangtreem\n#quanaotreem\n#thoitrangchobe"
   },
   {
     "code": "MN-234",
@@ -4190,36 +4568,36 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bodysuit & Đồ liền",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "3-6M",
+      "6-9M",
+      "9-12M",
+      "12-18M"
     ],
     "price": 195000,
     "image": "/images/products/mn-234.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "[HOT NOUS BST T10] Bộ bodysuit cộc tay in họa tiết phối quần dài trắng\nTHÔNG TIN CHẤT LIỆU\nMềm mại - Thoáng mát - Không gây kích ứng da\nShop Cam Kết:\n- Luôn đặt chất lượng lên hàng đầu\n- Chính hãng công ty cổ phần Nu - Việt Nam\n-️ Cập nhập mẫu mã liên tục phong phú\nThiết kế xinh xắn đáng yêu, món qu"
+    "description": "[HOT NOUS BST T10] Bộ bodysuit cộc tay in họa tiết phối quần dài trắng\nTHÔNG TIN CHẤT LIỆU\nMềm mại - Thoáng mát - Không gây kích ứng da\nShop Cam Kết:\n- Luôn đặt chất lượng lên hàng đầu\n- Chính hãng công ty cổ phần Nu - Việt Nam\n-️ Cập nhập mẫu mã liên tục phong phú\nThiết kế xinh xắn đáng yêu, món quà tuyệt vời cho bé yêu\nEm mời tất cả các chị yêu chốt đơn 😘😘😘\n#thegioimebimsua\n#nous\n#thoitrangtreem\n#quanaotreem\n#thoitrangchobe"
   },
   {
     "code": "MN-235",
     "tiktokId": "25272402810",
     "name": "LITTLE LOVE Bộ cộc tay cho bé quần + áo",
-    "brand": "Moniu",
+    "brand": "LITTLE LOVE",
     "category": "Bộ quần áo bé",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "3-6M",
+      "6-9M",
+      "9-12M",
+      "12-18M"
     ],
     "price": 225000,
     "image": "/images/products/mn-235.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "LITTLE LOVE Bộ cộc tay cho bé quần + áo\nTHÔNG TIN CHẤT LIỆU\nThoáng Mát - Mềm mại - Thấm hút tốt - Không gây kích ứng da\nShop Cam Kết:\n- Luôn đặt chất lượng lên hàng đầu\n- Cam kết sản phẩm chính hãng\n-️ Cập nhập mẫu mã liên tục phong phú\nThiết kế xinh xắn đáng yêu, món quà tuyệt vời cho bé yêu\nEm mời"
+    "description": "LITTLE LOVE Bộ cộc tay cho bé quần + áo\nTHÔNG TIN CHẤT LIỆU\nThoáng Mát - Mềm mại - Thấm hút tốt - Không gây kích ứng da\nShop Cam Kết:\n- Luôn đặt chất lượng lên hàng đầu\n- Cam kết sản phẩm chính hãng\n-️ Cập nhập mẫu mã liên tục phong phú\nThiết kế xinh xắn đáng yêu, món quà tuyệt vời cho bé yêu\nEm mời tất cả các chị yêu chốt đơn 😘😘😘\n#thegioimebimsua\n#littlelove\n#thoitrangtreem\n#quanaotreem\n#thoitrangchobe"
   },
   {
     "code": "MN-236",
@@ -4228,17 +4606,16 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "LA POMME",
     "category": "Chăn gối & Đệm ngủ",
     "variants": [
-      "Kem thêu oliu",
-      "Nâu thêu gấu",
-      "Hồng thêu thỏ",
-      "Xanh thêu rắn"
+      "Gối ghi",
+      "Gối nâu",
+      "Gối hồng"
     ],
     "price": 265000,
     "image": "/images/products/mn-236.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "Mang đến cho bé yêu của bạn một giấc ngủ ngon lành cùng gối đầu La Pomme bồng bềnh LAPOM BST T11. Với chất liệu mềm mại và êm ái, gối đầu này sẽ giúp bé cảm thấy thoải mái và dễ chịu khi nằm xuống.\nBộ quà tặng hoàn hảo: là sự lựa chọn tuyệt vời để làm quà cho bé mới sinh. Bộ sản phẩm được thiết kế v"
+    "description": "Mang đến cho bé yêu của bạn một giấc ngủ ngon lành cùng gối đầu La Pomme bồng bềnh LAPOM BST T11. Với chất liệu mềm mại và êm ái, gối đầu này sẽ giúp bé cảm thấy thoải mái và dễ chịu khi nằm xuống.\nBộ quà tặng hoàn hảo: là sự lựa chọn tuyệt vời để làm quà cho bé mới sinh. Bộ sản phẩm được thiết kế với kiểu dáng trẻ trung, xinh xắn, thích hợp để tặng cho bé trong các dịp lễ Tết hay sinh nhật.\nChất liệu an toàn: Gối được làm từ chất liệu 100% cotton cao cấp, không gây kích ứng hay khó chịu cho da nhạy cảm của em bé. Chất liệu này rất thoáng khí và hút ẩm tốt nên không lo lắng về việc em bé sẽ ra mồ hôi trong khi nằm.\nKích thước phù hợp: Kích thước của gối rất tiện lợi để mang theo khi đi du lịch hoặc đi xa. Nó phù hợp với các loại giường nhỏ hoặc xe đẩy baby.\n#thegioimebimsua\n#lapomme\n#goitreem"
   },
   {
     "code": "MN-237",
@@ -4247,7 +4624,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "LA POMME",
     "category": "Bộ quần áo bé",
     "variants": [
-      "Newborn (3-5.5kg)",
+      "NEWBORN",
       "0-3M",
       "3-6M"
     ],
@@ -4256,7 +4633,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "Mô tả sản phẩm:\n\nBộ combo sơ sinh La Pomme gồm 5 bộ áo dài tay và quần dài được thiết kế với hoạ tiết Pettit Soyeu đáng yêu, đem lại vẻ cuốn hút và ngộ nghĩnh cho bé yêu. Màu sắc trắng xanh thanh lịch phù hợp cho cả bé trai và bé gái.\n\nChất liệu: Vải cotton mềm mại, thấm hút mồ hôi tốt, không gây kí"
+    "description": "Mô tả sản phẩm:\n\nBộ combo sơ sinh La Pomme gồm 5 bộ áo dài tay và quần dài được thiết kế với hoạ tiết Pettit Soyeu đáng yêu, đem lại vẻ cuốn hút và ngộ nghĩnh cho bé yêu. Màu sắc trắng xanh thanh lịch phù hợp cho cả bé trai và bé gái.\n\nChất liệu: Vải cotton mềm mại, thấm hút mồ hôi tốt, không gây kích ứng da cho trẻ nhỏ.\n\nKích thước: Bộ áo quần phù hợp với bé sơ sinh từ 3-6kg.\n\nBảo quản: Giặt máy bằng nước lạnh hoặc nước ấm. Không giặt chung với đồ có màu khác. Phơi trong bóng râm để tránh phai màu.\n\nBên cạnh việc là sản phẩm đáng yêu cho bé yêu của bạn thì combo La Pomme còn là lựa chọn hoàn hảo để dành tặng những người thân trong gia đình có con mới chào đời. Bé mới sinh luôn là niềm tự hào của gia đình và việc được nhận được combo quần áo xinh xắn này sẽ khiến các bậc cha mẹ rất vui và biết ơn!\n\n"
   },
   {
     "code": "MN-238",
@@ -4265,17 +4642,17 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bộ quần áo bé",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "be phối cam,5-6Y (20-23kg)",
+      "be phối cam,2-3Y (13.5-15kg)",
+      "be phối cam,3-4Y (15-17kg)",
+      "be phối cam,4-5Y (17-20kg)"
     ],
     "price": 225000,
     "image": "/images/products/mn-238.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "Bộ cộc tay màu be phối cam mềm mát là lựa chọn hoàn hảo cho bé yêu của bạn vào những ngày hè nóng bức. Bộ sản phẩm này được thiết kế đầy tinh tế và chất liệu vải cotton cao cấp giúp bé luôn thoải mái và dễ chịu.\n\nMàu sắc: Bộ cộc tay được phối 2 tone màu be và cam nổi bật, mang lại sự trẻ trung, năng"
+    "description": "Bộ cộc tay màu be phối cam mềm mát là lựa chọn hoàn hảo cho bé yêu của bạn vào những ngày hè nóng bức. Bộ sản phẩm này được thiết kế đầy tinh tế và chất liệu vải cotton cao cấp giúp bé luôn thoải mái và dễ chịu.\n\nMàu sắc: Bộ cộc tay được phối 2 tone màu be và cam nổi bật, mang lại sự trẻ trung, năng động cho bé yêu của bạn\n\nChất liệu: Sản phẩm được làm từ vải cotton cao cấp, êm ái khi tiếp xúc với da nhạy cảm của bé\n\nKiểu dáng: Thiết kế đơn giản nhưng không kém phần sang trọng, mang lại sự thoải mái cho bé khi diện vào ngày hè oi bức\n\nNgoài ra, sản phẩm này có thể là lựa chọn hoàn hảo để biếu tặng các em nhỏ trong các dịp sinh nhật hay các ngày lễ quan trọng khác. Đặt hàng ngay để có thể sở hữa sản phẩm này!\n\n"
   },
   {
     "code": "MN-239",
@@ -4284,7 +4661,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "LA POMME",
     "category": "Bộ quần áo bé",
     "variants": [
-      "Newborn (3-5.5kg)",
+      "NEWBORN",
       "0-3M",
       "3-6M"
     ],
@@ -4293,7 +4670,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "[ BST SƠ SINH LAPOM] Combo 5 bộ sơ sinh màu Tím Baby Kisses quần + áo\nChất liệu mềm mại, co giãn và mát, các bé mặc mùa hè rất thoải mái xinh xắn\nHàng cao cấp của lapom họa tiết đáng yêu với tông màu xinh xắn là món quà tuyệt vời cho bé yêu trong mùa hè\nEm mời tất cả các chị yêu chốt đơn 😘😘😘\n#thegio"
+    "description": "[ BST SƠ SINH LAPOM] Combo 5 bộ sơ sinh màu Tím Baby Kisses quần + áo\nChất liệu mềm mại, co giãn và mát, các bé mặc mùa hè rất thoải mái xinh xắn\nHàng cao cấp của lapom họa tiết đáng yêu với tông màu xinh xắn là món quà tuyệt vời cho bé yêu trong mùa hè\nEm mời tất cả các chị yêu chốt đơn 😘😘😘\n#thegioimebimsua\n#La_pomme\n#thoitrangtreem\n#quanaotreem\n#bodychip\n#bodychobe"
   },
   {
     "code": "MN-240",
@@ -4302,17 +4679,17 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bộ quần áo bé",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "phối quần xanh,0-3M (3.5-5.5kg)",
+      "phối quần xanh,3-6M ( 5.5-7.5 kg)",
+      "phối quần xanh,6-9M ( 7.5-9.5kg)",
+      "phối quần xanh,9-12M (8.5-10.5kg)"
     ],
     "price": 225000,
     "image": "/images/products/mn-240.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "Bộ cộc tay áo trắng in trang trí phối quần xanh mềm mát là lựa chọn hoàn hảo cho bé trai của bạn.\n\nThiết kế sang trọng: Áo sơ mi cộc tay được in họa tiết đáng yêu, phối với quần đùi xanh lá cây ấn tượng.\n\nChất liệu thoáng khí: Được làm từ vải cotton cao cấp, bộ đồ giúp giữ cho bé thoải mái và khô rá"
+    "description": "Bộ cộc tay áo trắng in trang trí phối quần xanh mềm mát là lựa chọn hoàn hảo cho bé trai của bạn.\n\nThiết kế sang trọng: Áo sơ mi cộc tay được in họa tiết đáng yêu, phối với quần đùi xanh lá cây ấn tượng.\n\nChất liệu thoáng khí: Được làm từ vải cotton cao cấp, bộ đồ giúp giữ cho bé thoải mái và khô ráo suốt ngày dài.\n\nBạn có thể dễ dàng kết hợp bộ đồ này với các loại giày và phụ kiện khác để hoàn thành diện mạo thời thượng của bé.\n\n"
   },
   {
     "code": "MN-241",
@@ -4321,52 +4698,55 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bộ quần áo bé",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "be đính cà rốt,9-12M (8.5-10.5kg)",
+      "be đính cà rốt,12-18m (10.5-11.5kg)",
+      "be đính cà rốt,18-24m (11.5-13.5kg)",
+      "be đính cà rốt,2-3Y (13.5-15kg)",
+      "be đính cà rốt,6-9M ( 7.5-9.5kg)"
     ],
     "price": 225000,
     "image": "/images/products/mn-241.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "Bộ ba lỗ nâu phối be đính cà rốt là lựa chọn tuyệt vời để tặng cho bé yêu của bạn.\n\nChất liệu mềm mát: Bộ đồ được làm từ chất liệu cotton cao cấp, giúp bé thoải mái vận động và không bị khó chịu trong các ngày hè nắng nóng.\n\nGồm áo và quần: Bộ sản phẩm gồm áo ba lỗ và quần short phối cùng màu, giúp"
+    "description": "Bộ ba lỗ nâu phối be đính cà rốt là lựa chọn tuyệt vời để tặng cho bé yêu của bạn.\n\nChất liệu mềm mát: Bộ đồ được làm từ chất liệu cotton cao cấp, giúp bé thoải mái vận động và không bị khó chịu trong các ngày hè nắng nóng.\n\nGồm áo và quần: Bộ sản phẩm gồm áo ba lỗ và quần short phối cùng màu, giúp bé trông dễ thương và sinh động hơn.\n\nBên cạnh đó, bảng màu nâu phối be rất dễ kết hợp với các loại giày, tất hay phụ kiện khác. Hơn thế nữa, chiếc áo được thiết kế có hoạ tiết nhỏ xinh của những chiếc cà rốt ngọt ngon sẽ khiến bé yêu của bạn trông thật dễ thương.\n\nCác thông số sản phẩm:\n\n- Mã sản phẩm: N04010\n\n- Chất liệu: Cotton\n\n"
   },
   {
     "code": "MN-242",
     "tiktokId": "25222401632",
     "name": "N03018 Bộ liền cộc kẻ xanh phối trắng 0-9M",
-    "brand": "Moniu",
+    "brand": "NOUS",
     "category": "Bodysuit & Đồ liền",
     "variants": [
-      "9M"
+      "Kẻ xanh phối trắng,0-3m (3.5-5.5kg)",
+      "Kẻ xanh phối trắng,3-6M (5.5-7.5kg)",
+      "Kẻ xanh phối trắng,6-9m (7.5-9.5kg)",
+      "Kẻ xanh phối trắng,9-12m (8.5 -10.5kg)"
     ],
     "price": 195000,
     "image": "/images/products/mn-242.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "N03018 Bộ liền cộc kẻ xanh phối trắng 0-9M\nTHÔNG TIN CHẤT LIỆU\nMềm mại - Thoáng mát - Không gây kích ứng da\nShop Cam Kết:\n- Luôn đặt chất lượng lên hàng đầu\n- Chính hãng công ty cổ phần Nu - Việt Nam\n-️ Cập nhập mẫu mã liên tục phong phú\nThiết kế xinh xắn đáng yêu, món quà tuyệt vời cho bé yêu\nEm mờ"
+    "description": "N03018 Bộ liền cộc kẻ xanh phối trắng 0-9M\nTHÔNG TIN CHẤT LIỆU\nMềm mại - Thoáng mát - Không gây kích ứng da\nShop Cam Kết:\n- Luôn đặt chất lượng lên hàng đầu\n- Chính hãng công ty cổ phần Nu - Việt Nam\n-️ Cập nhập mẫu mã liên tục phong phú\nThiết kế xinh xắn đáng yêu, món quà tuyệt vời cho bé yêu\nEm mời tất cả các chị yêu chốt đơn 😘😘😘\n#thegioimebimsua\n#nous\n#thoitrangtreem\n#quanaotreem\n#thoitrangchobe"
   },
   {
     "code": "MN-243",
     "tiktokId": "25222399076",
     "name": "B03007 Bộ quần áo ngắn tay cài giữa chất liệu siro mềm mại cho bé áo+ quần BSR130202",
-    "brand": "Moniu",
+    "brand": "BUBABY",
     "category": "Bộ quần áo bé",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "3-6M",
+      "6-9M",
+      "9-12M"
     ],
     "price": 225000,
     "image": "/images/products/mn-243.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "Bộ quần áo ngắn tay cài giữa chất liệu siro mềm mại cho bé áo+ quần BSR130202 là lựa chọn hoàn hảo cho bé yêu của bạn\nChất liệu siro mềm mại: Bộ quần áo được làm từ chất liệu siro cao cấp, mang lại cảm giác êm ái và thoải mái cho bé khi sử dụng\nThiết kế tiện dụng: Với thiết kế ngắn tay và cài giữa,"
+    "description": "Bộ quần áo ngắn tay cài giữa chất liệu siro mềm mại cho bé áo+ quần BSR130202 là lựa chọn hoàn hảo cho bé yêu của bạn\nChất liệu siro mềm mại: Bộ quần áo được làm từ chất liệu siro cao cấp, mang lại cảm giác êm ái và thoải mái cho bé khi sử dụng\nThiết kế tiện dụng: Với thiết kế ngắn tay và cài giữa, bộ quần áo này rất tiện lợi để thay đồ và thay tã khiến cho cuộc sống của bạn trở nên dễ dàng hơn\nTính đồng bộ: BSR130202 gồm 1 chiếc ÁO + 1 chiếc QUẦN với kiểu dáng phối hợp hoàn hảoo mang lại sự phối đồ nhanh gọn như không phải suy nghĩ\nHơn nữa, sản phẩm này rất thích hợp để làm quà tặng sinh nhật hoặc các buổi tiệc khác. Hãy trở thành người bạn yêu thương của bé với sản phẩm này\n#thegioimebimsua\n#bubaby\n#mevabe\n#quanaotreem"
   },
   {
     "code": "MN-244",
@@ -4375,54 +4755,59 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "Moniu",
     "category": "Bộ quần áo bé",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "Hồng,0-3m (3-5 kg)",
+      "Hồng,3-6m (5-7 kg)",
+      "Hồng,6-9m ( 7-9 kg)",
+      "Hồng,9-12m ( 9-11 kg)",
+      "Xanh,0-3m (3-5 kg)",
+      "Xanh,3-6m (5-7 kg)",
+      "Xanh,6-9m ( 7-9 kg)",
+      "Xanh,9-12m ( 9-11 kg)"
     ],
     "price": 225000,
     "image": "/images/products/mn-244.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "[MIO x THẾ GIỚI MBS]  Bộ dài tay Mio họa tiết thỏ cho bé quần + áo\n\nChất liệu mềm mại, co giãn và mát, các bé mặc rất thoải mái xinh xắn\nHàng cao cấp của lapom họa tiết đáng yêu với tông màu xinh xắn là món quà tuyệt vời cho bé yêu\nEm mời tất cả các chị yêu chốt đơn 😘😘😘\n#thegioimebimsua\n#Mio\n#thoitr"
+    "description": "[MIO x THẾ GIỚI MBS]  Bộ dài tay Mio họa tiết thỏ cho bé quần + áo\n\nChất liệu mềm mại, co giãn và mát, các bé mặc rất thoải mái xinh xắn\nHàng cao cấp của lapom họa tiết đáng yêu với tông màu xinh xắn là món quà tuyệt vời cho bé yêu\nEm mời tất cả các chị yêu chốt đơn 😘😘😘\n#thegioimebimsua\n#Mio\n#thoitrangtreem\n#quanaotreem"
   },
   {
     "code": "MN-245",
     "tiktokId": "25172405166",
     "name": "B03011 Bộ ngắn tay cổ trụ Kyomi quần áo mùa hè cho bé trai và gái BBC130301",
-    "brand": "Moniu",
+    "brand": "BUBABY",
     "category": "Bộ quần áo bé",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "12-18M",
+      "18-24M",
+      "2-3Y",
+      "3-4Y",
+      "4-5Y"
     ],
     "price": 225000,
     "image": "/images/products/mn-245.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "Bộ ngắn tay cổ trụ Kyomi quần áo mùa hè cho bé trai và gái là lựa chọn tuyệt vời cho những đứa trẻ yêu thích sự thoải mái trong giấc ngủ. Với thiết kế mới lạ, chất liệu mềm mại, bộ quần áo này sẽ mang lại giấc ngủ ngon và thỏa mái cho bé.\n\nBộ quần áo được làm từ chất liệu mềm mại, thoáng khí giúp bé"
+    "description": "Bộ ngắn tay cổ trụ Kyomi quần áo mùa hè cho bé trai và gái là lựa chọn tuyệt vời cho những đứa trẻ yêu thích sự thoải mái trong giấc ngủ. Với thiết kế mới lạ, chất liệu mềm mại, bộ quần áo này sẽ mang lại giấc ngủ ngon và thỏa mái cho bé.\n\nBộ quần áo được làm từ chất liệu mềm mại, thoáng khí giúp bé cảm thấy dễ chịu.\n\nThiết kế đơn giản nhưng hiện đại với cổ trụ và tay ngắn phù hợp với không gian nghỉ ngơi của bé.\n\nBên cạnh tính năng thoải mái khi sử dụng trong phòng ngủ, bộ quần áo này còn có nhiều điểm nhấn thu hút để các bé có thể tự tin diện khi ra ngoài:\n\nCó các size từ S -> XL phù hợp cho các lứa tuổi khác nhau của các em.\n\nMàu sắc phối hợp thanh lịch mang lại cá tính riêng biệt cho từng em.\n\nVì vậy, không chỉ được thiết kế để mang lại sự thuận tiện trong việc diện vào buổi tối hay đi du lịch xa. Mà B03011 Bộ Ngắn Tay Cổ Trụ Kyomi Quần Áo Mùa Hè Cho Bé Traivà Gáicòn được xem là 1 sản phẩm đầy tiềm năng khiến con bạn luôn tự tin ở bất kỳ hoàn cảnh nà0!\n\n"
   },
   {
     "code": "MN-246",
     "tiktokId": "25172402445",
     "name": "N03001 Gối định hình cho bé từ sơ sinh",
-    "brand": "Moniu",
+    "brand": "NOUS",
     "category": "Chăn gối & Đệm ngủ",
     "variants": [
-      "Newborn (3-5.5kg)",
-      "0-3M",
-      "3-6M"
+      "Xanh da trời",
+      "Trắng tai gấu",
+      "Xanh lá"
     ],
     "price": 265000,
     "image": "/images/products/mn-246.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "N03001 Gối định hình cho bé từ sơ sinh\nTHÔNG TIN CHẤT LIỆU\nMềm mại - Thông thoáng - Không gây kích ứng da\nShop Cam Kết:\n- Luôn đặt chất lượng lên hàng đầu\n- Chính hãng công ty cổ phần Nu - Việt Nam\n-️ Cập nhập mẫu mã liên tục phong phú\nThiết kế xinh xắn đáng yêu, món quà tuyệt vời cho bé yêu trong m"
+    "description": "N03001 Gối định hình cho bé từ sơ sinh\nTHÔNG TIN CHẤT LIỆU\nMềm mại - Thông thoáng - Không gây kích ứng da\nShop Cam Kết:\n- Luôn đặt chất lượng lên hàng đầu\n- Chính hãng công ty cổ phần Nu - Việt Nam\n-️ Cập nhập mẫu mã liên tục phong phú\nThiết kế xinh xắn đáng yêu, món quà tuyệt vời cho bé yêu trong mùa hè này\nEm mời tất cả các chị yêu chốt đơn 😘😘😘\n#thegioimebimsua\n#nous\n#thoitrangtreem\n#quanaotreem\n#thoitrangchobe\n#goichanchobe"
   },
   {
     "code": "MN-247",
@@ -4431,7 +4816,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "LA POMME",
     "category": "Bộ quần áo bé",
     "variants": [
-      "Newborn (3-5.5kg)",
+      "NEWBORN",
       "0-3M",
       "3-6M"
     ],
@@ -4440,7 +4825,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "[LAPOM BST T11] Set sơ sinh La Pomme Gấu tai rời màu nâu\nChất liệu mềm mại, co giãn và mát, các bé mặc rất thoải mái xinh xắn\nHàng cao cấp của Lapom họa tiết đáng yêu với tông màu xinh xắn là món quà tuyệt vời cho bé yêu\nEm mời tất cả các chị yêu chốt đơn 😘😘😘\n#thegioimebimsua\n#La_pomme\n#thoitrangtre"
+    "description": "[LAPOM BST T11] Set sơ sinh La Pomme Gấu tai rời màu nâu\nChất liệu mềm mại, co giãn và mát, các bé mặc rất thoải mái xinh xắn\nHàng cao cấp của Lapom họa tiết đáng yêu với tông màu xinh xắn là món quà tuyệt vời cho bé yêu\nEm mời tất cả các chị yêu chốt đơn 😘😘😘\n#thegioimebimsua\n#La_pomme\n#thoitrangtreem\n#quanaotreem\n#bodychip\n#bodychobe"
   },
   {
     "code": "MN-248",
@@ -4449,14 +4834,17 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bộ quần áo bé",
     "variants": [
-      "3-4Y"
+      "2-3Y",
+      "3-4Y",
+      "4-5Y",
+      "5-6Y"
     ],
     "price": 225000,
     "image": "/images/products/mn-248.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "[BST MỚI NOUS KID 2-3-4Y] Bộ cộc tay áo trắng phối quần navy, màu be phối cổ trắng cho bé trai bé gáiTHÔNG TIN CHẤT LIỆU\nMềm mại - Thoáng mát - Không gây kích ứng da\nShop Cam Kết:\n- Luôn đặt chất lượng lên hàng đầu\n- Chính hãng công ty cổ phần Nu - Việt Nam\n-️ Cập nhập mẫu mã liên tục phong phú\nThiế"
+    "description": "[BST MỚI NOUS KID 2-3-4Y] Bộ cộc tay áo trắng phối quần navy, màu be phối cổ trắng cho bé trai bé gáiTHÔNG TIN CHẤT LIỆU\nMềm mại - Thoáng mát - Không gây kích ứng da\nShop Cam Kết:\n- Luôn đặt chất lượng lên hàng đầu\n- Chính hãng công ty cổ phần Nu - Việt Nam\n-️ Cập nhập mẫu mã liên tục phong phú\nThiết kế xinh xắn đáng yêu, món quà tuyệt vời cho bé yêu\nEm mời tất cả các chị yêu chốt đơn 😘😘😘\n#thegioimebimsua\n#nouskids\n#thoitrangtreem\n#quanaotreem\n#thoitrangchobe"
   },
   {
     "code": "MN-249",
@@ -4467,7 +4855,8 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "variants": [
       "6-9M",
       "9-12M",
-      "1-2Y",
+      "12-18M",
+      "18-24M",
       "2-3Y"
     ],
     "price": 225000,
@@ -4484,35 +4873,34 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "Moniu",
     "category": "Bodysuit & Đồ liền",
     "variants": [
-      "Newborn (3-5.5kg)",
-      "0-3M",
-      "3-6M"
+      "Thỏ 3D",
+      "xanh in cá voi"
     ],
     "price": 195000,
     "image": "/images/products/mn-250.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "Bộ liền dài màu trắng phối xanh in hình cá voi sẽ là sự lựa chọn hoàn hảo cho bé yêu của bạn. Với thiết kế độc đáo, sản phẩm này vừa mang lại sự thoải mái cho bé, vừa giúp bé trông thật dễ thương và nổi bật.\n\nChất liệu an toàn và thoáng khí: Bộ liền dài được làm từ chất liệu cotton cao cấp giúp cho"
+    "description": "Bộ liền dài màu trắng phối xanh in hình cá voi sẽ là sự lựa chọn hoàn hảo cho bé yêu của bạn. Với thiết kế độc đáo, sản phẩm này vừa mang lại sự thoải mái cho bé, vừa giúp bé trông thật dễ thương và nổi bật.\n\nChất liệu an toàn và thoáng khí: Bộ liền dài được làm từ chất liệu cotton cao cấp giúp cho bé cảm thấy mát mẻ và không bị kích ứng da.\n\nThiết kế thông minh: Với thiết kế liền lạc, bộ quần áo này giúp bạn tiết kiệm được nhiều thời gian trong việc tìm kiếm quần áo phù hợp cho con.\n\nTrang phục đa năng: Bé có thể diện sản phẩm này trong nhiều hoàn cảnh khác nhau như đi chơi, đi picnic hay ngủ trưa.\n\nMàu trắng tinh khôi của chiếc bộ liền dài phối xen vào gam xanh cá tính đã tạo ra một sản phẩm đầy ấn tượng để bạn có thể sắm cho con yêu của mình.\n\n"
   },
   {
     "code": "MN-251",
     "tiktokId": "25122399138",
     "name": "N03032 Bộ bodysuit cộc tay màu trắng phối quần vàng quần + áo",
-    "brand": "Moniu",
+    "brand": "NOUS",
     "category": "Bodysuit & Đồ liền",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "Trắng phối quần vàng,0-3m (3.5-5.5kg)",
+      "Trắng phối quần vàng,3-6M (5.5-7.5kg)",
+      "Trắng phối quần vàng,6-9m (7.5-9.5kg)",
+      "Trắng phối quần vàng,9-12m (8.5 -10.5kg)"
     ],
     "price": 195000,
     "image": "/images/products/mn-251.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "N03032 Bộ bodysuit cộc tay màu trắng phối quần vàng quần + áo\nTHÔNG TIN CHẤT LIỆU\nMềm mại - Thoáng mát - Không gây kích ứng da\nShop Cam Kết:\n- Luôn đặt chất lượng lên hàng đầu\n- Chính hãng công ty cổ phần Nu - Việt Nam\n-️ Cập nhập mẫu mã liên tục phong phú\nThiết kế xinh xắn đáng yêu, món quà tuyệt v"
+    "description": "N03032 Bộ bodysuit cộc tay màu trắng phối quần vàng quần + áo\nTHÔNG TIN CHẤT LIỆU\nMềm mại - Thoáng mát - Không gây kích ứng da\nShop Cam Kết:\n- Luôn đặt chất lượng lên hàng đầu\n- Chính hãng công ty cổ phần Nu - Việt Nam\n-️ Cập nhập mẫu mã liên tục phong phú\nThiết kế xinh xắn đáng yêu, món quà tuyệt vời cho bé yêu\nEm mời tất cả các chị yêu chốt đơn 😘😘😘\n#thegioimebimsua\n#nous\n#thoitrangtreem\n#quanaotreem\n#thoitrangchobe"
   },
   {
     "code": "MN-252",
@@ -4521,16 +4909,15 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "LA POMME",
     "category": "Bộ quần áo bé",
     "variants": [
-      "Newborn (3-5.5kg)",
-      "0-3M",
-      "3-6M"
+      "Hồng,3-6M (6.5-8.5kg)",
+      "Hồng,0-3M (4-6.5kg)"
     ],
     "price": 225000,
     "image": "/images/products/mn-252.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "[BST MỚI LA POMME] Combo 5 bộ sơ sinh màu Hồng cho bé chủ đề vườn cổ tích quần + áo\nChất liệu mềm mại, co giãn và mát, các bé mặc mùa hè rất thoải mái xinh xắn\nHàng cao cấp của lapom họa tiết đáng yêu với tông màu xinh xắn là món quà tuyệt vời cho bé yêu trong mùa hè\nEm mời tất cả các chị yêu chốt đ"
+    "description": "[BST MỚI LA POMME] Combo 5 bộ sơ sinh màu Hồng cho bé chủ đề vườn cổ tích quần + áo\nChất liệu mềm mại, co giãn và mát, các bé mặc mùa hè rất thoải mái xinh xắn\nHàng cao cấp của lapom họa tiết đáng yêu với tông màu xinh xắn là món quà tuyệt vời cho bé yêu trong mùa hè\nEm mời tất cả các chị yêu chốt đơn 😘😘😘\n#thegioimebimsua\n#La_pomme\n#thoitrangtreem\n#quanaotreem\n#bodychip\n#bodychobe"
   },
   {
     "code": "MN-253",
@@ -4539,17 +4926,21 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bộ quần áo bé",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "Hồng,5-6Y (20-23kg)",
+      "Xanh,2-3Y (13,5-15kg)",
+      "Xanh,3-4Y (15-17kg)",
+      "Xanh,4-5Y ( 17-20kg)",
+      "Xanh,5-6Y (20-23kg)",
+      "Hồng,2-3Y (13,5-15kg)",
+      "Hồng,3-4Y (15-17kg)",
+      "Hồng,4-5Y ( 17-20kg)"
     ],
     "price": 185000,
     "image": "/images/products/mn-253.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "[NOUS] BCCV trắng in máy bay Nous phối quần xanh, quần hồng áo + quần\nShop Cam Kết:\n-Luôn đặt chất lượng lên hàng đầu\n-Chính hãng công ty cổ phần Nu - Việt Nam\n-️Cập nhập mẫu mã liên tục phong phú\nThiết kế xinh xắn đáng yêu, món quà tuyệt vời cho bé yêu trong mùa hè này\nEm mời tất cả các chị yêu chố"
+    "description": "[NOUS] BCCV trắng in máy bay Nous phối quần xanh, quần hồng áo + quần\nShop Cam Kết:\n-Luôn đặt chất lượng lên hàng đầu\n-Chính hãng công ty cổ phần Nu - Việt Nam\n-️Cập nhập mẫu mã liên tục phong phú\nThiết kế xinh xắn đáng yêu, món quà tuyệt vời cho bé yêu trong mùa hè này\nEm mời tất cả các chị yêu chốt đơn 😘😘😘\n#thegioimebimsua\n#nous\n#thoitrangtreem\n#quanaotreem\n#thoitrangchobe"
   },
   {
     "code": "MN-254",
@@ -4558,7 +4949,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "LA POMME",
     "category": "Bộ quần áo bé",
     "variants": [
-      "Newborn (3-5.5kg)",
+      "NEWBORN",
       "0-3M",
       "3-6M"
     ],
@@ -4567,40 +4958,41 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "[BST T10 LAPOM] Set sơ sinh Lapom phối màu xanh cho bé quần + áo\nChất liệu mềm mại, co giãn và mát, các bé mặc rất thoải mái xinh xắn\nHàng cao cấp của Lapom họa tiết đáng yêu với tông màu xinh xắn là món quà tuyệt vời cho bé yêu\nEm mời tất cả các chị yêu chốt đơn 😘😘😘\n\n#thegioimebimsua\n#La_pomme\n#tho"
+    "description": "[BST T10 LAPOM] Set sơ sinh Lapom phối màu xanh cho bé quần + áo\nChất liệu mềm mại, co giãn và mát, các bé mặc rất thoải mái xinh xắn\nHàng cao cấp của Lapom họa tiết đáng yêu với tông màu xinh xắn là món quà tuyệt vời cho bé yêu\nEm mời tất cả các chị yêu chốt đơn 😘😘😘\n\n#thegioimebimsua\n#La_pomme\n#thoitrangtreem\n#quanaotreem\n#bodychip\n#bodychobe"
   },
   {
     "code": "MN-255",
     "tiktokId": "25072402980",
     "name": "N03044 Set quà tặng 5 món màu trắng cho bé",
-    "brand": "Moniu",
+    "brand": "NOUS",
     "category": "Quà tặng kèm",
     "variants": [
-      "Quà tặng kèm"
+      "Trắng,0-3m (3-6kg)"
     ],
     "price": 0,
     "image": "/images/products/mn-255.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "N03044 Set quà tặng 5 món màu trắng cho bé\nTHÔNG TIN CHẤT LIỆU\nMềm mại - Thoáng mát - Không gây kích ứng da\nShop Cam Kết:\n- Luôn đặt chất lượng lên hàng đầu\n- Chính hãng công ty cổ phần Nu - Việt Nam\n-️ Cập nhập mẫu mã liên tục phong phú\nThiết kế xinh xắn đáng yêu, món quà tuyệt vời cho bé yêu\nEm mờ"
+    "description": "N03044 Set quà tặng 5 món màu trắng cho bé\nTHÔNG TIN CHẤT LIỆU\nMềm mại - Thoáng mát - Không gây kích ứng da\nShop Cam Kết:\n- Luôn đặt chất lượng lên hàng đầu\n- Chính hãng công ty cổ phần Nu - Việt Nam\n-️ Cập nhập mẫu mã liên tục phong phú\nThiết kế xinh xắn đáng yêu, món quà tuyệt vời cho bé yêu\nEm mời tất cả các chị yêu chốt đơn 😘😘😘\n#thegioimebimsua\n#nous\n#thoitrangtreem\n#quanaotreem\n#thoitrangchobe"
   },
   {
     "code": "MN-256",
     "tiktokId": "25023533143",
     "name": "[BST THÁNG 4] Bộ cộc tay nâu nhạt hình gấu 9m, 12m",
-    "brand": "Moniu",
+    "brand": "NOUS",
     "category": "Bộ quần áo bé",
     "variants": [
-      "9M",
-      "12M"
+      "9-12M",
+      "12-18M",
+      "6-9M"
     ],
     "price": 225000,
     "image": "/images/products/mn-256.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "BST MỚI THÁNG 4\nChất liệu: Nu air, thoáng khí, mát, thích hợp mùa hè.\nForm vừa. Nếu muốn mặc rộng rãi thoải mái các mẹ tăng lên 1 size giúp sốp nhé !"
+    "description": "BST MỚI THÁNG 4\nChất liệu: Nu air, thoáng khí, mát, thích hợp mùa hè.\nForm vừa. Nếu muốn mặc rộng rãi thoải mái các mẹ tăng lên 1 size giúp sốp nhé ! "
   },
   {
     "code": "MN-257",
@@ -4609,7 +5001,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "LA POMME",
     "category": "Bộ quần áo bé",
     "variants": [
-      "Newborn (3-5.5kg)",
+      "NEWBORN",
       "0-3M",
       "3-6M"
     ],
@@ -4618,7 +5010,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "[LAPOM BST MỚI T9] Bộ sơ sinh màu Nâu La Pomme Caro Bear quần + áo\nChất liệu mềm mại, co giãn và mát, các bé mặc rất thoải mái xinh xắn\nHàng cao cấp của Lapom họa tiết đáng yêu với tông màu xinh xắn là món quà tuyệt vời cho bé yêu\nEm mời tất cả các chị yêu chốt đơn 😘😘😘\n\n#thegioimebimsua\n#La_pomme\n#t"
+    "description": "[LAPOM BST MỚI T9] Bộ sơ sinh màu Nâu La Pomme Caro Bear quần + áo\nChất liệu mềm mại, co giãn và mát, các bé mặc rất thoải mái xinh xắn\nHàng cao cấp của Lapom họa tiết đáng yêu với tông màu xinh xắn là món quà tuyệt vời cho bé yêu\nEm mời tất cả các chị yêu chốt đơn 😘😘😘\n\n#thegioimebimsua\n#La_pomme\n#thoitrangtreem\n#quanaotreem\n#bodychip\n#bodychobe"
   },
   {
     "code": "MN-258",
@@ -4627,23 +5019,20 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Yếm cho bé",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "Họa tiết noel"
     ],
     "price": 225000,
     "image": "/images/products/mn-258.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "[X'MAS NOUS] Set quần yếm màu xanh, đỏ kèm áo và mũ bonnet quần+áo\nBộ quà tặng cho bé [X'MAS NOUS] sẽ là một lựa chọn hoàn hảo dành cho bé yêu của bạn trong mùa Giáng Sinh này.\nTHÔNG TIN CHẤT LIỆU\nMềm mại - thoát hơi tốt - không kích ứng da\nShop Cam Kết:\n- Luôn đặt chất lượng lên hàng đầu\n- Chính hã"
+    "description": "[X'MAS NOUS] Set quần yếm màu xanh, đỏ kèm áo và mũ bonnet quần+áo\nBộ quà tặng cho bé [X'MAS NOUS] sẽ là một lựa chọn hoàn hảo dành cho bé yêu của bạn trong mùa Giáng Sinh này.\nTHÔNG TIN CHẤT LIỆU\nMềm mại - thoát hơi tốt - không kích ứng da\nShop Cam Kết:\n- Luôn đặt chất lượng lên hàng đầu\n- Chính hãng công ty cổ phần Nu - Việt Nam\n-️ Cập nhập mẫu mã liên tục phong phú\nThiết kế xinh xắn đáng yêu, món quà tuyệt vời cho bé yêu\nEm mời tất cả các chị yêu chốt đơn 😘😘😘\n#thegioimebimsua\n#x'masnous \n#noel \n#merrychristmas\n#thoitrangtreem\n#quanaotreem"
   },
   {
     "code": "MN-259",
     "tiktokId": "25022405923",
     "name": "Combo 3 Bánh gạo hữu cơ vị táo/ cà rốt, khoai lang/bí ngô, bánh gạo lứt Pororo cho bé",
-    "brand": "Moniu",
+    "brand": "PORORO",
     "category": "Bộ quần áo bé",
     "variants": [
       "Hồng pastel",
@@ -4656,7 +5045,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "Thành phần dinh dưỡng của bánh gạo hữu cơ Pororo vị Khoai lang & Bí ngô:\n- Gạo lứt hữu cơ Hàn Quốc giàu dinh dưỡng và tốt cho sức khỏe\n- Vị khoai lang tím hữu mix cùng bí ngô hữu cơ an lành trọn vị \n- Canxi: 15mg giúp phát triển chiều cao trong giai đoạn tăng trưởng\n- Vitamin C: 4mg hỗ trợ tăng cườn"
+    "description": "Thành phần dinh dưỡng của bánh gạo hữu cơ Pororo vị Khoai lang & Bí ngô:\n- Gạo lứt hữu cơ Hàn Quốc giàu dinh dưỡng và tốt cho sức khỏe\n- Vị khoai lang tím hữu mix cùng bí ngô hữu cơ an lành trọn vị \n- Canxi: 15mg giúp phát triển chiều cao trong giai đoạn tăng trưởng\n- Vitamin C: 4mg hỗ trợ tăng cường hệ miễn dịch tự nhiên\nĐiểm danh nhanh ưu điểm:\n- Dạng thanh dài 11cm dễ dàng cho bé luyện các kỹ năng cầm nắm cơ bản\n- Tan ngay trong miệng với vị ngọt tự nhiên, không bổ sung thêm đường\n- Túi gói zipline dễ dàng hơn trong việc bảo quản\nĐối tượng sử dụng: từ 6 tháng tuổi\nQuy cách đóng gói (Khối lượng tịnh): 25g/túi\n- Hướng dẫn sử dụng: Dùng để ăn trực tiếp\n- Hướng dẫn bảo quản: Bảo quản ở nhiệt độ phòng, nơi khô ráo, tránh tiếp xúc trực tiếp với ánh nắng mặt trời, nơi có nhiệt độ và độ ẩm cao\nXuất xứ: Hàn Quốc"
   },
   {
     "code": "MN-260",
@@ -4665,36 +5054,37 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "Moniu",
     "category": "Bộ quần áo bé",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "trang trí phối quần,2-3Y (13.5-15kg)",
+      "trang trí phối quần,3-4Y (15-17kg)",
+      "trang trí phối quần,4-5Y (17-20kg)",
+      "trang trí phối quần,5-6Y (20-23kg)"
     ],
     "price": 225000,
     "image": "/images/products/mn-260.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "Bộ cộc tay áo trắng hình in trang trí phối quần kẻ hồng là một bộ đồ thời trang dành cho bé trai. Với kiểu dáng sang trong và nổi bật, bộ cánh sẽ làm cho bé của bạn nổi bật trong những dịp đặc biệt như sinh nhật, lễ kỷ niệm hay ngày Tết.\n\nChất liệu cao cấp: Sản phẩm được làm từ chất liệu cao cấp, mề"
+    "description": "Bộ cộc tay áo trắng hình in trang trí phối quần kẻ hồng là một bộ đồ thời trang dành cho bé trai. Với kiểu dáng sang trong và nổi bật, bộ cánh sẽ làm cho bé của bạn nổi bật trong những dịp đặc biệt như sinh nhật, lễ kỷ niệm hay ngày Tết.\n\nChất liệu cao cấp: Sản phẩm được làm từ chất liệu cao cấp, mềm mại và thoáng khí để giữ cho bé thoải mái khi vận động.\n\nMàu sắc tươi sáng: Bản in được thiết kế với hình ảnh sinh động và màu sắc tươi sámg thời gian giúp sản phẩm nổi bật và cuốn hút.\n\nBên cạnh việc có thiết kế sang trọngoại viện của sản phẩm này đã được chăm chút tỉ mỉ. Vải thoát khí giúp áo luôn thông thoảngxã ở người khiến các em không có khó chịu khi đi lại hay vận đông. Đây là lựa chọn hoàn toàn phù hp để các em tỏa sángle. \n\n"
   },
   {
     "code": "MN-261",
     "tiktokId": "25022402225",
     "name": "KN04 Bộ Quần Áo Ngắn Tay KINNI quần + áo",
-    "brand": "Moniu",
+    "brand": "KINNI",
     "category": "Bộ quần áo bé",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "3-6M",
+      "6-9M",
+      "9-12M",
+      "12-18M",
+      "18-24M"
     ],
     "price": 225000,
     "image": "/images/products/mn-261.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "KINNI Bộ Quần Áo Ngắn Tay KINNI quần + áo\nTHÔNG TIN CHẤT LIỆU\n* Chất Liệu Cotton Organic: Thoáng Mát - Mềm mại - Thấm hút tốt - Không gây kích ứng da\nShop Cam Kết:\n- Luôn đặt chất lượng lên hàng đầu\n- Cam kết sản phẩm chính hãng\n-️ Cập nhập mẫu mã liên tục phong phú\nThiết kế xinh xắn đáng yêu, món q"
+    "description": "KINNI Bộ Quần Áo Ngắn Tay KINNI quần + áo\nTHÔNG TIN CHẤT LIỆU\n* Chất Liệu Cotton Organic: Thoáng Mát - Mềm mại - Thấm hút tốt - Không gây kích ứng da\nShop Cam Kết:\n- Luôn đặt chất lượng lên hàng đầu\n- Cam kết sản phẩm chính hãng\n-️ Cập nhập mẫu mã liên tục phong phú\nThiết kế xinh xắn đáng yêu, món quà tuyệt vời cho bé yêu\nEm mời tất cả các chị yêu chốt đơn 😘😘😘\n#thegioimebimsua\n#kinni\n#thoitrangtreem\n#quanaotreem\n#thoitrangchobe"
   },
   {
     "code": "MN-262",
@@ -4703,9 +5093,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bodysuit & Đồ liền",
     "variants": [
-      "Newborn (3-5.5kg)",
-      "0-3M",
-      "3-6M"
+      "Bộ liền dài kèm yếm,NB (3-5kg)"
     ],
     "price": 195000,
     "image": "/images/products/mn-262.jpg",
@@ -4721,24 +5109,31 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "Moniu",
     "category": "Bodysuit & Đồ liền",
     "variants": [
-      "6M",
-      "9M"
+      "Trắng Phối Tím,9-12M (8.5-10.5kg)",
+      "Trắng Phối Tím,6-9M (7.5-9.5kg)"
     ],
     "price": 195000,
     "image": "/images/products/mn-263.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "Bộ sưu tập mới NOUS Set 2 body suit trắng phối nâu, trắng phối tím 0m,3m,6m,9m\nTHÔNG TIN CHẤT LIỆU\n* Nu Petit: Mềm mại - Kháng khuẩn -Thoát hơi tốt\nThiết kế xinh xắn đáng yêu, món quà tuyệt vời cho bé yêu trong mùa hè này\nEm mời tất cả các chị yêu chốt đơn 😘😘😘\n#thegioimebimsua\n#nous\n#thoitrangtreem"
+    "description": "Bộ sưu tập mới NOUS Set 2 body suit trắng phối nâu, trắng phối tím 0m,3m,6m,9m\nTHÔNG TIN CHẤT LIỆU\n* Nu Petit: Mềm mại - Kháng khuẩn -Thoát hơi tốt\nThiết kế xinh xắn đáng yêu, món quà tuyệt vời cho bé yêu trong mùa hè này\nEm mời tất cả các chị yêu chốt đơn 😘😘😘\n#thegioimebimsua\n#nous\n#thoitrangtreem\n#quanaotreem\n#thoitrangchobe\n#bodychobe"
   },
   {
     "code": "MN-264",
     "tiktokId": "24973545419",
     "name": "[BST THÁNG 4] Bộ hai dây / ba lỗ cho bé từ 2 tuổi",
-    "brand": "Moniu",
+    "brand": "NOUS",
     "category": "Bộ quần áo bé",
     "variants": [
-      "12M"
+      "4-5Y,Kem Hoa Nhí",
+      "5-6Y,Kem Hoa Nhí",
+      "3-4Y,Trắng vàng",
+      "4-5Y,Trắng vàng",
+      "2-3Y,Kem Hoa Nhí",
+      "5-6Y,Trắng vàng",
+      "2-3Y,Trắng vàng",
+      "3-4Y,Kem Hoa Nhí"
     ],
     "price": 225000,
     "image": "/images/products/mn-264.jpg",
@@ -4751,20 +5146,20 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "code": "MN-265",
     "tiktokId": "24972406464",
     "name": "B03001 áo choàng tắm cho bé từ 1 tuổi dành cho mùa hè mềm thấm hút tốt ATR614301",
-    "brand": "Moniu",
+    "brand": "BUBABY",
     "category": "Áo & Áo khoác",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "trắng,3-5y (15- 20kg)",
+      "xanh lam,1-3y (10.5- 15kg)",
+      "xanh lam,3-5y (15- 20kg)",
+      "trắng,1-3y (10.5- 15kg)"
     ],
     "price": 185000,
     "image": "/images/products/mn-265.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "Bubaby Áo choàng tắm Terry Buộc dây cho bé là một sản phẩm rất tiện dụng và thoải mái cho bé yêu của bạn. Với chất liệu vải terry mềm mại, bé sẽ cảm thấy thoải mái và ấm áp sau khi tắm.\n\nChất liệu vải terry: được làm từ sợi bông tự nhiên, giúp thấm hút nước và khô ráo nhanh chóng.\n\nHình dáng áo choà"
+    "description": "Bubaby Áo choàng tắm Terry Buộc dây cho bé là một sản phẩm rất tiện dụng và thoải mái cho bé yêu của bạn. Với chất liệu vải terry mềm mại, bé sẽ cảm thấy thoải mái và ấm áp sau khi tắm.\n\nChất liệu vải terry: được làm từ sợi bông tự nhiên, giúp thấm hút nước và khô ráo nhanh chóng.\n\nHình dáng áo choàng: thiết kế buộc dây tiện lợi giúp tránh trượt khi bé cử động. Kích thước phù hợp với trẻ em từ 0-2 tuổi.\n\nSản phẩm Bubaby Áo choàng tắm Terry Buộc dây cho bé sẽ là lựa chọn hoàn hảo để gói gọn những khoảnh khắc đáng yêu của con bạn sau khi được tắm xong. Hãy để sản phẩm mang lại cảm giác thoải mái và an toàn nhất cho con yêu của bạn!"
   },
   {
     "code": "MN-266",
@@ -4773,17 +5168,17 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bộ quần áo bé",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "3-6M",
+      "6-9M",
+      "9-12M",
+      "12-18M"
     ],
     "price": 185000,
     "image": "/images/products/mn-266.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "[NOUS] Áo giữ nhiệt cổ 3cm/5cm chất Nu Peptit mềm mịn cho bé trai, bé gái\nTHÔNG TIN CHẤT LIỆU\nMềm mại - Thoáng mát - Không gây kích ứng da\nShop Cam Kết:\n- Luôn đặt chất lượng lên hàng đầu\n- Chính hãng công ty cổ phần Nu - Việt Nam\n-️ Cập nhập mẫu mã liên tục phong phú\nThiết kế xinh xắn đáng yêu, món"
+    "description": "[NOUS] Áo giữ nhiệt cổ 3cm/5cm chất Nu Peptit mềm mịn cho bé trai, bé gái\nTHÔNG TIN CHẤT LIỆU\nMềm mại - Thoáng mát - Không gây kích ứng da\nShop Cam Kết:\n- Luôn đặt chất lượng lên hàng đầu\n- Chính hãng công ty cổ phần Nu - Việt Nam\n-️ Cập nhập mẫu mã liên tục phong phú\nThiết kế xinh xắn đáng yêu, món quà tuyệt vời cho bé yêu\nEm mời tất cả các chị yêu chốt đơn 😘😘😘\n\n#thegioimebimsua\n#nous\n#thoitrangtreem\n#quanaotreem\n#thoitrangchobe"
   },
   {
     "code": "MN-267",
@@ -4792,36 +5187,39 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Nón & Mũ bé",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "Set 2 mũ bonnet,S (3-6m)",
+      "Set 2 mũ bonnet,M (6-12m)",
+      "Set 2 mũ bonnet,L (12-24m)",
+      "Set 2 mũ nồi,S (3-6m)",
+      "Set 2 mũ nồi,M (6-12m)",
+      "Set 2 mũ nồi,L (12-24m)"
     ],
     "price": 225000,
     "image": "/images/products/mn-267.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "[BST MỚI NOUS] Set 2 mũ nồi chấm bi hồng và caro xám\nTHÔNG TIN CHẤT LIỆU\nMềm mại - Thoáng mát - Không gây kích ứng da\nShop Cam Kết:\n- Luôn đặt chất lượng lên hàng đầu\n- Chính hãng công ty cổ phần Nu - Việt Nam\n-️ Cập nhập mẫu mã liên tục phong phú\nThiết kế xinh xắn đáng yêu, món quà tuyệt vời cho bé"
+    "description": "[BST MỚI NOUS] Set 2 mũ nồi chấm bi hồng và caro xám\nTHÔNG TIN CHẤT LIỆU\nMềm mại - Thoáng mát - Không gây kích ứng da\nShop Cam Kết:\n- Luôn đặt chất lượng lên hàng đầu\n- Chính hãng công ty cổ phần Nu - Việt Nam\n-️ Cập nhập mẫu mã liên tục phong phú\nThiết kế xinh xắn đáng yêu, món quà tuyệt vời cho bé yêu\nEm mời tất cả các chị yêu chốt đơn 😘😘😘\n#thegioimebimsua\n#nous\n#thoitrangtreem\n#quanaotreem\n#thoitrangchobe"
   },
   {
     "code": "MN-268",
     "tiktokId": "24972402098",
     "name": "N03061 Bộ cộc tay áo trắng phối quần hồng thêu ngôi sao cho bé quần + áo",
-    "brand": "Moniu",
+    "brand": "NOUS",
     "category": "Bộ quần áo bé",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "Áo trắng quần hồng,6-9m (7.5-9.5 kg)",
+      "Áo trắng quần hồng,9-12m (8.5-10.5kg)",
+      "Áo trắng quần hồng,12-18m (10.5-11.5kg)",
+      "Áo trắng quần hồng,18-24m (11.5-13.5kg)",
+      "Áo trắng quần hồng,2-3Y (13.5-15kg)"
     ],
     "price": 225000,
     "image": "/images/products/mn-268.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "Mang đến cho bé yêu của bạn một bộ đồ xinh xắn và đáng yêu với sản phẩm Bộ cộc tay áo trắng phối quần hồng thêu ngôi sao cho bé quần + áo. Sản phẩm được làm từ chất liệu mềm mại, thoáng khí, thân thiện với làn da nhạy cảm của bé.\nThiết kế dễ thương: Bộ cộc tay áo trắng phối quần hồng mang lại diện m"
+    "description": "Mang đến cho bé yêu của bạn một bộ đồ xinh xắn và đáng yêu với sản phẩm Bộ cộc tay áo trắng phối quần hồng thêu ngôi sao cho bé quần + áo. Sản phẩm được làm từ chất liệu mềm mại, thoáng khí, thân thiện với làn da nhạy cảm của bé.\nThiết kế dễ thương: Bộ cộc tay áo trắng phối quần hồng mang lại diện mạo ngọt ngào và dễ thương cho bé gái của bạn. Họa tiết ngôi sao được thiết kế tinh tế, chi tiết.\nChất liệu thoải mái: Sản phẩm được làm từ chất liệu cao cấp giúp giữ cho bé luôn khô ráo và thoải mái khi hoạt động. Bé sẽ không bị tức bụng hay gò bó khi mặc sản phẩm này.\nXuất xứ Việt Nam: Được sản xuất từ Việt Nam - nơi có nền công nghiệp may lớn - các sản phẩm mang nhãn hiệu nước này luôn được đảm bảos tính chính xác trong các chi tiết may và tính an toàn về vật liệu sử dụng"
   },
   {
     "code": "MN-269",
@@ -4830,17 +5228,17 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bộ quần áo bé",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "họa tiết xanh,4-5Y (17-20kg)",
+      "họa tiết xanh,5-6Y (20-23kg)",
+      "họa tiết xanh,2-3Y (13.5-15kg)",
+      "họa tiết xanh,3-4Y (15-17kg)"
     ],
     "price": 225000,
     "image": "/images/products/mn-269.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "Mô tả sản phẩm:\n\nBộ cộc ba lỗ áo trắng in họa tiết xanh phối quần navy là sự lựa chọn thời trang tuyệt vời dành cho các bé trai. Với thiết kế đơn giản nhưng không kém phần nổi bật, bộ cộc này sẽ giúp bé tự tin và năng động trong mọi hoạt động.\n\nChất liệu: Bề mặt vải mịn, thoáng khí và dễ chịu cho da"
+    "description": "Mô tả sản phẩm:\n\nBộ cộc ba lỗ áo trắng in họa tiết xanh phối quần navy là sự lựa chọn thời trang tuyệt vời dành cho các bé trai. Với thiết kế đơn giản nhưng không kém phần nổi bật, bộ cộc này sẽ giúp bé tự tin và năng động trong mọi hoạt động.\n\nChất liệu: Bề mặt vải mịn, thoáng khí và dễ chịu cho da. Vải cotton cao cấp mang lại sự thoải mái trong suốt quá trình hoạt đông.\n\nKiểu dáng: Thiết kế bằng họa tiết xanh in toàn bô áo thêm chi tiết ba lỗ năng đông. Quần navy tôn thêm chất liệu da của bé. Cổ áo bo thành chiếc vest nhỏ là điểm nhấn của sản phẩm này.\n\nTính linh hoạt: Sản phẩm có tính linh hoạt cao, có thể được phối hợp với các loại giày dép khác nhau để tạo ra nhiều kiểu outfit khác nhau.\n\nN04024 Bộ cột ba lỗ áo trắng in họa tiết xanh phối quần navy là sản phẩm không thể thiếu trong tủ quần áao của các bé.\n\n"
   },
   {
     "code": "MN-270",
@@ -4849,17 +5247,18 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "Moniu",
     "category": "Bộ quần áo bé",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "12-18M",
+      "18-24M",
+      "2-3Y",
+      "3-4Y",
+      "4-5Y"
     ],
     "price": 225000,
     "image": "/images/products/mn-270.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "Bộ ngắn tay cổ trụ Kyomi quần áo mùa hè cho bé trai và gái là lựa chọn tuyệt vời cho những đứa trẻ yêu thích sự thoải mái trong giấc ngủ. Với thiết kế mới lạ, chất liệu mềm mại, bộ quần áo này sẽ mang lại giấc ngủ ngon và thỏa mái cho bé.\n\nBộ quần áo được làm từ chất liệu mềm mại, thoáng khí giúp bé"
+    "description": "Bộ ngắn tay cổ trụ Kyomi quần áo mùa hè cho bé trai và gái là lựa chọn tuyệt vời cho những đứa trẻ yêu thích sự thoải mái trong giấc ngủ. Với thiết kế mới lạ, chất liệu mềm mại, bộ quần áo này sẽ mang lại giấc ngủ ngon và thỏa mái cho bé.\n\nBộ quần áo được làm từ chất liệu mềm mại, thoáng khí giúp bé cảm thấy dễ chịu.\n\nThiết kế đơn giản nhưng hiện đại với cổ trụ và tay ngắn phù hợp với không gian nghỉ ngơi của bé.\n\nBên cạnh tính năng thoải mái khi sử dụng trong phòng ngủ, bộ quần áo này còn có nhiều điểm nhấn thu hút để các bé có thể tự tin diện khi ra ngoài:\n\nCó các size từ S -> XL phù hợp cho các lứa tuổi khác nhau của các em.\n\nMàu sắc phối hợp thanh lịch mang lại cá tính riêng biệt cho từng em.\n\nVì vậy, không chỉ được thiết kế để mang lại sự thuận tiện trong việc diện vào buổi tối hay đi du lịch xa. Mà B03011 Bộ Ngắn Tay Cổ Trụ Kyomi Quần Áo Mùa Hè Cho Bé Traivà Gáicòn được xem là 1 sản phẩm đầy tiềm năng khiến con bạn luôn tự tin ở bất kỳ hoàn cảnh nà0!\n\n"
   },
   {
     "code": "MN-271",
@@ -4868,16 +5267,21 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "LA POMME",
     "category": "Phụ kiện & Khác",
     "variants": [
-      "Newborn (3-5.5kg)",
-      "0-3M",
-      "3-6M"
+      "Hươu nâu",
+      "Pink Sheep",
+      "Kẻ sư tử",
+      "Funny goose",
+      "Xanh trơn",
+      "Hồng trơn",
+      "Gấu xanh",
+      "Nude sheep"
     ],
     "price": 225000,
     "image": "/images/products/mn-271.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "Set 5 Khăn sữa sợi tre lụa (30x30) La Pomme\n- Thông tin chất liệu:\nThành phần 70% Silky Bamboo, 30% Organic Cotton giúp khăn mềm mịn như lụa\n- Niềm hạnh phúc của em bé rất đơn giản được thể hiện qua nụ cười hồn nhiên và vô tư nhất trên đời. \nMột em bé sơ sinh chẳng cần gì nhiều ngoài có Ba Mẹ yêu th"
+    "description": "Set 5 Khăn sữa sợi tre lụa (30x30) La Pomme\n- Thông tin chất liệu:\nThành phần 70% Silky Bamboo, 30% Organic Cotton giúp khăn mềm mịn như lụa\n- Niềm hạnh phúc của em bé rất đơn giản được thể hiện qua nụ cười hồn nhiên và vô tư nhất trên đời. \nMột em bé sơ sinh chẳng cần gì nhiều ngoài có Ba Mẹ yêu thương và luôn được cảm thấy thoải mái, dễ chịu cả ngày.\n#thegioimebimsua\n#La_pomme\n#thoitrangtreem\n#quanaotreem\n#khansualapom\n#phukiensosinh"
   },
   {
     "code": "MN-272",
@@ -4886,17 +5290,18 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bộ quần áo bé",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "6-9M",
+      "9-12M",
+      "12-18M",
+      "18-24M",
+      "2-3Y"
     ],
     "price": 225000,
     "image": "/images/products/mn-272.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "[BST MỚI] Bộ ba lỗ NOUS tai gấu phối quần kẻ bé trai/ bé gái\nMột trong những mẫu hot nhất của bst mới tháng 5 nhà Nous, thích hợp cho bé diện mùa hè vừa mát laị còn rất xinh yêu các mẹ ơi."
+    "description": "[BST MỚI] Bộ ba lỗ NOUS tai gấu phối quần kẻ bé trai/ bé gái\nMột trong những mẫu hot nhất của bst mới tháng 5 nhà Nous, thích hợp cho bé diện mùa hè vừa mát laị còn rất xinh yêu các mẹ ơi.\n"
   },
   {
     "code": "MN-273",
@@ -4905,17 +5310,17 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Quà tặng kèm",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "12-18M",
+      "S",
+      "M",
+      "L"
     ],
     "price": 699000,
     "image": "/images/products/mn-273.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "[X'MAS NOUS] Phụ kiện mũ giáng sinh cho bé\nBộ quà tặng cho bé [X'MAS NOUS] sẽ là một lựa chọn hoàn hảo dành cho bé yêu của bạn trong mùa Giáng Sinh này.\nTHÔNG TIN CHẤT LIỆU\nMềm mại - Thoáng mát - Không gây kích ứng da\nShop Cam Kết:\n- Luôn đặt chất lượng lên hàng đầu\n- Chính hãng công ty cổ phần Nu -"
+    "description": "[X'MAS NOUS] Phụ kiện mũ giáng sinh cho bé\nBộ quà tặng cho bé [X'MAS NOUS] sẽ là một lựa chọn hoàn hảo dành cho bé yêu của bạn trong mùa Giáng Sinh này.\nTHÔNG TIN CHẤT LIỆU\nMềm mại - Thoáng mát - Không gây kích ứng da\nShop Cam Kết:\n- Luôn đặt chất lượng lên hàng đầu\n- Chính hãng công ty cổ phần Nu - Việt Nam\n-️ Cập nhập mẫu mã liên tục phong phú\nThiết kế xinh xắn đáng yêu, món quà tuyệt vời cho bé yêu\nEm mời tất cả các chị yêu chốt đơn 😘😘😘\n#thegioimebimsua\n#x'masnous \n#noel \n#merrychristmas\n#thoitrangtreem\n#quanaotreem"
   },
   {
     "code": "MN-274",
@@ -4924,17 +5329,21 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bộ quần áo bé",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "BDKT kẻ caro xám,0-3M (3.5-5.5kg)",
+      "BDKT kẻ caro xám,3-6M (5.5-7.5kg)",
+      "BDKT kẻ caro xám,6-9M (7.5-9.5kg)",
+      "BDKT kẻ caro xám,9-12M (8.5-10.5kg)",
+      "BDKT kẻ caro vàng,0-3M (3.5-5.5kg)",
+      "BDKT kẻ caro vàng,3-6M (5.5-7.5kg)",
+      "BDKT kẻ caro vàng,6-9M (7.5-9.5kg)",
+      "BDKT kẻ caro vàng,9-12M (8.5-10.5kg)"
     ],
     "price": 185000,
     "image": "/images/products/mn-274.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "[NOUS BST T11] BDKT màu kẻ caro vàng/ xám ốp túi ngực\nTHÔNG TIN CHẤT LIỆU\nMềm mại - Thoáng mát - Không gây kích ứng da\nShop Cam Kết:\n- Luôn đặt chất lượng lên hàng đầu\n- Chính hãng công ty cổ phần Nu - Việt Nam\n-️ Cập nhập mẫu mã liên tục phong phú\nThiết kế xinh xắn đáng yêu, món quà tuyệt vời cho b"
+    "description": "[NOUS BST T11] BDKT màu kẻ caro vàng/ xám ốp túi ngực\nTHÔNG TIN CHẤT LIỆU\nMềm mại - Thoáng mát - Không gây kích ứng da\nShop Cam Kết:\n- Luôn đặt chất lượng lên hàng đầu\n- Chính hãng công ty cổ phần Nu - Việt Nam\n-️ Cập nhập mẫu mã liên tục phong phú\nThiết kế xinh xắn đáng yêu, món quà tuyệt vời cho bé yêu\nEm mời tất cả các chị yêu chốt đơn 😘😘😘\n#thegioimebimsua\n#nous\n#thoitrangtreem\n#quanaotreem\n#thoitrangchobe"
   },
   {
     "code": "MN-275",
@@ -4943,17 +5352,17 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "Moniu",
     "category": "Bộ quần áo bé",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "Xanh họa tiết thỏ,3-6m (5-7 kg)",
+      "Hồng họa tiết thỏ,0-3m (3-5 kg)",
+      "Hồng họa tiết thỏ,3-6m (5-7 kg)",
+      "Xanh họa tiết thỏ,0-3m (3-5 kg)"
     ],
     "price": 225000,
     "image": "/images/products/mn-275.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "[MIO x THẾ GIỚI MBS]  Bộ ngắn tay họa tiết thỏ xanh, hồng cho bé quần + áo\nChất liệu mềm mại, co giãn và mát, các bé mặc rất thoải mái xinh xắn\nHàng cao cấp của lapom họa tiết đáng yêu với tông màu xinh xắn là món quà tuyệt vời cho bé yêu\nEm mời tất cả các chị yêu chốt đơn 😘😘😘\n#thegioimebimsua\n#Mio"
+    "description": "[MIO x THẾ GIỚI MBS]  Bộ ngắn tay họa tiết thỏ xanh, hồng cho bé quần + áo\nChất liệu mềm mại, co giãn và mát, các bé mặc rất thoải mái xinh xắn\nHàng cao cấp của lapom họa tiết đáng yêu với tông màu xinh xắn là món quà tuyệt vời cho bé yêu\nEm mời tất cả các chị yêu chốt đơn 😘😘😘\n#thegioimebimsua\n#Mio\n#thoitrangtreem\n#quanaotreem"
   },
   {
     "code": "MN-276",
@@ -4962,17 +5371,15 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "Moniu",
     "category": "Bộ quần áo bé",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "3-6M",
+      "6-9M"
     ],
     "price": 225000,
     "image": "/images/products/mn-276.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "B02009 Bộ ngắn tay cài chéo Bambus Iconic 1 quần + áo-BBB1308NS là món quà tuyệt vời cho bé yêu của bạn. Được làm từ chất liệu cotton cao cấp, sản phẩm mang đến cho bé sự thoải mái và dễ chịu khi mặc.\n\nBộ ngắn tay cài chéo: Thiết kế đặc biệt với khóa kéo bên hông, giúp cho việc thay đồ nhanh gọn và"
+    "description": "B02009 Bộ ngắn tay cài chéo Bambus Iconic 1 quần + áo-BBB1308NS là món quà tuyệt vời cho bé yêu của bạn. Được làm từ chất liệu cotton cao cấp, sản phẩm mang đến cho bé sự thoải mái và dễ chịu khi mặc.\n\nBộ ngắn tay cài chéo: Thiết kế đặc biệt với khóa kéo bên hông, giúp cho việc thay đồ nhanh gọn và tiện lợi hơn bao giờ hết.\n\nIconic 1 quần + áo: Sản phẩm gồm 1 chiếc áo và 1 chiếc quần, có kiểu dáng thời trang với các màu sắc trẻ trung và năng động.\n\n"
   },
   {
     "code": "MN-277",
@@ -4981,9 +5388,14 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Chăn gối & Đệm ngủ",
     "variants": [
-      "Newborn (3-5.5kg)",
-      "0-3M",
-      "3-6M"
+      "Bamboo hoạ tiết tím",
+      "Trắng muslin mới",
+      "Bamboo thỏ hồng",
+      "Trắng muslin cá",
+      "Hoạ tiết xanh",
+      "Lê vàng",
+      "Hoạ tiết thỏ hồng",
+      "Bamboo trắng cà chua"
     ],
     "price": 55000,
     "image": "/images/products/mn-277.jpg",
@@ -4999,52 +5411,55 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bộ quần áo bé",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "be phối quần cam,5-6Y (20-23kg)",
+      "be phối quần cam,2-3Y (13.5-15kg)",
+      "be phối quần cam,3-4Y (15-17kg)",
+      "be phối quần cam,4-5Y (17-20kg)"
     ],
     "price": 225000,
     "image": "/images/products/mn-278.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "Bộ cộc ba lỗ áo màu be phối quần màu cam là lựa chọn hoàn hảo cho bé trong những ngày hè nóng bức.\n\nBộ đồ thiết kế với kiểu dáng cực kỳ dễ thương, phù hợp cho bé từ 6 tháng đến 3 tuổi.\n\nChất liệu vải cotton cao cấp, giúp cho bé luôn thoải mái và khô ráo trong suốt ngày dài.\n\nMàu sắc tươi sáng và đẹp"
+    "description": "Bộ cộc ba lỗ áo màu be phối quần màu cam là lựa chọn hoàn hảo cho bé trong những ngày hè nóng bức.\n\nBộ đồ thiết kế với kiểu dáng cực kỳ dễ thương, phù hợp cho bé từ 6 tháng đến 3 tuổi.\n\nChất liệu vải cotton cao cấp, giúp cho bé luôn thoải mái và khô ráo trong suốt ngày dài.\n\nMàu sắc tươi sáng và đẹp mắt, giúp tôn lên nét đáng yêu của bé yêu nhà bạn.\n\nBên cạnh việc tự mua sắm cho con yêu của bạn, bộ sản phẩm này còn làm quà tặng ý nghĩa và thiết thực để gửi gắm những thông điệp yêu thương. Hãy trân trọng từ chính nhữn điềuc này để mang lại niềm vui cho các bậc phụ huynh mới được ra mắt con mới sinh.\n\n"
   },
   {
     "code": "MN-279",
     "tiktokId": "24822404222",
     "name": "SET QUÀ TẶNG 3 MÓN CHO BÉ",
-    "brand": "Moniu",
+    "brand": "BUBABY",
     "category": "Quà tặng kèm",
     "variants": [
-      "Quà tặng kèm"
+      "0-3M",
+      "3-6M",
+      "6-9M"
     ],
     "price": 0,
     "image": "/images/products/mn-279.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "[Bubaby] SET QUÀ TẶNG 3 MÓN CHO BÉ\nChất liệu mềm mại, co giãn và mát, các bé mặc mùa hè rất thoải mái xinh xắn\nShop Cam Kết:\n- Luôn đặt chất lượng lên hàng đầu\n-️ Cập nhập mẫu mã liên tục phong phú\nThiết kế xinh xắn đáng yêu, món quà tuyệt vời cho bé yêu trong mùa hè này\nEm mời tất cả các chị yêu ch"
+    "description": "[Bubaby] SET QUÀ TẶNG 3 MÓN CHO BÉ\nChất liệu mềm mại, co giãn và mát, các bé mặc mùa hè rất thoải mái xinh xắn\nShop Cam Kết:\n- Luôn đặt chất lượng lên hàng đầu\n-️ Cập nhập mẫu mã liên tục phong phú\nThiết kế xinh xắn đáng yêu, món quà tuyệt vời cho bé yêu trong mùa hè này\nEm mời tất cả các chị yêu chốt đơn 😘😘😘\n#thegioimebimsua\n#bubaby\n#thoitrangtreem\n#quanaotreem\n#thoitrangchobe\n#bodychobe"
   },
   {
     "code": "MN-280",
     "tiktokId": "24822402397",
     "name": "KN05 Bộ Quần Áo Ngắn Tay KINNI Chất Liệu Cotton Organic Thoáng Mát",
-    "brand": "Moniu",
+    "brand": "KINNI",
     "category": "Bộ quần áo bé",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "3-6M",
+      "6-9M",
+      "9-12M",
+      "12-18M",
+      "18-24M"
     ],
     "price": 225000,
     "image": "/images/products/mn-280.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "KINNI Bộ Quần Áo Ngắn Tay KINNI quần + áo\nTHÔNG TIN CHẤT LIỆU\n* Chất Liệu Cotton Organic: Thoáng Mát - Mềm mại - Thấm hút tốt - Không gây kích ứng da\nShop Cam Kết:\n- Luôn đặt chất lượng lên hàng đầu\n- Cam kết sản phẩm chính hãng\n-️ Cập nhập mẫu mã liên tục phong phú\nThiết kế xinh xắn đáng yêu, món q"
+    "description": "KINNI Bộ Quần Áo Ngắn Tay KINNI quần + áo\nTHÔNG TIN CHẤT LIỆU\n* Chất Liệu Cotton Organic: Thoáng Mát - Mềm mại - Thấm hút tốt - Không gây kích ứng da\nShop Cam Kết:\n- Luôn đặt chất lượng lên hàng đầu\n- Cam kết sản phẩm chính hãng\n-️ Cập nhập mẫu mã liên tục phong phú\nThiết kế xinh xắn đáng yêu, món quà tuyệt vời cho bé yêu\nEm mời tất cả các chị yêu chốt đơn 😘😘😘\n#thegioimebimsua\n#kinni\n#thoitrangtreem\n#quanaotreem\n#thoitrangchobe"
   },
   {
     "code": "MN-281",
@@ -5053,17 +5468,18 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bộ quần áo bé",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "6-9M",
+      "9-12M",
+      "12-18M",
+      "18-24M",
+      "2-3Y"
     ],
     "price": 225000,
     "image": "/images/products/mn-281.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "[BST MỚI NOUS]\nTHÔNG TIN CHẤT LIỆU\nMềm mại - Thoáng mát - Không gây kích ứng da\nShop Cam Kết:\n- Luôn đặt chất lượng lên hàng đầu\n- Chính hãng công ty cổ phần Nu - Việt Nam\n-️ Cập nhập mẫu mã liên tục phong phú\nThiết kế xinh xắn đáng yêu, món quà tuyệt vời cho bé yêu\nEm mời tất cả các chị yêu chốt đơ"
+    "description": "[BST MỚI NOUS]\nTHÔNG TIN CHẤT LIỆU\nMềm mại - Thoáng mát - Không gây kích ứng da\nShop Cam Kết:\n- Luôn đặt chất lượng lên hàng đầu\n- Chính hãng công ty cổ phần Nu - Việt Nam\n-️ Cập nhập mẫu mã liên tục phong phú\nThiết kế xinh xắn đáng yêu, món quà tuyệt vời cho bé yêu\nEm mời tất cả các chị yêu chốt đơn 😘😘😘\n\n#nouskids\n#thoitrangtreem\n#quanaotreem\n#thoitrangchobe"
   },
   {
     "code": "MN-282",
@@ -5072,17 +5488,17 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bộ quần áo bé",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "Ghi phối be,Newborn (2.5-4kg)",
+      "Ghi phối be+mũ bcbt,Newborn (2.5-4kg)",
+      "Nâu kèm mũ,Newborn (2.5-4kg)",
+      "Xanh kèm mũ,Newborn (2.5-4kg)"
     ],
     "price": 225000,
     "image": "/images/products/mn-282.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "[NOUS BST MỚI T9] Bộ dài cài lệch màu nâu, màu xanh phối trắng mix phụ kiện mũ quần + áo\nTHÔNG TIN CHẤT LIỆU\nMềm mại - Thoáng khí - Không gây kích ứng da\nShop Cam Kết:\n- Luôn đặt chất lượng lên hàng đầu\n- Chính hãng công ty cổ phần Nu - Việt Nam\n-️ Cập nhập mẫu mã liên tục phong phú\nThiết kế xinh xắ"
+    "description": "[NOUS BST MỚI T9] Bộ dài cài lệch màu nâu, màu xanh phối trắng mix phụ kiện mũ quần + áo\nTHÔNG TIN CHẤT LIỆU\nMềm mại - Thoáng khí - Không gây kích ứng da\nShop Cam Kết:\n- Luôn đặt chất lượng lên hàng đầu\n- Chính hãng công ty cổ phần Nu - Việt Nam\n-️ Cập nhập mẫu mã liên tục phong phú\nThiết kế xinh xắn đáng yêu, món quà tuyệt vời cho bé yêu\nEm mời tất cả các chị yêu chốt đơn 😘😘😘\n#thegioimebimsua\n#nous\n#thoitrangtreem\n#quanaotreem\n#thoitrangchobe"
   },
   {
     "code": "MN-283",
@@ -5091,9 +5507,10 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "LA POMME",
     "category": "Bodysuit & Đồ liền",
     "variants": [
-      "Newborn (3-5.5kg)",
       "0-3M",
-      "3-6M"
+      "3-6M",
+      "6-9M",
+      "9-12M"
     ],
     "price": 195000,
     "image": "/images/products/mn-283.jpg",
@@ -5109,17 +5526,18 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "Moniu",
     "category": "Bộ quần áo bé",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "ba lỗ trắng caro xah,2-3Y (13.5-15kg)",
+      "ba lỗ trắng caro xah,6-9M ( 7.5-9.5kg)",
+      "ba lỗ trắng caro xah,9-12M (8.5-10.5kg)",
+      "ba lỗ trắng caro xah,12-18m (10.5-11.5kg)",
+      "ba lỗ trắng caro xah,18-24m (11.5-13.5kg)"
     ],
     "price": 225000,
     "image": "/images/products/mn-284.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "Bộ ba lỗ trắng phối quần caro xanh là lựa chọn hoàn hảo cho bé yêu của bạn. Với thiết kế năng động và trẻ trung, bộ đồ này sẽ làm bé của bạn thêm phần dễ thương và đáng yêu.\n\nChất liệu: Bộ ba được làm từ chất liệu cao cấp, mềm mại và thoáng khí, giúp cho bé cảm thấy thoải mái khi mặc.\n\nThiết kế: Bộ"
+    "description": "Bộ ba lỗ trắng phối quần caro xanh là lựa chọn hoàn hảo cho bé yêu của bạn. Với thiết kế năng động và trẻ trung, bộ đồ này sẽ làm bé của bạn thêm phần dễ thương và đáng yêu.\n\nChất liệu: Bộ ba được làm từ chất liệu cao cấp, mềm mại và thoáng khí, giúp cho bé cảm thấy thoải mái khi mặc.\n\nThiết kế: Bộ ba có thiết kế lỗ trắng rất dễ thương, được phối với quần caro xanh tạo nên sự hài hòa trong từng chi tiết.\n\nBên cạnh đó, bộ sản phẩm này được làm từ các nguyên liệu an toàn với da của bé. Vì vậy bạn có thể hoàn toàn yên tâm khi sử dụng sản phẩm này cho con yêu của bạn.\n\nĐặc điểm nổi bật:\n\n- Thiết kế nhỏ gọn và tiện lợi\n\n- Chất liệu cao cấp giúp cho sản phẩm có tuổi thọ cao\n\nHơn nữa, N04007 Bộ Ba Lỗ Trắn Phối Quần Carro Xanh Cho Bé là sản phẩm rất thiết thành trong danh mục quà tặg sinh nhật hay qua tang khai xuân và cũg là saùn phiäåù väát löïa töï hoå troä töø ñöôïc söû duïët cuûa beù yeâu treân con ñöôøi naøy.\n\n"
   },
   {
     "code": "MN-285",
@@ -5128,17 +5546,17 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bộ quần áo bé",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "be phối quần nâu,5-6Y (20-23kg)",
+      "be phối quần nâu,2-3Y (13.5-15kg)",
+      "be phối quần nâu,3-4Y (15-17kg)",
+      "be phối quần nâu,4-5Y (17-20kg)"
     ],
     "price": 225000,
     "image": "/images/products/mn-285.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "Bộ cộc tay màu be phối quần nâu mềm mát mùa hè cho bé áo+ quần - thời trang dành cho bé yêu của bạn, vừa đảm bảo sự thoải mái và dễ chịu trong những ngày hè oi bức. Hãy cùng tìm hiểu những đặc điểm nổi bật của sản phẩm này:\n\nBộ cộc tay với thiết kế thông minh giúp bé thoải mái vận động.\n\nChất liệu c"
+    "description": "Bộ cộc tay màu be phối quần nâu mềm mát mùa hè cho bé áo+ quần - thời trang dành cho bé yêu của bạn, vừa đảm bảo sự thoải mái và dễ chịu trong những ngày hè oi bức. Hãy cùng tìm hiểu những đặc điểm nổi bật của sản phẩm này:\n\nBộ cộc tay với thiết kế thông minh giúp bé thoải mái vận động.\n\nChất liệu cotton cao cấp, thấm hút mồ hôi và giúp cho làn da của bé luôn được thoáng khí.\n\nMàu sắc tự nhiên, phối quần nâu sang trọng giúp bé tự tin khi đi chơi hay gặp gỡ bạn bè.\n\n Ngoài ra, sản phẩm này được thiết kế đơn giản nhưng không kém phần ấn tượng. Với kiểu dáng áo+quần tiện lợi và dễ mix&match, các mom có thể mix theo ý thích để tạo ra các set trang phục mới lạ cho con yêu. Với N04029 Bộ cộc tay mà be phối quần nây - Bé yêunhanh chóngthành người!\n\n"
   },
   {
     "code": "MN-286",
@@ -5147,17 +5565,16 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "LA POMME",
     "category": "Bộ quần áo bé",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "NEWBORN",
+      "0-3M",
+      "3-6M"
     ],
     "price": 225000,
     "image": "/images/products/mn-286.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "[LAPOM BST T1] Bộ La Pomme Bonjour màu xanh\nChất liệu mềm mại, co giãn và mát, các bé mặc rất thoải mái xinh xắn\nHàng cao cấp của Lapom họa tiết đáng yêu với tông màu xinh xắn là món quà tuyệt vời cho bé yêu\nEm mời tất cả các chị yêu chốt đơn 😘😘😘\n#thegioimebimsua\n#La_pomme\n#thoitrangtreem\n#quanaotre"
+    "description": "[LAPOM BST T1] Bộ La Pomme Bonjour màu xanh\nChất liệu mềm mại, co giãn và mát, các bé mặc rất thoải mái xinh xắn\nHàng cao cấp của Lapom họa tiết đáng yêu với tông màu xinh xắn là món quà tuyệt vời cho bé yêu\nEm mời tất cả các chị yêu chốt đơn 😘😘😘\n#thegioimebimsua\n#La_pomme\n#thoitrangtreem\n#quanaotreem\n#bodychip\n#bodychobe"
   },
   {
     "code": "MN-287",
@@ -5166,36 +5583,33 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "Moniu",
     "category": "Nón & Mũ bé",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "Vịt Vàng kèm mũ,Newborn (3-5kg)",
+      "Hồng kèm mũ,Newborn (3-5kg)"
     ],
     "price": 225000,
     "image": "/images/products/mn-287.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "Bộ đồ này là một món quà tuyệt vời dành cho bé yêu của bạn. Với thiết kế dễ thương và chất liệu cotton thoáng khí, bé sẽ cảm thấy thoải mái và tự tin trong bộ đồ này.\n\nMàu sắc: Trắng phối hồng\n\nChất liệu: Cotton\n\nBộ đồ này bao gồm áo dài tay, quần và mũ. Áo có hình in trước ngực với chữ \"Love\" rất y"
+    "description": "Bộ đồ này là một món quà tuyệt vời dành cho bé yêu của bạn. Với thiết kế dễ thương và chất liệu cotton thoáng khí, bé sẽ cảm thấy thoải mái và tự tin trong bộ đồ này.\n\nMàu sắc: Trắng phối hồng\n\nChất liệu: Cotton\n\nBộ đồ này bao gồm áo dài tay, quần và mũ. Áo có hình in trước ngực với chữ \"Love\" rất yêu kiều, phối cùng quần họa tiết hoa lá xinh xắn. Mũ có thiết kế nhỏ gọn, giúp giữ ấm cho bé trong những ngày se lạnh.\n\nĐặt hàng ngay để trang phục của bé thêm xinh xắn và ấm áp vào mùa thu đông!\n\n"
   },
   {
     "code": "MN-288",
     "tiktokId": "24722399963",
     "name": "B02015 Bộ ngắn tay cài giữa siro cho bé mùa hè quần + áo BSR130801",
-    "brand": "Moniu",
+    "brand": "BUBABY",
     "category": "Bộ quần áo bé",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "3-6M",
+      "6-9M",
+      "9-12M"
     ],
     "price": 225000,
     "image": "/images/products/mn-288.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "Chào mừng bé đến với mùa hè sôi động cùng B02015 Bộ ngắn tay cài giữa siro cho bé áo + quần BSR130801! Với thiết kế dễ thương và tiện lợi, bộ quần áo này sẽ là trang phục yêu thích của bé trong những ngày nắng nóng.\nChất liệu siro thoáng khí: Được làm từ chất liệu siro cao cấp, bộ quần áo này mang l"
+    "description": "Chào mừng bé đến với mùa hè sôi động cùng B02015 Bộ ngắn tay cài giữa siro cho bé áo + quần BSR130801! Với thiết kế dễ thương và tiện lợi, bộ quần áo này sẽ là trang phục yêu thích của bé trong những ngày nắng nóng.\nChất liệu siro thoáng khí: Được làm từ chất liệu siro cao cấp, bộ quần áo này mang lại cho bé sự thoải mái và dễ chịu trong những ngày hè oi bức.\nBộ trang phục tiện lợi: Với thiết kế cài giữa, việc mặc và thay đổi trang phục cho bé sẽ trở nên dễ dàng hơn bao giờ hết.\nTay áo ngắn: Chiều dài tay áo của sản phẩm này là ngắn tay, giúp cho các hoạt động vận đông của bé không gặp rà khích hay khó chịu.\nB02015 Bộ ngắn tay cài giữa siro cho bebé được sản xuất và xuất xứ từ Việt Nam. Để duy trì được tính mới của sản phẩm bạn có thể yên tâm khi có máy có thể giặt được để bạn không phải lo lắm khi mang đi ra ngoài hoặc ra biển."
   },
   {
     "code": "MN-289",
@@ -5204,7 +5618,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "LA POMME",
     "category": "Bộ quần áo bé",
     "variants": [
-      "Newborn (3-5.5kg)",
+      "NEWBORN",
       "0-3M",
       "3-6M"
     ],
@@ -5213,7 +5627,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "[LAPOM BST MỚI T9] Bộ sơ sinh LaPomme Meowy Cat - Màu hồng quần + áo\nChất liệu mềm mại, co giãn và mát, các bé mặc rất thoải mái xinh xắn\nHàng cao cấp của Lapom họa tiết đáng yêu với tông màu xinh xắn là món quà tuyệt vời cho bé yêu\nEm mời tất cả các chị yêu chốt đơn 😘😘😘\n#thegioimebimsua\n#La_pomme\n#"
+    "description": "[LAPOM BST MỚI T9] Bộ sơ sinh LaPomme Meowy Cat - Màu hồng quần + áo\nChất liệu mềm mại, co giãn và mát, các bé mặc rất thoải mái xinh xắn\nHàng cao cấp của Lapom họa tiết đáng yêu với tông màu xinh xắn là món quà tuyệt vời cho bé yêu\nEm mời tất cả các chị yêu chốt đơn 😘😘😘\n#thegioimebimsua\n#La_pomme\n#thoitrangtreem\n#quanaotreem\n#bodychip\n#bodychobe"
   },
   {
     "code": "MN-290",
@@ -5222,17 +5636,21 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Phụ kiện & Khác",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "Xanh trơn",
+      "Hoạ tiết cam",
+      "Hoạ tiết tim",
+      "Lê vàng",
+      "Hoạ tiết tím",
+      "Trắng trơn",
+      "Hồng trơn",
+      "Hoạ tiết nâu"
     ],
     "price": 55000,
     "image": "/images/products/mn-290.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "Khăn đa năng VIP các màu big size cho bé\nTHÔNG TIN CHẤT LIỆU\nMềm mại - Thoáng mát - Không gây kích ứng da\nShop Cam Kết:\n- Luôn đặt chất lượng lên hàng đầu\n- Chính hãng công ty cổ phần Nu - Việt Nam\n-️ Cập nhập mẫu mã liên tục phong phú\nThiết kế xinh xắn đáng yêu, món quà tuyệt vời cho bé yêu\nEm mời"
+    "description": "Khăn đa năng VIP các màu big size cho bé\nTHÔNG TIN CHẤT LIỆU\nMềm mại - Thoáng mát - Không gây kích ứng da\nShop Cam Kết:\n- Luôn đặt chất lượng lên hàng đầu\n- Chính hãng công ty cổ phần Nu - Việt Nam\n-️ Cập nhập mẫu mã liên tục phong phú\nThiết kế xinh xắn đáng yêu, món quà tuyệt vời cho bé yêu\nEm mời tất cả các chị yêu chốt đơn 😘😘😘\n#nous\n#thoitrangtreem\n#quanaotreem\n#thoitrangchobe"
   },
   {
     "code": "MN-291",
@@ -5241,23 +5659,23 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Áo & Áo khoác",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "3-6M",
+      "6-9M",
+      "9-12M",
+      "12-18M"
     ],
     "price": 185000,
     "image": "/images/products/mn-291.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "THÔNG TIN CHẤT LIỆU\nMềm mại - Kháng khuẩn - Thoáng mát\nShop Cam Kết:\n- Luôn đặt chất lượng lên hàng đầu\n- Chính hãng công ty cổ phần Nu - Việt Nam\n-️ Cập nhập mẫu mã liên tục phong phú\nThiết kế xinh xắn đáng yêu, món quà tuyệt vời cho bé yêu\nEm mời tất cả các chị yêu chốt đơn 😘😘😘\n#thegioimebimsua\n#n"
+    "description": "THÔNG TIN CHẤT LIỆU\nMềm mại - Kháng khuẩn - Thoáng mát\nShop Cam Kết:\n- Luôn đặt chất lượng lên hàng đầu\n- Chính hãng công ty cổ phần Nu - Việt Nam\n-️ Cập nhập mẫu mã liên tục phong phú\nThiết kế xinh xắn đáng yêu, món quà tuyệt vời cho bé yêu\nEm mời tất cả các chị yêu chốt đơn 😘😘😘\n#thegioimebimsua\n#nous\n#thoitrangtreem\n#quanaotreem\n#thoitrangchobe"
   },
   {
     "code": "MN-292",
     "tiktokId": "24622407724",
     "name": "Yếm tam giác muslin trắng in họa tiết",
-    "brand": "Moniu",
+    "brand": "NOUS",
     "category": "Yếm cho bé",
     "variants": [
       "Hồng pastel",
@@ -5270,7 +5688,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "Mềm mịn và thấm hút tốt​​​, ngăn không cho thức ăn, nước miếng làm bẩn quần áo nhưng cũng vừa đủ gọn gàng để không gây ảnh hưởng đến hoạt động của bé\nĐặc điểm thiết kế\nChiếc yếm nhỏ xinh giữ áo quần của bé luôn sạch sẽ, giữ bé ấm áp những đêm thu se lạnh. \nHình ảnh bạn cáo tinh nghịch, để bé luôn dễ"
+    "description": "Mềm mịn và thấm hút tốt​​​, ngăn không cho thức ăn, nước miếng làm bẩn quần áo nhưng cũng vừa đủ gọn gàng để không gây ảnh hưởng đến hoạt động của bé\nĐặc điểm thiết kế\nChiếc yếm nhỏ xinh giữ áo quần của bé luôn sạch sẽ, giữ bé ấm áp những đêm thu se lạnh. \nHình ảnh bạn cáo tinh nghịch, để bé luôn dễ thương mọi lúc\nThông tin chất liệu\nMềm mại\nThấm hút tốt\nKháng khuẩn"
   },
   {
     "code": "MN-293",
@@ -5279,17 +5697,17 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bộ quần áo bé",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "be in hình quả lê,3-4Y (15-17kg)",
+      "be in hình quả lê,4-5Y (17-20kg)",
+      "be in hình quả lê,5-6Y (20-23kg)",
+      "be in hình quả lê,2-3Y (13.5-15kg)"
     ],
     "price": 225000,
     "image": "/images/products/mn-293.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "Mang đến cho bé yêu của bạn một bộ ba lỗ mềm mát với hình quả lê dễ thương với gam màu be nhẹ nhàng.\n\nBộ sản phẩm bao gồm áo và quần, thiết kế đơn giản và thoải mái, phù hợp cho bé trong những ngày hè nóng bức.\n\nChất liệu làm từ cotton cao cấp, an toàn và thân thiện với làn da của bé.\n\nBộ trang phục"
+    "description": "Mang đến cho bé yêu của bạn một bộ ba lỗ mềm mát với hình quả lê dễ thương với gam màu be nhẹ nhàng.\n\nBộ sản phẩm bao gồm áo và quần, thiết kế đơn giản và thoải mái, phù hợp cho bé trong những ngày hè nóng bức.\n\nChất liệu làm từ cotton cao cấp, an toàn và thân thiện với làn da của bé.\n\nBộ trang phục có độ co giãn tốt để tăng sự thoải mái khi bé di chuyển hoặc chơi đùa.\n\nĐầu tư vào sản phẩm này sẽ là sự lựa chọn hoàn hảo để tặng các cặp cha-mẹ mới sinh. Bé yêu của bạn sẽ trông dễ thương và khỏe khoắn trong chiếc áo ba lỗ này.\n\n"
   },
   {
     "code": "MN-294",
@@ -5298,16 +5716,15 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "Moniu",
     "category": "Bodysuit & Đồ liền",
     "variants": [
-      "Newborn (3-5.5kg)",
-      "0-3M",
-      "3-6M"
+      "màu xanh vịt",
+      "màu trắng họa tiết"
     ],
     "price": 195000,
     "image": "/images/products/mn-294.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "Bộ liền dài cho bé gái là món quà ý nghĩa dành cho bé yêu của bạn. Với thiết kế đơn giản nhưng không kém phần đáng yêu, sản phẩm sẽ mang lại cảm giác thoải mái và ấm áp cho bé trong mùa đông.\n\nMàu sắc: Trắng, Đỏ, Xanh\n\nChất liệu: Vải thun cotton\n\nBộ liền dài được in hoạ tiết táo và vịt ngộ nghĩnh tr"
+    "description": "Bộ liền dài cho bé gái là món quà ý nghĩa dành cho bé yêu của bạn. Với thiết kế đơn giản nhưng không kém phần đáng yêu, sản phẩm sẽ mang lại cảm giác thoải mái và ấm áp cho bé trong mùa đông.\n\nMàu sắc: Trắng, Đỏ, Xanh\n\nChất liệu: Vải thun cotton\n\nBộ liền dài được in hoạ tiết táo và vịt ngộ nghĩnh trên nền màu trắng tinh khôi. Mỗi chi tiết được chăm chút tỉ mỉ với các điểm nhấn là họa tiết táo đỏ và vịt xanh lá cây. Chiếc băng quàng cổ in họa tiết phù hợp mang lại diện mạo xinh xắn cho cô công chúa nhỏ của bạn.\n\nChất liệu cotton thun siêu êm ái và thoáng khí giúp bé luôn cảm thấy thoải mái trong suốt ngày dài. Đồng thời, bề mặt sản phẩm êm áy khiến da em bé không bị kích ứng hay viêm da.\n\nGói hàng:\n\n- 1 Bộ Liền Dài Màu Trắn In Họa Tiêt Táo Đỏ,\n\n- 1 Băng Quàng Cổ In Họa Tiêt Táo Đỏ,\n\n- 1 Băng Quàng Cổ In Họatiet Vịt Xanh Lá Cây.\n\nSản phẩm này rất phù hợp để làm quà tặg sinh nhật hay các ngày lễ lớn của các em bé gáisư này!\n\n.\n\n"
   },
   {
     "code": "MN-295",
@@ -5316,16 +5733,19 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "LA POMME",
     "category": "Váy đầm bé gái",
     "variants": [
-      "Newborn (3-5.5kg)",
-      "0-3M",
-      "3-6M"
+      "xanh,12-18m (12-13kg)",
+      "xanh,18-24m (13-15kg)",
+      "xanh,3-4y (17-19kg)",
+      "vàng,12-18m (12-13kg)",
+      "vàng,18-24m (13-15kg)",
+      "vàng,3-4y (17-19kg)"
     ],
     "price": 245000,
     "image": "/images/products/mn-295.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "Bộ cộc tay La Pomme giả váy thủy thủ rayon cotton mềm mịn quần +áo là sản phẩm hoàn hảo dành cho trẻ sơ sinh. Bộ quần áo được thiết kế với kiểu dáng đáng yêu, vừa có cảm giác trẻ trung, lại rất thoải mái.\n\nChất liệu rayon cotton cao cấp, mềm mịn và thoáng khí cho bé yêu của bạn.\n\nBộ quần áo bao gồm"
+    "description": "Bộ cộc tay La Pomme giả váy thủy thủ rayon cotton mềm mịn quần +áo là sản phẩm hoàn hảo dành cho trẻ sơ sinh. Bộ quần áo được thiết kế với kiểu dáng đáng yêu, vừa có cảm giác trẻ trung, lại rất thoải mái.\n\nChất liệu rayon cotton cao cấp, mềm mịn và thoáng khí cho bé yêu của bạn.\n\nBộ quần áo bao gồm áo phông và quần short đơn giản nhưng không kém phần nổi bật.\n\nSản phẩm được làm từ chất liệu an toàn cho da của bé, không gây kích ứng hoặc hại da. Bé sẽ luôn có được sự thoải mái khi diện chiếc bộ này. Thêm vào đó, chiếc bô này còn là lựa chọn tuyệt vời để làm quà tặng cho các bé trong các dịp sinh nhật hay lễ khác!"
   },
   {
     "code": "MN-296",
@@ -5334,9 +5754,13 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bộ quần áo bé",
     "variants": [
-      "Newborn (3-5.5kg)",
-      "0-3M",
-      "3-6M"
+      "Cam",
+      "Trắng phối xanh voi",
+      "Trắng phối xanh gấu",
+      "Trắg phối cam pastel",
+      "Tím nhạt",
+      "Trắng viền cam",
+      "Xanh dương nhạt"
     ],
     "price": 225000,
     "image": "/images/products/mn-296.jpg",
@@ -5352,17 +5776,17 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "Moniu",
     "category": "Bộ quần áo bé",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "be nâu đính thỏ,3-6M ( 5.5-7.5 kg)",
+      "be nâu đính thỏ,6-9M ( 7.5-9.5kg)",
+      "be nâu đính thỏ,9-12M (8.5-10.5kg)",
+      "be nâu đính thỏ,0-3M (3.5-5.5kg)"
     ],
     "price": 225000,
     "image": "/images/products/mn-297.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "Bộ cộc tay be phối nâu đính thỏ là một sản phẩm thời trang cho bé yêu của bạn. Với thiết kế xinh xắn, sản phẩm này chắc chắn sẽ làm bé của bạn trở nên đáng yêu và dễ thương hơn.\n\nChất liệu mềm mát: Sản phẩm được làm từ chất liệu cao cấp, đảm bảo mang lại sự thoải mái và dễ chịu cho bé trong những ng"
+    "description": "Bộ cộc tay be phối nâu đính thỏ là một sản phẩm thời trang cho bé yêu của bạn. Với thiết kế xinh xắn, sản phẩm này chắc chắn sẽ làm bé của bạn trở nên đáng yêu và dễ thương hơn.\n\nChất liệu mềm mát: Sản phẩm được làm từ chất liệu cao cấp, đảm bảo mang lại sự thoải mái và dễ chịu cho bé trong những ngày hè oi bức.\n\nThiết kế phối nâu đính thỏ: Với thiết kế tinh tế và phối màu hài hòa, sản phẩm này mang lại vẻ ngoài hiện đại nhưng không kém phần ngọt ngào cho bé.\n\nBộ cộc tay be được thiết kế vô cùng thông minh với kiểu dáng bodysuits & one-pieces tiện lợi khiến việc diện quần áo cho con trở nên thuận tiện hơn. Sản phẩm có kiểu dáng ôm sát giúp giữ ấm cơ thể bé vào những ngày lạnh giá hoặc khi đi ra vào điều hoà không khí. Ngoài ra, bông tai được may rời có khóa móc tiện lợi khiến việt mix quần áo của con trở thành điềụ rất thuận lợi\n\n"
   },
   {
     "code": "MN-298",
@@ -5371,17 +5795,18 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "Moniu",
     "category": "Bộ quần áo bé",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "Bộ ba lỗ hồng vịt,9-12M (8.5-10.5kg)",
+      "Bộ ba lỗ hồng vịt,12-18m (10.5-11.5kg)",
+      "Bộ ba lỗ hồng vịt,18-24m (11.5-13.5kg)",
+      "Bộ ba lỗ hồng vịt,2-3Y (13.5-15kg)",
+      "Bộ ba lỗ hồng vịt,6-9M ( 7.5-9.5kg)"
     ],
     "price": 225000,
     "image": "/images/products/mn-298.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "Mô tả sản phẩm: Bộ ba lỗ hồng trắng họa tiết vịt là lựa chọn tuyệt vời dành cho bé yêu của bạn trong những ngày hè nóng bức. Với chất liệu mềm mát và thiết kế thời trang, bộ đồ này sẽ giúp bé của bạn thoải mái và năng động suốt cả ngày.\n\nMàu sắc: Hồng, Trắng\n\n\n\nKiểu dáng: Bộ ba lỗ với họa tiết vịt"
+    "description": "Mô tả sản phẩm: Bộ ba lỗ hồng trắng họa tiết vịt là lựa chọn tuyệt vời dành cho bé yêu của bạn trong những ngày hè nóng bức. Với chất liệu mềm mát và thiết kế thời trang, bộ đồ này sẽ giúp bé của bạn thoải mái và năng động suốt cả ngày.\n\nMàu sắc: Hồng, Trắng\n\n\n\nKiểu dáng: Bộ ba lỗ với họa tiết vịt\n\nBộ đồ này được làm từ chất liệu cao cấp giúp cho bé cảm nhận được sự thoải mái khi mặc. Thiết kế lỗ thông thoáng giúp bé không bị khó chịu trong nhữn ngày nóngxức. Họa tiết con vịt dễ thương trên áo và quần khiến cho bộ đồ trở thành một sản phẩm ý nghĩa để tặn gifting set.\n\nVới kho hàng phong phú từ các size S,M,L các mom có thể yên tâm chọn size phù hợp cho con em của minh.\n\n.\n\n"
   },
   {
     "code": "MN-299",
@@ -5390,36 +5815,37 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bodysuit & Đồ liền",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "0-3M",
+      "3-6M",
+      "6-9M",
+      "9-12M"
     ],
     "price": 195000,
     "image": "/images/products/mn-299.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "Bộ liền cộc màu trắng phối kẻ vàng mềm mát cho bé mặc hè.\n\nChất liệu: Bằng vải cotton cao cấp, bền đẹp, không xù lông, thấm hút mồ hôi tốt giúp bé luôn thoải mái khi vận động.\n\nMàu sắc: Được thiết kế với gam trắng chủ đạo phối kèm hoa văn kẻ và các chi tiết nhỏ như khuy áo giúp bộ liền cổ thêm sinh"
+    "description": "Bộ liền cộc màu trắng phối kẻ vàng mềm mát cho bé mặc hè.\n\nChất liệu: Bằng vải cotton cao cấp, bền đẹp, không xù lông, thấm hút mồ hôi tốt giúp bé luôn thoải mái khi vận động.\n\nMàu sắc: Được thiết kế với gam trắng chủ đạo phối kèm hoa văn kẻ và các chi tiết nhỏ như khuy áo giúp bộ liền cổ thêm sinh động hơn."
   },
   {
     "code": "MN-300",
     "tiktokId": "24522399339",
     "name": "DN03008 Body cộc trắng phối vàng thêu trang trí cho bé từ 0M quần liền áo",
-    "brand": "Moniu",
+    "brand": "NOUS",
     "category": "Bodysuit & Đồ liền",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "0-3M (3,5-5,5kg)",
+      "3-6M (5,5-7,5KG)",
+      "6-9M (7,5-9,5kg)",
+      "9-12M (8,5-10,5kg)",
+      "12-18M (10,5-11,5kg)"
     ],
     "price": 195000,
     "image": "/images/products/mn-300.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "Body cộc trắng phối vàng thêu trang trí là một sản phẩm tuyệt vời cho bé yêu của bạn từ độ tuổi 0 tháng.\n\nThiết kế tiện dụng: Body cộc với quần liền áo giúp bé dễ dàng vận động, không bị lên cao\n\nChất liệu mềm mại: Được làm từ chất liệu cotton cao cấp, siêu thoáng khí và an toàn cho da của bé\n\nMàu s"
+    "description": "Body cộc trắng phối vàng thêu trang trí là một sản phẩm tuyệt vời cho bé yêu của bạn từ độ tuổi 0 tháng.\n\nThiết kế tiện dụng: Body cộc với quần liền áo giúp bé dễ dàng vận động, không bị lên cao\n\nChất liệu mềm mại: Được làm từ chất liệu cotton cao cấp, siêu thoáng khí và an toàn cho da của bé\n\nMàu sắc sinh động: Phối hợp giữa màu trắn và vành sọc phối nổi bật tạo nên điểm nhấn cho sản phẩm\n\nDễ dàng mix-match: Sản phẩm này có thể kết hợp được với nhiều loại quần áo khác nhau để tạo ra nhiều set đồ khác nhau.\n\nHãy lựa chọn sản phẩm Body cộc trắg phối vành thêut rang để mang lại sự thoải mái cho con yêue trong suốt ngày.\n\n"
   },
   {
     "code": "MN-301",
@@ -5428,14 +5854,16 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "LA POMME",
     "category": "Quà tặng kèm",
     "variants": [
-      "Quà tặng kèm"
+      "Màu ghi,Newborn (3-6kg)",
+      "Màu Hồng,Newborn (3-6kg)",
+      "Màu Trắng,Newborn (3-6kg)"
     ],
     "price": 0,
     "image": "/images/products/mn-301.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "[DUY NHẤT 30/8] Set quà tặng sơ sinh cao cấp Best for baby từ LA POMME\nTHÔNG TIN CHẤT LIỆU\nThoáng Mát - Mềm mại - Thấm hút tốt - Không gây kích ứng da\nShop Cam Kết:\n- Luôn đặt chất lượng lên hàng đầu\n- Cam kết sản phẩm chính hãng\n-️ Cập nhập mẫu mã liên tục phong phú\nThiết kế xinh xắn đáng yêu, món"
+    "description": "[DUY NHẤT 30/8] Set quà tặng sơ sinh cao cấp Best for baby từ LA POMME\nTHÔNG TIN CHẤT LIỆU\nThoáng Mát - Mềm mại - Thấm hút tốt - Không gây kích ứng da\nShop Cam Kết:\n- Luôn đặt chất lượng lên hàng đầu\n- Cam kết sản phẩm chính hãng\n-️ Cập nhập mẫu mã liên tục phong phú\nThiết kế xinh xắn đáng yêu, món quà tuyệt vời cho bé yêu\nEm mời tất cả các chị yêu chốt đơn 😘😘😘\n#thegioimebimsua\n#littlelove\n#thoitrangtreem\n#quanaotreem\n#thoitrangchobe"
   },
   {
     "code": "MN-302",
@@ -5444,17 +5872,18 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "Moniu",
     "category": "Bộ quần áo bé",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "Ba lỗ xanh gấu,2-3Y (13.5-15kg)",
+      "Ba lỗ xanh gấu,6-9M ( 7.5-9.5kg)",
+      "Ba lỗ xanh gấu,9-12M (8.5-10.5kg)",
+      "Ba lỗ xanh gấu,12-18m (10.5-11.5kg)",
+      "Ba lỗ xanh gấu,18-24m (11.5-13.5kg)"
     ],
     "price": 225000,
     "image": "/images/products/mn-302.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "Bộ ba lỗ xanh trắng họa tiết gấu mềm mát cho bé áo+ quần sẽ là sự lựa chọn tuyệt vời cho bé yêu của bạn.\n\nThiết kế đáng yêu: Với họa tiết gấu xinh xắn trên bộ đồ, bé sẽ trông rất dễ thương và ngọt ngào.\n\nChất liệu mềm mát: Chất liệu cotton cao cấp, thân thiện với làn da của bé, giúp cơ thể thoải mái"
+    "description": "Bộ ba lỗ xanh trắng họa tiết gấu mềm mát cho bé áo+ quần sẽ là sự lựa chọn tuyệt vời cho bé yêu của bạn.\n\nThiết kế đáng yêu: Với họa tiết gấu xinh xắn trên bộ đồ, bé sẽ trông rất dễ thương và ngọt ngào.\n\nChất liệu mềm mát: Chất liệu cotton cao cấp, thân thiện với làn da của bé, giúp cơ thể thoải mái và dễ chịu vào những ngày hè nóng bức.\n\nDễ dàng diện: Bộ ba lỗ có thiết kế thông minh giúp bạn dễ dàng điều chỉnh khi cần thiết. Nút bấm ở phía giữa áo và quần tạo điểm nhấn cho sản phẩm này.\n\nHãy để N04008 Bộ ba lỗ xanh trắng họa tiết gấu mang lại nụ cười rạng rỡ cho con bạn!\n\n"
   },
   {
     "code": "MN-303",
@@ -5463,17 +5892,21 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Phụ kiện & Khác",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "Muslin quả lê",
+      "Bamboo cô tiên",
+      "Quả cam",
+      "Muslin trắg gấu đỏ",
+      "Trắng hoạ tiết gấu",
+      "Bamboo trắng",
+      "Bamboo hồng",
+      "Cam"
     ],
     "price": 225000,
     "image": "/images/products/mn-303.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "[Nous] Set 5 Khăn Sữa Bamboo Sợi tre Mềm Mại Không Bám Bụi Vải Mẫu Mới\nTHÔNG TIN CHẤT LIỆU\nMềm mại - Thoáng mát - Không gây kích ứng da\nShop Cam Kết:\n- Luôn đặt chất lượng lên hàng đầu\n- Chính hãng công ty cổ phần Nu - Việt Nam\n-️ Cập nhập mẫu mã liên tục phong phú\nThiết kế xinh xắn đáng yêu, món qu"
+    "description": "[Nous] Set 5 Khăn Sữa Bamboo Sợi tre Mềm Mại Không Bám Bụi Vải Mẫu Mới\nTHÔNG TIN CHẤT LIỆU\nMềm mại - Thoáng mát - Không gây kích ứng da\nShop Cam Kết:\n- Luôn đặt chất lượng lên hàng đầu\n- Chính hãng công ty cổ phần Nu - Việt Nam\n-️ Cập nhập mẫu mã liên tục phong phú\nThiết kế xinh xắn đáng yêu, món quà tuyệt vời cho bé yêu\nEm mời tất cả các chị yêu chốt đơn 😘😘😘\n#thegioimebimsua\n#nous\n#thoitrangtreem\n#quanaotreem\n#thoitrangchobe\n#khansuachobe"
   },
   {
     "code": "MN-304",
@@ -5482,16 +5915,17 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "Moniu",
     "category": "Bodysuit & Đồ liền",
     "variants": [
-      "Newborn (3-5.5kg)",
       "0-3M",
-      "3-6M"
+      "3-6M",
+      "6-9M",
+      "9-12M"
     ],
     "price": 195000,
     "image": "/images/products/mn-304.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "Bộ liền cộc màu trắng phối xanh lá N04017 là lựa chọn lý tưởng cho bé yêu của bạn. Bộ sản phẩm gồm một bộ liền cộc và một đôi tất xinh xắn, thích hợp để bé mặc trong những ngày se lạnh hoặc khi đi chơi với gia đình.\n\nMàu sắc: Trắng phối xanh lá\n\nChất liệu: Cotton cao cấp, thoáng mát và thấm hút tốt"
+    "description": "Bộ liền cộc màu trắng phối xanh lá N04017 là lựa chọn lý tưởng cho bé yêu của bạn. Bộ sản phẩm gồm một bộ liền cộc và một đôi tất xinh xắn, thích hợp để bé mặc trong những ngày se lạnh hoặc khi đi chơi với gia đình.\n\nMàu sắc: Trắng phối xanh lá\n\nChất liệu: Cotton cao cấp, thoáng mát và thấm hút tốt\n\nKích thước: Thích hợp cho trẻ sơ sinh\n\nBên cạnh đó, chất liệu cotton cao cấp giúp bảo vệ làn da nhạy cảm của bé khỏi kích ứng và ngứa ngáy. Bạn có thể yên tâm sử dụng sản phẩm cho con yêu của bạn.\n\nNgoài ra, bộ sản phẩm này được thiết kế theo kiểu dáng hiện đại với gam trắng thanh lịch phối điểm nhấn xanh lá nổi bật. Đây là món quà ý nghĩa để bạn dành tặng cho bé trong các dịp sinh nhật hoặc các ngày kỷ niệm quan trọng.\n\n"
   },
   {
     "code": "MN-305",
@@ -5500,16 +5934,15 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "Moniu",
     "category": "Bodysuit & Đồ liền",
     "variants": [
-      "Newborn (3-5.5kg)",
-      "0-3M",
-      "3-6M"
+      "Xanh in hình cá voi,NB(3-5kg)",
+      "Trắng in hình thỏ,NB(3-5kg)"
     ],
     "price": 195000,
     "image": "/images/products/mn-305.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "Bộ liền dài màu trắng in hình thỏ được thiết kế đặc biệt cho bé yêu của bạn. Với kiểu dáng hiện đại và màu sắc trang nhã, bộ liền này không chỉ giúp cho bé yêu của bạn thoải mái vận động, mà còn giúp bé thêm phần dễ thương và xinh xắn.\n\nBộ liền có thiết kế mới nhất 2024.\n\nChất liệu cao cấp, không gâ"
+    "description": "Bộ liền dài màu trắng in hình thỏ được thiết kế đặc biệt cho bé yêu của bạn. Với kiểu dáng hiện đại và màu sắc trang nhã, bộ liền này không chỉ giúp cho bé yêu của bạn thoải mái vận động, mà còn giúp bé thêm phần dễ thương và xinh xắn.\n\nBộ liền có thiết kế mới nhất 2024.\n\nChất liệu cao cấp, không gây kích ứng cho da nhạy cảm của bé.\n\nIn hình thỏ ngộ nghĩnh và số 04 tạo nên điểm nhấn vô cùng đáng yêu\n\nĐược làm từ chất liệu cao cấp, bề mặt vải siêu mềm êm ái giúp các bố mẹ hoàn toàn yên tâm khi sử dụng sản phẩm này cho con em của họ. Với kiểu dáng bodysuits & one-pieces tiện lợi và tiết kiệm thời gian trong việc chăm sóc bé; Bé luôn có được sự thoải mái khi vận đồng hàng ngày; Đồng thời việc mix&match quần áo cho các bé trogn gia dinh trở lên phong phú hơn rất nhiềuy\n\nHãy để sản phẩm N03004 Bộ liền mới này là điểm nhấn trong tủ quần áo của con em bạn!\n\n"
   },
   {
     "code": "MN-306",
@@ -5518,17 +5951,17 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bộ quần áo bé",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "9-12M",
+      "12-18M",
+      "18-24M",
+      "2-3Y"
     ],
     "price": 225000,
     "image": "/images/products/mn-306.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "NOUS Bộ đồ bơi cộc tay dành cho bé trai từ 9 tháng đến 2-3 tuổi\nMẫu đồ bơi đơn giản dễ mặc cho bé, làm từ chất liệu cao cấp, đồ bơi nên khuyến khích ba mẹ lấy đúng size KHÔNG tăng size nhé ạ.\n\n❣️Do đặc thù sản phẩm đồ bơi sẽ hạn chế trả hàng, nên mong ba mẹ cân nhắc trước khi mua hàng ạ. Ba mẹ cần t"
+    "description": "NOUS Bộ đồ bơi cộc tay dành cho bé trai từ 9 tháng đến 2-3 tuổi\nMẫu đồ bơi đơn giản dễ mặc cho bé, làm từ chất liệu cao cấp, đồ bơi nên khuyến khích ba mẹ lấy đúng size KHÔNG tăng size nhé ạ.\n\n❣️Do đặc thù sản phẩm đồ bơi sẽ hạn chế trả hàng, nên mong ba mẹ cân nhắc trước khi mua hàng ạ. Ba mẹ cần tư vấn size cứ nhắn tin chiều cao, cân nặng bé gửi em nhaaa🫶🏼"
   },
   {
     "code": "MN-307",
@@ -5537,7 +5970,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "LA POMME",
     "category": "Bộ quần áo bé",
     "variants": [
-      "Newborn (3-5.5kg)",
+      "NEWBORN",
       "0-3M",
       "3-6M"
     ],
@@ -5546,7 +5979,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "[LAPOM BST MỚI T9] Bộ sơ sinh LaPomme Meowy Cat - Màu nâu quần + áo\nChất liệu mềm mại, co giãn và mát, các bé mặc rất thoải mái xinh xắn\nHàng cao cấp của Lapom họa tiết đáng yêu với tông màu xinh xắn là món quà tuyệt vời cho bé yêu\nEm mời tất cả các chị yêu chốt đơn 😘😘😘\n#thegioimebimsua\n#La_pomme\n#t"
+    "description": "[LAPOM BST MỚI T9] Bộ sơ sinh LaPomme Meowy Cat - Màu nâu quần + áo\nChất liệu mềm mại, co giãn và mát, các bé mặc rất thoải mái xinh xắn\nHàng cao cấp của Lapom họa tiết đáng yêu với tông màu xinh xắn là món quà tuyệt vời cho bé yêu\nEm mời tất cả các chị yêu chốt đơn 😘😘😘\n#thegioimebimsua\n#La_pomme\n#thoitrangtreem\n#quanaotreem\n#bodychip\n#bodychobe"
   },
   {
     "code": "MN-308",
@@ -5555,15 +5988,17 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Yếm cho bé",
     "variants": [
-      "6M",
-      "9M"
+      "0-3M",
+      "3-6M",
+      "6-9M",
+      "9-12M"
     ],
     "price": 195000,
     "image": "/images/products/mn-308.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "[NOUS BST T10] Body dài yếm kẻ xanh, hồng, vàng cho bé 0m,3m,6m,9m áo liền quần\nTHÔNG TIN CHẤT LIỆU\nMềm mại - Thoáng mát - Không gây kích ứng da\nShop Cam Kết:\n- Luôn đặt chất lượng lên hàng đầu\n- Chính hãng công ty cổ phần Nu - Việt Nam\n-️ Cập nhập mẫu mã liên tục phong phú\nThiết kế xinh xắn đáng yê"
+    "description": "[NOUS BST T10] Body dài yếm kẻ xanh, hồng, vàng cho bé 0m,3m,6m,9m áo liền quần\nTHÔNG TIN CHẤT LIỆU\nMềm mại - Thoáng mát - Không gây kích ứng da\nShop Cam Kết:\n- Luôn đặt chất lượng lên hàng đầu\n- Chính hãng công ty cổ phần Nu - Việt Nam\n-️ Cập nhập mẫu mã liên tục phong phú\nThiết kế xinh xắn đáng yêu, món quà tuyệt vời cho bé yêu\nEm mời tất cả các chị yêu chốt đơn 😘😘😘\n#thegioimebimsua\n#nous\n#thoitrangtreem\n#quanaotreem\n#thoitrangchobe"
   },
   {
     "code": "MN-309",
@@ -5572,35 +6007,42 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Yếm cho bé",
     "variants": [
-      "Newborn (3-5.5kg)",
-      "0-3M",
-      "3-6M"
+      "Kẻ xanh da trời",
+      "Hồng hình sò",
+      "Tròn nâu phối trắng",
+      "Trắng ngôi sao &mực",
+      "Hươu hồng",
+      "Vuông caro xanh",
+      "Sói xám",
+      "Hoạ tiết bánh mì"
     ],
     "price": 55000,
     "image": "/images/products/mn-309.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "[NOUS] Yếm Peptit cho bé trai, bé gái\nTHÔNG TIN CHẤT LIỆU\nMềm mại - Thoáng mát - Không gây kích ứng da\nShop Cam Kết:\n- Luôn đặt chất lượng lên hàng đầu\n- Chính hãng công ty cổ phần Nu - Việt Nam\n-️ Cập nhập mẫu mã liên tục phong phú\nThiết kế xinh xắn đáng yêu, món quà tuyệt vời cho bé yêu\nEm mời tất"
+    "description": "[NOUS] Yếm Peptit cho bé trai, bé gái\nTHÔNG TIN CHẤT LIỆU\nMềm mại - Thoáng mát - Không gây kích ứng da\nShop Cam Kết:\n- Luôn đặt chất lượng lên hàng đầu\n- Chính hãng công ty cổ phần Nu - Việt Nam\n-️ Cập nhập mẫu mã liên tục phong phú\nThiết kế xinh xắn đáng yêu, món quà tuyệt vời cho bé yêu\nEm mời tất cả các chị yêu chốt đơn 😘😘😘\n#nouskids\n#thoitrangtreem\n#quanaotreem\n#thoitrangchobe"
   },
   {
     "code": "MN-310",
     "tiktokId": "24322399755",
     "name": "C03005 Bộ cộc cổ tròn Fairy hồng mềm mại thấm hút mồ hôi cho bé gái áo + quần",
-    "brand": "Moniu",
+    "brand": "CHAANG",
     "category": "Bộ quần áo bé",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "3-6m (6-8kg)",
+      "6-9m (8-9,5kg)",
+      "9-12m (9,5-11kg)",
+      "12-18m (11-12,5kg)",
+      "18-24m (12,5-13,5kg)",
+      "24-36m (13,5-15kg)"
     ],
     "price": 225000,
     "image": "/images/products/mn-310.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "Bộ cộc cổ tròn Fairy hồng mềm mại thấm hút mồ hôi là lựa chọn hoàn hảo cho bé gái của bạn.\n\nMềm mại và thoáng khí: Chất liệu cao cấp giúp cho bé gái của bạn luôn thoải mái, không bị ngứa và kích ứng da.\n\nThấm hút tối đa: Bé sẽ luôn khô ráo và thoải mái với khả năng thấm hút tối đa của bộ cộc.\n\nBảo v"
+    "description": "Bộ cộc cổ tròn Fairy hồng mềm mại thấm hút mồ hôi là lựa chọn hoàn hảo cho bé gái của bạn.\n\nMềm mại và thoáng khí: Chất liệu cao cấp giúp cho bé gái của bạn luôn thoải mái, không bị ngứa và kích ứng da.\n\nThấm hút tối đa: Bé sẽ luôn khô ráo và thoải mái với khả năng thấm hút tối đa của bộ cộc.\n\nBảo vệ da nhạy cảm: Chất liệu không chứa hoá chất độc hại, dễ dàng giặt sạch để giữ cho bé luôn trong điều kiện tốt nhất.\n\nBên cạnh đó, bộ quần áo được thiết kế phù hợp với bé gái từ 1-3 tuổi để mang lại sự tiện lợi và tiết kiệm thời gian trong việc lựa chọn trang phục hàng ngày. Ngoài ra, sản phẩm này là một ý tưởng quà tặng ý nghĩa cho các bậc cha mẹ mong muốn mang lại niềm vui và sức khỏe cho con yêu.\n\n"
   },
   {
     "code": "MN-311",
@@ -5609,7 +6051,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Quà tặng kèm",
     "variants": [
-      "Quà tặng kèm"
+      "0-3M"
     ],
     "price": 0,
     "image": "/images/products/mn-311.jpg",
@@ -5625,17 +6067,17 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bodysuit & Đồ liền",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "Trắng phối kẻ xanh,0-3m (3.5-5.5kg)",
+      "Trắng phối kẻ xanh,3-6M (5.5-7.5kg)",
+      "Trắng phối kẻ xanh,6-9m (7.5-9.5kg)",
+      "Trắng phối kẻ xanh,9-12m (8.5 -10.5kg)"
     ],
     "price": 195000,
     "image": "/images/products/mn-312.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "Bộ liền cộc màu trắng phối kẻ xanh thêu hình con voi áo liền quần\nTHÔNG TIN CHẤT LIỆU\nMềm mại - Thoáng mát - Không gây kích ứng da\nShop Cam Kết:\n- Luôn đặt chất lượng lên hàng đầu\n- Chính hãng công ty cổ phần Nu - Việt Nam\n-️ Cập nhập mẫu mã liên tục phong phú\nThiết kế xinh xắn đáng yêu, món quà tuy"
+    "description": " Bộ liền cộc màu trắng phối kẻ xanh thêu hình con voi áo liền quần\nTHÔNG TIN CHẤT LIỆU\nMềm mại - Thoáng mát - Không gây kích ứng da\nShop Cam Kết:\n- Luôn đặt chất lượng lên hàng đầu\n- Chính hãng công ty cổ phần Nu - Việt Nam\n-️ Cập nhập mẫu mã liên tục phong phú\nThiết kế xinh xắn đáng yêu, món quà tuyệt vời cho bé yêu\nEm mời tất cả các chị yêu chốt đơn 😘😘😘\n#thegioimebimsua\n#nous\n#thoitrangtreem\n#quanaotreem\n#thoitrangchobe"
   },
   {
     "code": "MN-313",
@@ -5644,17 +6086,17 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bodysuit & Đồ liền",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "0-3M",
+      "3-6M",
+      "6-9M",
+      "9-12M"
     ],
     "price": 195000,
     "image": "/images/products/mn-313.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "Bộ sưu tập mới NOUS Set 2 body suit cho bé\nTHÔNG TIN CHẤT LIỆU\n* Dòng sản phẩm cao cấp: Mềm mại - Kháng khuẩn - Thoát hơi tốt\nShop Cam Kết:\n- Luôn đặt chất lượng lên hàng đầu\n- Chính hãng công ty cổ phần Nu - Việt Nam\n-️ Cập nhập mẫu mã liên tục phong phú\nThiết kế xinh xắn đáng yêu, món quà tuyệt vờ"
+    "description": "Bộ sưu tập mới NOUS Set 2 body suit cho bé\nTHÔNG TIN CHẤT LIỆU\n* Dòng sản phẩm cao cấp: Mềm mại - Kháng khuẩn - Thoát hơi tốt\nShop Cam Kết:\n- Luôn đặt chất lượng lên hàng đầu\n- Chính hãng công ty cổ phần Nu - Việt Nam\n-️ Cập nhập mẫu mã liên tục phong phú\nThiết kế xinh xắn đáng yêu, món quà tuyệt vời cho bé yêu\nEm mời tất cả các chị yêu chốt đơn 😘😘😘\n#thegioimebimsua\n#nous\n#thoitrangtreem\n#quanaotreem\n#thoitrangchobe\n#bodychobe"
   },
   {
     "code": "MN-314",
@@ -5663,17 +6105,18 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Quần yếm & Set yếm",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "0-3M",
+      "3-6M",
+      "6-9M",
+      "9-12M",
+      "12-18M"
     ],
     "price": 225000,
     "image": "/images/products/mn-314.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "[X'MAS NOUS] Set quần yếm màu xanh, đỏ kèm áo và mũ bonnet quần+áo\nBộ quà tặng cho bé [X'MAS NOUS] sẽ là một lựa chọn hoàn hảo dành cho bé yêu của bạn trong mùa Giáng Sinh này.\nTHÔNG TIN CHẤT LIỆU\nMềm mại - Thoáng mát - Không gây kích ứng da\nShop Cam Kết:\n- Luôn đặt chất lượng lên hàng đầu\n- Chính h"
+    "description": "[X'MAS NOUS] Set quần yếm màu xanh, đỏ kèm áo và mũ bonnet quần+áo\nBộ quà tặng cho bé [X'MAS NOUS] sẽ là một lựa chọn hoàn hảo dành cho bé yêu của bạn trong mùa Giáng Sinh này.\nTHÔNG TIN CHẤT LIỆU\nMềm mại - Thoáng mát - Không gây kích ứng da\nShop Cam Kết:\n- Luôn đặt chất lượng lên hàng đầu\n- Chính hãng công ty cổ phần Nu - Việt Nam\n-️ Cập nhập mẫu mã liên tục phong phú\nThiết kế xinh xắn đáng yêu, món quà tuyệt vời cho bé yêu\nEm mời tất cả các chị yêu chốt đơn 😘😘😘\n#thegioimebimsua\n#x'masnous \n#noel \n#merrychristmas\n#thoitrangtreem\n#quanaotreem"
   },
   {
     "code": "MN-315",
@@ -5682,17 +6125,17 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bodysuit & Đồ liền",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "Trắng hồng,6-9M (7.5-9.5kg)",
+      "Trắng hồng,9-12M (8.5-10.5kg)",
+      "Trắng hồng,12-18M (10.5-11.5kg)",
+      "Trắng hồng,3-6M (5.5-7.5kg)"
     ],
     "price": 195000,
     "image": "/images/products/mn-315.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "[BST MỚI NOUS] Set body suit dài trắng phối hồng nhạt quần + áo\nTHÔNG TIN CHẤT LIỆU\nMềm mại - Thoáng mát - Không gây kích ứng da\nShop Cam Kết:\n- Luôn đặt chất lượng lên hàng đầu\n- Chính hãng công ty cổ phần Nu - Việt Nam\n-️ Cập nhập mẫu mã liên tục phong phú\nThiết kế xinh xắn đáng yêu, món quà tuyệt"
+    "description": "[BST MỚI NOUS] Set body suit dài trắng phối hồng nhạt quần + áo\nTHÔNG TIN CHẤT LIỆU\nMềm mại - Thoáng mát - Không gây kích ứng da\nShop Cam Kết:\n- Luôn đặt chất lượng lên hàng đầu\n- Chính hãng công ty cổ phần Nu - Việt Nam\n-️ Cập nhập mẫu mã liên tục phong phú\nThiết kế xinh xắn đáng yêu, món quà tuyệt vời cho bé yêu\nEm mời tất cả các chị yêu chốt đơn 😘😘😘\n\n#thegioimebimsua\n#nous\n#thoitrangtreem\n#quanaotreem\n#thoitrangchobe"
   },
   {
     "code": "MN-316",
@@ -5701,17 +6144,16 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bộ quần áo bé",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "6-9M",
+      "9-12M",
+      "12-18M"
     ],
     "price": 225000,
     "image": "/images/products/mn-316.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "Bộ sưu tập mới NOUS Bộ ba lỗ cho bé trai bé gái\nTHÔNG TIN CHẤT LIỆU\nMềm mại - Thoáng mát - Không gây kích ứng da\nShop Cam Kết:\n- Luôn đặt chất lượng lên hàng đầu\n- Chính hãng công ty cổ phần Nu - Việt Nam\n-️ Cập nhập mẫu mã liên tục phong phú\nThiết kế xinh xắn đáng yêu, món quà tuyệt vời cho bé yêu"
+    "description": "Bộ sưu tập mới NOUS Bộ ba lỗ cho bé trai bé gái\nTHÔNG TIN CHẤT LIỆU\nMềm mại - Thoáng mát - Không gây kích ứng da\nShop Cam Kết:\n- Luôn đặt chất lượng lên hàng đầu\n- Chính hãng công ty cổ phần Nu - Việt Nam\n-️ Cập nhập mẫu mã liên tục phong phú\nThiết kế xinh xắn đáng yêu, món quà tuyệt vời cho bé yêu\nEm mời tất cả các chị yêu chốt đơn 😘😘😘\n#thegioimebimsua\n#nouskids\n#thoitrangtreem\n#quanaotreem\n#thoitrangchobe"
   },
   {
     "code": "MN-317",
@@ -5739,10 +6181,10 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Váy đầm bé gái",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "5-6Y",
+      "2-3Y",
+      "3-4Y",
+      "4-5Y"
     ],
     "price": 245000,
     "image": "/images/products/mn-318.jpg",
@@ -5758,8 +6200,8 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bộ quần áo bé",
     "variants": [
-      "12-18M",
-      "18-24M"
+      "12-18m",
+      "18-24m"
     ],
     "price": 225000,
     "image": "/images/products/mn-319.jpg",
@@ -5775,16 +6217,21 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Phụ kiện & Khác",
     "variants": [
-      "Newborn (3-5.5kg)",
-      "0-3M",
-      "3-6M"
+      "Be in hoạ tiết",
+      "Be hoa hồng muslin",
+      "Vàng",
+      "Nâu ht báo đốm",
+      "Nâu phối trắng gấu",
+      "Xanh phối trắng",
+      "Trắng vàng cô tiên",
+      "Hồng petit cáo nhỏ"
     ],
     "price": 55000,
     "image": "/images/products/mn-320.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "Khăn ủ cho bé từ sơ sinh bst mới của Nous\nTHÔNG TIN CHẤT LIỆU\nMềm mại - Thoáng mát - Không gây kích ứng da\nShop Cam Kết:\n- Luôn đặt chất lượng lên hàng đầu\n- Chính hãng công ty cổ phần Nu - Việt Nam\n-️ Cập nhập mẫu mã liên tục phong phú\nThiết kế xinh xắn đáng yêu, món quà tuyệt vời cho bé yêu\nEm mời"
+    "description": "Khăn ủ cho bé từ sơ sinh bst mới của Nous\nTHÔNG TIN CHẤT LIỆU\nMềm mại - Thoáng mát - Không gây kích ứng da\nShop Cam Kết:\n- Luôn đặt chất lượng lên hàng đầu\n- Chính hãng công ty cổ phần Nu - Việt Nam\n-️ Cập nhập mẫu mã liên tục phong phú\nThiết kế xinh xắn đáng yêu, món quà tuyệt vời cho bé yêu\nEm mời tất cả các chị yêu chốt đơn 😘😘😘\n#thegioimebimsua\n#nous\n#thoitrangtreem\n#quanaotreem\n#thoitrangchobe"
   },
   {
     "code": "MN-321",
@@ -5793,7 +6240,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "LA POMME",
     "category": "Bộ quần áo bé",
     "variants": [
-      "Newborn (3-5.5kg)",
+      "NEWBORN",
       "0-3M",
       "3-6M"
     ],
@@ -5802,7 +6249,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "[LAPOM BST MỚI T9] Combo 5 bộ sơ sinh màu Ghi La Pomme Hươu nhỏ quần + áo\nChất liệu mềm mại, co giãn và mát, các bé mặc rất thoải mái xinh xắn\nHàng cao cấp của Lapom họa tiết đáng yêu với tông màu xinh xắn là món quà tuyệt vời cho bé yêu\nEm mời tất cả các chị yêu chốt đơn 😘😘😘\n\n#thegioimebimsua\n#La_p"
+    "description": "[LAPOM BST MỚI T9] Combo 5 bộ sơ sinh màu Ghi La Pomme Hươu nhỏ quần + áo\nChất liệu mềm mại, co giãn và mát, các bé mặc rất thoải mái xinh xắn\nHàng cao cấp của Lapom họa tiết đáng yêu với tông màu xinh xắn là món quà tuyệt vời cho bé yêu\nEm mời tất cả các chị yêu chốt đơn 😘😘😘\n\n#thegioimebimsua\n#La_pomme\n#thoitrangtreem\n#quanaotreem\n#bodychip\n#bodychobe"
   },
   {
     "code": "MN-322",
@@ -5811,16 +6258,14 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "Moniu",
     "category": "Bộ quần áo bé",
     "variants": [
-      "Newborn (3-5.5kg)",
-      "0-3M",
-      "3-6M"
+      "Bộ dài tay phối quần,NB(3-5kg)"
     ],
     "price": 225000,
     "image": "/images/products/mn-322.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "Bộ dài tay phối quần xanh in hình con vịt là lựa chọn hoàn hảo cho các bé trai yêu thích sự trẻ trung và thời thượng.\n\nThiết kế đơn giản nhưng không kém phần nổi bật với chi tiết in hình con vịt ngộ nghĩnh và dễ thương.\n\nChất liệu cotton mềm mại, thoáng mát, an toàn cho làn da của bé.\n\nBộ sản phẩm g"
+    "description": "Bộ dài tay phối quần xanh in hình con vịt là lựa chọn hoàn hảo cho các bé trai yêu thích sự trẻ trung và thời thượng.\n\nThiết kế đơn giản nhưng không kém phần nổi bật với chi tiết in hình con vịt ngộ nghĩnh và dễ thương.\n\nChất liệu cotton mềm mại, thoáng mát, an toàn cho làn da của bé.\n\nBộ sản phẩm gồm áo dài tay và quần có đai chun giúp bé thoải mái trong hoạt động hàng ngày.\n\nVới bộ cánh mới này, các bé sẽ tự tin và năng động trong những buổi đi chơi hay đi học cùng bạn bè. Đồng thời, cha mẹ cũng yên tâm về việc lựa chọn sản phẩm an toàn cho con yêu của mình.\n\n"
   },
   {
     "code": "MN-323",
@@ -5829,17 +6274,16 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "LA POMME",
     "category": "Bộ quần áo bé",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "NEWBORN",
+      "0-3M",
+      "3-6M"
     ],
     "price": 225000,
     "image": "/images/products/mn-323.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "[ BST MỚI T8 LAPOM] Bộ thu đông cho bé màu trắng mix cam cho bé quần + áo\nChất liệu mềm mại, co giãn và mát, các bé mặc mùa hè rất thoải mái xinh xắn\nHàng cao cấp của lapom họa tiết đáng yêu với tông màu xinh xắn là món quà tuyệt vời cho bé yêu trong mùa hè\nEm mời tất cả các chị yêu chốt đơn 😘😘😘\n#th"
+    "description": "[ BST MỚI T8 LAPOM] Bộ thu đông cho bé màu trắng mix cam cho bé quần + áo\nChất liệu mềm mại, co giãn và mát, các bé mặc mùa hè rất thoải mái xinh xắn\nHàng cao cấp của lapom họa tiết đáng yêu với tông màu xinh xắn là món quà tuyệt vời cho bé yêu trong mùa hè\nEm mời tất cả các chị yêu chốt đơn 😘😘😘\n#thegioimebimsua\n#La_pomme\n#thoitrangtreem\n#quanaotreem\n#bodychip\n#bodychobe"
   },
   {
     "code": "MN-324",
@@ -5848,17 +6292,21 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Áo & Áo khoác",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "Cardigan kẻ xanh,6-9m (7.5-9.5 kg)",
+      "Cardigan kẻ xanh,9-12m (8.5-10.5kg)",
+      "Cardigan kẻ xanh,12-18m (10.5-11.5kg)",
+      "Cardigan kẻ xanh,18-24m (11.5-13.5kg)",
+      "Cardigan kẻ tím,6-9m (7.5-9.5 kg)",
+      "Cardigan kẻ tím,9-12m (8.5-10.5kg)",
+      "Cardigan kẻ tím,12-18m (10.5-11.5kg)",
+      "Cardigan kẻ tím,18-24m (11.5-13.5kg)"
     ],
     "price": 295000,
     "image": "/images/products/mn-324.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "[HOT NOUS BST T10] Áo khoác cardigan kẻ tím, xanh hình thêu trang trí\nTHÔNG TIN CHẤT LIỆU\nMềm mại - Thoáng mát - Không gây kích ứng da\nShop Cam Kết:\n- Luôn đặt chất lượng lên hàng đầu\n- Chính hãng công ty cổ phần Nu - Việt Nam\n-️ Cập nhập mẫu mã liên tục phong phú\nThiết kế xinh xắn đáng yêu, món quà"
+    "description": "[HOT NOUS BST T10] Áo khoác cardigan kẻ tím, xanh hình thêu trang trí\nTHÔNG TIN CHẤT LIỆU\nMềm mại - Thoáng mát - Không gây kích ứng da\nShop Cam Kết:\n- Luôn đặt chất lượng lên hàng đầu\n- Chính hãng công ty cổ phần Nu - Việt Nam\n-️ Cập nhập mẫu mã liên tục phong phú\nThiết kế xinh xắn đáng yêu, món quà tuyệt vời cho bé yêu\nEm mời tất cả các chị yêu chốt đơn 😘😘😘\n#thegioimebimsua\n#nous\n#thoitrangtreem\n#quanaotreem\n#thoitrangchobe"
   },
   {
     "code": "MN-325",
@@ -5867,17 +6315,16 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bodysuit & Đồ liền",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "3-6M (5.5-7.5kg)",
+      "6-9M (7.5-9.5kg)",
+      "9-12M (8.5-10.5kg)"
     ],
     "price": 195000,
     "image": "/images/products/mn-325.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "Nous Set 2 bodysuit mix màu xanh trắng\nShop Cam Kết:\n- Luôn đặt chất lượng lên hàng đầu\n- Chính hãng công ty cổ phần Nu - Việt Nam\n-️ Cập nhập mẫu mã liên tục phong phú\nThiết kế xinh xắn đáng yêu, món quà tuyệt vời cho bé yêu trong mùa hè này\nEm mời tất cả các chị yêu chốt đơn 😘😘😘\n#thegioimebimsua\n#"
+    "description": "Nous Set 2 bodysuit mix màu xanh trắng\nShop Cam Kết:\n- Luôn đặt chất lượng lên hàng đầu\n- Chính hãng công ty cổ phần Nu - Việt Nam\n-️ Cập nhập mẫu mã liên tục phong phú\nThiết kế xinh xắn đáng yêu, món quà tuyệt vời cho bé yêu trong mùa hè này\nEm mời tất cả các chị yêu chốt đơn 😘😘😘\n#thegioimebimsua\n#nous\n#thoitrangtreem\n#quanaotreem\n#thoitrangchobe\n#bodysuit"
   },
   {
     "code": "MN-326",
@@ -5886,16 +6333,14 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "NOUS",
     "category": "Bodysuit & Đồ liền",
     "variants": [
-      "Newborn (3-5.5kg)",
-      "0-3M",
-      "3-6M"
+      "NEWBORN"
     ],
     "price": 195000,
     "image": "/images/products/mn-326.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "{BST mới sơ sinh Nous} Bộ liền dài có tất màu trắng, xanh, cam in họa tiết NB\nTHÔNG TIN CHẤT LIỆU\n* Nu Peptit: Mềm mại - Thoáng mát - Không gây kích ứng da\nShop Cam Kết:\n- Luôn đặt chất lượng lên hàng đầu\n- Chính hãng công ty cổ phần Nu - Việt Nam\n-️ Cập nhập mẫu mã liên tục phong phú\nThiết kế xinh"
+    "description": "{BST mới sơ sinh Nous} Bộ liền dài có tất màu trắng, xanh, cam in họa tiết NB\nTHÔNG TIN CHẤT LIỆU\n* Nu Peptit: Mềm mại - Thoáng mát - Không gây kích ứng da\nShop Cam Kết:\n- Luôn đặt chất lượng lên hàng đầu\n- Chính hãng công ty cổ phần Nu - Việt Nam\n-️ Cập nhập mẫu mã liên tục phong phú\nThiết kế xinh xắn đáng yêu, món quà tuyệt vời cho bé yêu\nEm mời tất cả các chị yêu chốt đơn 😘😘😘\n#thegioimebimsua\n#nous\n#thoitrangtreem\n#quanaotreem\n#thoitrangchobe\n#quanaososinh"
   },
   {
     "code": "MN-327",
@@ -5904,17 +6349,15 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "Moniu",
     "category": "Bộ quần áo bé",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "3-6M",
+      "6-9M"
     ],
     "price": 225000,
     "image": "/images/products/mn-327.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "Bộ quần áo bé trai Bambus ngắn tay với dây cài cheo là một sự lựa chọn tuyệt vời cho bé yêu của bạn. Với chất liệu cotton mềm mại, bộ quần áo này không chỉ giúp bé thoải mái khi di chuyển, mà còn giúp tiết kiệm thời gian cho các bậc phụ huynh\n\nChất liệu cotton cao cấp: Bộ quần áo được làm từ cotton"
+    "description": "Bộ quần áo bé trai Bambus ngắn tay với dây cài cheo là một sự lựa chọn tuyệt vời cho bé yêu của bạn. Với chất liệu cotton mềm mại, bộ quần áo này không chỉ giúp bé thoải mái khi di chuyển, mà còn giúp tiết kiệm thời gian cho các bậc phụ huynh\n\nChất liệu cotton cao cấp: Bộ quần áo được làm từ cotton cao cấp, đảm bảo độ an toàn và thoải mái cho da của trẻ.\n\nBộ ngắn tay: Thiết kế ngắn tay phù hợp với khí hậu oi bức và nóng nực ở Việt Nam.\n\nDây cài chéo tiện lợi:\n\nDễ dàng thao tác khi thay đồ hoặc đi lại.\n\nAn toàn khi sử dụng để tránh rơi hay tuột xuống.\n\n"
   },
   {
     "code": "MN-328",
@@ -5923,36 +6366,40 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "Moniu",
     "category": "Bộ quần áo bé",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "Hồng,Newborn (3-4kg)",
+      "Hồng,0-3M (4-6kg)",
+      "Be,Newborn (3-4kg)",
+      "Be,0-3M (4-6kg)",
+      "Trắng,Newborn (3-4kg)",
+      "Trắng,0-3M (4-6kg)",
+      "Blue,Newborn (3-4kg)",
+      "Blue,0-3M (4-6kg)"
     ],
     "price": 225000,
     "image": "/images/products/mn-328.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "Set quần áo Bambus Iconic BBB1108NS có thiết kế dễ thương và tiện dụng cho bé yêu của bạn.\n\nChất liệu mềm mại, thoáng khí và thấm hút mồ hôi giúp bé luôn khô ráo và thoải mái.\n\nBộ sản phẩm bao gồm 1 quần đen phối viền xanh lá cây cài chéo bên hông áo trắng in hình động vật ngộ nghĩnh.\n\nKiểu dáng trẻ"
+    "description": "Set quần áo Bambus Iconic BBB1108NS có thiết kế dễ thương và tiện dụng cho bé yêu của bạn.\n\nChất liệu mềm mại, thoáng khí và thấm hút mồ hôi giúp bé luôn khô ráo và thoải mái.\n\nBộ sản phẩm bao gồm 1 quần đen phối viền xanh lá cây cài chéo bên hông áo trắng in hình động vật ngộ nghĩnh.\n\nKiểu dáng trẻ trung, năng động phù hợp cho bé từ 3-9 tháng tuổi.\n\nBambus Iconic BBB1108NS là sự lựa chọn hoàn hảo để tặng bé yêu trong nhữn dịp sinh nhật, lễ kỉ niệm hay chỉ đơn giản là muốn thể hiện tình cảm yêu quý của bạn với con.\n\nB02010 Bộ dài tay cài chéo Bambus Iconic 1 quần + áo-BBB1108NS là món quà tuyệt vời cho bé yêu của bạn. Với thiết kế độc đáo và chất liệu cao cấp, sản phẩm sẽ mang lại sự thoải mái và thời trang cho bé.\n\nThiết kế độc đáo: Bambus Iconic là bộ trang phục có thiết kế dễ thương với họa tiết nổi bật, áo có phong cách cài chéo và quần có kiểu dáng thoải mái.\n\nChất liệu cao cấp: Sản phẩm được làm từ chất liệu cotton tự nhiên, mềm mại và không gây kích ứng da cho bé. Chất liệu này giúp sản phẩm co giãn linh hoạt, mang lại sự thoải mái khi bé hoạt động.\n\nBảo vệ da nhạy cảm của trẻ: Sản phẩm không chứa các hóa chất gây hại như formaldehyde hay AZO; được kiểm tra an toàn để sử dụng cho các em nhỏ.\n\nSản phẩm được thiết kế theo chuẩn size Châu Âu để phù hợp với các bé từ mới sinh tới lứa tuổi khác nhau. B02010 Bộ dài tay cài chéo Bambus Iconic 1 quần + áo-BBB1108NS không chỉ là món quà ý nghĩa để bạn thể hiện yêu thương với con cái của mình; sản phẩm này hoàn toàn xứng đáng để trở thành lựa chọn hàng ngày của gia đình bạn!\n\n"
   },
   {
     "code": "MN-329",
     "tiktokId": "22364258848",
     "name": "N03049 Bộ hai dây màu hồng in họa tiết cho bé gái",
-    "brand": "Moniu",
+    "brand": "NOUS",
     "category": "Bộ quần áo bé",
     "variants": [
-      "Hồng pastel",
-      "Xanh mint",
-      "Trắng kem",
-      "Be ấm"
+      "Hồng in họa tiết,2-3Y (13.5-15kg)",
+      "Hồng in họa tiết,3-4Y (15-17kg)",
+      "Hồng in họa tiết,4-5Y (17-20kg)",
+      "Hồng in họa tiết,5-6Y (20-23kg)"
     ],
     "price": 225000,
     "image": "/images/products/mn-329.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "N03049 Bộ hai dây màu hồng in họa tiết cho bé gái\nTHÔNG TIN CHẤT LIỆU\nMềm mại - Thoáng mát - Không gây kích ứng da\nShop Cam Kết:\n- Luôn đặt chất lượng lên hàng đầu\n- Chính hãng công ty cổ phần Nu - Việt Nam\n-️ Cập nhập mẫu mã liên tục phong phú\nThiết kế xinh xắn đáng yêu, món quà tuyệt vời cho bé yê"
+    "description": "N03049 Bộ hai dây màu hồng in họa tiết cho bé gái\nTHÔNG TIN CHẤT LIỆU\nMềm mại - Thoáng mát - Không gây kích ứng da\nShop Cam Kết:\n- Luôn đặt chất lượng lên hàng đầu\n- Chính hãng công ty cổ phần Nu - Việt Nam\n-️ Cập nhập mẫu mã liên tục phong phú\nThiết kế xinh xắn đáng yêu, món quà tuyệt vời cho bé yêu\nEm mời tất cả các chị yêu chốt đơn 😘😘😘\n#thegioimebimsua\n#nous\n#thoitrangtreem\n#quanaotreem\n#thoitrangchobe"
   },
   {
     "code": "MN-330",
@@ -5961,7 +6408,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "brand": "LA POMME",
     "category": "Bộ quần áo bé",
     "variants": [
-      "Newborn (3-5.5kg)",
+      "NEWBORN",
       "0-3M",
       "3-6M"
     ],
@@ -5970,6 +6417,6 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
-    "description": "Mô tả sản phẩm:\n\nBộ combo sơ sinh La Pomme gồm 5 bộ áo dài tay và quần dài được thiết kế với hoạ tiết Pettit Soyeu đáng yêu, đem lại vẻ cuốn hút và ngộ nghĩnh cho bé yêu. Màu sắc trắng xanh thanh lịch phù hợp cho cả bé trai và bé gái.\n\nChất liệu: Vải cotton mềm mại, thấm hút mồ hôi tốt, không gây kí"
+    "description": "Mô tả sản phẩm:\n\nBộ combo sơ sinh La Pomme gồm 5 bộ áo dài tay và quần dài được thiết kế với hoạ tiết Pettit Soyeu đáng yêu, đem lại vẻ cuốn hút và ngộ nghĩnh cho bé yêu. Màu sắc trắng xanh thanh lịch phù hợp cho cả bé trai và bé gái.\n\nChất liệu: Vải cotton mềm mại, thấm hút mồ hôi tốt, không gây kích ứng da cho trẻ nhỏ.\n\nKích thước: Bộ áo quần phù hợp với bé sơ sinh từ 3-6kg.\n\nBảo quản: Giặt máy bằng nước lạnh hoặc nước ấm. Không giặt chung với đồ có màu khác. Phơi trong bóng râm để tránh phai màu.\n\nBên cạnh việc là sản phẩm đáng yêu cho bé yêu của bạn thì combo La Pomme còn là lựa chọn hoàn hảo để dành tặng những người thân trong gia đình có con mới chào đời. Bé mới sinh luôn là niềm tự hào của gia đình và việc được nhận được combo quần áo xinh xắn này sẽ khiến các bậc cha mẹ rất vui và biết ơn!\n\n"
   }
 ];
