@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import {
   ShoppingBag,
   CheckCircle,
@@ -13,6 +13,8 @@ import {
   ChevronRight,
   Sparkles,
   Heart,
+  PackageOpen,
+  Plus,
 } from 'lucide-react';
 import {
   AreaChart,
@@ -26,7 +28,7 @@ import {
   Cell,
 } from 'recharts';
 import { useShop } from '../context/ShopContext';
-import { INITIAL_CARRIERS, REVENUE_7_DAYS } from '../data/initialData';
+import { INITIAL_CARRIERS } from '../data/initialData';
 import { formatCurrency, getStatusStyle } from '../utils/formatters';
 
 export const OverviewPage: React.FC = () => {
@@ -34,20 +36,83 @@ export const OverviewPage: React.FC = () => {
   const [dateRange, setDateRange] = useState('Hôm nay (16/10/2025)');
   const [showDateDropdown, setShowDateDropdown] = useState(false);
 
-  // Status pie chart with official Moniu pastel palette
-  const statusPieData = [
-    { name: 'Đã giao', value: 89, percent: 70, color: '#48C9B0' },      // Mint Green
-    { name: 'Đang vận chuyển', value: 18, percent: 14, color: '#58B4FA' }, // Sky Blue
-    { name: 'Chờ xử lý', value: 9, percent: 7, color: '#FFC83B' },       // Honey Yellow
-    { name: 'Đã hủy', value: 6, percent: 5, color: '#FF5B65' },          // Coral Pink
-  ];
+  // 100% REAL dynamic metrics from actual orders
+  const totalOrders = orders.length;
+  const deliveredCount = orders.filter((o) => o.status === 'Đã giao').length;
+  const processingCount = orders.filter(
+    (o) => o.status === 'Đang xử lý' || o.status === 'Chờ xử lý'
+  ).length;
+  const cancelledCount = orders.filter((o) => o.status === 'Đã hủy').length;
+  const totalRevenue = orders
+    .filter((o) => o.status !== 'Đã hủy')
+    .reduce((sum, o) => sum + o.totalAmount, 0);
 
-  // 5 top metrics matching the reference with Moniu brand color tokens
+  // Real 7-day revenue trend based on actual orders
+  const dynamic7DaysRevenue = useMemo(() => {
+    const days = [];
+    const now = new Date();
+    for (let i = 6; i >= 0; i--) {
+      const d = new Date(now);
+      d.setDate(d.getDate() - i);
+      const dayStr = `${String(d.getDate()).padStart(2, '0')}/${String(d.getMonth() + 1).padStart(2, '0')}`;
+      const datePrefix = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+
+      const matchedOrders = orders.filter(
+        (o) => o.createdAt.startsWith(datePrefix) && o.status !== 'Đã hủy'
+      );
+      const rev = matchedOrders.reduce((sum, o) => sum + o.totalAmount, 0);
+      days.push({
+        date: dayStr,
+        revenue: rev,
+        orders: matchedOrders.length,
+      });
+    }
+    return days;
+  }, [orders]);
+
+  // Real status pie chart data
+  const statusPieData = useMemo(() => {
+    if (totalOrders === 0) {
+      return [{ name: 'Chưa có đơn', value: 1, percent: 100, color: '#FDE2E4' }];
+    }
+    const shipping = orders.filter((o) => o.status === 'Đang giao').length;
+
+    const list = [
+      { name: 'Đã giao', value: deliveredCount, percent: Math.round((deliveredCount / totalOrders) * 100), color: '#48C9B0' },
+      { name: 'Đang vận chuyển', value: shipping, percent: Math.round((shipping / totalOrders) * 100), color: '#58B4FA' },
+      { name: 'Chờ xử lý', value: processingCount, percent: Math.round((processingCount / totalOrders) * 100), color: '#FFC83B' },
+      { name: 'Đã hủy', value: cancelledCount, percent: Math.round((cancelledCount / totalOrders) * 100), color: '#FF5B65' },
+    ].filter((item) => item.value > 0);
+
+    return list.length > 0 ? list : [{ name: 'Chưa có đơn', value: 1, percent: 100, color: '#FDE2E4' }];
+  }, [totalOrders, deliveredCount, processingCount, cancelledCount, orders]);
+
+  // Real carrier statistics
+  const carriersWithLiveStats = useMemo(() => {
+    return INITIAL_CARRIERS.map((c) => {
+      const carrierOrders = orders.filter((o) => o.carrier === c.id);
+      const delivering = carrierOrders.filter(
+        (o) => o.shippingStatus === 'Đang giao' || o.shippingStatus === 'Đang trung chuyển'
+      ).length;
+      const success = carrierOrders.filter((o) => o.shippingStatus === 'Đã giao').length;
+      const failed = carrierOrders.filter(
+        (o) => o.shippingStatus === 'Giao thất bại' || o.shippingStatus === 'Chuyển hoàn'
+      ).length;
+      return {
+        ...c,
+        delivering,
+        success,
+        failed,
+      };
+    });
+  }, [orders]);
+
+  // 5 top metrics
   const statCards = [
     {
       title: 'Tổng đơn hàng',
-      value: '128',
-      change: '+12%',
+      value: totalOrders.toString(),
+      change: totalOrders > 0 ? '+100%' : '0%',
       isIncrease: true,
       compareText: 'so với hôm qua',
       icon: ShoppingBag,
@@ -57,8 +122,8 @@ export const OverviewPage: React.FC = () => {
     },
     {
       title: 'Đơn thành công',
-      value: '113',
-      change: '+15%',
+      value: deliveredCount.toString(),
+      change: deliveredCount > 0 ? '+100%' : '0%',
       isIncrease: true,
       compareText: 'so với hôm qua',
       icon: CheckCircle,
@@ -68,8 +133,8 @@ export const OverviewPage: React.FC = () => {
     },
     {
       title: 'Đang xử lý',
-      value: '9',
-      change: '+50%',
+      value: processingCount.toString(),
+      change: processingCount > 0 ? '+100%' : '0%',
       isIncrease: true,
       compareText: 'so với hôm qua',
       icon: Clock,
@@ -79,8 +144,8 @@ export const OverviewPage: React.FC = () => {
     },
     {
       title: 'Đã hủy',
-      value: '6',
-      change: '-25%',
+      value: cancelledCount.toString(),
+      change: '0%',
       isIncrease: false,
       compareText: 'so với hôm qua',
       icon: XCircle,
@@ -90,8 +155,8 @@ export const OverviewPage: React.FC = () => {
     },
     {
       title: 'Doanh thu (ước tính)',
-      value: '25.680.000đ',
-      change: '+18%',
+      value: formatCurrency(totalRevenue),
+      change: totalRevenue > 0 ? '+100%' : '0%',
       isIncrease: true,
       compareText: 'so với hôm qua',
       icon: Wallet,
@@ -234,7 +299,7 @@ export const OverviewPage: React.FC = () => {
 
       {/* Middle Row: Revenue 7 days | Status Donut | Today's Orders */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-5">
-        {/* Widget 1: Revenue 7 days chart (5 cols on lg) */}
+        {/* Widget 1: Revenue 7 days chart */}
         <div className="lg:col-span-5 bg-white rounded-3xl p-5 border border-[#FDE2E4] shadow-2xs">
           <div className="flex items-center justify-between mb-4">
             <div>
@@ -244,15 +309,14 @@ export const OverviewPage: React.FC = () => {
               <p className="text-xs text-[#8C7065] mt-0.5">Xu hướng chốt đơn đồ bé theo tuần</p>
             </div>
             <div className="flex items-center gap-1 text-xs font-bold text-[#FF5B65] bg-[#FFF0F1] px-3 py-1.5 rounded-xl border border-[#FCD2D6]">
-              <span>Doanh thu</span>
-              <ChevronDown className="w-3 h-3 text-[#FF5B65]" />
+              <span>Doanh thu thực tế</span>
             </div>
           </div>
 
           <div className="h-56 w-full">
             <ResponsiveContainer width="100%" height="100%">
               <AreaChart
-                data={REVENUE_7_DAYS}
+                data={dynamic7DaysRevenue}
                 margin={{ top: 10, right: 10, left: -15, bottom: 0 }}
               >
                 <defs>
@@ -271,9 +335,7 @@ export const OverviewPage: React.FC = () => {
                   tickLine={false}
                   axisLine={false}
                   tick={{ fill: '#8C7065', fontSize: 11 }}
-                  tickFormatter={(val) => `${val / 1000000}tr`}
-                  domain={[0, 40000000]}
-                  ticks={[0, 10000000, 20000000, 30000000, 40000000]}
+                  tickFormatter={(val) => `${val >= 1000000 ? val / 1000000 + 'tr' : val}`}
                 />
                 <Tooltip
                   formatter={(val: any) => [formatCurrency(Number(val) || 0), 'Doanh thu']}
@@ -301,13 +363,13 @@ export const OverviewPage: React.FC = () => {
           </div>
         </div>
 
-        {/* Widget 2: Donut Status chart (3 cols on lg) */}
+        {/* Widget 2: Donut Status chart */}
         <div className="lg:col-span-3 bg-white rounded-3xl p-5 border border-[#FDE2E4] shadow-2xs flex flex-col justify-between">
           <div className="mb-2">
             <h2 className="text-sm font-extrabold text-[#3D271D] font-['Nunito',sans-serif]">
               Trạng thái đơn hàng
             </h2>
-            <p className="text-xs text-[#8C7065] mt-0.5">Tỷ lệ xử lý đơn trong ngày</p>
+            <p className="text-xs text-[#8C7065] mt-0.5">Tỷ lệ xử lý đơn trong hệ thống</p>
           </div>
 
           <div className="flex items-center justify-center relative my-1">
@@ -320,7 +382,7 @@ export const OverviewPage: React.FC = () => {
                     cy="50%"
                     innerRadius={46}
                     outerRadius={64}
-                    paddingAngle={3}
+                    paddingAngle={totalOrders > 0 ? 3 : 0}
                     dataKey="value"
                     stroke="none"
                   >
@@ -333,31 +395,39 @@ export const OverviewPage: React.FC = () => {
             </div>
             {/* Center Text */}
             <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
-              <span className="text-xl font-black text-[#3D271D] font-['Nunito',sans-serif]">128</span>
-              <span className="text-[10px] text-[#8C7065] font-bold -mt-0.5">đơn bé yêu</span>
+              <span className="text-xl font-black text-[#3D271D] font-['Nunito',sans-serif]">
+                {totalOrders}
+              </span>
+              <span className="text-[10px] text-[#8C7065] font-bold -mt-0.5">đơn hàng</span>
             </div>
           </div>
 
           {/* Legend */}
           <div className="space-y-2 mt-2 pt-2 border-t border-[#FFF0F1] text-xs">
-            {statusPieData.map((item, idx) => (
-              <div key={idx} className="flex items-center justify-between">
-                <div className="flex items-center gap-2">
-                  <span
-                    className="w-2.5 h-2.5 rounded-full shrink-0 shadow-2xs"
-                    style={{ backgroundColor: item.color }}
-                  />
-                  <span className="text-[#3D271D] font-medium">{item.name}</span>
+            {totalOrders === 0 ? (
+              <p className="text-center text-[11px] text-[#8C7065] py-1 font-medium">
+                Chưa có đơn hàng nào
+              </p>
+            ) : (
+              statusPieData.map((item, idx) => (
+                <div key={idx} className="flex items-center justify-between">
+                  <div className="flex items-center gap-2">
+                    <span
+                      className="w-2.5 h-2.5 rounded-full shrink-0 shadow-2xs"
+                      style={{ backgroundColor: item.color }}
+                    />
+                    <span className="text-[#3D271D] font-medium">{item.name}</span>
+                  </div>
+                  <span className="font-bold text-[#3D271D]">
+                    {item.value} <span className="text-[#8C7065] font-normal">({item.percent}%)</span>
+                  </span>
                 </div>
-                <span className="font-bold text-[#3D271D]">
-                  {item.value} <span className="text-[#8C7065] font-normal">({item.percent}%)</span>
-                </span>
-              </div>
-            ))}
+              ))
+            )}
           </div>
         </div>
 
-        {/* Widget 3: Today's Orders (4 cols on lg) */}
+        {/* Widget 3: Today's Orders */}
         <div className="lg:col-span-4 bg-white rounded-3xl p-5 border border-[#FDE2E4] shadow-2xs flex flex-col justify-between">
           <div className="flex items-center justify-between mb-3">
             <div>
@@ -366,42 +436,61 @@ export const OverviewPage: React.FC = () => {
               </h2>
               <p className="text-xs text-[#8C7065] mt-0.5">Chốt đơn gần nhất lúc live</p>
             </div>
-            <button
-              onClick={() => setActiveTab('orders')}
-              className="text-xs text-[#FF5B65] hover:text-[#E84A54] font-bold flex items-center gap-0.5 cursor-pointer"
-            >
-              Xem tất cả
-              <ChevronRight className="w-3.5 h-3.5" />
-            </button>
+            {todayOrders.length > 0 && (
+              <button
+                onClick={() => setActiveTab('orders')}
+                className="text-xs text-[#FF5B65] hover:text-[#E84A54] font-bold flex items-center gap-0.5 cursor-pointer"
+              >
+                Xem tất cả
+                <ChevronRight className="w-3.5 h-3.5" />
+              </button>
+            )}
           </div>
 
           <div className="divide-y divide-[#FFF0F1] flex-1">
-            {todayOrders.map((ord) => {
-              const statusStyle = getStatusStyle(ord.status);
-              const firstItem = ord.items[0];
-              return (
-                <div
-                  key={ord.id}
-                  onClick={() => setSelectedOrderForModal(ord)}
-                  className="py-2.5 flex items-center justify-between gap-2 hover:bg-[#FFF9F6] rounded-2xl px-2 transition-colors cursor-pointer"
+            {todayOrders.length === 0 ? (
+              <div className="h-full flex flex-col items-center justify-center py-8 text-center">
+                <PackageOpen className="w-8 h-8 text-[#FF5B65]/40 mb-2" />
+                <p className="text-xs font-bold text-[#3D271D]">Chưa có đơn nào hôm nay</p>
+                <p className="text-[11px] text-[#8C7065] mt-0.5">
+                  Bấm nút bên dưới để chốt đơn đầu tiên!
+                </p>
+                <button
+                  onClick={() => setActiveTab('create-order')}
+                  className="mt-3 px-3 py-1.5 bg-[#FFF0F1] hover:bg-[#FDE2E4] text-[#FF5B65] rounded-xl text-xs font-bold transition-colors cursor-pointer flex items-center gap-1"
                 >
-                  <div className="min-w-0">
-                    <p className="text-xs font-extrabold text-[#3D271D] font-mono">{ord.code}</p>
-                    <p className="text-[11px] text-[#8C7065] truncate mt-0.5 font-medium">
-                      {firstItem ? `${firstItem.productName} (${firstItem.variant})` : 'Chưa có sản phẩm'}
-                    </p>
+                  <Plus className="w-3.5 h-3.5" />
+                  Tạo đơn mới
+                </button>
+              </div>
+            ) : (
+              todayOrders.map((ord) => {
+                const statusStyle = getStatusStyle(ord.status);
+                const firstItem = ord.items[0];
+                return (
+                  <div
+                    key={ord.id}
+                    onClick={() => setSelectedOrderForModal(ord)}
+                    className="py-2.5 flex items-center justify-between gap-2 hover:bg-[#FFF9F6] rounded-2xl px-2 transition-colors cursor-pointer"
+                  >
+                    <div className="min-w-0">
+                      <p className="text-xs font-extrabold text-[#3D271D] font-mono">{ord.code}</p>
+                      <p className="text-[11px] text-[#8C7065] truncate mt-0.5 font-medium">
+                        {firstItem ? `${firstItem.productName} (${firstItem.variant})` : 'Chưa có sản phẩm'}
+                      </p>
+                    </div>
+                    <div className="flex items-center gap-2 shrink-0">
+                      <span
+                        className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${statusStyle.bg} ${statusStyle.text} border ${statusStyle.border}`}
+                      >
+                        {ord.status}
+                      </span>
+                      <span className="text-[10px] text-[#8C7065] font-semibold">{ord.timeString}</span>
+                    </div>
                   </div>
-                  <div className="flex items-center gap-2 shrink-0">
-                    <span
-                      className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${statusStyle.bg} ${statusStyle.text} border ${statusStyle.border}`}
-                    >
-                      {ord.status}
-                    </span>
-                    <span className="text-[10px] text-[#8C7065] font-semibold">{ord.timeString}</span>
-                  </div>
-                </div>
-              );
-            })}
+                );
+              })
+            )}
           </div>
         </div>
       </div>
@@ -417,13 +506,15 @@ export const OverviewPage: React.FC = () => {
               </h2>
               <p className="text-xs text-[#8C7065] mt-0.5">Danh sách các đơn chốt live TikTok Moniu</p>
             </div>
-            <button
-              onClick={() => setActiveTab('orders')}
-              className="text-xs text-[#FF5B65] hover:text-[#E84A54] font-bold flex items-center gap-0.5 cursor-pointer"
-            >
-              Xem tất cả
-              <ChevronRight className="w-3.5 h-3.5" />
-            </button>
+            {recentOrders.length > 0 && (
+              <button
+                onClick={() => setActiveTab('orders')}
+                className="text-xs text-[#FF5B65] hover:text-[#E84A54] font-bold flex items-center gap-0.5 cursor-pointer"
+              >
+                Xem tất cả
+                <ChevronRight className="w-3.5 h-3.5" />
+              </button>
+            )}
           </div>
 
           {/* Responsive Table Wrapper */}
@@ -442,47 +533,65 @@ export const OverviewPage: React.FC = () => {
                 </tr>
               </thead>
               <tbody className="divide-y divide-[#FFF0F1]">
-                {recentOrders.map((ord) => {
-                  const statusStyle = getStatusStyle(ord.status);
-                  const firstItem = ord.items[0];
-                  const totalQty = ord.items.reduce((acc, it) => acc + it.quantity, 0);
+                {recentOrders.length === 0 ? (
+                  <tr>
+                    <td colSpan={8} className="py-12 text-center text-[#8C7065]">
+                      <PackageOpen className="w-9 h-9 mx-auto text-[#FF5B65]/40 mb-2" />
+                      <p className="text-xs font-bold text-[#3D271D]">Chưa có đơn hàng nào trong hệ thống</p>
+                      <p className="text-[11px] text-[#8C7065] mt-0.5">
+                        Tất cả dữ liệu mẫu đã được xóa sạch. Hãy tạo đơn đầu tiên!
+                      </p>
+                      <button
+                        onClick={() => setActiveTab('create-order')}
+                        className="mt-3 px-4 py-2 bg-[#FF5B65] hover:bg-[#E84A54] text-white rounded-xl text-xs font-bold transition-all shadow-sm cursor-pointer"
+                      >
+                        Tạo đơn hàng ngay
+                      </button>
+                    </td>
+                  </tr>
+                ) : (
+                  recentOrders.map((ord) => {
+                    const statusStyle = getStatusStyle(ord.status);
+                    const firstItem = ord.items[0];
+                    const totalQty = ord.items.reduce((acc, it) => acc + it.quantity, 0);
 
-                  return (
-                    <tr
-                      key={ord.id}
-                      className="hover:bg-[#FFF9F6] transition-colors group cursor-pointer"
-                      onClick={() => setSelectedOrderForModal(ord)}
-                    >
-                      <td className="py-3 pr-3 font-extrabold text-[#3D271D] font-mono">{ord.code}</td>
-                      <td className="py-3 px-3 font-bold text-[#3D271D]">{ord.customerName}</td>
-                      <td className="py-3 px-3 text-[#8C7065] max-w-[150px] truncate font-medium">
-                        {firstItem ? firstItem.variant : 'Sản phẩm mẫu'}
-                      </td>
-                      <td className="py-3 px-3 text-center font-bold text-[#3D271D]">{totalQty}</td>
-                      <td className="py-3 px-3 font-black text-[#FF5B65]">
-                        {formatCurrency(ord.totalAmount)}
-                      </td>
-                      <td className="py-3 px-3 text-center">
-                        <span
-                          className={`inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold ${statusStyle.bg} ${statusStyle.text} border ${statusStyle.border}`}
-                        >
-                          <span className={`w-1.5 h-1.5 rounded-full ${statusStyle.dot}`} />
-                          {ord.status}
-                        </span>
-                      </td>
-                      <td className="py-3 px-3 text-right text-[#8C7065] font-semibold">{ord.timeString}</td>
-                      <td className="py-3 pl-3 text-center" onClick={(e) => e.stopPropagation()}>
-                        <button
-                          onClick={() => setSelectedOrderForModal(ord)}
-                          className="p-1.5 text-[#8C7065] hover:text-[#FF5B65] hover:bg-[#FFF0F1] rounded-xl transition-colors cursor-pointer"
-                          title="Xem chi tiết"
-                        >
-                          <Eye className="w-4 h-4" />
-                        </button>
-                      </td>
-                    </tr>
-                  );
-                })}
+                    return (
+                      <tr
+                        key={ord.id}
+                        className="hover:bg-[#FFF9F6] transition-colors group cursor-pointer"
+                        onClick={() => setSelectedOrderForModal(ord)}
+                      >
+                        <td className="py-3 pr-3 font-extrabold text-[#3D271D] font-mono">{ord.code}</td>
+                        <td className="py-3 px-3 font-bold text-[#3D271D]">{ord.customerName}</td>
+                        <td className="py-3 px-3 text-[#8C7065] max-w-[150px] truncate font-medium">
+                          {firstItem ? firstItem.variant : 'Sản phẩm'}
+                        </td>
+                        <td className="py-3 px-3 text-center font-bold text-[#3D271D]">{totalQty}</td>
+                        <td className="py-3 px-3 font-black text-[#FF5B65]">
+                          {formatCurrency(ord.totalAmount)}
+                        </td>
+                        <td className="py-3 px-3 text-center">
+                          <span
+                            className={`inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold ${statusStyle.bg} ${statusStyle.text} border ${statusStyle.border}`}
+                          >
+                            <span className={`w-1.5 h-1.5 rounded-full ${statusStyle.dot}`} />
+                            {ord.status}
+                          </span>
+                        </td>
+                        <td className="py-3 px-3 text-right text-[#8C7065] font-semibold">{ord.timeString}</td>
+                        <td className="py-3 pl-3 text-center" onClick={(e) => e.stopPropagation()}>
+                          <button
+                            onClick={() => setSelectedOrderForModal(ord)}
+                            className="p-1.5 text-[#8C7065] hover:text-[#FF5B65] hover:bg-[#FFF0F1] rounded-xl transition-colors cursor-pointer"
+                            title="Xem chi tiết"
+                          >
+                            <Eye className="w-4 h-4" />
+                          </button>
+                        </td>
+                      </tr>
+                    );
+                  })
+                )}
               </tbody>
             </table>
           </div>
@@ -508,7 +617,7 @@ export const OverviewPage: React.FC = () => {
             </div>
 
             <div className="space-y-3.5">
-              {INITIAL_CARRIERS.map((carrier) => (
+              {carriersWithLiveStats.map((carrier) => (
                 <div key={carrier.id} className="flex items-center justify-between text-xs">
                   <div className="flex items-center gap-2.5">
                     <div

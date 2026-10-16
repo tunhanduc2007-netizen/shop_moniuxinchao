@@ -39,6 +39,33 @@ export const ShippingPage: React.FC = () => {
     });
   }, [orders, carrierFilter, shippingStatusFilter, searchCode]);
 
+  // Dynamic carrier statistics calculated directly from real orders
+  const dynamicCarriers = useMemo(() => {
+    return INITIAL_CARRIERS.map((c) => {
+      const carrierOrders = orders.filter((o) => o.carrier === c.id);
+      const delivering = carrierOrders.filter(
+        (o) =>
+          o.shippingStatus === 'Đang giao' ||
+          o.shippingStatus === 'Đang trung chuyển' ||
+          o.shippingStatus === 'Đang lấy hàng'
+      ).length;
+      const success = carrierOrders.filter((o) => o.shippingStatus === 'Đã giao').length;
+      const failed = carrierOrders.filter(
+        (o) => o.shippingStatus === 'Giao thất bại' || o.shippingStatus === 'Chuyển hoàn'
+      ).length;
+      const totalCarrier = carrierOrders.length;
+      const successRate = totalCarrier > 0 ? Math.round((success / totalCarrier) * 100) : 0;
+
+      return {
+        ...c,
+        delivering,
+        success,
+        failed,
+        successRate,
+      };
+    });
+  }, [orders]);
+
   const handleCopyTracking = (code?: string) => {
     if (!code) return;
     navigator.clipboard.writeText(code);
@@ -76,13 +103,13 @@ export const ShippingPage: React.FC = () => {
         </div>
 
         <div className="text-xs bg-[#FFF0F1] text-[#FF5B65] px-3.5 py-1.5 rounded-2xl border border-[#FCD2D6] font-bold">
-          Mô phỏng dữ liệu điều phối vận chuyển Moniu
+          Điều phối vận chuyển Moniu
         </div>
       </div>
 
       {/* Carrier Summary Cards */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        {INITIAL_CARRIERS.map((carrier) => (
+        {dynamicCarriers.map((carrier) => (
           <div
             key={carrier.id}
             onClick={() => setCarrierFilter(carrierFilter === carrier.id ? 'all' : carrier.id)}
@@ -102,7 +129,7 @@ export const ShippingPage: React.FC = () => {
                 </div>
                 <div>
                   <h3 className="font-extrabold text-[#3D271D] text-sm font-['Nunito',sans-serif]">{carrier.name}</h3>
-                  <p className="text-xs text-[#8C7065] font-semibold">Tỷ lệ thành công: 98%</p>
+                  <p className="text-xs text-[#8C7065] font-semibold">Tỷ lệ thành công: {carrier.successRate}%</p>
                 </div>
               </div>
 

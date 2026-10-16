@@ -35,9 +35,9 @@ interface ShopContextType {
 
 const ShopContext = createContext<ShopContextType | undefined>(undefined);
 
-const ORDERS_KEY = 'moniu_orders_v2';
-const SETTINGS_KEY = 'moniu_settings_v2';
-const PRODUCTS_KEY = 'moniu_products_v2';
+const ORDERS_KEY = 'moniu_clean_orders_v4';
+const SETTINGS_KEY = 'moniu_clean_settings_v4';
+const PRODUCTS_KEY = 'moniu_clean_products_v4';
 
 export const ShopProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [orders, setOrders] = useState<Order[]>(() => {
@@ -48,16 +48,6 @@ export const ShopProvider: React.FC<{ children: React.ReactNode }> = ({ children
       console.error('Failed to load orders from localStorage', e);
     }
     return INITIAL_ORDERS;
-  });
-
-  const [products, setProducts] = useState<ProductCatalogItem[]>(() => {
-    try {
-      const saved = localStorage.getItem(PRODUCTS_KEY);
-      if (saved) return JSON.parse(saved);
-    } catch (e) {
-      console.error('Failed to load products from localStorage', e);
-    }
-    return INITIAL_PRODUCTS;
   });
 
   const [settings, setSettings] = useState<StoreSettings>(() => {
@@ -75,14 +65,42 @@ export const ShopProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const [selectedOrderForModal, setSelectedOrderForModal] = useState<Order | null>(null);
   const [toasts, setToasts] = useState<ToastMessage[]>([]);
 
+  // 100% Dynamic products catalog stats derived from actual orders
+  const dynamicProducts = React.useMemo(() => {
+    const validOrders = orders.filter((o) => o.status !== 'Đã hủy');
+    const totalRev = validOrders.reduce((sum, o) => sum + o.totalAmount, 0);
+
+    return INITIAL_PRODUCTS.map((prod) => {
+      let soldCount = 0;
+      let revenue = 0;
+
+      validOrders.forEach((o) => {
+        o.items.forEach((item) => {
+          if (
+            (item.productCode && item.productCode.trim().toUpperCase() === prod.code.toUpperCase()) ||
+            (item.productName && item.productName.toLowerCase().includes(prod.name.toLowerCase()))
+          ) {
+            soldCount += Number(item.quantity) || 0;
+            revenue += (Number(item.quantity) || 0) * (Number(item.unitPrice) || 0);
+          }
+        });
+      });
+
+      const percentage = totalRev > 0 ? Math.round((revenue / totalRev) * 100) : 0;
+
+      return {
+        ...prod,
+        soldCount,
+        revenue,
+        percentage,
+      };
+    });
+  }, [orders]);
+
   // Persist to localStorage
   useEffect(() => {
     localStorage.setItem(ORDERS_KEY, JSON.stringify(orders));
   }, [orders]);
-
-  useEffect(() => {
-    localStorage.setItem(PRODUCTS_KEY, JSON.stringify(products));
-  }, [products]);
 
   useEffect(() => {
     localStorage.setItem(SETTINGS_KEY, JSON.stringify(settings));
@@ -139,23 +157,6 @@ export const ShopProvider: React.FC<{ children: React.ReactNode }> = ({ children
     };
 
     setOrders((prev) => [newOrder, ...prev]);
-
-    // Update product sold count
-    if (newOrder.items && newOrder.items.length > 0) {
-      setProducts((prev) =>
-        prev.map((prod) => {
-          const matchItem = newOrder.items.find((item) => item.productCode === prod.code);
-          if (matchItem) {
-            return {
-              ...prod,
-              soldCount: prod.soldCount + matchItem.quantity,
-              revenue: prod.revenue + matchItem.unitPrice * matchItem.quantity,
-            };
-          }
-          return prod;
-        })
-      );
-    }
 
     showToast({
       type: 'success',
@@ -244,13 +245,12 @@ export const ShopProvider: React.FC<{ children: React.ReactNode }> = ({ children
   };
 
   const resetToDefault = () => {
-    setOrders(INITIAL_ORDERS);
-    setProducts(INITIAL_PRODUCTS);
+    setOrders([]);
     setSettings(INITIAL_SETTINGS);
     showToast({
       type: 'info',
-      title: 'Đã khôi phục dữ liệu mẫu',
-      message: 'Toàn bộ dữ liệu đã được đặt lại như ban đầu.',
+      title: 'Đã làm mới sạch sẽ',
+      message: 'Toàn bộ dữ liệu đơn hàng đã được xóa sạch về 0.',
     });
   };
 
@@ -258,7 +258,7 @@ export const ShopProvider: React.FC<{ children: React.ReactNode }> = ({ children
     <ShopContext.Provider
       value={{
         orders,
-        products,
+        products: dynamicProducts,
         settings,
         activeTab,
         setActiveTab,

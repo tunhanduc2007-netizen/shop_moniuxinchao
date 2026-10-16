@@ -3,7 +3,6 @@ import {
   Plus,
   Trash2,
   RefreshCw,
-  Sparkles,
   CheckCircle2,
   Package,
   User,
@@ -37,14 +36,14 @@ export const CreateOrderPage: React.FC = () => {
   const [paymentMethod, setPaymentMethod] = useState<PaymentMethod>('COD');
   const [carrier, setCarrier] = useState<ShippingCarrier>(settings.defaultCarrier);
 
-  // Products in order
+  // Products in order (starts completely blank)
   const [orderItems, setOrderItems] = useState<OrderItem[]>([
     {
       id: '1',
-      productCode: 'B01',
-      productName: 'Set body chip sơ sinh 100% cotton Moniu',
-      variant: 'Hồng san hô / 6-9M',
-      unitPrice: 189000,
+      productCode: '',
+      productName: '',
+      variant: '',
+      unitPrice: 0,
       quantity: 1,
     },
   ]);
@@ -171,33 +170,6 @@ export const CreateOrderPage: React.FC = () => {
     setLastCreatedOrderCode(null);
   };
 
-  const handleFillDemo = () => {
-    setCustomerName('Mẹ Thỏ (Trần Bảo Ngọc)');
-    setCustomerPhone('0918 888 234');
-    setShippingAddress('Tòa Aqua 1, Vinhomes Golden River, Bến Nghé, Quận 1, TP.HCM');
-    setOrderNote('Chốt live Moniu mã váy công chúa #vay03 tặng kèm nơ cho bé');
-    setPaymentMethod('COD');
-    setCarrier('GHN');
-    setOrderItems([
-      {
-        id: '1',
-        productCode: 'B03',
-        productName: 'Váy công chúa voan xòe Moniu đính nơ',
-        variant: 'Hồng pastel / 1-2Y',
-        unitPrice: 299000,
-        quantity: 1,
-      },
-      {
-        id: '2',
-        productCode: 'B01',
-        productName: 'Set body chip sơ sinh 100% cotton Moniu',
-        variant: 'Hồng san hô / 6-9M',
-        unitPrice: 189000,
-        quantity: 1,
-      },
-    ]);
-  };
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
@@ -256,14 +228,6 @@ export const CreateOrderPage: React.FC = () => {
         </div>
 
         <div className="flex items-center gap-2">
-          <button
-            type="button"
-            onClick={handleFillDemo}
-            className="flex items-center gap-1.5 px-3.5 py-2 text-xs font-bold text-[#FF5B65] bg-[#FFF0F1] hover:bg-[#FDE2E4] rounded-2xl transition-colors border border-[#FCD2D6] cursor-pointer"
-          >
-            <Sparkles className="w-3.5 h-3.5 text-[#FF5B65]" />
-            Điền mẫu livestream
-          </button>
           <button
             type="button"
             onClick={handleResetForm}
