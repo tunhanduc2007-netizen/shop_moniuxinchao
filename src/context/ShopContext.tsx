@@ -78,7 +78,8 @@ export const ShopProvider: React.FC<{ children: React.ReactNode }> = ({ children
         o.items.forEach((item) => {
           if (
             (item.productCode && item.productCode.trim().toUpperCase() === prod.code.toUpperCase()) ||
-            (item.productName && item.productName.toLowerCase().includes(prod.name.toLowerCase()))
+            (prod.tiktokId && item.productCode && item.productCode.trim() === prod.tiktokId) ||
+            (item.productName && item.productName.toLowerCase() === prod.name.toLowerCase())
           ) {
             soldCount += Number(item.quantity) || 0;
             revenue += (Number(item.quantity) || 0) * (Number(item.unitPrice) || 0);

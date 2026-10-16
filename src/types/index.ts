@@ -41,13 +41,17 @@ export interface Order {
 
 export interface ProductCatalogItem {
   code: string;
+  tiktokId?: string;
   name: string;
+  brand?: string;
+  category?: string;
   variants: string[];
   price: number;
   image: string;
   soldCount: number;
   revenue: number;
   percentage: number;
+  description?: string;
 }
 
 export interface CarrierStats {

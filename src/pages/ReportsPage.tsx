@@ -8,6 +8,10 @@ import {
   Heart,
   Sparkles,
   PackageOpen,
+  Search,
+  ChevronLeft,
+  ChevronRight,
+  Filter,
 } from 'lucide-react';
 import {
   BarChart,
@@ -27,6 +31,34 @@ import { formatCurrency } from '../utils/formatters';
 export const ReportsPage: React.FC = () => {
   const { orders, products } = useShop();
   const [timeFilter, setTimeFilter] = useState('7days');
+
+  // Filter & Pagination for 330 real products
+  const [productSearch, setProductSearch] = useState('');
+  const [productBrandFilter, setProductBrandFilter] = useState('all');
+  const [productCategoryFilter, setProductCategoryFilter] = useState('all');
+  const [productPage, setProductPage] = useState(1);
+  const productsPerPage = 10;
+
+  const filteredCatalogProducts = useMemo(() => {
+    return products.filter((p) => {
+      const q = productSearch.toLowerCase().trim();
+      const matchSearch =
+        !q ||
+        p.name.toLowerCase().includes(q) ||
+        p.code.toLowerCase().includes(q) ||
+        (p.tiktokId && p.tiktokId.includes(q));
+      const matchBrand = productBrandFilter === 'all' || p.brand === productBrandFilter;
+      const matchCat = productCategoryFilter === 'all' || p.category === productCategoryFilter;
+
+      return matchSearch && matchBrand && matchCat;
+    });
+  }, [products, productSearch, productBrandFilter, productCategoryFilter]);
+
+  const totalProductPages = Math.ceil(filteredCatalogProducts.length / productsPerPage) || 1;
+  const paginatedCatalogProducts = useMemo(() => {
+    const start = (productPage - 1) * productsPerPage;
+    return filteredCatalogProducts.slice(start, start + productsPerPage);
+  }, [filteredCatalogProducts, productPage]);
 
   // 100% REAL dynamic KPI metrics
   const totalRevenue = useMemo(() => {
@@ -293,55 +325,209 @@ export const ReportsPage: React.FC = () => {
         </div>
       </div>
 
-      {/* Top Products Table */}
-      <div className="bg-white rounded-3xl p-5 sm:p-6 border border-[#FDE2E4] shadow-2xs">
-        <h2 className="text-sm font-extrabold text-[#3D271D] mb-4 font-['Nunito',sans-serif]">
-          Xếp hạng đồ em bé bán chạy nhất Moniu
-        </h2>
+      {/* Real Products Catalog & Sales Ranking Table */}
+      <div className="bg-white rounded-3xl p-5 sm:p-6 border border-[#FDE2E4] shadow-2xs space-y-4">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-[#FFF0F1] pb-4">
+          <div>
+            <h2 className="text-base font-black text-[#3D271D] font-['Nunito',sans-serif] flex items-center gap-2">
+              Kho 330 sản phẩm thực tế Moniu & Doanh số
+              <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-[#FFF0F1] text-[#FF5B65] border border-[#FCD2D6]">
+                TikTok Shop Catalog
+              </span>
+            </h2>
+            <p className="text-xs text-[#8C7065] mt-0.5 font-medium">
+              Toàn bộ danh mục thời trang em bé chính hãng NOUS, LA POMME, MONONA
+            </p>
+          </div>
+
+          {/* Search Input */}
+          <div className="relative w-full sm:w-80">
+            <Search className="w-4 h-4 text-[#8C7065] absolute left-3.5 top-1/2 -translate-y-1/2" />
+            <input
+              type="text"
+              value={productSearch}
+              onChange={(e) => {
+                setProductSearch(e.target.value);
+                setProductPage(1);
+              }}
+              placeholder="Tìm theo tên đồ bé, mã MN-..., mã TikTok..."
+              className="w-full bg-[#FFF9F6] focus:bg-white text-xs text-[#3D271D] pl-10 pr-8 py-2 rounded-2xl border border-[#FDE2E4] focus:outline-hidden focus:border-[#FF5B65] font-medium"
+            />
+            {productSearch && (
+              <button
+                onClick={() => {
+                  setProductSearch('');
+                  setProductPage(1);
+                }}
+                className="absolute right-3 top-1/2 -translate-y-1/2 text-xs text-[#8C7065] hover:text-[#3D271D]"
+              >
+                ×
+              </button>
+            )}
+          </div>
+        </div>
+
+        {/* Brand & Category Filter Row */}
+        <div className="flex flex-wrap items-center justify-between gap-2 pt-1 pb-1">
+          {/* Brand pills */}
+          <div className="flex items-center gap-1.5 overflow-x-auto pb-1 scrollbar-none">
+            {[
+              { id: 'all', label: 'Tất cả (330)' },
+              { id: 'NOUS', label: 'NOUS (137)' },
+              { id: 'LA POMME', label: 'LA POMME (31)' },
+              { id: 'MONONA', label: 'MONONA (21)' },
+            ].map((b) => (
+              <button
+                key={b.id}
+                onClick={() => {
+                  setProductBrandFilter(b.id);
+                  setProductPage(1);
+                }}
+                className={`px-3 py-1 rounded-xl text-xs font-bold transition-all cursor-pointer ${
+                  productBrandFilter === b.id
+                    ? 'bg-[#FF5B65] text-white shadow-xs'
+                    : 'bg-[#FFF9F6] text-[#8C7065] hover:bg-[#FFF0F1] border border-[#FDE2E4]'
+                }`}
+              >
+                {b.label}
+              </button>
+            ))}
+          </div>
+
+          {/* Category Select */}
+          <div className="flex items-center gap-2">
+            <span className="text-xs text-[#8C7065] font-bold">Phân loại:</span>
+            <select
+              value={productCategoryFilter}
+              onChange={(e) => {
+                setProductCategoryFilter(e.target.value);
+                setProductPage(1);
+              }}
+              className="text-xs font-bold bg-[#FFF9F6] border border-[#FDE2E4] text-[#3D271D] rounded-xl px-3 py-1.5 focus:outline-hidden focus:border-[#FF5B65]"
+            >
+              <option value="all">Tất cả danh mục</option>
+              <option value="Bodysuit">Bodysuit</option>
+              <option value="Bộ quần áo">Bộ quần áo</option>
+              <option value="Chăn gối">Chăn gối</option>
+              <option value="Áo khoác">Áo khoác</option>
+              <option value="Váy đầm">Váy đầm</option>
+              <option value="Phụ kiện">Phụ kiện</option>
+              <option value="Quà tặng">Quà tặng</option>
+            </select>
+          </div>
+        </div>
+
+        {/* Products Table */}
         <div className="overflow-x-auto">
           <table className="w-full text-left text-xs whitespace-nowrap">
             <thead>
-              <tr className="border-b border-[#FDE2E4] text-[#8C7065] font-bold">
-                <th className="pb-3 pr-4">Mã SP</th>
-                <th className="pb-3 px-4">Tên sản phẩm</th>
-                <th className="pb-3 px-4 text-right">Đơn giá</th>
-                <th className="pb-3 px-4 text-center">Đã bán</th>
-                <th className="pb-3 px-4 text-right">Tổng doanh thu</th>
-                <th className="pb-3 pl-4 text-right">Đóng góp</th>
+              <tr className="border-b border-[#FDE2E4] text-[#8C7065] font-bold bg-[#FFF9F6]/60">
+                <th className="py-3 px-4">Mã SP</th>
+                <th className="py-3 px-4">Tên sản phẩm đồ bé</th>
+                <th className="py-3 px-4 text-center">Thương hiệu</th>
+                <th className="py-3 px-4 text-right">Đơn giá</th>
+                <th className="py-3 px-4 text-center">Đã bán</th>
+                <th className="py-3 px-4 text-right">Tổng doanh thu</th>
+                <th className="py-3 pl-4 text-right">Tỷ trọng</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-[#FFF0F1]">
-              {products.map((prod) => (
-                <tr key={prod.code} className="hover:bg-[#FFF9F6] transition-colors">
-                  <td className="py-3.5 pr-4 font-black text-[#FF5B65] font-mono">{prod.code}</td>
-                  <td className="py-3.5 px-4">
-                    <div className="flex items-center gap-3">
-                      <img
-                        src={prod.image}
-                        alt={prod.name}
-                        className="w-8 h-8 rounded-xl object-cover border border-[#FDE2E4]"
-                      />
-                      <span className="font-bold text-[#3D271D]">{prod.name}</span>
-                    </div>
-                  </td>
-                  <td className="py-3.5 px-4 text-right font-medium text-[#3D271D]">
-                    {formatCurrency(prod.price)}
-                  </td>
-                  <td className="py-3.5 px-4 text-center font-bold text-[#3D271D]">
-                    {prod.soldCount} set
-                  </td>
-                  <td className="py-3.5 px-4 text-right font-black text-[#FF5B65]">
-                    {formatCurrency(prod.revenue)}
-                  </td>
-                  <td className="py-3.5 pl-4 text-right">
-                    <span className="inline-block px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-[#EBF9F6] text-[#238774] border border-[#B8ECE1]">
-                      {prod.percentage}%
-                    </span>
+              {paginatedCatalogProducts.length === 0 ? (
+                <tr>
+                  <td colSpan={7} className="py-12 text-center text-[#8C7065]">
+                    Không tìm thấy sản phẩm nào khớp với tìm kiếm.
                   </td>
                 </tr>
-              ))}
+              ) : (
+                paginatedCatalogProducts.map((prod) => (
+                  <tr key={prod.code} className="hover:bg-[#FFF9F6] transition-colors">
+                    <td className="py-3.5 px-4">
+                      <div>
+                        <span className="font-mono font-black text-[#FF5B65] bg-[#FFF0F1] px-2 py-0.5 rounded-lg border border-[#FCD2D6]">
+                          {prod.code}
+                        </span>
+                        {prod.tiktokId && (
+                          <span className="block font-mono text-[9px] text-[#8C7065] mt-1">
+                            ID: {prod.tiktokId}
+                          </span>
+                        )}
+                      </div>
+                    </td>
+                    <td className="py-3.5 px-4 max-w-sm">
+                      <div className="flex items-center gap-3">
+                        <img
+                          src={prod.image}
+                          alt={prod.name}
+                          className="w-9 h-9 rounded-xl object-cover border border-[#FDE2E4] shrink-0 bg-[#FFF0F1]"
+                        />
+                        <div className="min-w-0">
+                          <p className="font-bold text-[#3D271D] truncate" title={prod.name}>
+                            {prod.name}
+                          </p>
+                          <span className="text-[10px] text-[#8C7065] font-semibold">
+                            {prod.category}
+                          </span>
+                        </div>
+                      </div>
+                    </td>
+                    <td className="py-3.5 px-4 text-center">
+                      <span className="inline-block text-[10px] font-black px-2 py-0.5 rounded-md bg-[#EBF9F6] text-[#238774] border border-[#B8ECE1]">
+                        {prod.brand || 'Moniu'}
+                      </span>
+                    </td>
+                    <td className="py-3.5 px-4 text-right font-bold text-[#3D271D]">
+                      {prod.price === 0 ? (
+                        <span className="text-[#238774] font-black">Quà tặng (0đ)</span>
+                      ) : (
+                        formatCurrency(prod.price)
+                      )}
+                    </td>
+                    <td className="py-3.5 px-4 text-center font-bold text-[#3D271D]">
+                      {prod.soldCount} set
+                    </td>
+                    <td className="py-3.5 px-4 text-right font-black text-[#FF5B65]">
+                      {formatCurrency(prod.revenue)}
+                    </td>
+                    <td className="py-3.5 pl-4 text-right">
+                      <span className="inline-block px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-[#FFF0F1] text-[#FF5B65] border border-[#FCD2D6]">
+                        {prod.percentage}%
+                      </span>
+                    </td>
+                  </tr>
+                ))
+              )}
             </tbody>
           </table>
+        </div>
+
+        {/* Pagination Footer */}
+        <div className="pt-3 border-t border-[#FDE2E4] flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-[#8C7065]">
+          <div>
+            Hiển thị <span className="font-bold text-[#3D271D]">{paginatedCatalogProducts.length}</span> /{' '}
+            <span className="font-bold text-[#3D271D]">{filteredCatalogProducts.length}</span> sản phẩm thực tế
+          </div>
+
+          <div className="flex items-center gap-1.5">
+            <button
+              onClick={() => setProductPage((p) => Math.max(1, p - 1))}
+              disabled={productPage === 1}
+              className="p-1.5 rounded-xl border border-[#FDE2E4] text-[#8C7065] hover:bg-[#FFF9F6] disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer"
+            >
+              <ChevronLeft className="w-4 h-4" />
+            </button>
+
+            <span className="px-3 py-1 text-[#3D271D] font-bold">
+              Trang {productPage} / {totalProductPages}
+            </span>
+
+            <button
+              onClick={() => setProductPage((p) => Math.min(totalProductPages, p + 1))}
+              disabled={productPage === totalProductPages}
+              className="p-1.5 rounded-xl border border-[#FDE2E4] text-[#8C7065] hover:bg-[#FFF9F6] disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer"
+            >
+              <ChevronRight className="w-4 h-4" />
+            </button>
+          </div>
         </div>
       </div>
     </div>

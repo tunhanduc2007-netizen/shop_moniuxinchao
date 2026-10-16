@@ -1,57 +1,8 @@
 import type { Order, ProductCatalogItem, CarrierStats, StoreSettings } from '../types';
+import { REAL_PRODUCTS } from './realProducts';
 
-export const INITIAL_PRODUCTS: ProductCatalogItem[] = [
-  {
-    code: 'B01',
-    name: 'Set body chip sơ sinh 100% cotton Moniu',
-    variants: ['Họa tiết sao vàng / 0-3M', 'Xanh mint mây / 3-6M', 'Hồng san hô / 6-9M', 'Vàng butter / 9-12M'],
-    price: 189000,
-    image: 'https://images.unsplash.com/photo-1522771930-78848d9293e8?w=200&auto=format&fit=crop&q=80',
-    soldCount: 0,
-    revenue: 0,
-    percentage: 0,
-  },
-  {
-    code: 'B02',
-    name: 'Bộ yếm gấu denim kèm áo cotton mềm cho bé',
-    variants: ['Xanh denim / 1-2Y', 'Be ấm / 2-3Y', 'Xanh pastel / 3-4Y'],
-    price: 269000,
-    image: 'https://images.unsplash.com/photo-1519689680058-324335c77eba?w=200&auto=format&fit=crop&q=80',
-    soldCount: 0,
-    revenue: 0,
-    percentage: 0,
-  },
-  {
-    code: 'B03',
-    name: 'Váy công chúa voan xòe Moniu đính nơ',
-    variants: ['Hồng pastel / 1-2Y', 'Trắng kem / 2-3Y', 'Hồng san hô / 3-4Y'],
-    price: 299000,
-    image: 'https://images.unsplash.com/photo-1622290291468-a28f7a7dc6a8?w=200&auto=format&fit=crop&q=80',
-    soldCount: 0,
-    revenue: 0,
-    percentage: 0,
-  },
-  {
-    code: 'B04',
-    name: 'Set đồ bộ thun lạnh mát mịn xuất Hàn',
-    variants: ['Khủng long mint / 9-12M', 'Mèo con hồng / 1-2Y', 'Gấu vàng / 2-3Y'],
-    price: 159000,
-    image: 'https://images.unsplash.com/photo-1514090458221-65bb69cf63e6?w=200&auto=format&fit=crop&q=80',
-    soldCount: 0,
-    revenue: 0,
-    percentage: 0,
-  },
-  {
-    code: 'B05',
-    name: 'Áo khoác lông cừu tai gấu Moniu ấm áp',
-    variants: ['Nâu gấu / 1-2Y', 'Trắng sữa / 2-3Y', 'Hồng đào / 3-4Y'],
-    price: 349000,
-    image: 'https://images.unsplash.com/photo-1544816155-12df9643f363?w=200&auto=format&fit=crop&q=80',
-    soldCount: 0,
-    revenue: 0,
-    percentage: 0,
-  },
-];
+// 330 REAL products imported directly from TikTok Shop seller inventory
+export const INITIAL_PRODUCTS: ProductCatalogItem[] = REAL_PRODUCTS;
 
 // Clean empty orders list - No fake or sample orders
 export const INITIAL_ORDERS: Order[] = [];
@@ -96,7 +47,7 @@ export const INITIAL_SETTINGS: StoreSettings = {
   sellerEmail: 'moniuxinchao.baby@gmail.com',
   storeAddress: '720A Điện Biên Phủ, Phường 22, Bình Thạnh, TP. Hồ Chí Minh',
   tiktokShopName: 'Moniu Xin chào Official (@moniuxinchao.baby)',
-  tiktokShopId: 'VN_MONIU_992810',
+  tiktokShopId: '1214757544',
   orderPrefix: 'MN-',
   orderRandomLength: 7,
   defaultShippingFee: 25000,

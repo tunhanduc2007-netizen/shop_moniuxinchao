@@ -652,18 +652,18 @@ export const OverviewPage: React.FC = () => {
                 <h2 className="text-sm font-extrabold text-[#3D271D] font-['Nunito',sans-serif]">
                   Doanh thu theo sản phẩm
                 </h2>
-                <p className="text-xs text-[#8C7065] mt-0.5">Mặt hàng bé yêu bán chạy</p>
+                <p className="text-xs text-[#8C7065] mt-0.5">Top mặt hàng trong 330 sản phẩm</p>
               </div>
               <button
                 onClick={() => setActiveTab('reports')}
                 className="text-xs text-[#FF5B65] hover:text-[#E84A54] font-bold cursor-pointer"
               >
-                Xem chi tiết
+                Xem tất cả 330 SP
               </button>
             </div>
 
             <div className="space-y-3">
-              {products.map((prod) => (
+              {products.slice(0, 5).map((prod) => (
                 <div key={prod.code} className="flex items-center justify-between gap-3 text-xs">
                   <div className="flex items-center gap-2.5 min-w-0">
                     <img
