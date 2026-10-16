@@ -7,6 +7,7 @@ import { OrderDetailModal } from './components/OrderDetailModal';
 import { OverviewPage } from './pages/OverviewPage';
 import { CreateOrderPage } from './pages/CreateOrderPage';
 import { OrderHistoryPage } from './pages/OrderHistoryPage';
+import { CustomersPage } from './pages/CustomersPage';
 import { ShippingPage } from './pages/ShippingPage';
 import { ReportsPage } from './pages/ReportsPage';
 import { SettingsPage } from './pages/SettingsPage';
@@ -34,6 +35,7 @@ const AppContent: React.FC = () => {
           {activeTab === 'overview' && <OverviewPage />}
           {activeTab === 'create-order' && <CreateOrderPage />}
           {activeTab === 'orders' && <OrderHistoryPage />}
+          {activeTab === 'customers' && <CustomersPage />}
           {activeTab === 'products' && <ProductsPage />}
           {activeTab === 'shipping' && <ShippingPage />}
           {activeTab === 'reports' && <ReportsPage />}

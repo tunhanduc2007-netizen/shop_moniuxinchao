@@ -86,4 +86,86 @@ export interface StoreSettings {
   bankBranch: string;
 }
 
-export type ActiveTab = 'overview' | 'create-order' | 'orders' | 'products' | 'shipping' | 'reports' | 'settings';
+export type CustomerRank = 'Mầm Nhỏ' | 'Bé Ngoan' | 'Mẹ Thông Thái' | 'Mẹ Kim Cương';
+
+export interface CustomerRankInfo {
+  rank: CustomerRank;
+  label: string;
+  badgeBg: string;
+  badgeText: string;
+  border: string;
+  discountPercent: number; // % giảm giá tự động
+  icon: string;
+  minSpent: number;
+  minOrders: number;
+  perks: string;
+}
+
+export const CUSTOMER_RANKS: Record<CustomerRank, CustomerRankInfo> = {
+  'Mầm Nhỏ': {
+    rank: 'Mầm Nhỏ',
+    label: 'Hạng Mầm Nhỏ (Khách mới)',
+    badgeBg: 'bg-[#FFF0F1]',
+    badgeText: 'text-[#FF5B65]',
+    border: 'border-[#FCD2D6]',
+    discountPercent: 0,
+    icon: '🥉',
+    minSpent: 0,
+    minOrders: 1,
+    perks: 'Tặng sticker Nous & thiệp cảm ơn Moniu',
+  },
+  'Bé Ngoan': {
+    rank: 'Bé Ngoan',
+    label: 'Hạng Bé Ngoan (Khách quen)',
+    badgeBg: 'bg-[#FFF8E6]',
+    badgeText: 'text-[#B87B00]',
+    border: 'border-[#FDE199]',
+    discountPercent: 3, // Giảm 3%
+    icon: '🥈',
+    minSpent: 1000000,
+    minOrders: 2,
+    perks: 'Giảm 3% tự động đơn live + Freeship từ 299k',
+  },
+  'Mẹ Thông Thái': {
+    rank: 'Mẹ Thông Thái',
+    label: 'Mẹ Thông Thái (Khách VIP)',
+    badgeBg: 'bg-[#EBF9F6]',
+    badgeText: 'text-[#238774]',
+    border: 'border-[#B8ECE1]',
+    discountPercent: 5, // Giảm 5%
+    icon: '🥇',
+    minSpent: 3000000,
+    minOrders: 5,
+    perks: 'Giảm 5% tự động + Quà sinh nhật bé + Ưu tiên soạn đơn',
+  },
+  'Mẹ Kim Cương': {
+    rank: 'Mẹ Kim Cương',
+    label: 'Mẹ Kim Cương (Super VIP)',
+    badgeBg: 'bg-[#F6F1FE]',
+    badgeText: 'text-[#8050D9]',
+    border: 'border-[#E7DBFC]',
+    discountPercent: 8, // Giảm 8%
+    icon: '💎',
+    minSpent: 6000000,
+    minOrders: 10,
+    perks: 'Giảm 8% trọn đời + Luôn Freeship + Quà BST độc quyền',
+  },
+};
+
+export interface Customer {
+  id: string;
+  phone: string;
+  name: string;
+  address?: string;
+  rank: CustomerRank;
+  totalOrders: number;
+  totalSpent: number;
+  notes?: string;
+  lastOrderDate?: string;
+  lastBabySize?: string;
+  createdAt: string;
+  updatedAt: string;
+}
+
+export type ActiveTab = 'overview' | 'create-order' | 'orders' | 'customers' | 'products' | 'shipping' | 'reports' | 'settings';
+

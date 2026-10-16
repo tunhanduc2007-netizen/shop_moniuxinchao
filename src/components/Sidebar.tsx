@@ -3,12 +3,14 @@ import {
   LayoutDashboard,
   PlusSquare,
   FileText,
+  Users,
   Truck,
   TrendingUp,
   Boxes,
   Settings,
   X,
   Sparkles,
+  Crown,
 } from 'lucide-react';
 import { useShop } from '../context/ShopContext';
 import type { ActiveTab } from '../types';
@@ -19,12 +21,13 @@ interface SidebarProps {
 }
 
 export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
-  const { activeTab, setActiveTab } = useShop();
+  const { activeTab, setActiveTab, customers } = useShop();
 
   const menuItems: { id: ActiveTab; label: string; icon: React.ComponentType<{ className?: string }> }[] = [
     { id: 'overview', label: 'Tổng quan', icon: LayoutDashboard },
     { id: 'create-order', label: 'Tạo đơn hàng', icon: PlusSquare },
     { id: 'orders', label: 'Lịch sử đơn hàng', icon: FileText },
+    { id: 'customers', label: 'Khách hàng & Rank', icon: Users },
     { id: 'products', label: 'Kho sản phẩm', icon: Boxes },
     { id: 'shipping', label: 'Vận chuyển', icon: Truck },
     { id: 'reports', label: 'Báo cáo', icon: TrendingUp },
@@ -115,6 +118,18 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                     >
                       <Sparkles className="w-2.5 h-2.5" />
                       Live
+                    </span>
+                  )}
+                  {item.id === 'customers' && (
+                    <span
+                      className={`ml-auto text-[10px] font-extrabold px-2 py-0.5 rounded-full transition-colors flex items-center gap-1 ${
+                        isActive
+                          ? 'bg-[#FF5B65] text-white shadow-xs'
+                          : 'bg-white/20 text-white border border-white/25 shadow-xs'
+                      }`}
+                    >
+                      <Crown className="w-2.5 h-2.5 text-[#FFD147]" />
+                      VIP {customers.length > 0 ? `(${customers.length})` : ''}
                     </span>
                   )}
                   {item.id === 'products' && (

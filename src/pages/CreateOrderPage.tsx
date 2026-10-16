@@ -26,15 +26,22 @@ import {
   Minus,
   Gift,
   Percent,
+  Crown,
+  Award,
+  Star,
+  Check,
 } from 'lucide-react';
 import { useShop } from '../context/ShopContext';
-import type { OrderItem, PaymentMethod, ShippingCarrier, ProductCatalogItem } from '../types';
+import type { OrderItem, PaymentMethod, ShippingCarrier, ProductCatalogItem, Customer } from '../types';
+import { CUSTOMER_RANKS } from '../types';
 import { formatCurrency } from '../utils/formatters';
+import { getNextSuggestedBabySize } from '../utils/customerUtils';
 import { SizeSelectionModal } from '../components/SizeSelectionModal';
 
 export const CreateOrderPage: React.FC = () => {
   const {
     orders,
+    customers,
     products,
     settings,
     generateUniqueCode,
@@ -42,6 +49,8 @@ export const CreateOrderPage: React.FC = () => {
     setActiveTab,
     pendingOrderItem,
     setPendingOrderItem,
+    initialOrderPrefill,
+    setInitialOrderPrefill,
     showToast,
   } = useShop();
 
@@ -98,21 +107,84 @@ export const CreateOrderPage: React.FC = () => {
     };
   }, [products]);
 
-  // Check for repeat customer based on phone number
-  const repeatCustomer = useMemo(() => {
-    const clean = customerPhone.trim();
-    if (clean.length < 9) return null;
-    const found = orders.find(
-      (o) => o.customerPhone && o.customerPhone.trim() === clean && (o.customerName || o.shippingAddress)
-    );
-    if (found && (found.customerName !== customerName || found.shippingAddress !== shippingAddress)) {
-      return {
-        name: found.customerName,
-        address: found.shippingAddress,
-      };
+  // Handle customer prefill from Customers page or external actions
+  useEffect(() => {
+    if (initialOrderPrefill) {
+      if (initialOrderPrefill.customerName) setCustomerName(initialOrderPrefill.customerName);
+      if (initialOrderPrefill.customerPhone) setCustomerPhone(initialOrderPrefill.customerPhone);
+      if (initialOrderPrefill.shippingAddress) setShippingAddress(initialOrderPrefill.shippingAddress);
+      setInitialOrderPrefill(null);
     }
-    return null;
-  }, [customerPhone, orders, customerName, shippingAddress]);
+  }, [initialOrderPrefill, setInitialOrderPrefill]);
+
+  // KEY 1: SỐ ĐIỆN THOẠI (100% precision)
+  const cleanPhone = useMemo(() => customerPhone.replace(/\D/g, ''), [customerPhone]);
+
+  const recognizedCustomer = useMemo(() => {
+    if (cleanPhone.length < 8) return null;
+    return customers.find((c) => c.phone.replace(/\D/g, '') === cleanPhone) || null;
+  }, [cleanPhone, customers]);
+
+  // KEY 2: NICKNAME TIKTOK / TÊN KHÁCH (Auto-suggest dropdown)
+  const [isNameSuggestionsOpen, setIsNameSuggestionsOpen] = useState(false);
+  const nameInputRef = useRef<HTMLDivElement>(null);
+
+  const nameSuggestions = useMemo(() => {
+    const query = customerName.trim().toLowerCase();
+    if (query.length < 2) return [];
+    return customers
+      .filter(
+        (c) =>
+          c.name.toLowerCase().includes(query) ||
+          c.phone.replace(/\D/g, '').includes(query)
+      )
+      .slice(0, 5);
+  }, [customerName, customers]);
+
+  const handleSelectSuggestedCustomer = (cust: Customer) => {
+    setCustomerName(cust.name);
+    setCustomerPhone(cust.phone);
+    if (cust.address) setShippingAddress(cust.address);
+    setIsNameSuggestionsOpen(false);
+
+    // Auto-apply VIP discount if available
+    const rankInfo = CUSTOMER_RANKS[cust.rank];
+    if (rankInfo && rankInfo.discountPercent > 0 && subtotal > 0) {
+      const discount = Math.round((subtotal * rankInfo.discountPercent) / 100);
+      setDiscountAmount(discount);
+    }
+
+    showToast({
+      type: 'success',
+      title: 'Đã nhận diện khách quen!',
+      message: `Mẹ ${cust.name} • ${rankInfo.label} (${cust.totalOrders} đơn)`,
+    });
+  };
+
+  const handleApplyVipDiscount = () => {
+    if (!recognizedCustomer) return;
+    const rankInfo = CUSTOMER_RANKS[recognizedCustomer.rank];
+    if (rankInfo && rankInfo.discountPercent > 0) {
+      const discount = Math.round((subtotal * rankInfo.discountPercent) / 100);
+      setDiscountAmount(discount);
+      showToast({
+        type: 'success',
+        title: `Đã áp dụng giảm -${rankInfo.discountPercent}% VIP`,
+        message: `Tiết kiệm ${formatCurrency(discount)} dành riêng cho ${rankInfo.label}!`,
+      });
+    }
+  };
+
+  // Close name suggestions dropdown on outside click
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (nameInputRef.current && !nameInputRef.current.contains(e.target as Node)) {
+        setIsNameSuggestionsOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
 
   // Auto-receive product with size from other tabs
   useEffect(() => {
@@ -134,6 +206,7 @@ export const CreateOrderPage: React.FC = () => {
       }
     };
     document.addEventListener('mousedown', handleClickOutside);
+
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
@@ -399,7 +472,7 @@ export const CreateOrderPage: React.FC = () => {
     setLastCreatedOrderCode(null);
   };
 
-  const submitOrder = () => {
+  const submitOrder = async () => {
     if (!customerName.trim()) {
       showToast({
         type: 'warning',
@@ -418,7 +491,7 @@ export const CreateOrderPage: React.FC = () => {
       return;
     }
 
-    const created = addOrder({
+    const created = await addOrder({
       code: orderCode,
       customerName: customerName.trim(),
       customerPhone: customerPhone.trim(),
@@ -911,46 +984,213 @@ export const CreateOrderPage: React.FC = () => {
               </div>
             </div>
 
-            {/* Repeat customer notification prompt */}
-            {repeatCustomer && (
-              <div className="p-3 bg-[#EBF9F6] border border-[#B8ECE1] rounded-2xl flex items-center justify-between gap-2 animate-in fade-in">
-                <div className="text-xs text-[#238774]">
-                  <span className="font-extrabold">✨ Khách quen:</span> {repeatCustomer.name} ({repeatCustomer.address})
+            {/* RECOGNITION NOTIFICATION PANEL (KEY 1: SĐT & REPEAT CUSTOMER RECOGNITION) */}
+            {recognizedCustomer ? (
+              <div
+                className={`p-4 rounded-3xl border transition-all animate-in fade-in slide-in-from-top-2 shadow-xs ${
+                  recognizedCustomer.rank === 'Mẹ Kim Cương'
+                    ? 'bg-gradient-to-br from-[#FAF5FF] via-[#F3E8FF] to-[#FAF5FF] border-[#D8B4FE]'
+                    : recognizedCustomer.rank === 'Mẹ Thông Thái'
+                    ? 'bg-gradient-to-br from-[#FFFBEB] via-[#FEF3C7] to-[#FFFBEB] border-[#FCD34D]'
+                    : recognizedCustomer.rank === 'Bé Ngoan'
+                    ? 'bg-gradient-to-br from-[#F0FDF4] via-[#DCFCE7] to-[#F0FDF4] border-[#86EFAC]'
+                    : 'bg-gradient-to-br from-[#FFF1F2] via-[#FFE4E6] to-[#FFF1F2] border-[#FECDD3]'
+                }`}
+              >
+                <div className="flex flex-wrap items-center justify-between gap-2 pb-2.5 border-b border-black/5">
+                  <div className="flex items-center gap-2">
+                    <span className="text-xl">
+                      {CUSTOMER_RANKS[recognizedCustomer.rank].icon}
+                    </span>
+                    <div>
+                      <div className="flex items-center gap-2">
+                        <span className="text-xs font-black text-[#3D271D]">
+                          {CUSTOMER_RANKS[recognizedCustomer.rank].label}
+                        </span>
+                        <span className="px-2 py-0.5 rounded-full text-[10px] font-black bg-white/80 border border-black/10 text-[#3D271D]">
+                          ✨ Khách quen quay lại
+                        </span>
+                      </div>
+                      <p className="text-[11px] text-[#5C453B] font-medium">
+                        Đã mua <span className="font-black text-[#FF5B65]">{recognizedCustomer.totalOrders} đơn</span> • Tổng tích lũy <span className="font-black text-[#FF5B65]">{formatCurrency(recognizedCustomer.totalSpent)}</span>
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* 1-Click Auto-Fill Address Button */}
+                  {recognizedCustomer.address && (
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setCustomerName(recognizedCustomer.name);
+                        setShippingAddress(recognizedCustomer.address || '');
+                        showToast({
+                          type: 'success',
+                          title: 'Đã tự điền địa chỉ cũ!',
+                          message: `Đã điền địa chỉ của mẹ ${recognizedCustomer.name}`,
+                        });
+                      }}
+                      className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#FF5B65] hover:bg-[#E84A54] text-white rounded-xl text-xs font-black shadow-xs hover:shadow-md transition-all cursor-pointer shrink-0 active:scale-95"
+                    >
+                      <Zap className="w-3.5 h-3.5 fill-current" />
+                      ⚡ Tự điền địa chỉ cũ
+                    </button>
+                  )}
                 </div>
-                <button
-                  type="button"
-                  onClick={() => {
-                    setCustomerName(repeatCustomer.name);
-                    setShippingAddress(repeatCustomer.address);
-                  }}
-                  className="px-2.5 py-1 bg-[#238774] text-white rounded-xl text-[11px] font-bold shadow-2xs hover:bg-[#1E7363] transition-colors cursor-pointer shrink-0"
-                >
-                  Tự điền nhanh
-                </button>
+
+                {/* Saved Address preview */}
+                <div className="mt-2.5 flex items-start gap-2 text-xs text-[#3D271D]">
+                  <MapPin className="w-3.5 h-3.5 text-[#FF5B65] mt-0.5 shrink-0" />
+                  <span className="font-medium leading-relaxed">
+                    <span className="font-bold">Địa chỉ quen thuộc:</span> {recognizedCustomer.address || 'Chưa lưu địa chỉ chi tiết'}
+                  </span>
+                </div>
+
+                {/* VIP Discount Benefit */}
+                {CUSTOMER_RANKS[recognizedCustomer.rank].discountPercent > 0 && (
+                  <div className="mt-2.5 p-2.5 rounded-2xl bg-white/70 border border-black/5 flex flex-wrap items-center justify-between gap-2">
+                    <div className="flex items-center gap-2">
+                      <Gift className="w-4 h-4 text-[#FF5B65]" />
+                      <span className="text-xs font-bold text-[#3D271D]">
+                        Quyền lợi Rank: Giảm <span className="text-[#FF5B65] font-black">-{CUSTOMER_RANKS[recognizedCustomer.rank].discountPercent}% VIP</span>
+                        {subtotal > 0 && (
+                          <span className="text-[#8C7065] ml-1">
+                            (= {formatCurrency(Math.round((subtotal * CUSTOMER_RANKS[recognizedCustomer.rank].discountPercent) / 100))})
+                          </span>
+                        )}
+                      </span>
+                    </div>
+
+                    <button
+                      type="button"
+                      onClick={handleApplyVipDiscount}
+                      className="px-2.5 py-1 bg-white border border-[#FF5B65]/30 hover:border-[#FF5B65] text-[#FF5B65] hover:bg-[#FFF0F1] text-[11px] font-black rounded-xl transition-all cursor-pointer shadow-2xs"
+                    >
+                      🎁 Áp dụng -{CUSTOMER_RANKS[recognizedCustomer.rank].discountPercent}% vào đơn
+                    </button>
+                  </div>
+                )}
+
+                {/* Baby Size Memory & Suggestion */}
+                {recognizedCustomer.lastBabySize && (
+                  <div className="mt-2 text-xs text-[#6B554D] flex items-center justify-between gap-2 bg-white/50 px-3 py-1.5 rounded-xl border border-black/5">
+                    <span>
+                      👶 Lần trước mẹ lấy size: <strong className="text-[#3D271D]">{recognizedCustomer.lastBabySize}</strong> • {getNextSuggestedBabySize(recognizedCustomer.lastBabySize)}
+                    </span>
+                    <button
+                      type="button"
+                      onClick={() => {
+                        const suggestion = getNextSuggestedBabySize(recognizedCustomer.lastBabySize);
+                        setOrderNote((prev) => (prev ? `${prev} | ${suggestion}` : suggestion));
+                        showToast({
+                          type: 'info',
+                          title: 'Đã thêm gợi ý size',
+                          message: 'Đã thêm ghi chú size bé vào đơn hàng.',
+                        });
+                      }}
+                      className="text-[11px] font-bold text-[#FF5B65] hover:underline cursor-pointer shrink-0"
+                    >
+                      + Thêm vào ghi chú
+                    </button>
+                  </div>
+                )}
               </div>
-            )}
+            ) : cleanPhone.length >= 9 ? (
+              <div className="p-3 bg-gradient-to-r from-[#FFF8E6] to-[#FFF0F1] border border-[#FDE199] rounded-2xl flex items-center justify-between gap-2 animate-in fade-in">
+                <div className="flex items-center gap-2">
+                  <span className="text-base">🥉</span>
+                  <div>
+                    <p className="text-xs font-black text-[#8A5D00]">Khách mới (Hạng Mầm Nhỏ)</p>
+                    <p className="text-[11px] text-[#8C7065]">
+                      Đơn hàng đầu tiên của mẹ tại Moniu Xin Chào! Tặng kèm thiệp cảm ơn & quà sticker Nous.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ) : null}
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div>
+              {/* KEY 2: TÊN KHÁCH / NICKNAME TIKTOK (WITH AUTO-SUGGEST DROPDOWN) */}
+              <div className="relative" ref={nameInputRef}>
                 <label className="block text-xs font-bold text-[#3D271D] mb-1.5">
                   Tên khách / Nickname TikTok <span className="text-[#FF5B65]">*</span>
                 </label>
                 <div className="relative">
-                  <User className="w-4 h-4 text-[#8C7065] absolute left-3.5 top-1/2 -translate-y-1/2" />
+                  <User className="w-4 h-4 text-[#8C7065] absolute left-3.5 top-1/2 -translate-y-1/2 z-10" />
                   <input
                     type="text"
                     required
                     value={customerName}
-                    onChange={(e) => setCustomerName(e.target.value)}
+                    onChange={(e) => {
+                      setCustomerName(e.target.value);
+                      setIsNameSuggestionsOpen(true);
+                    }}
+                    onFocus={() => {
+                      if (customerName.trim().length >= 2) setIsNameSuggestionsOpen(true);
+                    }}
                     placeholder="Ví dụ: Mẹ Bắp, Mẹ Sóc,..."
                     className="w-full bg-[#FFF9F6] focus:bg-white text-xs text-[#3D271D] pl-10 pr-3.5 py-2.5 rounded-2xl border border-[#FDE2E4] focus:border-[#FF5B65] focus:ring-2 focus:ring-[#FF5B65]/15 outline-hidden font-medium"
                   />
                 </div>
+
+                {/* Auto-suggest dropdown menu when typing customer nickname/name */}
+                {isNameSuggestionsOpen && nameSuggestions.length > 0 && (
+                  <div className="absolute left-0 right-0 top-full mt-1.5 bg-white rounded-2xl border border-[#FCD2D6] shadow-xl z-50 overflow-hidden animate-in fade-in duration-150">
+                    <div className="p-2 bg-[#FFF0F1] border-b border-[#FCD2D6] flex items-center justify-between text-[11px] font-bold text-[#FF5B65]">
+                      <span>🔍 Tìm thấy {nameSuggestions.length} khách quen Moniu:</span>
+                      <button
+                        type="button"
+                        onClick={() => setIsNameSuggestionsOpen(false)}
+                        className="text-[#8C7065] hover:text-[#3D271D] cursor-pointer"
+                      >
+                        Đóng ✕
+                      </button>
+                    </div>
+                    <div className="divide-y divide-[#FFF0F1] max-h-56 overflow-y-auto">
+                      {nameSuggestions.map((cust) => (
+                        <div
+                          key={cust.id || cust.phone}
+                          onClick={() => handleSelectSuggestedCustomer(cust)}
+                          className="p-3 hover:bg-[#FFF9F6] cursor-pointer transition-colors flex items-center justify-between gap-2"
+                        >
+                          <div className="min-w-0">
+                            <div className="flex items-center gap-1.5">
+                              <span className="font-black text-xs text-[#3D271D]">
+                                {cust.name}
+                              </span>
+                              <span className={`text-[10px] font-black px-1.5 py-0.5 rounded-md ${CUSTOMER_RANKS[cust.rank].badgeBg} ${CUSTOMER_RANKS[cust.rank].badgeText}`}>
+                                {CUSTOMER_RANKS[cust.rank].icon} {cust.rank}
+                              </span>
+                            </div>
+                            <p className="text-[11px] text-[#8C7065] truncate mt-0.5">
+                              📞 {cust.phone} {cust.address ? `• 📍 ${cust.address}` : ''}
+                            </p>
+                            <p className="text-[10px] text-[#A68F86]">
+                              Đã mua {cust.totalOrders} đơn ({formatCurrency(cust.totalSpent)})
+                            </p>
+                          </div>
+                          <button
+                            type="button"
+                            className="px-2 py-1 bg-[#FFF0F1] text-[#FF5B65] hover:bg-[#FF5B65] hover:text-white rounded-xl text-[10px] font-bold transition-colors cursor-pointer shrink-0"
+                          >
+                            Chọn ➔
+                          </button>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </div>
 
+              {/* KEY 1: SỐ ĐIỆN THOẠI (100% precision) */}
               <div>
-                <label className="block text-xs font-bold text-[#3D271D] mb-1.5">
-                  Số điện thoại <span className="text-[#FF5B65]">*</span>
+                <label className="block text-xs font-bold text-[#3D271D] mb-1.5 flex items-center justify-between">
+                  <span>Số điện thoại <span className="text-[#FF5B65]">*</span></span>
+                  {recognizedCustomer && (
+                    <span className="text-[10px] font-black text-[#238774] flex items-center gap-1">
+                      <Check className="w-3 h-3 stroke-[3]" /> Khách quen chuẩn xác
+                    </span>
+                  )}
                 </label>
                 <div className="relative">
                   <Phone className="w-4 h-4 text-[#8C7065] absolute left-3.5 top-1/2 -translate-y-1/2" />
@@ -965,6 +1205,7 @@ export const CreateOrderPage: React.FC = () => {
                 </div>
               </div>
             </div>
+
 
             <div>
               <label className="block text-xs font-bold text-[#3D271D] mb-1.5">
