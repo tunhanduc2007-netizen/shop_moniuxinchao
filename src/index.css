@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+:root {
+  /* Official Moniu Xin chào Brand Colors */
+  --brand-primary: #FF5B65;
+  --brand-primary-hover: #E84A54;
+  --brand-primary-light: #FFF0F1;
+  --brand-secondary: #FFAAA6;
+  --brand-yellow: #FFC83B;
+  --brand-yellow-light: #FFF8E6;
+  --brand-blue: #58B4FA;
+  --brand-blue-light: #EDF7FE;
+  --brand-purple: #B892FF;
+  --brand-purple-light: #F6F1FE;
+  --brand-mint: #48C9B0;
+  --brand-mint-light: #EBF9F6;
+  --surface: #FFF9F6;
+  --surface-card: #FFFFFF;
+  --text-primary: #3D271D;
+  --text-secondary: #8C7065;
+  --border: #FDE2E4;
+}
+
+@layer base {
+  body {
+    font-family: 'Nunito', 'Inter', system-ui, -apple-system, sans-serif;
+    color: var(--text-primary);
+    background-color: var(--surface);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Nunito', 'Inter', system-ui, sans-serif;
+    letter-spacing: -0.015em;
+  }
+}
+
+/* Custom rounded scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FFF5F5;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #FFCBD0;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FFAAA6;
+}
