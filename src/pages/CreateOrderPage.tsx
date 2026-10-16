@@ -36,6 +36,7 @@ import type { OrderItem, PaymentMethod, ShippingCarrier, ProductCatalogItem, Cus
 import { CUSTOMER_RANKS } from '../types';
 import { formatCurrency } from '../utils/formatters';
 import { getNextSuggestedBabySize } from '../utils/customerUtils';
+import { searchAddressSuggestions, AddressSuggestion, POPULAR_PROVINCES } from '../utils/addressUtils';
 import { SizeSelectionModal } from '../components/SizeSelectionModal';
 
 export const CreateOrderPage: React.FC = () => {
@@ -185,6 +186,46 @@ export const CreateOrderPage: React.FC = () => {
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
+
+  // ADDRESS & STREET AUTOCOMPLETE (vietnamese-provinces-database)
+  const [isAddressSuggestionsOpen, setIsAddressSuggestionsOpen] = useState(false);
+  const addressContainerRef = useRef<HTMLDivElement>(null);
+
+  const addressSuggestions = useMemo(() => {
+    if (!shippingAddress || shippingAddress.trim().length < 2) return [];
+    return searchAddressSuggestions(shippingAddress, 6);
+  }, [shippingAddress]);
+
+  const handleSelectAddressSuggestion = (suggestion: AddressSuggestion) => {
+    setShippingAddress(suggestion.fullAddress);
+    setIsAddressSuggestionsOpen(false);
+    showToast({
+      type: 'info',
+      title: 'Đã điền địa chỉ chuẩn',
+      message: suggestion.fullAddress,
+    });
+  };
+
+  const handleAddProvinceChip = (provinceName: string) => {
+    setShippingAddress((prev) => {
+      const clean = prev.trim();
+      if (!clean) return `${provinceName}`;
+      if (clean.toLowerCase().includes(provinceName.toLowerCase())) return clean;
+      return `${clean}, ${provinceName}`;
+    });
+  };
+
+  // Close address suggestions dropdown on outside click
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (addressContainerRef.current && !addressContainerRef.current.contains(e.target as Node)) {
+        setIsAddressSuggestionsOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
 
   // Auto-receive product with size from other tabs
   useEffect(() => {
@@ -1207,22 +1248,119 @@ export const CreateOrderPage: React.FC = () => {
             </div>
 
 
-            <div>
-              <label className="block text-xs font-bold text-[#3D271D] mb-1.5">
-                Địa chỉ giao hàng (Nhập đầy đủ để giao tận tay) <span className="text-[#FF5B65]">*</span>
-              </label>
+            {/* ĐỊA CHỈ GIAO HÀNG VỚI GỢI Ý TÊN ĐƯỜNG & HÀNH CHÍNH VIETNAMESE-PROVINCES */}
+            <div className="relative" ref={addressContainerRef}>
+              <div className="flex items-center justify-between mb-1.5">
+                <label className="text-xs font-bold text-[#3D271D] flex items-center gap-1.5">
+                  <MapPin className="w-3.5 h-3.5 text-[#FF5B65]" />
+                  <span>Địa chỉ giao hàng (Nhập đầy đủ để giao tận tay) <span className="text-[#FF5B65]">*</span></span>
+                </label>
+                {shippingAddress && (
+                  <button
+                    type="button"
+                    onClick={() => setShippingAddress('')}
+                    className="text-[10px] text-[#8C7065] hover:text-[#FF5B65] font-bold cursor-pointer"
+                  >
+                    Xóa địa chỉ
+                  </button>
+                )}
+              </div>
+
               <div className="relative">
-                <MapPin className="w-4 h-4 text-[#8C7065] absolute left-3.5 top-3" />
+                <MapPin className="w-4 h-4 text-[#8C7065] absolute left-3.5 top-3 z-10" />
                 <textarea
                   rows={2}
                   required
                   value={shippingAddress}
-                  onChange={(e) => setShippingAddress(e.target.value)}
+                  onChange={(e) => {
+                    setShippingAddress(e.target.value);
+                    setIsAddressSuggestionsOpen(true);
+                  }}
+                  onFocus={() => {
+                    if (shippingAddress.trim().length >= 2) {
+                      setIsAddressSuggestionsOpen(true);
+                    }
+                  }}
                   placeholder="Số nhà, tên đường, Phường/Xã, Quận/Huyện, Tỉnh/Thành phố..."
                   className="w-full bg-[#FFF9F6] focus:bg-white text-xs text-[#3D271D] pl-10 pr-3.5 py-2 rounded-2xl border border-[#FDE2E4] focus:border-[#FF5B65] focus:ring-2 focus:ring-[#FF5B65]/15 outline-hidden leading-relaxed font-medium"
                 />
               </div>
+
+              {/* FLOATING ADDRESS & STREET SUGGESTIONS MENU */}
+              {isAddressSuggestionsOpen && addressSuggestions.length > 0 && (
+                <div className="absolute left-0 right-0 top-full mt-1.5 bg-white rounded-2xl border border-[#FCD2D6] shadow-xl z-50 overflow-hidden animate-in fade-in duration-150">
+                  <div className="p-2.5 bg-gradient-to-r from-[#FFF0F1] to-[#FFF9F6] border-b border-[#FCD2D6] flex items-center justify-between text-[11px] font-black text-[#FF5B65]">
+                    <span className="flex items-center gap-1">
+                      <Sparkles className="w-3 h-3 text-[#FF5B65]" />
+                      Gợi ý tên đường & địa chỉ chuẩn Việt Nam ({addressSuggestions.length}):
+                    </span>
+                    <button
+                      type="button"
+                      onClick={() => setIsAddressSuggestionsOpen(false)}
+                      className="text-[#8C7065] hover:text-[#3D271D] font-bold cursor-pointer"
+                    >
+                      Đóng ✕
+                    </button>
+                  </div>
+                  <div className="divide-y divide-[#FFF0F1] max-h-60 overflow-y-auto">
+                    {addressSuggestions.map((item, idx) => (
+                      <div
+                        key={idx}
+                        onClick={() => handleSelectAddressSuggestion(item)}
+                        className="p-3 hover:bg-[#FFF9F6] cursor-pointer transition-colors flex items-center justify-between gap-2.5"
+                      >
+                        <div className="min-w-0 flex items-start gap-2.5">
+                          <MapPin className="w-4 h-4 text-[#FF5B65] mt-0.5 shrink-0" />
+                          <div>
+                            <p className="text-xs font-bold text-[#3D271D] leading-snug">
+                              {item.fullAddress}
+                            </p>
+                            <div className="flex items-center gap-1.5 mt-1">
+                              <span className="px-2 py-0.5 rounded-md text-[10px] font-black bg-[#FFF0F1] text-[#FF5B65]">
+                                {item.province}
+                              </span>
+                              {item.district && (
+                                <span className="px-2 py-0.5 rounded-md text-[10px] font-bold bg-[#F5F2F0] text-[#6E584F]">
+                                  {item.district}
+                                </span>
+                              )}
+                              {item.postalCode && (
+                                <span className="text-[10px] font-mono text-[#8C7065]">
+                                  Mã bưu chính: {item.postalCode}
+                                </span>
+                              )}
+                            </div>
+                          </div>
+                        </div>
+
+                        <button
+                          type="button"
+                          className="px-2.5 py-1 bg-[#FFF0F1] text-[#FF5B65] hover:bg-[#FF5B65] hover:text-white rounded-xl text-[10px] font-black transition-colors cursor-pointer shrink-0"
+                        >
+                          Chọn ➔
+                        </button>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* QUICK PROVINCE CHIPS (NÚT CHỌN NHANH TỈNH THÀNH KHI LIVE) */}
+              <div className="mt-2 flex items-center gap-1.5 overflow-x-auto pb-1 text-[11px] text-[#8C7065]">
+                <span className="shrink-0 font-bold text-[10px] text-[#A68F86]">Thêm nhanh:</span>
+                {POPULAR_PROVINCES.slice(0, 8).map((p) => (
+                  <button
+                    key={p}
+                    type="button"
+                    onClick={() => handleAddProvinceChip(p)}
+                    className="shrink-0 px-2.5 py-1 rounded-xl bg-[#FFF9F6] hover:bg-[#FFF0F1] hover:text-[#FF5B65] border border-[#FDE2E4] font-medium text-[10px] transition-colors cursor-pointer"
+                  >
+                    + {p}
+                  </button>
+                ))}
+              </div>
             </div>
+
 
             <div>
               <label className="block text-xs font-bold text-[#3D271D] mb-1.5">
