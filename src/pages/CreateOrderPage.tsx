@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect, useMemo, useRef } from 'react';
 import {
   Plus,
   Trash2,
@@ -18,6 +18,14 @@ import {
   Tag,
   Filter,
   Sparkles,
+  Wand2,
+  QrCode,
+  ShoppingBag,
+  Zap,
+  ChevronDown,
+  Minus,
+  Gift,
+  Percent,
 } from 'lucide-react';
 import { useShop } from '../context/ShopContext';
 import type { OrderItem, PaymentMethod, ShippingCarrier, ProductCatalogItem } from '../types';
@@ -26,6 +34,7 @@ import { SizeSelectionModal } from '../components/SizeSelectionModal';
 
 export const CreateOrderPage: React.FC = () => {
   const {
+    orders,
     products,
     settings,
     generateUniqueCode,
@@ -45,27 +54,33 @@ export const CreateOrderPage: React.FC = () => {
   const [paymentMethod, setPaymentMethod] = useState<PaymentMethod>('COD');
   const [carrier, setCarrier] = useState<ShippingCarrier>(settings.defaultCarrier);
 
-  // Products in order (starts completely blank)
-  const [orderItems, setOrderItems] = useState<OrderItem[]>([
-    {
-      id: '1',
-      productCode: '',
-      productName: '',
-      variant: '',
-      unitPrice: 0,
-      quantity: 1,
-    },
-  ]);
+  // Livestream specific features: Freeship & Discount
+  const [isLiveFreeship, setIsLiveFreeship] = useState(true); // Default true for live convenience
+  const [discountAmount, setDiscountAmount] = useState(0);
 
+  // Products in order (starts empty for clean, fast workflow)
+  const [orderItems, setOrderItems] = useState<OrderItem[]>([]);
   const [lastCreatedOrderCode, setLastCreatedOrderCode] = useState<string | null>(null);
 
-  // State for 330 real products picker modal
+  // Fast Product Search dropdown state
+  const [fastSearchQuery, setFastSearchQuery] = useState('');
+  const [isFastSearchOpen, setIsFastSearchOpen] = useState(false);
+  const searchInputRef = useRef<HTMLInputElement>(null);
+  const searchContainerRef = useRef<HTMLDivElement>(null);
+
+  // Smart Live Comment Parser state
+  const [isParserOpen, setIsParserOpen] = useState(false);
+  const [rawCommentText, setRawCommentText] = useState('');
+
+  // 330 products full picker modal state
   const [isProductPickerOpen, setIsProductPickerOpen] = useState(false);
   const [pickerSearch, setPickerSearch] = useState('');
   const [pickerBrand, setPickerBrand] = useState('all');
   const [pickerCategory, setPickerCategory] = useState('all');
-  const [activeRowForPicker, setActiveRowForPicker] = useState<number | null>(null);
   const [pickerProductForSize, setPickerProductForSize] = useState<ProductCatalogItem | null>(null);
+
+  // VietQR modal state
+  const [showQrModal, setShowQrModal] = useState(false);
 
   // Dynamic brand counts for picker
   const pickerBrandStats = useMemo(() => {
@@ -83,17 +98,26 @@ export const CreateOrderPage: React.FC = () => {
     };
   }, [products]);
 
-  // Tự động nhận sản phẩm đã chọn size khi chốt đơn từ Kho 330 SP
+  // Check for repeat customer based on phone number
+  const repeatCustomer = useMemo(() => {
+    const clean = customerPhone.trim();
+    if (clean.length < 9) return null;
+    const found = orders.find(
+      (o) => o.customerPhone && o.customerPhone.trim() === clean && (o.customerName || o.shippingAddress)
+    );
+    if (found && (found.customerName !== customerName || found.shippingAddress !== shippingAddress)) {
+      return {
+        name: found.customerName,
+        address: found.shippingAddress,
+      };
+    }
+    return null;
+  }, [customerPhone, orders, customerName, shippingAddress]);
+
+  // Auto-receive product with size from other tabs
   useEffect(() => {
     if (pendingOrderItem) {
-      setOrderItems((prev) => {
-        const isEmptySingleRow =
-          prev.length === 1 && !prev[0].productCode && !prev[0].productName;
-        if (isEmptySingleRow) {
-          return [pendingOrderItem];
-        }
-        return [...prev, pendingOrderItem];
-      });
+      setOrderItems((prev) => [...prev, pendingOrderItem]);
       setPendingOrderItem(null);
     }
   }, [pendingOrderItem, setPendingOrderItem]);
@@ -102,121 +126,137 @@ export const CreateOrderPage: React.FC = () => {
     setOrderCode(generateUniqueCode());
   }, []);
 
+  // Close search popover when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (searchContainerRef.current && !searchContainerRef.current.contains(e.target as Node)) {
+        setIsFastSearchOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
+  // Keyboard shortcut: F9 or Ctrl+Enter to submit
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'F9' || (e.key === 'Enter' && (e.ctrlKey || e.metaKey))) {
+        e.preventDefault();
+        submitOrder();
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  });
+
   const handleRegenerateCode = () => {
     setOrderCode(generateUniqueCode());
   };
 
-  const handleAddItem = () => {
-    const newItem: OrderItem = {
-      id: Math.random().toString(),
-      productCode: '',
-      productName: '',
-      variant: '',
-      unitPrice: 0,
-      quantity: 1,
-    };
-    setOrderItems([...orderItems, newItem]);
-  };
+  // Add a product with exact size in 1 click
+  const handleAddProductWithVariant = (prod: ProductCatalogItem, variantName?: string) => {
+    const selectedVariant = variantName || (prod.variants && prod.variants.length > 0 ? prod.variants[0] : 'Tiêu chuẩn');
 
-  const handleRemoveItem = (index: number) => {
-    if (orderItems.length === 1) {
-      setOrderItems([
-        {
-          id: Math.random().toString(),
-          productCode: '',
-          productName: '',
-          variant: '',
-          unitPrice: 0,
-          quantity: 1,
-        },
-      ]);
-      return;
+    // Check if same product & size already exists in order
+    const existingIndex = orderItems.findIndex(
+      (it) => it.productCode === prod.code && it.variant === selectedVariant
+    );
+
+    if (existingIndex !== -1) {
+      // Increase quantity
+      setOrderItems((prev) => {
+        const updated = [...prev];
+        updated[existingIndex].quantity = (Number(updated[existingIndex].quantity) || 1) + 1;
+        return updated;
+      });
+      showToast({
+        type: 'info',
+        title: 'Đã tăng số lượng',
+        message: `${prod.name} (${selectedVariant}) x${orderItems[existingIndex].quantity + 1}`,
+        code: prod.code,
+      });
+    } else {
+      // Add new item
+      const newItem: OrderItem = {
+        id: Math.random().toString(),
+        productCode: prod.code,
+        productName: prod.name,
+        variant: selectedVariant,
+        unitPrice: prod.price,
+        quantity: 1,
+        image: prod.image,
+      };
+      setOrderItems((prev) => [...prev, newItem]);
+      showToast({
+        type: 'success',
+        title: 'Đã thêm vào đơn',
+        message: `${prod.name} (${selectedVariant})`,
+        code: prod.code,
+      });
     }
-    setOrderItems(orderItems.filter((_, idx) => idx !== index));
+
+    setFastSearchQuery('');
+    setIsFastSearchOpen(false);
   };
 
-  const handleItemChange = (index: number, field: keyof OrderItem, value: any) => {
+  // Change quantity
+  const handleQuantityChange = (index: number, delta: number) => {
     setOrderItems((prev) => {
       const updated = [...prev];
-      updated[index] = { ...updated[index], [field]: value };
-
-      if (field === 'productCode') {
-        const val = String(value).trim().toLowerCase();
-        const found = products.find(
-          (p) =>
-            p.code.toLowerCase() === val ||
-            p.code.toLowerCase().replace('-', '') === val ||
-            (p.tiktokId && p.tiktokId.toLowerCase() === val)
-        );
-        if (found) {
-          updated[index].productName = found.name;
-          updated[index].unitPrice = found.price;
-          if (found.variants.length > 0 && !updated[index].variant) {
-            updated[index].variant = found.variants[0];
-          }
-        }
-      }
-
+      const cur = Number(updated[index].quantity) || 1;
+      const next = Math.max(1, cur + delta);
+      updated[index] = { ...updated[index], quantity: next };
       return updated;
     });
   };
 
-  // Mở bước chọn size khi chọn sản phẩm từ kho
-  const handleStartSizeSelectionForPicker = (prod: ProductCatalogItem) => {
-    setPickerProductForSize(prod);
+  // Remove item
+  const handleRemoveItem = (index: number) => {
+    setOrderItems(orderItems.filter((_, idx) => idx !== index));
   };
 
-  const handleConfirmPickerSize = (prod: ProductCatalogItem, selectedSize: string, qty: number) => {
-    const newItem: OrderItem = {
-      id: Math.random().toString(),
-      productCode: prod.code,
-      productName: prod.name,
-      variant: selectedSize,
-      unitPrice: prod.price,
-      quantity: qty,
-      image: prod.image,
-    };
-
-    if (activeRowForPicker !== null && orderItems[activeRowForPicker]) {
-      setOrderItems((prev) => {
-        const updated = [...prev];
-        updated[activeRowForPicker] = newItem;
-        return updated;
-      });
-    } else {
-      const emptyIndex = orderItems.findIndex(
-        (it) => !it.productCode && !it.productName
-      );
-      if (emptyIndex !== -1) {
-        setOrderItems((prev) => {
-          const updated = [...prev];
-          updated[emptyIndex] = newItem;
-          return updated;
-        });
-      } else {
-        setOrderItems((prev) => [...prev, newItem]);
-      }
-    }
-
-    setIsProductPickerOpen(false);
-    setActiveRowForPicker(null);
-    setPickerProductForSize(null);
-
-    showToast({
-      type: 'success',
-      title: 'Đã thêm vào đơn hàng!',
-      message: `${prod.name} (Size: ${selectedSize}, SL: ${qty})`,
-      code: prod.code,
+  // Update item field directly
+  const handleItemFieldChange = (index: number, field: keyof OrderItem, val: any) => {
+    setOrderItems((prev) => {
+      const updated = [...prev];
+      updated[index] = { ...updated[index], [field]: val };
+      return updated;
     });
   };
 
-  const handleQuickSelectCatalogProduct = (prodCode: string) => {
-    const prod = products.find((p) => p.code === prodCode);
-    if (!prod) return;
-    setPickerProductForSize(prod);
+  // Add empty manual row
+  const handleAddManualRow = () => {
+    const newItem: OrderItem = {
+      id: Math.random().toString(),
+      productCode: '',
+      productName: '',
+      variant: 'Tiêu chuẩn',
+      unitPrice: 0,
+      quantity: 1,
+    };
+    setOrderItems((prev) => [...prev, newItem]);
   };
 
-  const filteredPickerProducts = React.useMemo(() => {
+  // Filtered products for instant fast search
+  const fastSearchResults = useMemo(() => {
+    const q = fastSearchQuery.toLowerCase().trim();
+    if (!q) return [];
+    return products
+      .filter((p) => {
+        return (
+          p.code.toLowerCase().includes(q) ||
+          p.code.toLowerCase().replace('-', '').includes(q) ||
+          p.name.toLowerCase().includes(q) ||
+          (p.tiktokId && p.tiktokId.includes(q)) ||
+          (p.brand && p.brand.toLowerCase().includes(q)) ||
+          (p.category && p.category.toLowerCase().includes(q))
+        );
+      })
+      .slice(0, 6);
+  }, [products, fastSearchQuery]);
+
+  // Full picker filtered products
+  const filteredPickerProducts = useMemo(() => {
     return products.filter((p) => {
       const q = pickerSearch.toLowerCase().trim();
       const matchSearch =
@@ -234,17 +274,116 @@ export const CreateOrderPage: React.FC = () => {
     });
   }, [products, pickerSearch, pickerBrand, pickerCategory]);
 
-  const subtotal = orderItems.reduce(
-    (sum, item) => sum + (Number(item.unitPrice) || 0) * (Number(item.quantity) || 1),
-    0
-  );
+  // Smart Live Comment Parser
+  const handleParseComment = () => {
+    if (!rawCommentText.trim()) return;
+    const text = rawCommentText.trim();
 
-  const shippingFee =
-    subtotal >= settings.freeShippingThreshold && subtotal > 0
-      ? 0
-      : settings.defaultShippingFee;
+    // 1. Phone extraction (10 digits starting with 0)
+    let phone = '';
+    const phoneMatch = text.match(/\b(0[35789]\d{8})\b/);
+    if (phoneMatch) {
+      phone = phoneMatch[1];
+    }
 
-  const totalAmount = subtotal + shippingFee;
+    // 2. Product code extraction (MN-001, MN001, MN 001)
+    let matchedProd: ProductCatalogItem | undefined;
+    const codeMatch = text.match(/\b(MN[\s-]?[0-9]{1,3})\b/i);
+    if (codeMatch) {
+      const numStr = codeMatch[1].replace(/[^0-9]/g, '');
+      const formattedCode = `MN-${parseInt(numStr, 10).toString().padStart(3, '0')}`;
+      matchedProd = products.find((p) => p.code.toLowerCase() === formattedCode.toLowerCase());
+    }
+
+    // If no MN code, try matching product by keywords (bodysuit, chăn, khẩu trang,...)
+    if (!matchedProd) {
+      const words = text.toLowerCase();
+      matchedProd = products.find((p) => {
+        const titleLower = p.name.toLowerCase();
+        return words.includes(p.code.toLowerCase()) || (p.tiktokId && words.includes(p.tiktokId));
+      });
+    }
+
+    // 3. Size extraction
+    let detectedSize = '';
+    const sizeMatch = text.match(
+      /\b(NB|Newborn|0-3[mM]?|3-6[mM]?|6-9[mM]?|9-12[mM]?|12-18[mM]?|18-24[mM]?|2-3[yY]?|3-4[yY]?|S|M|L)\b/i
+    );
+    if (sizeMatch) {
+      detectedSize = sizeMatch[1].toUpperCase();
+      if (!detectedSize.endsWith('M') && !detectedSize.endsWith('Y') && !['NB', 'NEWBORN', 'S', 'M', 'L'].includes(detectedSize)) {
+        detectedSize += 'M';
+      }
+    }
+
+    // 4. Name extraction
+    let cleanText = text
+      .replace(phone, '')
+      .replace(codeMatch ? codeMatch[0] : '', '')
+      .replace(sizeMatch ? sizeMatch[0] : '', '')
+      .replace(/\b(chốt|size|sdt|sđt|đt|lấy|cho em|em lấy|bộ|mẫu|dặn|ship|món)\b/gi, '')
+      .trim();
+
+    const words = cleanText.split(/\s+/).filter(Boolean);
+    let nameParts: string[] = [];
+    let addrParts: string[] = [];
+    let isNamePhase = true;
+
+    for (const w of words) {
+      const lower = w.toLowerCase();
+      if (
+        ['hà nội', 'hcm', 'hn', 'đường', 'phố', 'ngõ', 'quận', 'huyện', 'tỉnh', 'xã', 'phường', 'tp'].some((k) =>
+          lower.includes(k)
+        )
+      ) {
+        isNamePhase = false;
+      }
+      if (isNamePhase && nameParts.length < 3) {
+        nameParts.push(w);
+      } else {
+        addrParts.push(w);
+      }
+    }
+
+    const detectedName = nameParts.join(' ');
+    const detectedAddress = addrParts.join(' ');
+
+    // Fill form
+    if (phone) setCustomerPhone(phone);
+    if (detectedName) setCustomerName(detectedName);
+    if (detectedAddress) setShippingAddress(detectedAddress);
+
+    // If product was found, add to order
+    if (matchedProd) {
+      const finalSize =
+        detectedSize || (matchedProd.variants && matchedProd.variants.length > 0 ? matchedProd.variants[0] : 'Tiêu chuẩn');
+      handleAddProductWithVariant(matchedProd, finalSize);
+    }
+
+    showToast({
+      type: 'success',
+      title: '⚡ Đã bóc tách comment!',
+      message: `${detectedName ? `Khách: ${detectedName}` : ''} ${matchedProd ? `— Đồ: ${matchedProd.code}` : ''} ${detectedSize ? `(${detectedSize})` : ''}`,
+    });
+
+    setRawCommentText('');
+  };
+
+  // Calculations
+  const subtotal = useMemo(() => {
+    return orderItems.reduce(
+      (sum, item) => sum + (Number(item.unitPrice) || 0) * (Number(item.quantity) || 1),
+      0
+    );
+  }, [orderItems]);
+
+  const shippingFee = useMemo(() => {
+    if (isLiveFreeship) return 0;
+    if (subtotal >= settings.freeShippingThreshold && subtotal > 0) return 0;
+    return settings.defaultShippingFee;
+  }, [isLiveFreeship, subtotal, settings]);
+
+  const totalAmount = Math.max(0, subtotal + shippingFee - discountAmount);
 
   const handleResetForm = () => {
     setOrderCode(generateUniqueCode());
@@ -254,77 +393,99 @@ export const CreateOrderPage: React.FC = () => {
     setOrderNote('');
     setPaymentMethod('COD');
     setCarrier(settings.defaultCarrier);
-    setOrderItems([
-      {
-        id: Math.random().toString(),
-        productCode: '',
-        productName: '',
-        variant: '',
-        unitPrice: 0,
-        quantity: 1,
-      },
-    ]);
+    setIsLiveFreeship(true);
+    setDiscountAmount(0);
+    setOrderItems([]);
     setLastCreatedOrderCode(null);
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-
+  const submitOrder = () => {
     if (!customerName.trim()) {
-      alert('Vui lòng nhập tên mẹ / khách hàng');
+      showToast({
+        type: 'warning',
+        title: 'Thiếu tên người nhận',
+        message: 'Vui lòng nhập Tên khách hoặc Nickname TikTok',
+      });
       return;
     }
 
-    const validItems = orderItems.filter((it) => it.productName.trim() || it.productCode.trim());
-    if (validItems.length === 0) {
-      alert('Vui lòng thêm ít nhất một món đồ em bé vào đơn');
+    if (orderItems.length === 0) {
+      showToast({
+        type: 'warning',
+        title: 'Đơn chưa có đồ bé',
+        message: 'Vui lòng tìm và thêm ít nhất một món đồ bé vào đơn',
+      });
       return;
     }
 
     const created = addOrder({
       code: orderCode,
-      customerName,
-      customerPhone,
-      shippingAddress,
-      orderNote,
+      customerName: customerName.trim(),
+      customerPhone: customerPhone.trim(),
+      shippingAddress: shippingAddress.trim(),
+      orderNote: orderNote.trim(),
       paymentMethod,
       carrier,
-      items: validItems.map((item) => ({
+      items: orderItems.map((item) => ({
         ...item,
         unitPrice: Number(item.unitPrice) || 0,
         quantity: Number(item.quantity) || 1,
       })),
       subtotal,
       shippingFee,
-      discount: 0,
+      discount: discountAmount,
       totalAmount,
       status: 'Chờ xử lý',
       shippingStatus: 'Chờ lấy hàng',
     });
 
     setLastCreatedOrderCode(created.code);
+    showToast({
+      type: 'success',
+      title: '🎉 Chốt đơn live thành công!',
+      message: `Đơn ${created.code} cho ${customerName} (${formatCurrency(totalAmount)})`,
+      code: created.code,
+    });
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    submitOrder();
   };
 
   return (
-    <div className="space-y-6 pb-12 max-w-6xl mx-auto">
-      {/* Title & Quick Actions */}
+    <div className="space-y-6 pb-12 max-w-7xl mx-auto notranslate" translate="no">
+      {/* Title & Quick Action Bar */}
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div>
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2.5">
             <h1 className="text-2xl font-black text-[#3D271D] tracking-tight font-['Nunito',sans-serif]">
               Tạo đơn chốt live
             </h1>
-            <span className="text-xs font-extrabold px-3 py-1 rounded-full bg-[#FFF0F1] text-[#FF5B65] border border-[#FCD2D6] flex items-center gap-1">
-              <Heart className="w-3 h-3 fill-[#FF5B65]" />
+            <span className="text-xs font-extrabold px-3 py-1 rounded-full bg-[#FFF0F1] text-[#FF5B65] border border-[#FCD2D6] flex items-center gap-1.5 shadow-2xs">
+              <span className="w-2 h-2 rounded-full bg-[#FF5B65] animate-ping" />
               Moniu Live Fast-Entry
             </span>
           </div>
-          <p className="text-sm text-[#8C7065] mt-0.5 font-medium">
-            Tối ưu tốc độ bấm đơn nhanh khi livestream TikTok bán đồ em bé
+          <p className="text-sm text-[#8C7065] mt-1 font-medium">
+            Tối ưu bấm đơn siêu tốc: gõ tìm kiếm kèm size 1-click hoặc bóc tách bình luận live
           </p>
         </div>
 
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 flex-wrap">
+          <button
+            type="button"
+            onClick={() => setIsParserOpen(!isParserOpen)}
+            className={`flex items-center gap-1.5 px-3.5 py-2 text-xs font-bold rounded-2xl transition-all cursor-pointer border ${
+              isParserOpen
+                ? 'bg-[#FF5B65] text-white border-[#FF5B65] shadow-xs'
+                : 'bg-white text-[#FF5B65] hover:bg-[#FFF0F1] border-[#FCD2D6]'
+            }`}
+          >
+            <Sparkles className="w-3.5 h-3.5" />
+            {isParserOpen ? 'Đóng bóc tách comment' : '⚡ Bóc tách comment live'}
+          </button>
+
           <button
             type="button"
             onClick={handleResetForm}
@@ -336,6 +497,46 @@ export const CreateOrderPage: React.FC = () => {
         </div>
       </div>
 
+      {/* Smart Live Comment Parser Box */}
+      {isParserOpen && (
+        <div className="bg-gradient-to-r from-[#FFF0F1] via-[#FFF9F6] to-[#FFF0F1] border-2 border-[#FCD2D6] rounded-3xl p-4 sm:p-5 shadow-xs space-y-3 animate-in fade-in slide-in-from-top-2 duration-200">
+          <div className="flex items-center justify-between">
+            <span className="text-xs font-black text-[#FF5B65] flex items-center gap-1.5 font-['Nunito',sans-serif]">
+              <Wand2 className="w-4 h-4" />
+              Bóc tách thông minh từ bình luận Livestream TikTok / Shopee
+            </span>
+            <span className="text-[11px] text-[#8C7065] font-medium hidden sm:inline">
+              Tự động nhận diện: SĐT, Tên khách, Mã SP (MN-001...), Size
+            </span>
+          </div>
+
+          <div className="flex flex-col sm:flex-row gap-2.5">
+            <input
+              type="text"
+              autoFocus
+              value={rawCommentText}
+              onChange={(e) => setRawCommentText(e.target.value)}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter') {
+                  e.preventDefault();
+                  handleParseComment();
+                }
+              }}
+              placeholder="Dán bình luận tại đây: Ví dụ: 0987123456 mẹ Bắp chốt MN-001 size 3-6M số 12 Cầu Giấy Hà Nội..."
+              className="flex-1 bg-white text-xs text-[#3D271D] px-4 py-2.5 rounded-2xl border border-[#FDE2E4] focus:outline-hidden focus:border-[#FF5B65] focus:ring-2 focus:ring-[#FF5B65]/15 font-medium"
+            />
+            <button
+              type="button"
+              onClick={handleParseComment}
+              className="px-5 py-2.5 bg-[#FF5B65] hover:bg-[#E84A54] text-white rounded-2xl text-xs font-black transition-all shadow-xs shrink-0 flex items-center justify-center gap-1.5 cursor-pointer"
+            >
+              <Zap className="w-4 h-4" />
+              Bóc tách & Điền tức thì
+            </button>
+          </div>
+        </div>
+      )}
+
       {/* Success banner after order creation */}
       {lastCreatedOrderCode && (
         <div className="p-4.5 bg-[#EBF9F6] border border-[#B8ECE1] rounded-3xl flex flex-col sm:flex-row sm:items-center justify-between gap-3 animate-in fade-in slide-in-from-top-3">
@@ -345,7 +546,8 @@ export const CreateOrderPage: React.FC = () => {
             </div>
             <div>
               <p className="text-sm font-extrabold text-[#238774] font-['Nunito',sans-serif]">
-                Tạo đơn thành công! Mã đơn: <span className="font-mono text-[#186053] font-black">{lastCreatedOrderCode}</span>
+                Tạo đơn thành công! Mã đơn:{' '}
+                <span className="font-mono text-[#186053] font-black">{lastCreatedOrderCode}</span>
               </p>
               <p className="text-xs text-[#238774] mt-0.5 font-medium">
                 Đơn hàng đã được lưu và cập nhật tức thì vào Lịch sử đơn hàng Moniu.
@@ -373,19 +575,326 @@ export const CreateOrderPage: React.FC = () => {
 
       {/* Main Order Form */}
       <form onSubmit={handleSubmit} className="grid grid-cols-1 lg:grid-cols-12 gap-6">
-        {/* Left Column: Customer & Products (8 cols) */}
-        <div className="lg:col-span-8 space-y-6">
-          {/* Card: Thông tin khách hàng & Người nhận */}
-          <div className="bg-white rounded-3xl p-6 border border-[#FDE2E4] shadow-2xs space-y-4">
+        {/* Left Column: Products First & Customer Info (7 cols) */}
+        <div className="lg:col-span-7 space-y-6">
+          {/* CARD 1: ĐỒ BÉ TRONG ĐƠN (TIỆN NGHI HÀNG ĐẦU) */}
+          <div className="bg-white rounded-3xl p-5 sm:p-6 border border-[#FDE2E4] shadow-2xs space-y-4">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-[#FFF0F1] pb-4">
+              <div>
+                <h2 className="text-sm font-black text-[#3D271D] flex items-center gap-2 font-['Nunito',sans-serif]">
+                  <ShoppingBag className="w-4 h-4 text-[#FF5B65]" />
+                  Đồ bé yêu trong đơn
+                  {orderItems.length > 0 && (
+                    <span className="text-[11px] font-black px-2 py-0.5 rounded-full bg-[#FF5B65] text-white">
+                      {orderItems.reduce((acc, it) => acc + (Number(it.quantity) || 1), 0)} món
+                    </span>
+                  )}
+                </h2>
+                <p className="text-xs text-[#8C7065] mt-0.5 font-medium">
+                  Chọn đồ bé từ kho 330 sản phẩm thực tế (NOUS, LA POMME, MONONA)
+                </p>
+              </div>
+
+              {/* Browse Catalog 330 button */}
+              <button
+                type="button"
+                onClick={() => setIsProductPickerOpen(true)}
+                className="flex items-center gap-1.5 px-3.5 py-2 bg-[#FFF0F1] hover:bg-[#FDE2E4] text-[#FF5B65] rounded-2xl text-xs font-black border border-[#FCD2D6] transition-all shadow-2xs cursor-pointer self-start sm:self-auto shrink-0"
+              >
+                <Package className="w-4 h-4" />
+                Kho 330 mẫu (kèm ảnh)
+              </button>
+            </div>
+
+            {/* INSTANT FAST SEARCH BAR WITH INLINE 1-CLICK SIZE PILLS */}
+            <div className="relative" ref={searchContainerRef}>
+              <div className="relative">
+                <Search className="w-4 h-4 text-[#FF5B65] absolute left-3.5 top-1/2 -translate-y-1/2" />
+                <input
+                  ref={searchInputRef}
+                  type="text"
+                  value={fastSearchQuery}
+                  onChange={(e) => {
+                    setFastSearchQuery(e.target.value);
+                    setIsFastSearchOpen(true);
+                  }}
+                  onFocus={() => setIsFastSearchOpen(true)}
+                  placeholder="🔍 Gõ mã MN-..., tên đồ bé (bodysuit, áo khoác, nous, la pomme)..."
+                  className="w-full bg-[#FFF9F6] focus:bg-white text-xs text-[#3D271D] font-bold pl-10 pr-10 py-3 rounded-2xl border-2 border-[#FDE2E4] focus:border-[#FF5B65] focus:ring-2 focus:ring-[#FF5B65]/15 outline-hidden shadow-2xs transition-all"
+                />
+                {fastSearchQuery && (
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setFastSearchQuery('');
+                      setIsFastSearchOpen(false);
+                    }}
+                    className="absolute right-3 top-1/2 -translate-y-1/2 text-xs text-[#8C7065] hover:text-[#3D271D] p-1"
+                  >
+                    <X className="w-4 h-4" />
+                  </button>
+                )}
+              </div>
+
+              {/* Fast Search Results Popover */}
+              {isFastSearchOpen && fastSearchResults.length > 0 && (
+                <div className="absolute left-0 right-0 top-full mt-1.5 z-40 bg-white rounded-2xl shadow-xl border border-[#FDE2E4] overflow-hidden max-h-96 overflow-y-auto divide-y divide-[#FFF0F1] animate-in fade-in zoom-in-95 duration-150">
+                  <div className="p-2 bg-[#FFF9F6] text-[11px] font-bold text-[#8C7065] flex items-center justify-between">
+                    <span>Tìm thấy {fastSearchResults.length} sản phẩm (Bấm size để thêm ngay):</span>
+                    <button
+                      type="button"
+                      onClick={() => setIsFastSearchOpen(false)}
+                      className="text-[10px] text-[#FF5B65] hover:underline cursor-pointer"
+                    >
+                      Đóng
+                    </button>
+                  </div>
+                  {fastSearchResults.map((prod) => (
+                    <div
+                      key={prod.code}
+                      className="p-3 hover:bg-[#FFF9F6] transition-colors flex flex-col sm:flex-row sm:items-center justify-between gap-2.5"
+                    >
+                      <div className="flex items-center gap-3 min-w-0">
+                        <img
+                          src={prod.image}
+                          alt={prod.name}
+                          className="w-12 h-12 rounded-xl object-cover border border-[#FDE2E4] shrink-0 bg-[#FFF0F1]"
+                        />
+                        <div className="min-w-0">
+                          <div className="flex items-center gap-1.5">
+                            <span className="font-mono font-black text-[11px] text-[#FF5B65] bg-[#FFF0F1] px-1.5 py-0.5 rounded-md">
+                              {prod.code}
+                            </span>
+                            {prod.brand && (
+                              <span className="text-[10px] font-extrabold text-[#238774] bg-[#EBF9F6] px-1.5 py-0.5 rounded-md">
+                                {prod.brand}
+                              </span>
+                            )}
+                          </div>
+                          <p className="text-xs font-bold text-[#3D271D] truncate mt-0.5 max-w-sm">
+                            {prod.name}
+                          </p>
+                          <p className="text-xs font-black text-[#FF5B65] mt-0.5">
+                            {prod.price === 0 ? 'Quà tặng' : formatCurrency(prod.price)}
+                          </p>
+                        </div>
+                      </div>
+
+                      {/* 1-Click Size Pills */}
+                      <div className="flex items-center gap-1 flex-wrap shrink-0">
+                        <span className="text-[10px] font-bold text-[#8C7065] mr-1 hidden sm:inline">
+                          Size:
+                        </span>
+                        {(prod.variants && prod.variants.length > 0 ? prod.variants : ['Tiêu chuẩn']).map((v) => (
+                          <button
+                            key={v}
+                            type="button"
+                            onClick={() => handleAddProductWithVariant(prod, v)}
+                            className="px-2 py-1 rounded-lg text-[10px] font-extrabold bg-white hover:bg-[#FF5B65] text-[#3D271D] hover:text-white border border-[#FDE2E4] hover:border-[#FF5B65] transition-all shadow-2xs cursor-pointer active:scale-95"
+                            title={`Thêm ${prod.name} size ${v}`}
+                          >
+                            + {v}
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* ORDER ITEMS LIST TABLE / CARDS */}
+            {orderItems.length === 0 ? (
+              <div className="py-8 px-4 rounded-2xl border-2 border-dashed border-[#FDE2E4] text-center space-y-3 bg-[#FFF9F6]/40">
+                <div className="w-12 h-12 rounded-2xl bg-[#FFF0F1] text-[#FF5B65] flex items-center justify-center mx-auto">
+                  <ShoppingBag className="w-6 h-6" />
+                </div>
+                <div>
+                  <p className="text-xs font-bold text-[#3D271D]">Chưa có món đồ nào trong đơn</p>
+                  <p className="text-[11px] text-[#8C7065] mt-0.5">
+                    Gõ tìm kiếm ở ô trên (bấm chọn size 1-click) hoặc bấm nút &quot;Kho 330 mẫu&quot; để chọn
+                  </p>
+                </div>
+                {/* Quick Hot Suggestions */}
+                <div className="flex items-center justify-center gap-1.5 flex-wrap pt-1">
+                  <span className="text-[10px] font-bold text-[#8C7065]">Thêm nhanh mẫu HOT:</span>
+                  {products.slice(0, 4).map((p) => (
+                    <button
+                      key={p.code}
+                      type="button"
+                      onClick={() => handleAddProductWithVariant(p)}
+                      className="text-[10px] font-bold px-2 py-1 bg-white hover:bg-[#FFF0F1] text-[#FF5B65] rounded-xl border border-[#FDE2E4] transition-all cursor-pointer shadow-2xs"
+                    >
+                      + {p.code} ({p.name.slice(0, 16)}...)
+                    </button>
+                  ))}
+                </div>
+              </div>
+            ) : (
+              <div className="space-y-2.5">
+                {orderItems.map((item, index) => {
+                  const matched = products.find(
+                    (p) =>
+                      p.code.toLowerCase() === item.productCode.toLowerCase() ||
+                      (p.tiktokId && p.tiktokId === item.productCode)
+                  );
+                  const availableVariants = matched?.variants || [];
+
+                  return (
+                    <div
+                      key={item.id}
+                      className="p-3 sm:p-3.5 bg-[#FFF9F6] hover:bg-white rounded-2xl border border-[#FDE2E4] transition-all space-y-2 shadow-2xs group"
+                    >
+                      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                        {/* Thumbnail & Product Details */}
+                        <div className="flex items-center gap-3 min-w-0 flex-1">
+                          {item.image || matched?.image ? (
+                            <img
+                              src={item.image || matched?.image}
+                              alt={item.productName}
+                              className="w-12 h-12 rounded-xl object-cover border border-[#FDE2E4] shrink-0 bg-white"
+                            />
+                          ) : (
+                            <div className="w-12 h-12 rounded-xl bg-[#FFF0F1] text-[#FF5B65] flex items-center justify-center shrink-0 border border-[#FCD2D6] font-bold text-xs">
+                              {item.productCode || 'SP'}
+                            </div>
+                          )}
+
+                          <div className="min-w-0 flex-1">
+                            <div className="flex items-center gap-1.5 flex-wrap">
+                              {item.productCode && (
+                                <span className="font-mono font-black text-[10px] text-[#FF5B65] bg-[#FFF0F1] px-1.5 py-0.5 rounded-md">
+                                  {item.productCode}
+                                </span>
+                              )}
+                              {matched?.brand && (
+                                <span className="text-[9px] font-black text-[#238774] bg-[#EBF9F6] px-1.5 py-0.5 rounded-md">
+                                  {matched.brand}
+                                </span>
+                              )}
+                              {matched?.category && (
+                                <span className="text-[9px] font-bold text-[#8C7065] hidden sm:inline">
+                                  • {matched.category}
+                                </span>
+                              )}
+                            </div>
+                            <p className="text-xs font-bold text-[#3D271D] truncate mt-0.5">
+                              {item.productName || 'Món đồ tự nhập'}
+                            </p>
+                          </div>
+                        </div>
+
+                        {/* Size / Variant Selector & Quantity & Price */}
+                        <div className="flex items-center gap-3 self-end sm:self-auto shrink-0">
+                          {/* Size Pill with instant options */}
+                          <div className="relative">
+                            {availableVariants.length > 0 ? (
+                              <select
+                                value={item.variant}
+                                onChange={(e) => handleItemFieldChange(index, 'variant', e.target.value)}
+                                className="text-xs font-bold text-[#3D271D] bg-white px-2.5 py-1.5 rounded-xl border border-[#FDE2E4] focus:border-[#FF5B65] outline-hidden cursor-pointer shadow-2xs"
+                              >
+                                {availableVariants.map((v) => (
+                                  <option key={v} value={v}>
+                                    Size: {v}
+                                  </option>
+                                ))}
+                              </select>
+                            ) : (
+                              <input
+                                type="text"
+                                placeholder="Size/màu"
+                                value={item.variant}
+                                onChange={(e) => handleItemFieldChange(index, 'variant', e.target.value)}
+                                className="w-24 text-xs font-bold text-[#3D271D] bg-white px-2.5 py-1.5 rounded-xl border border-[#FDE2E4] outline-hidden"
+                              />
+                            )}
+                          </div>
+
+                          {/* Quantity Stepper (- 1 +) */}
+                          <div className="flex items-center bg-white border border-[#FDE2E4] rounded-xl shadow-2xs overflow-hidden">
+                            <button
+                              type="button"
+                              onClick={() => handleQuantityChange(index, -1)}
+                              className="w-7 h-7 flex items-center justify-center text-[#8C7065] hover:text-[#FF5B65] hover:bg-[#FFF0F1] transition-colors cursor-pointer"
+                              title="Giảm 1"
+                            >
+                              <Minus className="w-3 h-3" />
+                            </button>
+                            <span className="w-7 text-center font-black text-xs text-[#3D271D]">
+                              {item.quantity}
+                            </span>
+                            <button
+                              type="button"
+                              onClick={() => handleQuantityChange(index, 1)}
+                              className="w-7 h-7 flex items-center justify-center text-[#8C7065] hover:text-[#FF5B65] hover:bg-[#FFF0F1] transition-colors cursor-pointer"
+                              title="Tăng 1"
+                            >
+                              <Plus className="w-3 h-3" />
+                            </button>
+                          </div>
+
+                          {/* Line total */}
+                          <div className="text-right min-w-[70px]">
+                            <span className="text-xs font-black text-[#FF5B65] block font-['Nunito',sans-serif]">
+                              {formatCurrency((item.unitPrice || 0) * (item.quantity || 1))}
+                            </span>
+                            <span className="text-[10px] text-[#8C7065] font-medium block">
+                              {formatCurrency(item.unitPrice || 0)} / món
+                            </span>
+                          </div>
+
+                          {/* Remove item */}
+                          <button
+                            type="button"
+                            onClick={() => handleRemoveItem(index)}
+                            className="p-1.5 text-[#8C7065] hover:text-[#FF5B65] hover:bg-[#FFF0F1] rounded-xl transition-colors cursor-pointer"
+                            title="Xóa món này"
+                          >
+                            <Trash2 className="w-4 h-4" />
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            )}
+
+            {/* Bottom Actions of Products Card */}
+            <div className="flex items-center justify-between pt-2 border-t border-[#FFF0F1]">
+              <button
+                type="button"
+                onClick={handleAddManualRow}
+                className="text-[11px] font-bold text-[#8C7065] hover:text-[#FF5B65] flex items-center gap-1 transition-colors cursor-pointer"
+              >
+                <Plus className="w-3.5 h-3.5" />
+                Thêm dòng tự gõ tay
+              </button>
+
+              {orderItems.length > 0 && (
+                <button
+                  type="button"
+                  onClick={() => setOrderItems([])}
+                  className="text-[11px] font-bold text-[#8C7065] hover:text-[#FF5B65] transition-colors cursor-pointer"
+                >
+                  Xóa hết đồ trong đơn
+                </button>
+              )}
+            </div>
+          </div>
+
+          {/* CARD 2: THÔNG TIN KHÁCH HÀNG & NGƯỜI NHẬN */}
+          <div className="bg-white rounded-3xl p-5 sm:p-6 border border-[#FDE2E4] shadow-2xs space-y-4">
             <div className="flex items-center justify-between border-b border-[#FFF0F1] pb-3.5">
-              <h2 className="text-sm font-extrabold text-[#3D271D] flex items-center gap-2 font-['Nunito',sans-serif]">
+              <h2 className="text-sm font-black text-[#3D271D] flex items-center gap-2 font-['Nunito',sans-serif]">
                 <User className="w-4 h-4 text-[#FF5B65]" />
                 Thông tin người nhận (Mẹ / Bé)
               </h2>
 
               {/* Order Code Generator */}
               <div className="flex items-center gap-2">
-                <span className="text-xs text-[#8C7065] font-semibold">Mã đơn tự sinh:</span>
+                <span className="text-xs text-[#8C7065] font-semibold">Mã đơn:</span>
                 <div className="flex items-center bg-[#FFF0F1] border border-[#FCD2D6] rounded-xl px-2.5 py-1">
                   <span className="text-xs font-mono font-black text-[#FF5B65] tracking-wider">
                     {orderCode}
@@ -401,6 +910,25 @@ export const CreateOrderPage: React.FC = () => {
                 </div>
               </div>
             </div>
+
+            {/* Repeat customer notification prompt */}
+            {repeatCustomer && (
+              <div className="p-3 bg-[#EBF9F6] border border-[#B8ECE1] rounded-2xl flex items-center justify-between gap-2 animate-in fade-in">
+                <div className="text-xs text-[#238774]">
+                  <span className="font-extrabold">✨ Khách quen:</span> {repeatCustomer.name} ({repeatCustomer.address})
+                </div>
+                <button
+                  type="button"
+                  onClick={() => {
+                    setCustomerName(repeatCustomer.name);
+                    setShippingAddress(repeatCustomer.address);
+                  }}
+                  className="px-2.5 py-1 bg-[#238774] text-white rounded-xl text-[11px] font-bold shadow-2xs hover:bg-[#1E7363] transition-colors cursor-pointer shrink-0"
+                >
+                  Tự điền nhanh
+                </button>
+              </div>
+            )}
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
@@ -440,7 +968,7 @@ export const CreateOrderPage: React.FC = () => {
 
             <div>
               <label className="block text-xs font-bold text-[#3D271D] mb-1.5">
-                Địa chỉ giao hàng <span className="text-[#FF5B65]">*</span>
+                Địa chỉ giao hàng (Nhập đầy đủ để giao tận tay) <span className="text-[#FF5B65]">*</span>
               </label>
               <div className="relative">
                 <MapPin className="w-4 h-4 text-[#8C7065] absolute left-3.5 top-3" />
@@ -471,247 +999,120 @@ export const CreateOrderPage: React.FC = () => {
               </div>
             </div>
           </div>
-
-          {/* Card: Danh sách sản phẩm đồ em bé */}
-          <div className="bg-white rounded-3xl p-6 border border-[#FDE2E4] shadow-2xs space-y-4">
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-[#FFF0F1] pb-3.5">
-              <div>
-                <h2 className="text-sm font-extrabold text-[#3D271D] flex items-center gap-2 font-['Nunito',sans-serif]">
-                  <Package className="w-4 h-4 text-[#FF5B65]" />
-                  Đồ bé yêu trong đơn
-                </h2>
-                <p className="text-xs text-[#8C7065] mt-0.5">
-                  Kho 330 sản phẩm thực tế (NOUS, LA POMME, MONONA) sẵn sàng chốt live
-                </p>
-              </div>
-
-              {/* Quick Search Button & Top Chips */}
-              <div className="flex items-center gap-2 flex-wrap">
-                <button
-                  type="button"
-                  onClick={() => {
-                    setActiveRowForPicker(null);
-                    setIsProductPickerOpen(true);
-                  }}
-                  className="flex items-center gap-1.5 px-3.5 py-1.5 bg-[#FFF0F1] hover:bg-[#FDE2E4] text-[#FF5B65] rounded-xl text-xs font-black border border-[#FCD2D6] transition-all shadow-2xs cursor-pointer font-['Nunito',sans-serif]"
-                >
-                  <Search className="w-3.5 h-3.5" />
-                  Tra cứu kho 330 SP
-                </button>
-
-                <div className="hidden sm:flex items-center gap-1.5">
-                  {products.slice(0, 4).map((p) => (
-                    <button
-                      key={p.code}
-                      type="button"
-                      onClick={() => handleQuickSelectCatalogProduct(p.code)}
-                      className="text-[11px] font-bold px-2 py-1 bg-[#FFF9F6] hover:bg-[#FFF0F1] text-[#3D271D] hover:text-[#FF5B65] rounded-xl transition-colors border border-[#FDE2E4] cursor-pointer"
-                      title={p.name}
-                    >
-                      + {p.code}
-                    </button>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            {/* Product items table / rows */}
-            <div className="space-y-3">
-              {orderItems.map((item, index) => {
-                const matched = products.find(
-                  (p) =>
-                    p.code.toLowerCase() === item.productCode.toLowerCase() ||
-                    (p.tiktokId && p.tiktokId === item.productCode)
-                );
-
-                return (
-                  <div
-                    key={item.id}
-                    className="p-4 bg-[#FFF9F6]/80 hover:bg-[#FFF9F6] rounded-2xl border border-[#FDE2E4] transition-all space-y-3"
-                  >
-                    <div className="grid grid-cols-12 gap-2.5 items-start">
-                      {/* Mã SP */}
-                      <div className="col-span-4 sm:col-span-2">
-                        <div className="flex items-center justify-between mb-1">
-                          <label className="block text-[10px] font-bold text-[#8C7065]">
-                            Mã SP
-                          </label>
-                          <button
-                            type="button"
-                            onClick={() => {
-                              setActiveRowForPicker(index);
-                              setIsProductPickerOpen(true);
-                            }}
-                            className="text-[10px] text-[#FF5B65] font-bold hover:underline cursor-pointer"
-                            title="Chọn từ 330 sản phẩm thực tế"
-                          >
-                            Kho 330
-                          </button>
-                        </div>
-                        <input
-                          type="text"
-                          placeholder="MN-001"
-                          value={item.productCode}
-                          onChange={(e) => handleItemChange(index, 'productCode', e.target.value)}
-                          className="w-full bg-white text-xs font-black text-[#FF5B65] px-2.5 py-2 rounded-xl border border-[#FDE2E4] uppercase"
-                        />
-                      </div>
-
-                      {/* Tên sản phẩm */}
-                      <div className="col-span-8 sm:col-span-4">
-                        <div className="flex items-center gap-1 mb-1">
-                          <label className="block text-[10px] font-bold text-[#8C7065]">
-                            Tên sản phẩm
-                          </label>
-                          {matched?.brand && (
-                            <span className="text-[9px] font-black px-1.5 py-0.2 rounded-md bg-[#FFF0F1] text-[#FF5B65] border border-[#FCD2D6]">
-                              {matched.brand}
-                            </span>
-                          )}
-                        </div>
-                        <input
-                          type="text"
-                          placeholder="Tên đồ bé (NOUS, LA POMME, MONONA...)"
-                          value={item.productName}
-                          onChange={(e) => handleItemChange(index, 'productName', e.target.value)}
-                          className="w-full bg-white text-xs text-[#3D271D] font-bold px-2.5 py-2 rounded-xl border border-[#FDE2E4]"
-                        />
-                      </div>
-
-                      {/* Phân loại / Biến thể (Màu & Size tháng/tuổi) */}
-                      <div className="col-span-6 sm:col-span-3">
-                        <div className="flex items-center justify-between mb-1">
-                          <label className="block text-[10px] font-bold text-[#8C7065]">
-                            Màu sắc & Size (0-3M, 1-2Y,...)
-                          </label>
-                          {matched && (
-                            <button
-                              type="button"
-                              onClick={() => {
-                                setActiveRowForPicker(index);
-                                handleStartSizeSelectionForPicker(matched);
-                              }}
-                              className="text-[10px] font-bold text-[#FF5B65] hover:underline cursor-pointer"
-                              title="Mở bảng chọn size & cân nặng chuẩn của Moniu"
-                            >
-                              Chọn size chuẩn
-                            </button>
-                          )}
-                        </div>
-                        <input
-                          type="text"
-                          placeholder="Size tháng / màu"
-                          value={item.variant}
-                          onChange={(e) => handleItemChange(index, 'variant', e.target.value)}
-                          className="w-full bg-white text-xs text-[#3D271D] font-medium px-2.5 py-2 rounded-xl border border-[#FDE2E4]"
-                        />
-                        {/* Quick Variant Selection Chips */}
-                        {matched?.variants && matched.variants.length > 0 && (
-                          <div className="flex flex-wrap gap-1 mt-1.5">
-                            {matched.variants.map((v) => (
-                              <button
-                                key={v}
-                                type="button"
-                                onClick={() => handleItemChange(index, 'variant', v)}
-                                className={`text-[10px] font-bold px-2 py-0.5 rounded-lg border transition-colors cursor-pointer ${
-                                  item.variant === v
-                                    ? 'bg-[#FF5B65] text-white border-[#FF5B65]'
-                                    : 'bg-white text-[#8C7065] border-[#FDE2E4] hover:bg-[#FFF0F1] hover:text-[#FF5B65]'
-                                }`}
-                              >
-                                {v}
-                              </button>
-                            ))}
-                          </div>
-                        )}
-                      </div>
-
-                      {/* Đơn giá */}
-                      <div className="col-span-6 sm:col-span-2">
-                        <label className="block text-[10px] font-bold text-[#8C7065] mb-1">
-                          Đơn giá (đ)
-                        </label>
-                        <input
-                          type="number"
-                          placeholder="195000"
-                          value={item.unitPrice || ''}
-                          onChange={(e) =>
-                            handleItemChange(index, 'unitPrice', Number(e.target.value))
-                          }
-                          className="w-full bg-white text-xs font-black text-[#3D271D] px-2 py-2 rounded-xl border border-[#FDE2E4]"
-                        />
-                      </div>
-
-                      {/* Số lượng & Xóa */}
-                      <div className="col-span-12 sm:col-span-1 flex items-center justify-between sm:justify-end gap-2 pt-1 sm:pt-4">
-                        <div className="flex items-center sm:hidden">
-                          <span className="text-xs text-[#8C7065] mr-2 font-bold">Số lượng:</span>
-                        </div>
-                        <div className="flex items-center gap-1.5">
-                          <input
-                            type="number"
-                            min="1"
-                            value={item.quantity}
-                            onChange={(e) =>
-                              handleItemChange(index, 'quantity', Math.max(1, Number(e.target.value)))
-                            }
-                            className="w-14 bg-white text-xs font-black text-center text-[#3D271D] py-2 rounded-xl border border-[#FDE2E4]"
-                          />
-                          <button
-                            type="button"
-                            onClick={() => handleRemoveItem(index)}
-                            className="p-2 text-[#8C7065] hover:text-[#FF5B65] hover:bg-[#FFF0F1] rounded-xl transition-colors cursor-pointer"
-                            title="Xóa sản phẩm"
-                          >
-                            <Trash2 className="w-4 h-4" />
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Line Total */}
-                    <div className="text-right text-[11px] text-[#8C7065] border-t border-[#FDE2E4] pt-2">
-                      Thành tiền dòng này:{' '}
-                      <strong className="text-[#FF5B65] font-black text-xs">
-                        {formatCurrency((item.unitPrice || 0) * (item.quantity || 1))}
-                      </strong>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-
-            {/* Add product button */}
-            <button
-              type="button"
-              onClick={handleAddItem}
-              className="w-full py-3 border-2 border-dashed border-[#FDE2E4] hover:border-[#FF5B65] hover:bg-[#FFF0F1]/40 rounded-2xl text-xs font-bold text-[#8C7065] hover:text-[#FF5B65] transition-all flex items-center justify-center gap-2 cursor-pointer"
-            >
-              <Plus className="w-4 h-4" />
-              Thêm món đồ khác vào đơn
-            </button>
-          </div>
         </div>
 
-        {/* Right Column: Payment & Shipping & Summary (4 cols) */}
-        <div className="lg:col-span-4 space-y-6">
-          {/* Card: Vận chuyển & Thanh toán */}
-          <div className="bg-white rounded-3xl p-6 border border-[#FDE2E4] shadow-2xs space-y-4">
-            <h2 className="text-sm font-extrabold text-[#3D271D] flex items-center gap-2 border-b border-[#FFF0F1] pb-3.5 font-['Nunito',sans-serif]">
+        {/* Right Column: Payment, Shipping, Live Offers & Checkout (5 cols - Sticky) */}
+        <div className="lg:col-span-5 space-y-6">
+          {/* CARD 1: VẬN CHUYỂN & ƯU ĐÃI LIVE */}
+          <div className="bg-white rounded-3xl p-5 sm:p-6 border border-[#FDE2E4] shadow-2xs space-y-4">
+            <h2 className="text-sm font-black text-[#3D271D] flex items-center gap-2 border-b border-[#FFF0F1] pb-3.5 font-['Nunito',sans-serif]">
               <Truck className="w-4 h-4 text-[#FF5B65]" />
-              Giao hàng & Thanh toán
+              Vận chuyển & Ưu đãi Live
             </h2>
+
+            {/* FREESHIP LIVE TOGGLE (CỰC KỲ TIỆN LỢI TRÊN LIVE) */}
+            <div className="p-3 bg-gradient-to-r from-[#FFF0F1] to-[#FFF9F6] border border-[#FCD2D6] rounded-2xl flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                <Gift className="w-4 h-4 text-[#FF5B65]" />
+                <div>
+                  <p className="text-xs font-black text-[#3D271D]">Freeship cho khách chốt live</p>
+                  <p className="text-[10px] text-[#8C7065]">Miễn phí vận chuyển 0đ tức thì</p>
+                </div>
+              </div>
+
+              <button
+                type="button"
+                onClick={() => setIsLiveFreeship(!isLiveFreeship)}
+                className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors cursor-pointer ${
+                  isLiveFreeship ? 'bg-[#FF5B65]' : 'bg-[#E5D7D2]'
+                }`}
+              >
+                <span
+                  className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+                    isLiveFreeship ? 'translate-x-6' : 'translate-x-1'
+                  }`}
+                />
+              </button>
+            </div>
+
+            {/* DISCOUNT / VOUCHER INPUT */}
+            <div>
+              <div className="flex items-center justify-between mb-1.5">
+                <label className="text-xs font-bold text-[#3D271D] flex items-center gap-1">
+                  <Percent className="w-3.5 h-3.5 text-[#FF5B65]" />
+                  Ưu đãi giảm giá chốt live (đ)
+                </label>
+                {discountAmount > 0 && (
+                  <button
+                    type="button"
+                    onClick={() => setDiscountAmount(0)}
+                    className="text-[10px] text-[#FF5B65] font-bold hover:underline"
+                  >
+                    Xóa giảm giá
+                  </button>
+                )}
+              </div>
+              <div className="flex items-center gap-1.5">
+                <input
+                  type="number"
+                  min="0"
+                  step="5000"
+                  value={discountAmount || ''}
+                  onChange={(e) => setDiscountAmount(Math.max(0, Number(e.target.value)))}
+                  placeholder="0"
+                  className="w-full bg-[#FFF9F6] focus:bg-white text-xs font-black text-[#FF5B65] px-3.5 py-2.5 rounded-2xl border border-[#FDE2E4] outline-hidden"
+                />
+                <button
+                  type="button"
+                  onClick={() => setDiscountAmount(10000)}
+                  className="px-2.5 py-2 rounded-xl text-[10px] font-bold bg-[#FFF0F1] hover:bg-[#FDE2E4] text-[#FF5B65] border border-[#FCD2D6] shrink-0 cursor-pointer"
+                >
+                  -10k
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setDiscountAmount(20000)}
+                  className="px-2.5 py-2 rounded-xl text-[10px] font-bold bg-[#FFF0F1] hover:bg-[#FDE2E4] text-[#FF5B65] border border-[#FCD2D6] shrink-0 cursor-pointer"
+                >
+                  -20k
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setDiscountAmount(30000)}
+                  className="px-2.5 py-2 rounded-xl text-[10px] font-bold bg-[#FFF0F1] hover:bg-[#FDE2E4] text-[#FF5B65] border border-[#FCD2D6] shrink-0 cursor-pointer"
+                >
+                  -30k
+                </button>
+              </div>
+            </div>
+
+            {/* Carrier */}
+            <div>
+              <label className="block text-xs font-bold text-[#3D271D] mb-1.5">
+                Đơn vị vận chuyển
+              </label>
+              <select
+                value={carrier}
+                onChange={(e) => setCarrier(e.target.value as ShippingCarrier)}
+                className="w-full bg-[#FFF9F6] text-xs font-bold text-[#3D271D] px-3.5 py-2.5 rounded-2xl border border-[#FDE2E4] focus:outline-hidden focus:border-[#FF5B65] cursor-pointer"
+              >
+                <option value="GHN">GHN (Giao Hàng Nhanh)</option>
+                <option value="GHTK">GHTK (Giao Hàng Tiết Kiệm)</option>
+                <option value="J&T Express">J&T Express</option>
+                <option value="Viettel Post">Viettel Post</option>
+              </select>
+            </div>
 
             {/* Payment Method */}
             <div>
-              <label className="block text-xs font-bold text-[#3D271D] mb-2">
+              <label className="block text-xs font-bold text-[#3D271D] mb-1.5">
                 Phương thức thanh toán
               </label>
               <div className="grid grid-cols-2 gap-2">
                 <button
                   type="button"
                   onClick={() => setPaymentMethod('COD')}
-                  className={`p-3 rounded-2xl border text-xs font-bold text-center transition-all cursor-pointer ${
+                  className={`p-2.5 rounded-2xl border text-xs font-bold text-center transition-all cursor-pointer ${
                     paymentMethod === 'COD'
                       ? 'border-[#FF5B65] bg-[#FFF0F1] text-[#FF5B65] shadow-2xs'
                       : 'border-[#FDE2E4] text-[#8C7065] hover:bg-[#FFF9F6]'
@@ -724,7 +1125,7 @@ export const CreateOrderPage: React.FC = () => {
                 <button
                   type="button"
                   onClick={() => setPaymentMethod('Chuyển khoản')}
-                  className={`p-3 rounded-2xl border text-xs font-bold text-center transition-all cursor-pointer ${
+                  className={`p-2.5 rounded-2xl border text-xs font-bold text-center transition-all cursor-pointer ${
                     paymentMethod === 'Chuyển khoản'
                       ? 'border-[#48C9B0] bg-[#EBF9F6] text-[#238774] shadow-2xs'
                       : 'border-[#FDE2E4] text-[#8C7065] hover:bg-[#FFF9F6]'
@@ -734,29 +1135,24 @@ export const CreateOrderPage: React.FC = () => {
                   Chuyển khoản
                 </button>
               </div>
-            </div>
 
-            {/* Carrier */}
-            <div>
-              <label className="block text-xs font-bold text-[#3D271D] mb-2">
-                Đơn vị vận chuyển
-              </label>
-              <select
-                value={carrier}
-                onChange={(e) => setCarrier(e.target.value as ShippingCarrier)}
-                className="w-full bg-[#FFF9F6] text-xs font-bold text-[#3D271D] px-3.5 py-2.5 rounded-2xl border border-[#FDE2E4] focus:outline-hidden focus:border-[#FF5B65]"
-              >
-                <option value="GHN">GHN (Giao Hàng Nhanh)</option>
-                <option value="GHTK">GHTK (Giao Hàng Tiết Kiệm)</option>
-                <option value="J&T Express">J&T Express</option>
-                <option value="Viettel Post">Viettel Post</option>
-              </select>
+              {/* VietQR View Button if Chuyển khoản */}
+              {paymentMethod === 'Chuyển khoản' && (
+                <button
+                  type="button"
+                  onClick={() => setShowQrModal(true)}
+                  className="w-full mt-2 py-2 px-3 bg-[#EBF9F6] hover:bg-[#D5F5EE] text-[#238774] rounded-xl text-xs font-bold flex items-center justify-center gap-1.5 border border-[#B8ECE1] transition-colors cursor-pointer"
+                >
+                  <QrCode className="w-4 h-4" />
+                  Xem mã VietQR chuyển khoản ({formatCurrency(totalAmount)})
+                </button>
+              )}
             </div>
           </div>
 
-          {/* Card: Tổng kết thanh toán */}
-          <div className="bg-white rounded-3xl p-6 border border-[#FDE2E4] shadow-2xs space-y-4">
-            <h2 className="text-sm font-extrabold text-[#3D271D] border-b border-[#FFF0F1] pb-3.5 font-['Nunito',sans-serif]">
+          {/* CARD 2: CHI TIẾT THANH TOÁN & NÚT CHỐT ĐƠN */}
+          <div className="bg-white rounded-3xl p-5 sm:p-6 border border-[#FDE2E4] shadow-2xs space-y-4 sticky top-6">
+            <h2 className="text-sm font-black text-[#3D271D] border-b border-[#FFF0F1] pb-3.5 font-['Nunito',sans-serif]">
               Chi tiết thanh toán
             </h2>
 
@@ -765,36 +1161,43 @@ export const CreateOrderPage: React.FC = () => {
                 <span>Tạm tính tiền hàng:</span>
                 <span className="font-bold text-[#3D271D]">{formatCurrency(subtotal)}</span>
               </div>
+
               <div className="flex justify-between text-[#8C7065] font-medium">
                 <span>Phí vận chuyển:</span>
                 <span>
                   {shippingFee === 0 ? (
-                    <span className="text-[#238774] font-bold">Freeship đơn bé</span>
+                    <span className="text-[#238774] font-black bg-[#EBF9F6] px-2 py-0.5 rounded-md">
+                      Miễn phí (Freeship live)
+                    </span>
                   ) : (
                     <span className="font-bold text-[#3D271D]">{formatCurrency(shippingFee)}</span>
                   )}
                 </span>
               </div>
-              <div className="flex justify-between text-[#8C7065] font-medium">
-                <span>Ưu đãi chốt live:</span>
-                <span className="text-[#3D271D] font-bold">0đ</span>
-              </div>
+
+              {discountAmount > 0 && (
+                <div className="flex justify-between text-[#FF5B65] font-bold">
+                  <span>Ưu đãi giảm giá live:</span>
+                  <span>- {formatCurrency(discountAmount)}</span>
+                </div>
+              )}
+
               <div className="pt-3 border-t border-[#FDE2E4] flex justify-between items-center text-sm font-bold text-[#3D271D]">
                 <span>Tổng thanh toán:</span>
-                <span className="text-xl font-black text-[#FF5B65] font-['Nunito',sans-serif]">
+                <span className="text-2xl font-black text-[#FF5B65] font-['Nunito',sans-serif] tracking-tight">
                   {formatCurrency(totalAmount)}
                 </span>
               </div>
             </div>
 
-            {/* Actions */}
+            {/* Big Action Submit Button */}
             <div className="pt-2 space-y-2">
               <button
                 type="submit"
-                className="w-full py-3.5 bg-gradient-to-r from-[#FF5B65] to-[#F14652] hover:from-[#E84A54] hover:to-[#DE3D49] text-white rounded-2xl text-sm font-extrabold shadow-lg shadow-[#FF5B65]/30 transition-all flex items-center justify-center gap-2 cursor-pointer font-['Nunito',sans-serif]"
+                className="w-full py-4 bg-gradient-to-r from-[#FF5B65] to-[#F14652] hover:from-[#E84A54] hover:to-[#DE3D49] text-white rounded-2xl text-sm font-black shadow-lg shadow-[#FF5B65]/35 hover:shadow-xl hover:shadow-[#FF5B65]/40 transition-all flex items-center justify-center gap-2 cursor-pointer font-['Nunito',sans-serif] active:scale-[0.98]"
               >
                 <CheckCircle2 className="w-5 h-5" />
-                Chốt đơn ngay
+                CHỐT ĐƠN NGAY (F9 / Enter)
               </button>
 
               <button
@@ -809,7 +1212,7 @@ export const CreateOrderPage: React.FC = () => {
         </div>
       </form>
 
-      {/* Modal: Tra cứu kho 330 sản phẩm thực tế */}
+      {/* MODAL: TRA CỨU KHO 330 SẢN PHẨM THỰC TẾ (CÓ ẢNH VÀ SIZE CHỌN TRỰC TIẾP) */}
       {isProductPickerOpen && (
         <div className="fixed inset-0 z-50 overflow-y-auto bg-[#3D271D]/50 backdrop-blur-xs flex items-center justify-center p-3 sm:p-5">
           <div
@@ -826,7 +1229,7 @@ export const CreateOrderPage: React.FC = () => {
                   <h3 className="text-base font-black text-[#3D271D] font-['Nunito',sans-serif] flex items-center gap-2">
                     Kho 330 sản phẩm thực tế Moniu
                     <span className="text-[11px] font-bold px-2 py-0.5 rounded-full bg-white text-[#FF5B65] border border-[#FCD2D6]">
-                      TikTok Shop
+                      TikTok & Shopee Live
                     </span>
                   </h3>
                   <p className="text-xs text-[#8C7065] mt-0.5 font-medium">
@@ -837,17 +1240,14 @@ export const CreateOrderPage: React.FC = () => {
 
               <button
                 type="button"
-                onClick={() => {
-                  setIsProductPickerOpen(false);
-                  setActiveRowForPicker(null);
-                }}
+                onClick={() => setIsProductPickerOpen(false)}
                 className="p-2 text-[#8C7065] hover:text-[#FF5B65] hover:bg-[#FFF0F1] rounded-2xl transition-colors cursor-pointer"
               >
                 <X className="w-5 h-5" />
               </button>
             </div>
 
-            {/* Search & Filters */}
+            {/* Search & Brand Filters */}
             <div className="p-4 sm:p-5 border-b border-[#FFF0F1] bg-[#FFF9F6]/50 space-y-3 shrink-0">
               <div className="relative">
                 <Search className="w-4 h-4 text-[#8C7065] absolute left-3.5 top-1/2 -translate-y-1/2" />
@@ -856,7 +1256,7 @@ export const CreateOrderPage: React.FC = () => {
                   autoFocus
                   value={pickerSearch}
                   onChange={(e) => setPickerSearch(e.target.value)}
-                  placeholder="Tìm theo tên sản phẩm, mã (MN-001...), mã TikTok Shop (581...), chất liệu..."
+                  placeholder="Tìm theo tên sản phẩm, mã (MN-001...), hãng NOUS, LA POMME, loại bodysuit..."
                   className="w-full bg-white text-xs text-[#3D271D] pl-10 pr-9 py-2.5 rounded-2xl border border-[#FDE2E4] focus:outline-hidden focus:border-[#FF5B65] focus:ring-2 focus:ring-[#FF5B65]/15 font-medium"
                 />
                 {pickerSearch && (
@@ -869,9 +1269,9 @@ export const CreateOrderPage: React.FC = () => {
                 )}
               </div>
 
-              {/* Brand Filters */}
+              {/* Brand Filter Buttons */}
               <div className="flex items-center gap-1.5 overflow-x-auto pb-1 scrollbar-none notranslate" translate="no">
-                <span className="text-[11px] font-bold text-[#8C7065] mr-1">Thương hiệu:</span>
+                <span className="text-[11px] font-bold text-[#8C7065] mr-1 shrink-0">Hãng:</span>
                 {[
                   { id: 'all', label: `Tất cả (${pickerBrandStats.all})` },
                   { id: 'NOUS', label: `NOUS (${pickerBrandStats.nous})` },
@@ -884,7 +1284,7 @@ export const CreateOrderPage: React.FC = () => {
                     type="button"
                     translate="no"
                     onClick={() => setPickerBrand(b.id)}
-                    className={`px-3 py-1 rounded-xl text-xs font-bold transition-all cursor-pointer notranslate ${
+                    className={`px-3 py-1 rounded-xl text-xs font-bold transition-all cursor-pointer notranslate shrink-0 ${
                       pickerBrand === b.id
                         ? 'bg-[#FF5B65] text-white shadow-xs'
                         : 'bg-white text-[#8C7065] hover:bg-[#FFF0F1] border border-[#FDE2E4]'
@@ -895,9 +1295,9 @@ export const CreateOrderPage: React.FC = () => {
                 ))}
               </div>
 
-              {/* Category Filters */}
+              {/* Category Pills */}
               <div className="flex items-center gap-1.5 overflow-x-auto pb-1 scrollbar-none">
-                <span className="text-[11px] font-bold text-[#8C7065] mr-1 shrink-0">Phân loại:</span>
+                <span className="text-[11px] font-bold text-[#8C7065] mr-1 shrink-0">Loại:</span>
                 {[
                   { id: 'all', label: 'Tất cả loại' },
                   { id: 'Bộ quần áo bé', label: 'Bộ quần áo' },
@@ -905,123 +1305,157 @@ export const CreateOrderPage: React.FC = () => {
                   { id: 'Áo & Áo khoác', label: 'Áo khoác' },
                   { id: 'Nón & Mũ bé', label: 'Nón / Mũ' },
                   { id: 'Yếm cho bé', label: 'Yếm' },
-                  { id: 'Bao tay & Bao chân', label: 'Bao tay/chân' },
                   { id: 'Chăn gối & Đệm ngủ', label: 'Chăn gối' },
                   { id: 'Váy đầm bé gái', label: 'Váy đầm' },
-                  { id: 'Quần yếm & Set yếm', label: 'Quần yếm' },
-                  { id: 'Phụ kiện & Khác', label: 'Phụ kiện' },
                   { id: 'Quà tặng kèm', label: 'Quà tặng' },
-                ].map((cat) => (
+                ].map((c) => (
                   <button
-                    key={cat.id}
+                    key={c.id}
                     type="button"
-                    onClick={() => setPickerCategory(cat.id)}
-                    className={`px-2.5 py-0.5 rounded-lg text-[11px] font-semibold whitespace-nowrap transition-all cursor-pointer ${
-                      pickerCategory === cat.id
-                        ? 'bg-[#3D271D] text-white font-bold shadow-xs'
-                        : 'bg-white text-[#8C7065] hover:bg-[#FFF9F6] border border-[#FDE2E4]'
+                    onClick={() => setPickerCategory(c.id)}
+                    className={`px-2.5 py-1 rounded-xl text-[11px] font-bold transition-all cursor-pointer whitespace-nowrap shrink-0 ${
+                      pickerCategory === c.id
+                        ? 'bg-[#3D271D] text-white shadow-xs'
+                        : 'bg-white text-[#8C7065] hover:bg-[#FFF0F1] border border-[#FDE2E4]'
                     }`}
                   >
-                    {cat.label}
+                    {c.label}
                   </button>
                 ))}
               </div>
             </div>
 
-            {/* Product List */}
-            <div className="p-4 sm:p-5 overflow-y-auto flex-1 divide-y divide-[#FFF0F1]">
-              <div className="flex items-center justify-between pb-3 text-xs text-[#8C7065] font-semibold">
-                <span>
-                  Tìm thấy <strong className="text-[#FF5B65] font-black">{filteredPickerProducts.length}</strong> sản phẩm phù hợp
-                </span>
-                <span className="text-[11px]">Bấm vào sản phẩm để thêm vào đơn</span>
-              </div>
+            {/* Products Grid in Modal */}
+            <div className="flex-1 overflow-y-auto p-4 sm:p-5">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+                {filteredPickerProducts.slice(0, 48).map((prod) => (
+                  <div
+                    key={prod.code}
+                    className="p-3 bg-white rounded-2xl border border-[#FDE2E4] hover:border-[#FF5B65] hover:shadow-md transition-all flex flex-col justify-between group"
+                  >
+                    <div className="space-y-2">
+                      <div className="relative aspect-4/3 rounded-xl overflow-hidden bg-[#FFF0F1] border border-[#FDE2E4]">
+                        <img
+                          src={prod.image}
+                          alt={prod.name}
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                        />
+                        <span className="absolute top-1.5 left-1.5 font-mono font-black text-[10px] text-white bg-[#FF5B65] px-2 py-0.5 rounded-md shadow-xs">
+                          {prod.code}
+                        </span>
+                        {prod.brand && (
+                          <span
+                            translate="no"
+                            className="absolute top-1.5 right-1.5 font-extrabold text-[9px] text-[#238774] bg-white/95 px-1.5 py-0.5 rounded-md shadow-xs notranslate"
+                          >
+                            {prod.brand}
+                          </span>
+                        )}
+                      </div>
 
-              {filteredPickerProducts.length === 0 ? (
-                <div className="py-16 text-center text-[#8C7065]">
-                  <Package className="w-10 h-10 mx-auto text-[#FF5B65]/40 mb-2" />
-                  <p className="text-xs font-bold text-[#3D271D]">Không tìm thấy sản phẩm nào</p>
-                  <p className="text-[11px] text-[#8C7065] mt-1">
-                    Hãy thử gõ từ khóa khác như "nous", "bodysuit", "chăn"...
-                  </p>
-                </div>
-              ) : (
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-3 pt-3">
-                  {filteredPickerProducts.slice(0, 60).map((prod) => (
-                    <div
-                      key={prod.code}
-                      onClick={() => handleStartSizeSelectionForPicker(prod)}
-                      className="p-3 bg-white hover:bg-[#FFF9F6] border border-[#FDE2E4] hover:border-[#FF5B65] rounded-2xl transition-all cursor-pointer flex gap-3 group relative shadow-2xs hover:shadow-md"
-                    >
-                      <img
-                        src={prod.image}
-                        alt={prod.name}
-                        className="w-16 h-16 rounded-xl object-cover border border-[#FDE2E4] shrink-0 bg-[#FFF0F1]"
-                      />
-
-                      <div className="min-w-0 flex-1 flex flex-col justify-between">
-                        <div>
-                          <div className="flex items-center gap-1.5 flex-wrap">
-                            <span className="font-mono font-black text-[10px] text-[#FF5B65] bg-[#FFF0F1] px-1.5 py-0.5 rounded-md border border-[#FCD2D6]">
-                              {prod.code}
-                            </span>
-                            {prod.brand && (
-                              <span className="text-[9px] font-black text-[#238774] bg-[#EBF9F6] px-1.5 py-0.5 rounded-md border border-[#B8ECE1]">
-                                {prod.brand}
-                              </span>
-                            )}
-                            <span className="text-[9px] text-[#8C7065] font-semibold">
-                              {prod.category}
-                            </span>
-                          </div>
-
-                          <h4 className="text-xs font-bold text-[#3D271D] line-clamp-2 mt-1 group-hover:text-[#FF5B65] transition-colors leading-snug">
-                            {prod.name}
-                          </h4>
-                        </div>
-
-                        <div className="flex items-center justify-between pt-1.5 border-t border-[#FFF0F1] mt-1.5">
+                      <div>
+                        <p className="text-xs font-bold text-[#3D271D] line-clamp-2 leading-snug">
+                          {prod.name}
+                        </p>
+                        <div className="flex items-center justify-between mt-1">
                           <span className="text-xs font-black text-[#FF5B65] font-['Nunito',sans-serif]">
-                            {prod.price === 0 ? 'Quà tặng kèm (0đ)' : formatCurrency(prod.price)}
+                            {prod.price === 0 ? 'Quà tặng' : formatCurrency(prod.price)}
                           </span>
-
-                          <span className="text-[10px] font-bold px-2 py-0.5 bg-[#FFF0F1] text-[#FF5B65] rounded-lg group-hover:bg-[#FF5B65] group-hover:text-white transition-colors">
-                            + Chọn size
-                          </span>
+                          <span className="text-[10px] text-[#8C7065]">{prod.category}</span>
                         </div>
                       </div>
                     </div>
-                  ))}
-                </div>
-              )}
-            </div>
 
-            {/* Modal Footer */}
-            <div className="px-6 py-3 border-t border-[#FFF0F1] bg-[#FFF9F6] flex items-center justify-between text-xs text-[#8C7065]">
-              <span>Kho dữ liệu đồng bộ TikTok Shop chính thức</span>
-              <button
-                type="button"
-                onClick={() => {
-                  setIsProductPickerOpen(false);
-                  setActiveRowForPicker(null);
-                }}
-                className="px-4 py-1.5 bg-white border border-[#FDE2E4] rounded-xl font-bold text-[#3D271D] hover:bg-[#FFF0F1] transition-colors cursor-pointer"
-              >
-                Đóng cửa sổ
-              </button>
+                    {/* Size selection pills in card */}
+                    <div className="pt-2 border-t border-[#FFF0F1] mt-2">
+                      <div className="flex items-center gap-1 flex-wrap">
+                        {(prod.variants && prod.variants.length > 0 ? prod.variants : ['Tiêu chuẩn']).slice(0, 5).map((v) => (
+                          <button
+                            key={v}
+                            type="button"
+                            onClick={() => {
+                              handleAddProductWithVariant(prod, v);
+                              setIsProductPickerOpen(false);
+                            }}
+                            className="px-2 py-0.5 bg-[#FFF0F1] hover:bg-[#FF5B65] text-[#FF5B65] hover:text-white rounded-lg text-[10px] font-black transition-all cursor-pointer"
+                          >
+                            + {v}
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
       )}
 
-      {/* Modal Chọn Size khi chọn sản phẩm trong Tạo đơn */}
-      <SizeSelectionModal
-        isOpen={!!pickerProductForSize}
-        onClose={() => setPickerProductForSize(null)}
-        product={pickerProductForSize}
-        onConfirm={handleConfirmPickerSize}
-        confirmText="Xác nhận & Thêm vào đơn"
-      />
+      {/* VIETQR POPUP MODAL FOR CHUYỂN KHOẢN */}
+      {showQrModal && (
+        <div className="fixed inset-0 z-50 overflow-y-auto bg-[#3D271D]/60 backdrop-blur-xs flex items-center justify-center p-4">
+          <div
+            className="relative bg-white rounded-3xl shadow-2xl border border-[#FDE2E4] w-full max-w-sm p-6 text-center space-y-4 animate-in fade-in zoom-in-95"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="flex justify-between items-center border-b border-[#FFF0F1] pb-3">
+              <span className="text-sm font-black text-[#3D271D] font-['Nunito',sans-serif]">
+                Mã VietQR thanh toán
+              </span>
+              <button
+                type="button"
+                onClick={() => setShowQrModal(false)}
+                className="p-1 text-[#8C7065] hover:text-[#FF5B65]"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+
+            <div className="p-4 bg-white rounded-2xl border-2 border-[#B8ECE1] shadow-sm inline-block">
+              {/* VietQR Quick API Image */}
+              <img
+                src={`https://api.vietqr.io/image/970422-0987654321-compact2.jpg?amount=${totalAmount}&addInfo=${encodeURIComponent(orderCode)}&accountName=MONIU%20XIN%20CHAO`}
+                alt="VietQR Code"
+                className="w-48 h-48 mx-auto object-contain rounded-xl"
+              />
+            </div>
+
+            <div className="text-xs text-[#8C7065] space-y-1">
+              <p>
+                Số tiền:{' '}
+                <strong className="text-[#FF5B65] font-black text-sm">
+                  {formatCurrency(totalAmount)}
+                </strong>
+              </p>
+              <p>
+                Nội dung CK: <strong className="font-mono text-[#3D271D]">{orderCode}</strong>
+              </p>
+            </div>
+
+            <button
+              type="button"
+              onClick={() => setShowQrModal(false)}
+              className="w-full py-2.5 bg-[#238774] text-white rounded-xl text-xs font-bold cursor-pointer"
+            >
+              Đã hiểu & Đóng
+            </button>
+          </div>
+        </div>
+      )}
+
+      {/* Size Selection Modal (Fallback) */}
+      {pickerProductForSize && (
+        <SizeSelectionModal
+          isOpen={true}
+          product={pickerProductForSize}
+          onClose={() => setPickerProductForSize(null)}
+          onConfirm={(prod, size, qty) => {
+            handleAddProductWithVariant(prod, size);
+            setPickerProductForSize(null);
+          }}
+        />
+      )}
     </div>
   );
 };
