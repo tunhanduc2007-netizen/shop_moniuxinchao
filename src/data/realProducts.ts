@@ -13,7 +13,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "9-12M"
     ],
     "price": 195000,
-    "image": "https://images.unsplash.com/photo-1522771930-78848d9293e8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-001.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -31,7 +31,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "3-6M"
     ],
     "price": 195000,
-    "image": "https://images.unsplash.com/photo-1522771930-78848d9293e8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-002.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -50,7 +50,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "2-3Y"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-003.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -69,7 +69,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 55000,
-    "image": "https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-004.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -85,7 +85,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Quà tặng kèm"
     ],
     "price": 0,
-    "image": "https://images.unsplash.com/photo-1514090458221-65bb69cf63e6?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-005.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -101,7 +101,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "12M"
     ],
     "price": 195000,
-    "image": "https://images.unsplash.com/photo-1522771930-78848d9293e8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-006.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -120,7 +120,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "2-3Y"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-007.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -139,7 +139,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 295000,
-    "image": "https://images.unsplash.com/photo-1544816155-12df9643f363?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-008.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -158,7 +158,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Xanh thêu rắn"
     ],
     "price": 265000,
-    "image": "https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-009.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -177,7 +177,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "2-3Y"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-010.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -193,7 +193,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "9-12M"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-011.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -212,7 +212,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 185000,
-    "image": "https://images.unsplash.com/photo-1522771930-78848d9293e8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-012.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -231,7 +231,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-013.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -250,7 +250,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 55000,
-    "image": "https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-014.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -268,7 +268,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "3-6M"
     ],
     "price": 265000,
-    "image": "https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-015.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -287,7 +287,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 295000,
-    "image": "https://images.unsplash.com/photo-1544816155-12df9643f363?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-016.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -303,7 +303,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "6M"
     ],
     "price": 245000,
-    "image": "https://images.unsplash.com/photo-1622290291468-a28f7a7dc6a8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-017.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -322,7 +322,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 55000,
-    "image": "https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-018.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -338,7 +338,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "9-12M"
     ],
     "price": 195000,
-    "image": "https://images.unsplash.com/photo-1522771930-78848d9293e8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-019.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -357,7 +357,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 185000,
-    "image": "https://images.unsplash.com/photo-1522771930-78848d9293e8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-020.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -376,7 +376,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 185000,
-    "image": "https://images.unsplash.com/photo-1522771930-78848d9293e8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-021.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -395,7 +395,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 185000,
-    "image": "https://images.unsplash.com/photo-1522771930-78848d9293e8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-022.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -414,7 +414,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 195000,
-    "image": "https://images.unsplash.com/photo-1522771930-78848d9293e8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-023.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -430,7 +430,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "6M"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-024.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -446,7 +446,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "9-12M"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-025.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -462,7 +462,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "12M"
     ],
     "price": 55000,
-    "image": "https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-026.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -478,7 +478,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "9-12M"
     ],
     "price": 195000,
-    "image": "https://images.unsplash.com/photo-1522771930-78848d9293e8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-027.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -497,7 +497,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "2-3Y"
     ],
     "price": 245000,
-    "image": "https://images.unsplash.com/photo-1622290291468-a28f7a7dc6a8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-028.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -513,7 +513,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "9-12M"
     ],
     "price": 195000,
-    "image": "https://images.unsplash.com/photo-1522771930-78848d9293e8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-029.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -531,7 +531,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "3-6M"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-030.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -550,7 +550,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 185000,
-    "image": "https://images.unsplash.com/photo-1522771930-78848d9293e8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-031.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -567,7 +567,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "6-9M"
     ],
     "price": 195000,
-    "image": "https://images.unsplash.com/photo-1522771930-78848d9293e8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-032.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -583,7 +583,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "6M"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-033.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -602,7 +602,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 195000,
-    "image": "https://images.unsplash.com/photo-1522771930-78848d9293e8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-034.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -621,7 +621,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 195000,
-    "image": "https://images.unsplash.com/photo-1522771930-78848d9293e8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-035.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -639,7 +639,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "3-6M"
     ],
     "price": 55000,
-    "image": "https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-036.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -655,7 +655,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Quà tặng kèm"
     ],
     "price": 0,
-    "image": "https://images.unsplash.com/photo-1514090458221-65bb69cf63e6?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-037.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -671,7 +671,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "9-12M"
     ],
     "price": 195000,
-    "image": "https://images.unsplash.com/photo-1522771930-78848d9293e8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-038.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -690,7 +690,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 55000,
-    "image": "https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-039.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -707,7 +707,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "2Y"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-040.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -726,7 +726,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "2-3Y"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-041.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -742,7 +742,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "6M"
     ],
     "price": 55000,
-    "image": "https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-042.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -758,7 +758,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "9-12M"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-043.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -777,7 +777,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 55000,
-    "image": "https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-044.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -796,7 +796,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Xanh thêu rắn"
     ],
     "price": 265000,
-    "image": "https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-045.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -815,7 +815,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 295000,
-    "image": "https://images.unsplash.com/photo-1544816155-12df9643f363?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-046.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -834,7 +834,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Xanh thêu rắn"
     ],
     "price": 265000,
-    "image": "https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-047.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -853,7 +853,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Xanh thêu rắn"
     ],
     "price": 265000,
-    "image": "https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-048.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -872,7 +872,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 295000,
-    "image": "https://images.unsplash.com/photo-1544816155-12df9643f363?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-049.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -888,7 +888,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "9-12M"
     ],
     "price": 195000,
-    "image": "https://images.unsplash.com/photo-1522771930-78848d9293e8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-050.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -904,7 +904,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Quà tặng kèm"
     ],
     "price": 0,
-    "image": "https://images.unsplash.com/photo-1514090458221-65bb69cf63e6?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-051.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -920,7 +920,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "9M"
     ],
     "price": 195000,
-    "image": "https://images.unsplash.com/photo-1522771930-78848d9293e8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-052.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -936,7 +936,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "9M"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-053.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -952,7 +952,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "9-12M"
     ],
     "price": 195000,
-    "image": "https://images.unsplash.com/photo-1522771930-78848d9293e8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-054.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -971,7 +971,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Xanh thêu rắn"
     ],
     "price": 265000,
-    "image": "https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-055.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -989,7 +989,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "3-6M"
     ],
     "price": 195000,
-    "image": "https://images.unsplash.com/photo-1522771930-78848d9293e8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-056.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -1006,7 +1006,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "4-5Y"
     ],
     "price": 245000,
-    "image": "https://images.unsplash.com/photo-1622290291468-a28f7a7dc6a8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-057.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -1025,7 +1025,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 55000,
-    "image": "https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-058.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -1041,7 +1041,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Quà tặng kèm"
     ],
     "price": 0,
-    "image": "https://images.unsplash.com/photo-1514090458221-65bb69cf63e6?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-059.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -1060,7 +1060,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 195000,
-    "image": "https://images.unsplash.com/photo-1522771930-78848d9293e8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-060.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -1079,7 +1079,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "2-3Y"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-061.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -1098,7 +1098,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-062.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -1114,7 +1114,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "9-12M"
     ],
     "price": 195000,
-    "image": "https://images.unsplash.com/photo-1522771930-78848d9293e8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-063.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -1133,7 +1133,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 195000,
-    "image": "https://images.unsplash.com/photo-1522771930-78848d9293e8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-064.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -1152,7 +1152,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 55000,
-    "image": "https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-065.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -1171,7 +1171,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 295000,
-    "image": "https://images.unsplash.com/photo-1544816155-12df9643f363?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-066.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -1189,7 +1189,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "3-6M"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-067.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -1208,7 +1208,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-068.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -1224,7 +1224,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "18M"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-069.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -1243,7 +1243,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "2-3Y"
     ],
     "price": 185000,
-    "image": "https://images.unsplash.com/photo-1522771930-78848d9293e8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-070.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -1259,7 +1259,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Quà tặng kèm"
     ],
     "price": 0,
-    "image": "https://images.unsplash.com/photo-1514090458221-65bb69cf63e6?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-071.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -1278,7 +1278,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "2-3Y"
     ],
     "price": 185000,
-    "image": "https://images.unsplash.com/photo-1522771930-78848d9293e8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-072.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -1297,7 +1297,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "2-3Y"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-073.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -1313,7 +1313,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "18M"
     ],
     "price": 195000,
-    "image": "https://images.unsplash.com/photo-1522771930-78848d9293e8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-074.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -1330,7 +1330,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "4-5Y"
     ],
     "price": 245000,
-    "image": "https://images.unsplash.com/photo-1622290291468-a28f7a7dc6a8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-075.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -1349,7 +1349,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-076.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -1368,7 +1368,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Xanh thêu rắn"
     ],
     "price": 265000,
-    "image": "https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-077.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -1384,7 +1384,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "6M"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-078.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -1403,7 +1403,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 55000,
-    "image": "https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-079.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -1419,7 +1419,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "6M"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-080.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -1435,7 +1435,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "6M"
     ],
     "price": 185000,
-    "image": "https://images.unsplash.com/photo-1522771930-78848d9293e8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-081.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -1451,7 +1451,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "6M"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-082.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -1467,7 +1467,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "9-12M"
     ],
     "price": 195000,
-    "image": "https://images.unsplash.com/photo-1522771930-78848d9293e8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-083.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -1483,7 +1483,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "0-3M"
     ],
     "price": 195000,
-    "image": "https://images.unsplash.com/photo-1522771930-78848d9293e8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-084.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -1501,7 +1501,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "3-6M"
     ],
     "price": 195000,
-    "image": "https://images.unsplash.com/photo-1522771930-78848d9293e8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-085.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -1517,7 +1517,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "6-9M"
     ],
     "price": 195000,
-    "image": "https://images.unsplash.com/photo-1522771930-78848d9293e8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-086.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -1533,7 +1533,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Quà tặng kèm"
     ],
     "price": 0,
-    "image": "https://images.unsplash.com/photo-1514090458221-65bb69cf63e6?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-087.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -1551,7 +1551,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "3-6M"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-088.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -1567,7 +1567,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Quà tặng kèm"
     ],
     "price": 0,
-    "image": "https://images.unsplash.com/photo-1514090458221-65bb69cf63e6?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-089.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -1584,7 +1584,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "9-12M"
     ],
     "price": 195000,
-    "image": "https://images.unsplash.com/photo-1522771930-78848d9293e8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-090.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -1602,7 +1602,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "3-6M"
     ],
     "price": 195000,
-    "image": "https://images.unsplash.com/photo-1522771930-78848d9293e8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-091.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -1618,7 +1618,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "6M"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-092.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -1637,7 +1637,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 195000,
-    "image": "https://images.unsplash.com/photo-1522771930-78848d9293e8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-093.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -1654,7 +1654,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "12M"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-094.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -1672,7 +1672,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "3-6M"
     ],
     "price": 265000,
-    "image": "https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-095.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -1690,7 +1690,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "3-6M"
     ],
     "price": 55000,
-    "image": "https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-096.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -1706,7 +1706,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "6M"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-097.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -1722,7 +1722,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "6M"
     ],
     "price": 245000,
-    "image": "https://images.unsplash.com/photo-1622290291468-a28f7a7dc6a8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-098.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -1740,7 +1740,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "3-6M"
     ],
     "price": 265000,
-    "image": "https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-099.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -1759,7 +1759,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-100.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -1778,7 +1778,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 185000,
-    "image": "https://images.unsplash.com/photo-1522771930-78848d9293e8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-101.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -1797,7 +1797,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "2-3Y"
     ],
     "price": 195000,
-    "image": "https://images.unsplash.com/photo-1522771930-78848d9293e8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-102.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -1813,7 +1813,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "9M"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-103.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -1829,7 +1829,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Quà tặng kèm"
     ],
     "price": 0,
-    "image": "https://images.unsplash.com/photo-1514090458221-65bb69cf63e6?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-104.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -1848,7 +1848,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 55000,
-    "image": "https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-105.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -1867,7 +1867,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Xanh thêu rắn"
     ],
     "price": 265000,
-    "image": "https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-106.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -1886,7 +1886,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 55000,
-    "image": "https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-107.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -1905,7 +1905,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 55000,
-    "image": "https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-108.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -1923,7 +1923,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "3-6M"
     ],
     "price": 265000,
-    "image": "https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-109.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -1941,7 +1941,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "3-6M"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-110.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -1958,7 +1958,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "9M"
     ],
     "price": 195000,
-    "image": "https://images.unsplash.com/photo-1522771930-78848d9293e8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-111.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -1977,7 +1977,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 55000,
-    "image": "https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-112.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -1994,7 +1994,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "9M"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-113.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -2012,7 +2012,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "3-6M"
     ],
     "price": 195000,
-    "image": "https://images.unsplash.com/photo-1522771930-78848d9293e8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-114.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -2030,7 +2030,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "3-6M"
     ],
     "price": 265000,
-    "image": "https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-115.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -2049,7 +2049,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Xanh thêu rắn"
     ],
     "price": 265000,
-    "image": "https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-116.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -2067,7 +2067,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "3-6M"
     ],
     "price": 55000,
-    "image": "https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-117.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -2086,7 +2086,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-118.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -2104,7 +2104,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "3-6M"
     ],
     "price": 265000,
-    "image": "https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-119.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -2123,7 +2123,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-120.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -2139,7 +2139,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "9-12M"
     ],
     "price": 195000,
-    "image": "https://images.unsplash.com/photo-1522771930-78848d9293e8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-121.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -2155,7 +2155,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "9M"
     ],
     "price": 185000,
-    "image": "https://images.unsplash.com/photo-1522771930-78848d9293e8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-122.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -2174,7 +2174,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "2-3Y"
     ],
     "price": 185000,
-    "image": "https://images.unsplash.com/photo-1522771930-78848d9293e8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-123.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -2193,7 +2193,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Xanh thêu rắn"
     ],
     "price": 265000,
-    "image": "https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-124.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -2212,7 +2212,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "2-3Y"
     ],
     "price": 185000,
-    "image": "https://images.unsplash.com/photo-1522771930-78848d9293e8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-125.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -2231,7 +2231,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 195000,
-    "image": "https://images.unsplash.com/photo-1522771930-78848d9293e8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-126.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -2250,7 +2250,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 195000,
-    "image": "https://images.unsplash.com/photo-1522771930-78848d9293e8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-127.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -2266,7 +2266,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "9M"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-128.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -2284,7 +2284,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "3-6M"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-129.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -2301,7 +2301,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "9M"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-130.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -2318,7 +2318,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "9M"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-131.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -2334,7 +2334,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "9-12M"
     ],
     "price": 195000,
-    "image": "https://images.unsplash.com/photo-1522771930-78848d9293e8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-132.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -2353,7 +2353,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "2-3Y"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-133.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -2372,7 +2372,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-134.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -2390,7 +2390,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "3-6M"
     ],
     "price": 195000,
-    "image": "https://images.unsplash.com/photo-1522771930-78848d9293e8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-135.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -2409,7 +2409,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "2-3Y"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-136.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -2427,7 +2427,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "3-6M"
     ],
     "price": 55000,
-    "image": "https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-137.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -2445,7 +2445,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "3-6M"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-138.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -2464,7 +2464,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "2-3Y"
     ],
     "price": 295000,
-    "image": "https://images.unsplash.com/photo-1544816155-12df9643f363?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-139.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -2483,7 +2483,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Xanh thêu rắn"
     ],
     "price": 265000,
-    "image": "https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-140.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -2502,7 +2502,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 195000,
-    "image": "https://images.unsplash.com/photo-1522771930-78848d9293e8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-141.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -2520,7 +2520,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "3-6M"
     ],
     "price": 195000,
-    "image": "https://images.unsplash.com/photo-1522771930-78848d9293e8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-142.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -2539,7 +2539,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 195000,
-    "image": "https://images.unsplash.com/photo-1522771930-78848d9293e8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-143.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -2556,7 +2556,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "4-5Y"
     ],
     "price": 295000,
-    "image": "https://images.unsplash.com/photo-1544816155-12df9643f363?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-144.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -2574,7 +2574,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "3-6M"
     ],
     "price": 185000,
-    "image": "https://images.unsplash.com/photo-1522771930-78848d9293e8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-145.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -2593,7 +2593,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Xanh thêu rắn"
     ],
     "price": 265000,
-    "image": "https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-146.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -2612,7 +2612,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "9-12M"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-147.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -2628,7 +2628,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Quà tặng kèm"
     ],
     "price": 0,
-    "image": "https://images.unsplash.com/photo-1514090458221-65bb69cf63e6?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-148.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -2645,7 +2645,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "2-3Y"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-149.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -2664,7 +2664,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 195000,
-    "image": "https://images.unsplash.com/photo-1522771930-78848d9293e8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-150.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -2682,7 +2682,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "3-6M"
     ],
     "price": 195000,
-    "image": "https://images.unsplash.com/photo-1522771930-78848d9293e8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-151.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -2700,7 +2700,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "3-6M"
     ],
     "price": 55000,
-    "image": "https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-152.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -2719,7 +2719,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-153.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -2738,7 +2738,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 55000,
-    "image": "https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-154.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -2757,7 +2757,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-155.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -2773,7 +2773,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "9M"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-156.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -2789,7 +2789,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "9-12M"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-157.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -2807,7 +2807,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "3-6M"
     ],
     "price": 265000,
-    "image": "https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-158.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -2825,7 +2825,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "3-6M"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-159.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -2844,7 +2844,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-160.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -2860,7 +2860,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Quà tặng kèm"
     ],
     "price": 0,
-    "image": "https://images.unsplash.com/photo-1514090458221-65bb69cf63e6?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-161.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -2878,7 +2878,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "3-6M"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-162.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -2897,7 +2897,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-163.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -2913,7 +2913,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Quà tặng kèm"
     ],
     "price": 0,
-    "image": "https://images.unsplash.com/photo-1514090458221-65bb69cf63e6?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-164.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -2929,7 +2929,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "18M"
     ],
     "price": 295000,
-    "image": "https://images.unsplash.com/photo-1544816155-12df9643f363?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-165.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -2948,7 +2948,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-166.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -2964,7 +2964,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "6M"
     ],
     "price": 295000,
-    "image": "https://images.unsplash.com/photo-1544816155-12df9643f363?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-167.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -2980,7 +2980,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "9-12M"
     ],
     "price": 195000,
-    "image": "https://images.unsplash.com/photo-1522771930-78848d9293e8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-168.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -2999,7 +2999,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "9-12M"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-169.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -3018,7 +3018,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-170.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -3036,7 +3036,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "3-6M"
     ],
     "price": 265000,
-    "image": "https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-171.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -3054,7 +3054,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "3-6M"
     ],
     "price": 499000,
-    "image": "https://images.unsplash.com/photo-1522771930-78848d9293e8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-172.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -3073,7 +3073,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-173.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -3092,7 +3092,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "2-3Y"
     ],
     "price": 295000,
-    "image": "https://images.unsplash.com/photo-1544816155-12df9643f363?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-174.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -3109,7 +3109,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "12M"
     ],
     "price": 499000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-175.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -3128,7 +3128,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-176.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -3146,7 +3146,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "3-6M"
     ],
     "price": 195000,
-    "image": "https://images.unsplash.com/photo-1522771930-78848d9293e8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-177.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -3164,7 +3164,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "3-6M"
     ],
     "price": 195000,
-    "image": "https://images.unsplash.com/photo-1522771930-78848d9293e8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-178.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -3183,7 +3183,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-179.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -3201,7 +3201,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "3-6M"
     ],
     "price": 195000,
-    "image": "https://images.unsplash.com/photo-1522771930-78848d9293e8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-180.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -3220,7 +3220,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "2-3Y"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-181.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -3239,7 +3239,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 245000,
-    "image": "https://images.unsplash.com/photo-1622290291468-a28f7a7dc6a8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-182.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -3258,7 +3258,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "2-3Y"
     ],
     "price": 295000,
-    "image": "https://images.unsplash.com/photo-1544816155-12df9643f363?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-183.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -3277,7 +3277,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "2-3Y"
     ],
     "price": 245000,
-    "image": "https://images.unsplash.com/photo-1622290291468-a28f7a7dc6a8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-184.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -3293,7 +3293,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "6M"
     ],
     "price": 195000,
-    "image": "https://images.unsplash.com/photo-1522771930-78848d9293e8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-185.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -3312,7 +3312,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-186.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -3331,7 +3331,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Xanh thêu rắn"
     ],
     "price": 265000,
-    "image": "https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-187.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -3347,7 +3347,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Quà tặng kèm"
     ],
     "price": 0,
-    "image": "https://images.unsplash.com/photo-1514090458221-65bb69cf63e6?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-188.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -3366,7 +3366,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-189.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -3385,7 +3385,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-190.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -3401,7 +3401,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "2Y"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-191.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -3420,7 +3420,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 195000,
-    "image": "https://images.unsplash.com/photo-1522771930-78848d9293e8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-192.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -3439,7 +3439,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-193.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -3458,7 +3458,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-194.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -3477,7 +3477,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 55000,
-    "image": "https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-195.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -3495,7 +3495,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "3-6M"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-196.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -3513,7 +3513,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "3-6M"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-197.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -3532,7 +3532,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 195000,
-    "image": "https://images.unsplash.com/photo-1522771930-78848d9293e8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-198.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -3550,7 +3550,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "3-6M"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-199.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -3569,7 +3569,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 195000,
-    "image": "https://images.unsplash.com/photo-1522771930-78848d9293e8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-200.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -3585,7 +3585,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "9M"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-201.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -3604,7 +3604,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-202.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -3623,7 +3623,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-203.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -3642,7 +3642,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-204.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -3661,7 +3661,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 195000,
-    "image": "https://images.unsplash.com/photo-1522771930-78848d9293e8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-205.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -3680,7 +3680,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-206.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -3696,7 +3696,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "9M"
     ],
     "price": 195000,
-    "image": "https://images.unsplash.com/photo-1522771930-78848d9293e8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-207.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -3715,7 +3715,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-208.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -3734,7 +3734,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-209.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -3753,7 +3753,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-210.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -3772,7 +3772,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 195000,
-    "image": "https://images.unsplash.com/photo-1522771930-78848d9293e8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-211.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -3790,7 +3790,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "4-5Y"
     ],
     "price": 245000,
-    "image": "https://images.unsplash.com/photo-1622290291468-a28f7a7dc6a8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-212.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -3809,7 +3809,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-213.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -3827,7 +3827,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "3-6M"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-214.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -3846,7 +3846,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 55000,
-    "image": "https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-215.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -3865,7 +3865,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-216.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -3883,7 +3883,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "3-6M"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-217.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -3902,7 +3902,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-218.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -3921,7 +3921,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-219.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -3940,7 +3940,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-220.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -3959,7 +3959,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-221.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -3977,7 +3977,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "3-6M"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-222.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -3996,7 +3996,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-223.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -4012,7 +4012,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Quà tặng kèm"
     ],
     "price": 0,
-    "image": "https://images.unsplash.com/photo-1514090458221-65bb69cf63e6?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-224.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -4031,7 +4031,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 195000,
-    "image": "https://images.unsplash.com/photo-1522771930-78848d9293e8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-225.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -4048,7 +4048,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "2-3Y"
     ],
     "price": 245000,
-    "image": "https://images.unsplash.com/photo-1622290291468-a28f7a7dc6a8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-226.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -4067,7 +4067,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "12-18M"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-227.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -4086,7 +4086,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 185000,
-    "image": "https://images.unsplash.com/photo-1522771930-78848d9293e8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-228.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -4104,7 +4104,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "3-6M"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-229.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -4123,7 +4123,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-230.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -4142,7 +4142,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Xanh thêu rắn"
     ],
     "price": 265000,
-    "image": "https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-231.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -4158,7 +4158,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "6M"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-232.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -4177,7 +4177,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-233.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -4196,7 +4196,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 195000,
-    "image": "https://images.unsplash.com/photo-1522771930-78848d9293e8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-234.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -4215,7 +4215,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-235.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -4234,7 +4234,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Xanh thêu rắn"
     ],
     "price": 265000,
-    "image": "https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-236.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -4252,7 +4252,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "3-6M"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-237.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -4271,7 +4271,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-238.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -4289,7 +4289,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "3-6M"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-239.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -4308,7 +4308,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-240.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -4327,7 +4327,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-241.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -4343,7 +4343,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "9M"
     ],
     "price": 195000,
-    "image": "https://images.unsplash.com/photo-1522771930-78848d9293e8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-242.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -4362,7 +4362,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-243.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -4381,7 +4381,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-244.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -4400,7 +4400,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-245.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -4418,7 +4418,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "3-6M"
     ],
     "price": 265000,
-    "image": "https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-246.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -4436,7 +4436,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "3-6M"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-247.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -4452,7 +4452,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "3-4Y"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-248.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -4471,7 +4471,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "2-3Y"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-249.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -4489,7 +4489,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "3-6M"
     ],
     "price": 195000,
-    "image": "https://images.unsplash.com/photo-1522771930-78848d9293e8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-250.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -4508,7 +4508,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 195000,
-    "image": "https://images.unsplash.com/photo-1522771930-78848d9293e8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-251.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -4526,7 +4526,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "3-6M"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-252.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -4545,7 +4545,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 185000,
-    "image": "https://images.unsplash.com/photo-1522771930-78848d9293e8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-253.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -4563,7 +4563,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "3-6M"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-254.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -4579,7 +4579,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Quà tặng kèm"
     ],
     "price": 0,
-    "image": "https://images.unsplash.com/photo-1514090458221-65bb69cf63e6?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-255.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -4596,7 +4596,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "12M"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-256.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -4614,7 +4614,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "3-6M"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-257.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -4633,7 +4633,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-258.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -4652,7 +4652,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 185000,
-    "image": "https://images.unsplash.com/photo-1522771930-78848d9293e8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-259.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -4671,7 +4671,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-260.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -4690,7 +4690,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-261.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -4708,7 +4708,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "3-6M"
     ],
     "price": 195000,
-    "image": "https://images.unsplash.com/photo-1522771930-78848d9293e8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-262.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -4725,7 +4725,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "9M"
     ],
     "price": 195000,
-    "image": "https://images.unsplash.com/photo-1522771930-78848d9293e8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-263.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -4741,7 +4741,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "12M"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-264.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -4760,7 +4760,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 185000,
-    "image": "https://images.unsplash.com/photo-1522771930-78848d9293e8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-265.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -4779,7 +4779,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 185000,
-    "image": "https://images.unsplash.com/photo-1522771930-78848d9293e8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-266.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -4798,7 +4798,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-267.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -4817,7 +4817,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-268.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -4836,7 +4836,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-269.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -4855,7 +4855,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-270.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -4873,7 +4873,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "3-6M"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-271.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -4892,7 +4892,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-272.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -4911,7 +4911,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 699000,
-    "image": "https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-273.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -4930,7 +4930,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 185000,
-    "image": "https://images.unsplash.com/photo-1522771930-78848d9293e8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-274.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -4949,7 +4949,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-275.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -4968,7 +4968,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-276.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -4986,7 +4986,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "3-6M"
     ],
     "price": 55000,
-    "image": "https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-277.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -5005,7 +5005,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-278.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -5021,7 +5021,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Quà tặng kèm"
     ],
     "price": 0,
-    "image": "https://images.unsplash.com/photo-1514090458221-65bb69cf63e6?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-279.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -5040,7 +5040,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-280.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -5059,7 +5059,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-281.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -5078,7 +5078,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-282.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -5096,7 +5096,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "3-6M"
     ],
     "price": 195000,
-    "image": "https://images.unsplash.com/photo-1522771930-78848d9293e8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-283.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -5115,7 +5115,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-284.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -5134,7 +5134,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-285.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -5153,7 +5153,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-286.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -5172,7 +5172,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-287.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -5191,7 +5191,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-288.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -5209,7 +5209,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "3-6M"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-289.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -5228,7 +5228,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 55000,
-    "image": "https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-290.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -5247,7 +5247,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 185000,
-    "image": "https://images.unsplash.com/photo-1522771930-78848d9293e8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-291.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -5266,7 +5266,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 55000,
-    "image": "https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-292.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -5285,7 +5285,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-293.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -5303,7 +5303,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "3-6M"
     ],
     "price": 195000,
-    "image": "https://images.unsplash.com/photo-1522771930-78848d9293e8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-294.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -5321,7 +5321,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "3-6M"
     ],
     "price": 245000,
-    "image": "https://images.unsplash.com/photo-1622290291468-a28f7a7dc6a8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-295.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -5339,7 +5339,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "3-6M"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-296.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -5358,7 +5358,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-297.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -5377,7 +5377,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-298.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -5396,7 +5396,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 195000,
-    "image": "https://images.unsplash.com/photo-1522771930-78848d9293e8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-299.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -5415,7 +5415,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 195000,
-    "image": "https://images.unsplash.com/photo-1522771930-78848d9293e8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-300.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -5431,7 +5431,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Quà tặng kèm"
     ],
     "price": 0,
-    "image": "https://images.unsplash.com/photo-1514090458221-65bb69cf63e6?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-301.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -5450,7 +5450,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-302.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -5469,7 +5469,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-303.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -5487,7 +5487,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "3-6M"
     ],
     "price": 195000,
-    "image": "https://images.unsplash.com/photo-1522771930-78848d9293e8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-304.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -5505,7 +5505,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "3-6M"
     ],
     "price": 195000,
-    "image": "https://images.unsplash.com/photo-1522771930-78848d9293e8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-305.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -5524,7 +5524,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-306.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -5542,7 +5542,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "3-6M"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-307.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -5559,7 +5559,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "9M"
     ],
     "price": 195000,
-    "image": "https://images.unsplash.com/photo-1522771930-78848d9293e8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-308.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -5577,7 +5577,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "3-6M"
     ],
     "price": 55000,
-    "image": "https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-309.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -5596,7 +5596,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-310.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -5612,7 +5612,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Quà tặng kèm"
     ],
     "price": 0,
-    "image": "https://images.unsplash.com/photo-1514090458221-65bb69cf63e6?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-311.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -5631,7 +5631,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 195000,
-    "image": "https://images.unsplash.com/photo-1522771930-78848d9293e8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-312.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -5650,7 +5650,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 195000,
-    "image": "https://images.unsplash.com/photo-1522771930-78848d9293e8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-313.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -5669,7 +5669,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-314.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -5688,7 +5688,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 195000,
-    "image": "https://images.unsplash.com/photo-1522771930-78848d9293e8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-315.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -5707,7 +5707,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-316.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -5726,7 +5726,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 245000,
-    "image": "https://images.unsplash.com/photo-1622290291468-a28f7a7dc6a8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-317.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -5745,7 +5745,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 245000,
-    "image": "https://images.unsplash.com/photo-1622290291468-a28f7a7dc6a8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-318.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -5762,7 +5762,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "18-24M"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-319.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -5780,7 +5780,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "3-6M"
     ],
     "price": 55000,
-    "image": "https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-320.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -5798,7 +5798,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "3-6M"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-321.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -5816,7 +5816,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "3-6M"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-322.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -5835,7 +5835,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-323.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -5854,7 +5854,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 295000,
-    "image": "https://images.unsplash.com/photo-1544816155-12df9643f363?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-324.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -5873,7 +5873,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 195000,
-    "image": "https://images.unsplash.com/photo-1522771930-78848d9293e8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-325.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -5891,7 +5891,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "3-6M"
     ],
     "price": 195000,
-    "image": "https://images.unsplash.com/photo-1522771930-78848d9293e8?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-326.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -5910,7 +5910,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-327.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -5929,7 +5929,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-328.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -5948,7 +5948,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "Be ấm"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-329.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
@@ -5966,7 +5966,7 @@ export const REAL_PRODUCTS: ProductCatalogItem[] = [
       "3-6M"
     ],
     "price": 225000,
-    "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=240&auto=format&fit=crop&q=80",
+    "image": "/images/products/mn-330.jpg",
     "soldCount": 0,
     "revenue": 0,
     "percentage": 0,
