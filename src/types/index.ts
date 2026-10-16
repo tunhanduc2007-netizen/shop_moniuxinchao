@@ -1,4 +1,4 @@
-export type OrderStatus = 'Chờ xử lý' | 'Đang xử lý' | 'Đang giao' | 'Đã giao' | 'Đã hủy';
+export type OrderStatus = 'Chờ thông tin' | 'Chờ xử lý' | 'Đang xử lý' | 'Đang giao' | 'Đã giao' | 'Đã hủy';
 
 export type PaymentMethod = 'COD' | 'Chuyển khoản';
 
@@ -34,6 +34,8 @@ export interface Order {
   trackingCode?: string;
   shippingStatus?: ShippingStatus;
   orderNote?: string;
+  isPendingInfo?: boolean; // Đơn giữ đồ trên live, chờ khách inbox SĐT/địa chỉ
+  holdExpiresAt?: string; // Hạn giữ đồ
   createdAt: string; // ISO string or format "16/10/2025 10:23"
   timeString: string; // e.g. "10:23"
   updatedAt: string;

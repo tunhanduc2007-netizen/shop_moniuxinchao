@@ -59,6 +59,13 @@ export function getStatusStyle(status: OrderStatus): {
         dot: 'bg-[#FFC83B]',
         border: 'border-[#FDE199]',
       };
+    case 'Chờ thông tin':
+      return {
+        bg: 'bg-amber-50',
+        text: 'text-amber-800',
+        dot: 'bg-amber-500',
+        border: 'border-amber-300',
+      };
     case 'Đã hủy':
       return {
         bg: 'bg-[#FFF0F1]',

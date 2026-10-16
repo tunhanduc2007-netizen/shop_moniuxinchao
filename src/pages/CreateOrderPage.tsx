@@ -30,6 +30,7 @@ import {
   Award,
   Star,
   Check,
+  Clock,
 } from 'lucide-react';
 import { useShop } from '../context/ShopContext';
 import type { OrderItem, PaymentMethod, ShippingCarrier, ProductCatalogItem, Customer } from '../types';
@@ -38,6 +39,7 @@ import { formatCurrency } from '../utils/formatters';
 import { getNextSuggestedBabySize } from '../utils/customerUtils';
 import { searchAddressSuggestions, AddressSuggestion, POPULAR_PROVINCES } from '../utils/addressUtils';
 import { SizeSelectionModal } from '../components/SizeSelectionModal';
+import { LiveHoldOrdersModal } from '../components/LiveHoldOrdersModal';
 
 export const CreateOrderPage: React.FC = () => {
   const {
@@ -47,6 +49,7 @@ export const CreateOrderPage: React.FC = () => {
     settings,
     generateUniqueCode,
     addOrder,
+    mergeIntoOrder,
     setActiveTab,
     pendingOrderItem,
     setPendingOrderItem,
@@ -513,6 +516,42 @@ export const CreateOrderPage: React.FC = () => {
     setLastCreatedOrderCode(null);
   };
 
+  const [isLiveHoldModalOpen, setIsLiveHoldModalOpen] = useState(false);
+
+  // Đếm số đơn đang giữ đồ trên live
+  const pendingHoldCount = useMemo(() => {
+    return orders.filter((o) => o.status === 'Chờ thông tin' || o.isPendingInfo).length;
+  }, [orders]);
+
+  // Ý tưởng 2: Gộp đơn tự động khi khách chốt nhiều lần trên live
+  const activePendingOrderForCustomer = useMemo(() => {
+    const cleanName = customerName.trim().toLowerCase();
+    if (cleanName.length < 2) return null;
+    return (
+      orders.find(
+        (o) =>
+          (o.status === 'Chờ thông tin' || o.isPendingInfo) &&
+          o.customerName.trim().toLowerCase() === cleanName
+      ) || null
+    );
+  }, [customerName, orders]);
+
+  const handleMergeToPendingOrder = async () => {
+    if (!activePendingOrderForCustomer) return;
+    if (orderItems.length === 0) {
+      showToast({
+        type: 'warning',
+        title: 'Chưa có đồ để gộp',
+        message: 'Vui lòng chọn món đồ bé muốn gộp vào đơn chờ.',
+      });
+      return;
+    }
+
+    await mergeIntoOrder(activePendingOrderForCustomer.id, orderItems, discountAmount);
+    handleResetForm();
+  };
+
+  // Ý tưởng 1: Nút 1 - Chốt đơn chính thức (khi có đủ SĐT & Địa chỉ)
   const submitOrder = async () => {
     if (!customerName.trim()) {
       showToast({
@@ -562,10 +601,57 @@ export const CreateOrderPage: React.FC = () => {
     });
   };
 
+  // Ý tưởng 1: Nút 2 - Lưu giữ đồ / Đơn chờ (Chỉ cần Nick TikTok)
+  const submitHoldOrder = async () => {
+    if (!customerName.trim()) {
+      showToast({
+        type: 'warning',
+        title: 'Thiếu Nick TikTok / Tên khách',
+        message: 'Chỉ cần nhập tên khách (ví dụ: Mẹ Bắp) là có thể lưu giữ đồ!',
+      });
+      return;
+    }
+
+    if (orderItems.length === 0) {
+      showToast({
+        type: 'warning',
+        title: 'Đơn chưa có đồ bé',
+        message: 'Vui lòng chọn ít nhất 1 món đồ bé để giữ đơn cho khách.',
+      });
+      return;
+    }
+
+    const created = await addOrder({
+      code: orderCode,
+      customerName: customerName.trim(),
+      customerPhone: customerPhone.trim() || 'Chưa có SĐT',
+      shippingAddress: shippingAddress.trim() || 'Chờ khách gửi địa chỉ inbox',
+      orderNote: orderNote.trim(),
+      paymentMethod,
+      carrier,
+      items: orderItems.map((item) => ({
+        ...item,
+        unitPrice: Number(item.unitPrice) || 0,
+        quantity: Number(item.quantity) || 1,
+      })),
+      subtotal,
+      shippingFee: 0,
+      discount: discountAmount,
+      totalAmount: Math.max(0, subtotal - discountAmount),
+      status: 'Chờ thông tin',
+      shippingStatus: 'Chờ lấy hàng',
+      isPendingInfo: true,
+    });
+
+    setLastCreatedOrderCode(created.code);
+    handleResetForm();
+  };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     submitOrder();
   };
+
 
   return (
     <div className="space-y-6 pb-12 max-w-7xl mx-auto notranslate" translate="no">
@@ -587,6 +673,21 @@ export const CreateOrderPage: React.FC = () => {
         </div>
 
         <div className="flex items-center gap-2 flex-wrap">
+          <button
+            type="button"
+            onClick={() => setIsLiveHoldModalOpen(true)}
+            className="relative flex items-center gap-1.5 px-3.5 py-2 text-xs font-bold rounded-2xl transition-all cursor-pointer border bg-amber-50 text-amber-900 hover:bg-amber-100 border-amber-300 shadow-2xs hover:shadow-xs active:scale-[0.98]"
+            title="Mở khay quản lý các đơn giữ đồ chờ bổ sung SĐT & Địa chỉ"
+          >
+            <Clock className="w-3.5 h-3.5 text-amber-600 animate-pulse" />
+            <span>⏳ Giỏ hàng chờ live</span>
+            {pendingHoldCount > 0 && (
+              <span className="px-2 py-0.5 rounded-full text-[10px] font-black bg-amber-500 text-white shadow-2xs animate-bounce">
+                {pendingHoldCount}
+              </span>
+            )}
+          </button>
+
           <button
             type="button"
             onClick={() => setIsParserOpen(!isParserOpen)}
@@ -1569,20 +1670,70 @@ export const CreateOrderPage: React.FC = () => {
               </div>
             </div>
 
-            {/* Big Action Submit Button */}
-            <div className="pt-2 space-y-2">
+            {/* Ý tưởng 2: Thông báo Gộp đơn tự động khi khách chốt nhiều lần trên live */}
+            {activePendingOrderForCustomer && orderItems.length > 0 && (
+              <div className="p-3.5 bg-gradient-to-r from-amber-50 to-orange-50 border-2 border-amber-300 rounded-2xl space-y-2.5 shadow-xs animate-in fade-in duration-200">
+                <div className="flex items-start gap-2.5">
+                  <span className="text-xl shrink-0">💡</span>
+                  <div className="text-xs">
+                    <p className="font-extrabold text-amber-900">
+                      Mẹ {activePendingOrderForCustomer.customerName} đang có 1 đơn chờ giữ đồ!
+                    </p>
+                    <p className="text-amber-800 mt-0.5 leading-relaxed">
+                      Đã giữ <strong className="font-bold">{activePendingOrderForCustomer.items.length} món</strong> ({formatCurrency(activePendingOrderForCustomer.totalAmount)}). Mẹ có muốn gộp {orderItems.length} món mới này vào chung không?
+                    </p>
+                  </div>
+                </div>
+                <button
+                  type="button"
+                  onClick={handleMergeToPendingOrder}
+                  className="w-full py-2.5 px-3 bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-black text-xs rounded-xl shadow-xs transition-all flex items-center justify-center gap-2 cursor-pointer active:scale-[0.98]"
+                >
+                  <Plus className="w-4 h-4" />
+                  + Gộp vào giỏ {activePendingOrderForCustomer.customerName} (Gom 1 giỏ duy nhất)
+                </button>
+              </div>
+            )}
+
+            {/* Ý tưởng 1: Cơ chế 2 nút chốt đơn (Đơn chính thức & Lưu giữ đồ) */}
+            <div className="pt-2 space-y-2.5">
+              {/* Nút 1: Chốt đơn chính thức */}
               <button
                 type="submit"
-                className="w-full py-4 bg-gradient-to-r from-[#FF5B65] to-[#F14652] hover:from-[#E84A54] hover:to-[#DE3D49] text-white rounded-2xl text-sm font-black shadow-lg shadow-[#FF5B65]/35 hover:shadow-xl hover:shadow-[#FF5B65]/40 transition-all flex items-center justify-center gap-2 cursor-pointer font-['Nunito',sans-serif] active:scale-[0.98]"
+                className="w-full py-3.5 bg-gradient-to-r from-[#FF5B65] to-[#F14652] hover:from-[#E84A54] hover:to-[#DE3D49] text-white rounded-2xl text-xs sm:text-sm font-black shadow-lg shadow-[#FF5B65]/35 hover:shadow-xl hover:shadow-[#FF5B65]/40 transition-all flex items-center justify-center gap-2 cursor-pointer font-['Nunito',sans-serif] active:scale-[0.98]"
               >
                 <CheckCircle2 className="w-5 h-5" />
-                CHỐT ĐƠN NGAY (F9 / Enter)
+                🔴 CHỐT ĐƠN NGAY (Đầy đủ SĐT & Địa chỉ)
               </button>
+
+              {/* Nút 2: Lưu giữ đồ / Đơn chờ (Chỉ cần Nick TikTok) */}
+              <button
+                type="button"
+                onClick={submitHoldOrder}
+                className="w-full py-3 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white rounded-2xl text-xs sm:text-sm font-extrabold shadow-md shadow-amber-500/25 hover:shadow-lg hover:shadow-amber-500/35 transition-all flex items-center justify-center gap-2 cursor-pointer active:scale-[0.98]"
+              >
+                <Clock className="w-4 h-4 animate-pulse" />
+                ⏳ LƯU GIỮ ĐỒ / ĐƠN CHỜ (Chỉ cần Nick TikTok)
+              </button>
+
+              <div className="flex items-center justify-between px-1 text-[11px] text-[#8C7065] pt-0.5">
+                <span className="flex items-center gap-1 text-amber-700 font-semibold">
+                  <Clock className="w-3 h-3" />
+                  Giữ đồ 24h không bị chốt trùng
+                </span>
+                <button
+                  type="button"
+                  onClick={() => setIsLiveHoldModalOpen(true)}
+                  className="text-[#FF5B65] hover:underline font-bold cursor-pointer"
+                >
+                  Xem {pendingHoldCount} đơn chờ live →
+                </button>
+              </div>
 
               <button
                 type="button"
                 onClick={handleResetForm}
-                className="w-full py-2.5 bg-[#FFF9F6] hover:bg-[#FFF0F1] text-[#8C7065] rounded-2xl text-xs font-bold transition-colors cursor-pointer border border-[#FDE2E4]"
+                className="w-full py-2 bg-[#FFF9F6] hover:bg-[#FFF0F1] text-[#8C7065] rounded-2xl text-xs font-bold transition-colors cursor-pointer border border-[#FDE2E4]"
               >
                 Hủy bỏ & Làm mới form
               </button>
@@ -1835,6 +1986,12 @@ export const CreateOrderPage: React.FC = () => {
           }}
         />
       )}
+
+      {/* Ý tưởng 3 & 4: Khay Quản lý Hàng chờ Live & 1-Click Hoàn tất */}
+      <LiveHoldOrdersModal
+        isOpen={isLiveHoldModalOpen}
+        onClose={() => setIsLiveHoldModalOpen(false)}
+      />
     </div>
   );
 };

@@ -11,10 +11,12 @@ import {
   Plus,
   Phone,
   Sparkles,
+  Clock,
 } from 'lucide-react';
 import { useShop } from '../context/ShopContext';
 import type { Order, OrderStatus } from '../types';
 import { formatCurrency, getStatusStyle } from '../utils/formatters';
+import { LiveHoldOrdersModal } from '../components/LiveHoldOrdersModal';
 
 export const OrderHistoryPage: React.FC = () => {
   const {
@@ -30,7 +32,13 @@ export const OrderHistoryPage: React.FC = () => {
   const [statusFilter, setStatusFilter] = useState<string>('all');
   const [paymentFilter, setPaymentFilter] = useState<string>('all');
   const [currentPage, setCurrentPage] = useState(1);
+  const [isLiveHoldModalOpen, setIsLiveHoldModalOpen] = useState(false);
   const itemsPerPage = 7;
+
+  // Đếm đơn chờ live
+  const pendingHoldCount = useMemo(() => {
+    return orders.filter((o) => o.status === 'Chờ thông tin' || o.isPendingInfo).length;
+  }, [orders]);
 
   // Filter orders
   const filteredOrders = useMemo(() => {
@@ -43,7 +51,12 @@ export const OrderHistoryPage: React.FC = () => {
         ord.customerPhone.toLowerCase().includes(query) ||
         ord.items.some((it) => it.productName.toLowerCase().includes(query));
 
-      const matchStatus = statusFilter === 'all' || ord.status === statusFilter;
+      const matchStatus =
+        statusFilter === 'all'
+          ? true
+          : statusFilter === 'Chờ thông tin'
+          ? ord.status === 'Chờ thông tin' || ord.isPendingInfo
+          : ord.status === statusFilter;
       const matchPayment = paymentFilter === 'all' || ord.paymentMethod === paymentFilter;
 
       return matchSearch && matchStatus && matchPayment;
@@ -87,6 +100,11 @@ export const OrderHistoryPage: React.FC = () => {
 
   const statusList: { key: string; label: string; count: number }[] = [
     { key: 'all', label: 'Tất cả đơn', count: orders.length },
+    {
+      key: 'Chờ thông tin',
+      label: '⏳ Chờ thông tin (Giữ live)',
+      count: pendingHoldCount,
+    },
     { key: 'Chờ xử lý', label: 'Chờ xử lý', count: orders.filter((o) => o.status === 'Chờ xử lý').length },
     { key: 'Đang xử lý', label: 'Đang xử lý', count: orders.filter((o) => o.status === 'Đang xử lý').length },
     { key: 'Đang giao', label: 'Đang giao', count: orders.filter((o) => o.status === 'Đang giao').length },
@@ -107,7 +125,20 @@ export const OrderHistoryPage: React.FC = () => {
           </p>
         </div>
 
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 flex-wrap">
+          <button
+            onClick={() => setIsLiveHoldModalOpen(true)}
+            className="flex items-center gap-1.5 px-3.5 py-2.5 text-xs font-bold text-amber-900 bg-amber-50 hover:bg-amber-100 border border-amber-300 rounded-2xl transition-colors shadow-2xs cursor-pointer"
+            title="Mở khay đơn hàng giữ đồ trên live"
+          >
+            <Clock className="w-4 h-4 text-amber-600 animate-pulse" />
+            <span>⏳ Khay hàng chờ live</span>
+            {pendingHoldCount > 0 && (
+              <span className="px-2 py-0.5 rounded-full text-[10px] font-black bg-amber-500 text-white shadow-2xs">
+                {pendingHoldCount}
+              </span>
+            )}
+          </button>
           <button
             onClick={handleExportCSV}
             className="flex items-center gap-1.5 px-4 py-2.5 text-xs font-bold text-[#3D271D] bg-white hover:bg-[#FFF9F6] border border-[#FDE2E4] rounded-2xl transition-colors shadow-2xs cursor-pointer"
@@ -286,6 +317,7 @@ export const OrderHistoryPage: React.FC = () => {
                           }
                           className={`text-[11px] font-bold px-3 py-1 rounded-full cursor-pointer focus:outline-hidden ${statusStyle.bg} ${statusStyle.text} border ${statusStyle.border}`}
                         >
+                          <option value="Chờ thông tin">⏳ Chờ thông tin (Giữ đồ)</option>
                           <option value="Chờ xử lý">Chờ xử lý</option>
                           <option value="Đang xử lý">Đang xử lý</option>
                           <option value="Đang giao">Đang giao</option>
@@ -359,6 +391,12 @@ export const OrderHistoryPage: React.FC = () => {
           </div>
         </div>
       </div>
+
+      {/* Modal Quản lý Hàng chờ Live */}
+      <LiveHoldOrdersModal
+        isOpen={isLiveHoldModalOpen}
+        onClose={() => setIsLiveHoldModalOpen(false)}
+      />
     </div>
   );
 };

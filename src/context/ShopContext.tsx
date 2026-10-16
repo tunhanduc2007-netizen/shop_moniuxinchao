@@ -49,6 +49,9 @@ interface ShopContextType {
   addOrder: (newOrderData: Partial<Order>) => Promise<Order>;
   updateOrderStatus: (orderId: string, status: OrderStatus) => Promise<void>;
   updateShippingStatus: (orderId: string, status: ShippingStatus) => Promise<void>;
+  updateOrder: (orderId: string, updatedFields: Partial<Order>) => Promise<void>;
+  mergeIntoOrder: (targetOrderId: string, additionalItems: OrderItem[], additionalDiscount?: number) => Promise<void>;
+  completePendingOrder: (orderId: string, customerPhone: string, shippingAddress: string, customerName?: string) => Promise<void>;
   deleteOrder: (orderId: string) => Promise<void>;
   updateSettings: (newSettings: StoreSettings) => void;
   resetToDefault: () => Promise<void>;
@@ -57,6 +60,7 @@ interface ShopContextType {
   isSupabaseConnected: boolean;
   isSyncing: boolean;
 }
+
 
 const ShopContext = createContext<ShopContextType | undefined>(undefined);
 
@@ -88,11 +92,18 @@ function mapDbOrderToOrder(row: any): Order {
     trackingCode: row.tracking_code || '',
     shippingStatus: row.shipping_status || 'Chờ lấy hàng',
     orderNote: row.order_note || '',
+    isPendingInfo:
+      row.status === 'Chờ thông tin' ||
+      !row.customer_phone ||
+      row.customer_phone === 'Chưa có SĐT' ||
+      row.shipping_address === 'Chờ khách gửi địa chỉ inbox',
+    holdExpiresAt: row.hold_expires_at || undefined,
     createdAt: dateFormatted,
     timeString,
     updatedAt: row.updated_at || dateFormatted,
   };
 }
+
 
 export const ShopProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [orders, setOrders] = useState<Order[]>(() => {
@@ -308,26 +319,34 @@ export const ShopProvider: React.FC<{ children: React.ReactNode }> = ({ children
     const code = orderData.code || generateUniqueCode();
     const id = `ord-${Date.now()}`;
 
+    const isPending = orderData.status === 'Chờ thông tin' || Boolean(orderData.isPendingInfo);
+    const holdExpiresAt = new Date(Date.now() + 24 * 60 * 60 * 1000).toISOString();
+
     const newOrder: Order = {
       id,
       code,
-      customerName: orderData.customerName?.trim() || 'Khách vãng lai',
+      customerName: orderData.customerName?.trim() || 'Khách xem live',
       customerPhone: orderData.customerPhone?.trim() || '',
-      shippingAddress: orderData.shippingAddress?.trim() || 'Chưa cập nhật địa chỉ',
+      shippingAddress:
+        orderData.shippingAddress?.trim() ||
+        (isPending ? 'Chờ khách gửi địa chỉ inbox' : 'Chưa cập nhật địa chỉ'),
       items: orderData.items && orderData.items.length > 0 ? orderData.items : [],
       subtotal: orderData.subtotal || 0,
-      shippingFee: orderData.shippingFee ?? settings.defaultShippingFee,
+      shippingFee: orderData.shippingFee ?? (isPending ? 0 : settings.defaultShippingFee),
       discount: orderData.discount || 0,
       totalAmount: orderData.totalAmount || 0,
       paymentMethod: orderData.paymentMethod || 'COD',
       isPaid: orderData.paymentMethod === 'Chuyển khoản',
-      status: orderData.status || 'Chờ xử lý',
+      status: isPending ? 'Chờ thông tin' : (orderData.status || 'Chờ xử lý'),
       carrier: orderData.carrier || settings.defaultCarrier,
-      trackingCode:
-        orderData.trackingCode ||
-        `${orderData.carrier || settings.defaultCarrier}${Math.floor(10000000 + Math.random() * 90000000)}`,
-      shippingStatus: orderData.shippingStatus || 'Chờ lấy hàng',
+      trackingCode: isPending
+        ? ''
+        : (orderData.trackingCode ||
+          `${orderData.carrier || settings.defaultCarrier}${Math.floor(10000000 + Math.random() * 90000000)}`),
+      shippingStatus: isPending ? 'Chờ lấy hàng' : (orderData.shippingStatus || 'Chờ lấy hàng'),
       orderNote: orderData.orderNote || '',
+      isPendingInfo: isPending,
+      holdExpiresAt,
       createdAt: dateFormatted,
       timeString,
       updatedAt: dateFormatted,
@@ -369,12 +388,21 @@ export const ShopProvider: React.FC<{ children: React.ReactNode }> = ({ children
       console.warn('Failed to push order to Supabase:', err);
     }
 
-    showToast({
-      type: 'success',
-      title: 'Tạo đơn thành công!',
-      message: `Đơn hàng #${newOrder.code} của ${newOrder.customerName} đã được lưu vào hệ thống đám mây.`,
-      code: newOrder.code,
-    });
+    if (isPending) {
+      showToast({
+        type: 'info',
+        title: '⏳ Đã lưu đơn giữ đồ Live!',
+        message: `Đơn chờ #${newOrder.code} của mẹ ${newOrder.customerName} đang giữ tạm ${newOrder.items.length} món.`,
+        code: newOrder.code,
+      });
+    } else {
+      showToast({
+        type: 'success',
+        title: 'Tạo đơn thành công!',
+        message: `Đơn hàng #${newOrder.code} của ${newOrder.customerName} đã được lưu vào hệ thống đám mây.`,
+        code: newOrder.code,
+      });
+    }
 
     return newOrder;
   };
@@ -455,6 +483,108 @@ export const ShopProvider: React.FC<{ children: React.ReactNode }> = ({ children
     });
   };
 
+  const updateOrder = async (orderId: string, updatedFields: Partial<Order>) => {
+    setOrders((prev) =>
+      prev.map((ord) => {
+        if (ord.id === orderId || ord.code === orderId) {
+          return {
+            ...ord,
+            ...updatedFields,
+            updatedAt: new Date().toISOString(),
+          };
+        }
+        return ord;
+      })
+    );
+
+    try {
+      const dbPayload: any = {};
+      if (updatedFields.customerName !== undefined) dbPayload.customer_name = updatedFields.customerName;
+      if (updatedFields.customerPhone !== undefined) dbPayload.customer_phone = updatedFields.customerPhone;
+      if (updatedFields.shippingAddress !== undefined) dbPayload.shipping_address = updatedFields.shippingAddress;
+      if (updatedFields.status !== undefined) dbPayload.status = updatedFields.status;
+      if (updatedFields.items !== undefined) dbPayload.items = updatedFields.items;
+      if (updatedFields.subtotal !== undefined) dbPayload.subtotal = updatedFields.subtotal;
+      if (updatedFields.discount !== undefined) dbPayload.discount = updatedFields.discount;
+      if (updatedFields.totalAmount !== undefined) dbPayload.total_amount = updatedFields.totalAmount;
+      if (updatedFields.orderNote !== undefined) dbPayload.order_note = updatedFields.orderNote;
+      dbPayload.updated_at = new Date().toISOString();
+
+      await supabase
+        .from('orders')
+        .update(dbPayload)
+        .or(`id.eq.${orderId},code.eq.${orderId}`);
+    } catch (e) {
+      console.warn('Supabase updateOrder failed:', e);
+    }
+  };
+
+  const mergeIntoOrder = async (
+    targetOrderId: string,
+    additionalItems: OrderItem[],
+    additionalDiscount = 0
+  ) => {
+    const target = orders.find((o) => o.id === targetOrderId || o.code === targetOrderId);
+    if (!target) return;
+
+    const mergedItems = [...target.items, ...additionalItems];
+    const newSubtotal = mergedItems.reduce(
+      (sum, item) => sum + (Number(item.unitPrice) || 0) * (Number(item.quantity) || 1),
+      0
+    );
+    const newDiscount = (Number(target.discount) || 0) + additionalDiscount;
+    const newTotal = Math.max(0, newSubtotal + (Number(target.shippingFee) || 0) - newDiscount);
+
+    await updateOrder(targetOrderId, {
+      items: mergedItems,
+      subtotal: newSubtotal,
+      discount: newDiscount,
+      totalAmount: newTotal,
+    });
+
+    showToast({
+      type: 'success',
+      title: 'Đã gộp đơn live thành công!',
+      message: `Đã thêm ${additionalItems.length} món vào giỏ chờ #${target.code} của ${target.customerName}.`,
+      code: target.code,
+    });
+  };
+
+  const completePendingOrder = async (
+    orderId: string,
+    customerPhone: string,
+    shippingAddress: string,
+    customerName?: string
+  ) => {
+    const target = orders.find((o) => o.id === orderId || o.code === orderId);
+    if (!target) return;
+
+    const finalName = customerName?.trim() || target.customerName;
+    const finalPhone = customerPhone.trim();
+    const finalAddress = shippingAddress.trim();
+
+    await updateOrder(orderId, {
+      customerName: finalName,
+      customerPhone: finalPhone,
+      shippingAddress: finalAddress,
+      status: 'Chờ xử lý',
+      shippingStatus: 'Chờ lấy hàng',
+      isPendingInfo: false,
+    });
+
+    setTimeout(() => {
+      refreshDataFromSupabase();
+    }, 600);
+
+    showToast({
+      type: 'success',
+      title: 'Hoàn tất đơn hàng!',
+      message: `Đơn #${target.code} của mẹ ${finalName} đã chuyển sang chờ đóng gói.`,
+      code: target.code,
+    });
+  };
+
+
   const deleteOrder = async (orderId: string) => {
     const target = orders.find((o) => o.id === orderId || o.code === orderId);
     setOrders((prev) => prev.filter((o) => o.id !== orderId && o.code !== orderId));
@@ -532,6 +662,9 @@ export const ShopProvider: React.FC<{ children: React.ReactNode }> = ({ children
         addOrder,
         updateOrderStatus,
         updateShippingStatus,
+        updateOrder,
+        mergeIntoOrder,
+        completePendingOrder,
         deleteOrder,
         updateSettings,
         resetToDefault,
