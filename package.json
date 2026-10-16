@@ -1,9 +1,10 @@
 {
-  "name": "tiktok_shop",
+  "name": "shop_moniuxinchao",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "start": "vite",
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "oxlint",
