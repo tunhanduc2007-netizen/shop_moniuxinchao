@@ -9,8 +9,6 @@ import {
   Boxes,
   Settings,
   X,
-  Sparkles,
-  Crown,
 } from 'lucide-react';
 import { useShop } from '../context/ShopContext';
 import type { ActiveTab } from '../types';
@@ -108,30 +106,6 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                     }`}
                   />
                   <span>{item.label}</span>
-                  {item.id === 'create-order' && (
-                    <span
-                      className={`ml-auto text-[10px] font-extrabold px-2 py-0.5 rounded-full transition-colors flex items-center gap-0.5 ${
-                        isActive
-                          ? 'bg-[#FF5B65] text-white shadow-xs'
-                          : 'bg-[#FFD147] text-[#3D271D] font-bold shadow-xs'
-                      }`}
-                    >
-                      <Sparkles className="w-2.5 h-2.5" />
-                      Live
-                    </span>
-                  )}
-                  {item.id === 'customers' && (
-                    <span
-                      className={`ml-auto text-[10px] font-extrabold px-2 py-0.5 rounded-full transition-colors flex items-center gap-1 ${
-                        isActive
-                          ? 'bg-[#FF5B65] text-white shadow-xs'
-                          : 'bg-white/20 text-white border border-white/25 shadow-xs'
-                      }`}
-                    >
-                      <Crown className="w-2.5 h-2.5 text-[#FFD147]" />
-                      VIP {customers.length > 0 ? `(${customers.length})` : ''}
-                    </span>
-                  )}
                   {item.id === 'products' && (
                     <span
                       className={`ml-auto text-[10px] font-extrabold px-2 py-0.5 rounded-full transition-colors ${

@@ -1704,17 +1704,17 @@ export const CreateOrderPage: React.FC = () => {
                 className="w-full py-3.5 bg-gradient-to-r from-[#FF5B65] to-[#F14652] hover:from-[#E84A54] hover:to-[#DE3D49] text-white rounded-2xl text-xs sm:text-sm font-black shadow-lg shadow-[#FF5B65]/35 hover:shadow-xl hover:shadow-[#FF5B65]/40 transition-all flex items-center justify-center gap-2 cursor-pointer font-['Nunito',sans-serif] active:scale-[0.98]"
               >
                 <CheckCircle2 className="w-5 h-5" />
-                🔴 CHỐT ĐƠN NGAY (Đầy đủ SĐT & Địa chỉ)
+                🔴 CHỐT ĐƠN NGAY
               </button>
 
-              {/* Nút 2: Lưu giữ đồ / Đơn chờ (Chỉ cần Nick TikTok) */}
+              {/* Nút 2: Lưu giữ đồ / Đơn chờ */}
               <button
                 type="button"
                 onClick={submitHoldOrder}
                 className="w-full py-3 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white rounded-2xl text-xs sm:text-sm font-extrabold shadow-md shadow-amber-500/25 hover:shadow-lg hover:shadow-amber-500/35 transition-all flex items-center justify-center gap-2 cursor-pointer active:scale-[0.98]"
               >
                 <Clock className="w-4 h-4 animate-pulse" />
-                ⏳ LƯU GIỮ ĐỒ / ĐƠN CHỜ (Chỉ cần Nick TikTok)
+                ⏳ LƯU GIỮ ĐỒ / ĐƠN CHỜ
               </button>
 
               <div className="flex items-center justify-between px-1 text-[11px] text-[#8C7065] pt-0.5">
