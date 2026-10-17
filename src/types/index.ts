@@ -2,9 +2,21 @@ export type OrderStatus = 'Chờ thông tin' | 'Chờ xử lý' | 'Đang xử l�
 
 export type PaymentMethod = 'COD' | 'Chuyển khoản';
 
-export type ShippingCarrier = 'GHN' | 'GHTK' | 'J&T Express' | 'Viettel Post';
+export type ShippingCarrier = 'GHN' | 'GHTK' | 'J&T Express' | 'Viettel Post' | 'SPX Express';
 
 export type ShippingStatus = 'Chờ lấy hàng' | 'Đang lấy hàng' | 'Đang trung chuyển' | 'Đang giao' | 'Đã giao' | 'Giao thất bại' | 'Chuyển hoàn';
+
+export interface TrackingTimelineEvent {
+  time: string;
+  date: string;
+  status: string;
+  location: string;
+  description: string;
+  shipperName?: string;
+  shipperPhone?: string;
+  completed: boolean;
+  isCurrent?: boolean;
+}
 
 export interface OrderItem {
   id: string;
@@ -33,6 +45,7 @@ export interface Order {
   carrier: ShippingCarrier;
   trackingCode?: string;
   shippingStatus?: ShippingStatus;
+  trackingTimeline?: TrackingTimelineEvent[];
   orderNote?: string;
   isPendingInfo?: boolean; // Đơn giữ đồ trên live, chờ khách inbox SĐT/địa chỉ
   holdExpiresAt?: string; // Hạn giữ đồ
@@ -59,12 +72,15 @@ export interface ProductCatalogItem {
 export interface CarrierStats {
   id: ShippingCarrier;
   name: string;
+  shortName?: string;
   logo: string;
   color: string;
   badgeBg: string;
+  trackingUrlPrefix?: string;
   delivering: number;
   success: number;
   failed: number;
+  successRate?: number;
 }
 
 export interface StoreSettings {

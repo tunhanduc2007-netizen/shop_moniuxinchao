@@ -1580,6 +1580,7 @@ export const CreateOrderPage: React.FC = () => {
                 <option value="GHTK">GHTK (Giao Hàng Tiết Kiệm)</option>
                 <option value="J&T Express">J&T Express</option>
                 <option value="Viettel Post">Viettel Post</option>
+                <option value="SPX Express">SPX Express (Shopee Express)</option>
               </select>
             </div>
 

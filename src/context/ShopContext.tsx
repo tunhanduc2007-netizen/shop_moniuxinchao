@@ -13,6 +13,7 @@ import { INITIAL_ORDERS, INITIAL_PRODUCTS, INITIAL_SETTINGS } from '../data/init
 import { generateOrderCode } from '../utils/formatters';
 import { supabase } from '../lib/supabase';
 import { deriveCustomersFromOrders } from '../utils/customerUtils';
+import { generateCarrierTrackingCode } from '../utils/carrierUtils';
 
 interface ToastMessage {
   id: string;
@@ -342,7 +343,10 @@ export const ShopProvider: React.FC<{ children: React.ReactNode }> = ({ children
       trackingCode: isPending
         ? ''
         : (orderData.trackingCode ||
-          `${orderData.carrier || settings.defaultCarrier}${Math.floor(10000000 + Math.random() * 90000000)}`),
+          generateCarrierTrackingCode(
+            orderData.carrier || settings.defaultCarrier,
+            code
+          )),
       shippingStatus: isPending ? 'Chờ lấy hàng' : (orderData.shippingStatus || 'Chờ lấy hàng'),
       orderNote: orderData.orderNote || '',
       isPendingInfo: isPending,
@@ -562,11 +566,16 @@ export const ShopProvider: React.FC<{ children: React.ReactNode }> = ({ children
     const finalName = customerName?.trim() || target.customerName;
     const finalPhone = customerPhone.trim();
     const finalAddress = shippingAddress.trim();
+    const finalTracking =
+      target.trackingCode && target.trackingCode.trim().length > 3
+        ? target.trackingCode
+        : generateCarrierTrackingCode(target.carrier, target.code);
 
     await updateOrder(orderId, {
       customerName: finalName,
       customerPhone: finalPhone,
       shippingAddress: finalAddress,
+      trackingCode: finalTracking,
       status: 'Chờ xử lý',
       shippingStatus: 'Chờ lấy hàng',
       isPendingInfo: false,
